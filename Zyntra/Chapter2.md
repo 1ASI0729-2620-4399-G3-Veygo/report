@@ -151,7 +151,7 @@ A partir del Análisis FODA, se plantean las siguientes estrategias y tácticas 
 
 Nombre completo: Andre Perez
 
-Edad: 19 años
+Edad: 20 años
 
 Papel desempeñado: Arrendatario
 
@@ -248,31 +248,116 @@ Finalmente, señala que estaría dispuesto a utilizar **Veygo**, principalmente 
 **Segmento Objetivo 2: Propietarios particulares (arrendadores)**
 
 **Entrevista 1**
-Nombre completo: 
-Edad:
-Papel desempeñado:
-Distrito: 
 
+Nombre completo: Jordan Cruz
+
+Edad: 27 años
+
+Papel desempeñado: Arrendador de un auto
+
+Distrito: Los Olivos
+ 
 **Detalles de la entrevista:**
-
-
+ 
+[[URL de la entrevista]()] — Duración de la entrevista: [4:51]
+ 
 **Transcripción resumen de entrevista:**
-
-
+Jordan mostró interés en la plataforma, ya que considera que le brindaría un control más claro sobre el alquiler de sus vehículos. Valoró especialmente las medidas de seguridad que podrían proteger tanto a arrendadores como a arrendatarios, y destacó que contar con un **sistema de reseñas de clientes anteriores** sería una herramienta valiosa para identificar inquilinos confiables y evitar problemas.
+ 
+Respecto al **panel administrativo**, mencionó que sería útil tener una plataforma que le permita registrar el estado de sus vehículos y gestionar el tiempo de alquiler de manera más eficiente. Sobre el **calendario de disponibilidad**, apreció especialmente la idea de una reserva anticipada que le permita asegurar la disponibilidad de sus vehículos en fechas específicas. En general, mostró interés en un sistema que mejore la confianza y la transparencia entre arrendadores y arrendatarios.
  
 **Entrevista 2**
-Nombre completo: 
-Edad: 
-Papel desempeñado:
-Distrito: 
 
+Nombre completo: Jose Marchena
+
+Edad: 23 años
+
+Papel desempeñado: Arrendador de un auto
+
+Distrito: San Juan de Lurigancho
+ 
 **Detalles de la entrevista:**
-
-
+ 
+[[URL de la entrevista]()] — Duración de la entrevista: [5:33]
+ 
 **Transcripción resumen de entrevista:**
+Jose se mostró gratamente impresionado con el producto presentado, ya que incorpora las **medidas de seguridad** que, según indica, siempre se buscan al momento de arrendar un vehículo a un tercero. Señaló que le gustaría que la plataforma también contara con funciones para ver opiniones o comentarios de otros usuarios que ya la hayan utilizado, lo cual aumentaría aún más la confianza.
+ 
+Comentó que anteriormente ofrecía su vehículo en alquiler a través de Facebook, pero siempre le quedaba una sensación de duda e inseguridad al momento de la entrega. Con los métodos de seguridad mostrados (verificación de identidad), afirma sentirse mucho más tranquilo y confiado en el servicio.
+ 
+**Entrevista 3**
 
+Nombre completo: Juan Diaz Banda
+
+Edad: 28 años
+
+Papel desempeñado: Propietario/arrendador (profesor de colegio)
+
+Distrito: Bellavista, Callao
+ 
+**Detalles de la entrevista:**
+ 
+[[URL de la entrevista]()] — Duración de la entrevista: [3:54]
+ 
+**Transcripción resumen de entrevista:**
+Juan combina su trabajo en un colegio con el alquiler de su Toyota Yaris para generar ingresos adicionales. Es una persona práctica y organizada que gestiona su negocio **manualmente mediante un registro en Excel**, operando principalmente en zonas cercanas a su domicilio.
+ 
+Para alquilar su vehículo exige DNI y licencia de conducir vigente, con un mínimo de un día y un máximo de una semana de alquiler. Promociona su servicio por Instagram y coordina los tratos por WhatsApp, pero reconoce que estos canales son **inseguros para manejar datos personales**. Muestra interés en migrar a una aplicación especializada que le permita ver reseñas de clientes, gestionar sus alquileres mediante un **panel de control** y reducir riesgos. Su perfil refleja la necesidad de una solución tecnológica más confiable y eficiente para su negocio.
 
 #### 2.2.3 Análisis de entrevistas.
+A continuación se identifican, por cada segmento objetivo, las características objetivas y subjetivas más comunes, con su sustento estadístico y la referencia a las entrevistas de donde se extrae cada una. Estas características son la base para la construcción de los arquetipos de usuario.
+ 
+**Segmento 1: Clientes (Arrendatarios)** — muestra: Andre Perez (E1), Summy Callaca (E2), Diego León (E3)
+ 
+*Características objetivas*
+ 
+| Característica | % | Entrevistas donde se identifica |
+| --- | --- | --- |
+| Edad entre 20 y 22 años (promedio ≈20.7 años) | 100% (3/3) | E1, E2, E3 |
+| Exige/presenta DNI y licencia de conducir vigente para alquilar | 100% (3/3) | E1, E2, E3 |
+| Prefiere vehículos de transmisión manual | 100% (3/3) | E1, E2, E3 |
+| Combina estudios con alguna actividad económica (estudia, o estudia y trabaja) | 66.7% (2/3) | E1, E2 |
+| Reside en un distrito distinto entre sí (sin coincidencia de distrito) | 100% (3/3) | E1 (Comas), E2 (Oxapampa), E3 (Salamanca, Lima) |
+| Ha usado alguna vez una plataforma especializada de alquiler (ej. Kayak) | 33.3% (1/3) | E3 |
+ 
+*Características subjetivas*
+ 
+| Característica | % | Entrevistas donde se identifica |
+| --- | --- | --- |
+| Confiaría más en un arrendador si su identidad fue verificada por la plataforma | 100% (3/3) | E1, E2, E3 |
+| Le resulta frustrante que un vehículo anunciado como disponible finalmente no lo esté | 100% (3/3) | E1, E2, E3 |
+| Le interesaría filtrar específicamente por tipo de vehículo (eléctrico/manual) | 100% (3/3) | E1, E2, E3 |
+| Considera importante que el vehículo esté cerca de su ubicación al momento de la entrega | 100% (3/3) | E1, E2, E3 |
+| Percibe que las plataformas/canales actuales no brindan información suficiente o generan desconfianza | 100% (3/3) | E1, E2, E3 |
+| Se muestra dispuesto(a) a usar Veygo | 100% (3/3) | E1, E2, E3 |
+| Exige que el punto de entrega sea, además de cercano, seguro/verificable | 33.3% (1/3) | E2 |
+| Manifiesta incomodidad cuando se solicitan demasiados datos/documentos | 33.3% (1/3) | E3 |
+| Pide que se le explique para qué se usarán sus datos personales | 33.3% (1/3) | E1 |
+ 
+**Segmento 2: Propietarios particulares (Arrendadores)** — muestra: Jordan Cruz (E1), Jose Marchena (E2), Juan Diaz Banda (E3)
+
+*Características objetivas*
+ 
+| Característica | % | Entrevistas donde se identifica |
+| --- | --- | --- |
+| Edad entre 23 y 28 años (promedio 26 años) | 100% (3/3) | E1, E2, E3 |
+| Reside en un distrito distinto entre sí (sin coincidencia de distrito) | 100% (3/3) | E1 (Los Olivos), E2 (San Juan de Lurigancho), E3 (Bellavista, Callao) |
+| Utiliza redes sociales (Facebook/Instagram) o WhatsApp para promocionar o coordinar el alquiler de su vehículo | 66.7% (2/3) | E2, E3 |
+| Alquila su vehículo como actividad complementaria a otra ocupación | 33.3% (1/3) | E3 (profesor de colegio) |
+| Gestiona su(s) alquiler(es) mediante un registro manual (Excel) | 33.3% (1/3) | E3 |
+
+*Características subjetivas*
+ 
+| Característica | % | Entrevistas donde se identifica |
+| --- | --- | --- |
+| Valora positivamente contar con medidas/verificación de seguridad para identificar arrendatarios confiables | 100% (3/3) | E1, E2, E3 |
+| Le interesaría un sistema de reseñas o comentarios de arrendatarios anteriores | 100% (3/3) | E1, E2, E3 |
+| Se muestra dispuesto a migrar/usar Veygo | 100% (3/3) | E1, E2, E3 |
+| Le interesaría un panel administrativo para registrar el estado de sus vehículos y gestionar su alquiler | 66.7% (2/3) | E1, E3 |
+| Desconfía de canales informales (Facebook, WhatsApp) para manejar datos personales del alquiler | 66.7% (2/3) | E2, E3 |
+| Valora una reserva anticipada / calendario para asegurar la disponibilidad de su vehículo en fechas específicas | 33.3% (1/3) | E1 |
+ 
+La verificación de identidad y la disposición a usar Veygo son las únicas características subjetivas presentes en el 100% de ambos segmentos, lo que las convierte en el punto de partida más sólido para los arquetipos. El panel administrativo aparece con fuerza (66.7%) solo en el segmento de propietarios, mientras que el filtrado por tipo de vehículo y el mapa de cercanía aparecen con fuerza (100%) solo en el segmento de clientes; esta diferencia debe reflejarse en arquetipos distintos para cada segmento, en lugar de un arquetipo único para "el usuario de Veygo". El interés en un sistema de reseñas, presente en el 100% de los propietarios entrevistados, se identifica como una característica subjetiva transversal no contemplada en los cinco flujos originales, relevante para la construcción del arquetipo de propietario.
 
 ### 2.3. Needfinding.
 
