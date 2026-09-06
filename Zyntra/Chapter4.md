@@ -201,6 +201,17 @@ La **Landing Page** de Veygo busca atraer nuevos usuarios, generar confianza y m
 
 ```
 
+#### 4.2.4. Searching Systems
+
+Para facilitar la búsqueda de vehículos, **Veygo** incorpora un sistema de búsqueda sencillo que permite a los usuarios encontrar opciones según sus necesidades y preferencias.
+
+- **Búsqueda por ubicación**: Permite encontrar vehículos disponibles en una ciudad o zona determinada.
+- **Búsqueda por fechas**: Permite seleccionar la fecha de inicio y devolución para mostrar vehículos disponibles durante el periodo elegido.
+- **Filtros de búsqueda**: Permite filtrar los vehículos según características como tipo de vehículo, transmisión, tipo de energía, precio y disponibilidad.
+- **Búsqueda por categorías**: Permite explorar vehículos según diferentes necesidades, como trabajo diario, viajes familiares, carga, aventura o vehículos eléctricos.
+- **Resultados de búsqueda**: Muestra los vehículos que coinciden con los criterios seleccionados, facilitando la comparación de sus características y precios.
+
+Este sistema permite reducir el tiempo de búsqueda y ayuda a los usuarios a encontrar un vehículo que se adapte mejor a sus necesidades.
 
 
 
