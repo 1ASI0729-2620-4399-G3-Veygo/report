@@ -249,14 +249,19 @@ La navegación en **Veygo** está diseñada para que los usuarios puedan desplaz
 
 **Veygo** utiliza una navegación sencilla y organizada, con accesos directos a las funciones principales para reducir el número de pasos necesarios. La estructura y los nombres de las secciones permiten que clientes y propietarios identifiquen fácilmente las opciones disponibles según sus necesidades.
 
+### 4.3. Landing Page UI Design
 
+#### 4.3.1. Landing Page Wireframe
 
+Estos wireframes permiten visualizar de manera detallada la estructura propuesta para la página de aterrizaje. A través de ellos, se pueden identificar sus principales elementos, funcionalidades y la forma en que los usuarios interactuarán y navegarán por el sitio.
 
+ <img src="assets/img/cap4/wireframe-landing.png" alt="logo" width="" height="">
 
+#### 4.3.2. Landing Page Mock-up
 
+Los siguientes mockups representan una visión más cercana a la landing Page de Veygo:
 
-
-
+ <img src="assets/img/cap4/Landingpage.png" alt="logo" width="" height="">
 
 
 
