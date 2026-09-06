@@ -154,13 +154,35 @@ El flujo general de la plataforma se organiza de la siguiente manera:
 
 11. **Perfil:** Permite gestionar la información de la cuenta y los datos relacionados con la verificación del usuario.
 
+#### 4.2.2. Labeling Systems
 
+El sistema de etiquetado de Veygo utiliza nombres simples y directos para facilitar la identificación de cada sección. Los términos empleados mantienen una relación clara con las funciones de la plataforma y permiten una navegación intuitiva para clientes y propietarios.
 
+##### Secciones y contenido de la Landing Page
 
+| **Sección** | **Contenido** |
+|-------------|---------------|
+| **Inicio** | Presenta Veygo y sus principales beneficios, permitiendo acceder rápidamente a las funciones de la plataforma. |
+| **Cómo funciona** | Explica de manera sencilla los pasos para buscar, reservar y alquilar un vehículo. |
+| **Vehículos** | Muestra los vehículos disponibles y permite conocer sus principales características. |
+| **Confianza** | Presenta las medidas de seguridad, verificación de identidad y mecanismos de reputación de Veygo. |
+| **Testimonios** | Muestra las experiencias y opiniones de usuarios de la plataforma. |
+| **Iniciar Sesión** | Permite acceder a una cuenta existente. |
+| **Registrarme** | Permite crear una nueva cuenta en Veygo. |
 
+##### Secciones y contenido de Veygo
 
-
-
+| **Sección** | **Contenido** |
+|-------------|---------------|
+| **Página Principal** | Punto de acceso a las principales funciones de la plataforma según el tipo de usuario. |
+| **Buscar Vehículos** | Permite encontrar vehículos disponibles según ubicación, fechas y preferencias. |
+| **Detalle del Vehículo** | Muestra información, características, precio y disponibilidad del vehículo seleccionado. |
+| **Reservas** | Permite gestionar las solicitudes y reservas realizadas dentro de la plataforma. |
+| **Mis Vehículos** | Permite a los propietarios visualizar y administrar los vehículos que tienen publicados. |
+| **Disponibilidad** | Permite gestionar las fechas disponibles de los vehículos mediante un calendario. |
+| **Panel del Propietario** | Presenta información sobre vehículos, reservas y transacciones para facilitar la gestión. |
+| **Calificaciones y Reseñas** | Permite consultar y realizar valoraciones sobre las experiencias de alquiler. |
+| **Perfil** | Permite consultar y administrar la información de la cuenta del usuario. |
 
 
 
