@@ -120,7 +120,37 @@ El diseño mantiene una distribución ordenada y consistente, utilizando espacio
 
 - **Uso Consistente de Componentes:** Se reutilizan componentes como botones, tarjetas, campos de búsqueda y elementos de navegación para mantener una experiencia uniforme en toda la plataforma.
 
+### 4.2. Information Architecture
 
+#### 4.2.1. Organization Systems
+
+El sistema de organización de **Veygo** busca ofrecer una navegación sencilla y ordenada, permitiendo que los usuarios encuentren rápidamente las funciones relacionadas con el alquiler y la publicación de vehículos. La plataforma está organizada considerando sus dos principales tipos de usuarios: **clientes** y **propietarios**.
+
+Los clientes tienen acceso a funciones orientadas a la búsqueda y alquiler de vehículos, mientras que los propietarios cuentan con herramientas para publicar sus vehículos, administrar su disponibilidad y gestionar las reservas recibidas.
+
+El flujo general de la plataforma se organiza de la siguiente manera:
+
+1. **Landing Page:** Presenta Veygo, sus principales beneficios, vehículos disponibles y opciones para registrarse o iniciar sesión.
+
+2. **Registro e Inicio de Sesión:** Permite crear una cuenta o acceder a la plataforma mediante credenciales registradas.
+
+3. **Página Principal:** Punto de acceso a las principales funcionalidades de Veygo según el tipo de usuario.
+
+4. **Búsqueda de Vehículos:** Permite buscar vehículos mediante ubicación, fechas de alquiler y diferentes filtros.
+
+5. **Detalle del Vehículo:** Muestra información del vehículo, características, disponibilidad y datos necesarios antes de realizar una reserva.
+
+6. **Reservas:** Permite al cliente solicitar un vehículo y consultar el estado de sus reservas.
+
+7. **Publicación de Vehículos:** Permite a los propietarios registrar y ofrecer sus automóviles o motocicletas dentro de la plataforma.
+
+8. **Gestión de Disponibilidad:** Permite al propietario administrar mediante un calendario las fechas disponibles de sus vehículos.
+
+9. **Panel del Propietario:** Presenta información relacionada con vehículos activos, reservas y transacciones realizadas.
+
+10. **Calificaciones y Reseñas:** Permite a clientes y propietarios compartir su experiencia después de completar un alquiler.
+
+11. **Perfil:** Permite gestionar la información de la cuenta y los datos relacionados con la verificación del usuario.
 
 
 
