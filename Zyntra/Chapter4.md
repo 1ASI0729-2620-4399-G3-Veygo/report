@@ -128,6 +128,8 @@ El sistema de organización de **Veygo** busca ofrecer una navegación sencilla 
 
 Los clientes tienen acceso a funciones orientadas a la búsqueda y alquiler de vehículos, mientras que los propietarios cuentan con herramientas para publicar sus vehículos, administrar su disponibilidad y gestionar las reservas recibidas.
 
+<img src="assets/img/cap4/Organization_Systems.png" alt="logo" width="400"/><btn>
+
 El flujo general de la plataforma se organiza de la siguiente manera:
 
 1. **Landing Page:** Presenta Veygo, sus principales beneficios, vehículos disponibles y opciones para registrarse o iniciar sesión.
