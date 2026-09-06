@@ -184,7 +184,22 @@ El sistema de etiquetado de Veygo utiliza nombres simples y directos para facili
 | **Calificaciones y Reseñas** | Permite consultar y realizar valoraciones sobre las experiencias de alquiler. |
 | **Perfil** | Permite consultar y administrar la información de la cuenta del usuario. |
 
+#### 4.2.3. SEO Tags and Meta Tags
 
+La **Landing Page** de Veygo busca atraer nuevos usuarios, generar confianza y mejorar su posicionamiento en búsquedas relacionadas con el alquiler de vehículos. Las etiquetas SEO y meta describen la plataforma y sus principales servicios, facilitando que los usuarios encuentren Veygo mediante términos relacionados con alquiler de autos, motos y movilidad.
+
+**Título de la página (Title)**
+
+```html
+<title>Veygo – Alquiler de vehículos seguro y confiable</title>
+
+<meta name="description" content="Veygo conecta a propietarios y clientes para alquilar vehículos de forma segura, rápida y confiable en Lima. Encuentra autos y motos disponibles según tus necesidades.">
+
+<meta name="keywords" content="Veygo, alquiler de vehículos, alquiler de autos, alquiler de motos, rentar auto, vehículos en Lima, alquiler seguro, movilidad en Lima">
+
+<meta name="author" content="Equipo Veygo">
+
+```
 
 
 
