@@ -106,6 +106,20 @@ El diseño mantiene una distribución ordenada y consistente, utilizando espacio
 - **Separación entre elementos:** 16px–32px.
 - **Bordes:** Redondeados para mantener una apariencia moderna y amigable.
 
+#### 4.1.2. Web Style Guidelines
+
+- **Responsive Design:** La interfaz de Veygo debe adaptarse correctamente a computadoras, tablets y dispositivos móviles, manteniendo una navegación clara y accesible.
+
+- **Consistencia Visual:** Se mantienen los colores, tipografía Geist, estilos de botones, tarjetas e íconos definidos en las guías generales para conservar una identidad visual uniforme.
+
+- **Accesibilidad:** Los colores y tamaños de texto se seleccionan buscando un contraste adecuado y una lectura clara para los usuarios.
+
+- **Estados de Interacción:** Los botones, enlaces e íconos presentan cambios visuales al interactuar con ellos, permitiendo identificar fácilmente los elementos activos.
+
+- **Navegación e Interactividad:** La navegación se mantiene sencilla e intuitiva, facilitando el acceso a las principales secciones y funcionalidades de Veygo.
+
+- **Uso Consistente de Componentes:** Se reutilizan componentes como botones, tarjetas, campos de búsqueda y elementos de navegación para mantener una experiencia uniforme en toda la plataforma.
+
 
 
 
