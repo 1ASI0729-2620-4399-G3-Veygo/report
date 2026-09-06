@@ -213,6 +213,43 @@ Para facilitar la búsqueda de vehículos, **Veygo** incorpora un sistema de bú
 
 Este sistema permite reducir el tiempo de búsqueda y ayuda a los usuarios a encontrar un vehículo que se adapte mejor a sus necesidades.
 
+#### 4.2.5. Navigation Systems
+
+La navegación en **Veygo** está diseñada para que los usuarios puedan desplazarse de manera sencilla entre las principales secciones de la plataforma. Se utiliza una barra de navegación principal, accesos directos y una estructura organizada según las funciones disponibles para clientes y propietarios.
+
+##### **Estructura de Navegación en la Landing Page**
+
+| **Sección** | **Descripción** |
+|-------------|-----------------|
+| **Inicio** | Presenta Veygo y su propuesta de valor, destacando sus principales beneficios. |
+| **Cómo funciona** | Explica los pasos necesarios para buscar y alquilar un vehículo. |
+| **Vehículos** | Permite explorar los vehículos disponibles y conocer sus características. |
+| **Confianza** | Presenta las medidas de seguridad, verificación y reputación de la plataforma. |
+| **Testimonios** | Muestra las experiencias de usuarios que han utilizado Veygo. |
+| **Iniciar Sesión** | Permite acceder a una cuenta existente. |
+| **Registrarme** | Permite crear una nueva cuenta en la plataforma. |
+
+##### **Estructura de Navegación en Veygo**
+
+| **Sección** | **Descripción** |
+|-------------|-----------------|
+| **Página Principal** | Punto de acceso a las principales funcionalidades según el tipo de usuario. |
+| **Buscar Vehículos** | Permite encontrar vehículos mediante ubicación, fechas y filtros. |
+| **Detalle del Vehículo** | Presenta las características, precio y disponibilidad del vehículo seleccionado. |
+| **Reservas** | Permite consultar y gestionar las reservas realizadas. |
+| **Mis Vehículos** | Permite a los propietarios administrar los vehículos publicados. |
+| **Disponibilidad** | Permite gestionar las fechas disponibles de cada vehículo. |
+| **Panel del Propietario** | Muestra información sobre vehículos, reservas y transacciones. |
+| **Calificaciones y Reseñas** | Permite consultar y registrar valoraciones sobre las experiencias de alquiler. |
+| **Perfil** | Permite gestionar la información de la cuenta del usuario. |
+
+---
+
+#### **Accesibilidad y navegación intuitiva**
+
+**Veygo** utiliza una navegación sencilla y organizada, con accesos directos a las funciones principales para reducir el número de pasos necesarios. La estructura y los nombres de las secciones permiten que clientes y propietarios identifiquen fácilmente las opciones disponibles según sus necesidades.
+
+
 
 
 
