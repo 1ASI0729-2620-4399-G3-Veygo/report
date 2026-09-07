@@ -361,13 +361,97 @@ La verificación de identidad y la disposición a usar Veygo son las únicas car
 
 ### 2.3. Needfinding.
 
+A partir del análisis de las entrevistas realizadas a los dos segmentos objetivo y de los hallazgos obtenidos en el análisis competitivo, se elaboraron los principales artefactos de Needfinding de Veygo, los cuales permiten representar las características, objetivos, necesidades, tareas, experiencias, frustraciones y expectativas de los clientes arrendatarios y de los propietarios particulares que ofrecen sus vehículos en alquiler.
+
+Los resultados obtenidos evidencian diferencias claras entre ambos segmentos, mientras los clientes priorizan la disponibilidad del vehículo, la cercanía, la facilidad para comparar alternativas y la confianza en el propietario, los arrendadores muestran mayor preocupación por la seguridad, la confiabilidad de los clientes, las reseñas y el control de sus operaciones de alquiler.
+
 #### 2.3.1. User Personas.
+
+A partir de las características objetivas y subjetivas identificadas en las entrevistas se construyó un User Persona para cada segmento objetivo, estos perfiles no representan directamente a un entrevistado particular, sino que sintetizan los patrones más relevantes encontrados durante la investigación.
+Para el segmento de clientes se consideraron principalmente la preferencia por vehículos de transmisión manual, la consulta anticipada de disponibilidad, la importancia de la cercanía y la necesidad de interactuar con propietarios confiables.
+Para el segmento de propietarios se priorizaron la seguridad durante el alquiler, la necesidad de identificar arrendatarios confiables, el interés en contar con reseñas y la búsqueda de un mayor control sobre sus operaciones.
+
+##### Segmento 1: Clientes / Arrendatarios
+
+El User Persona Adriana Torres representa al cliente que busca alquilar un vehículo de manera segura y organizada, sus principales objetivos se relacionan con encontrar una alternativa adecuada a sus necesidades, confirmar su disponibilidad, reducir el tiempo empleado en la búsqueda y contar con información suficiente para confiar en el propietario antes de realizar el alquiler.
+
+![User Persona - Cliente Arrendatario](assets/img/user-persona-cliente.png)
+
+##### Segmento 2: Propietarios particulares / Arrendadores
+
+El User Persona Carlos Mendoza representa al propietario particular que ofrece su vehículo en alquiler y busca realizar esta actividad reduciendo los riesgos asociados a tratar con personas desconocidas, sus principales necesidades se relacionan con la verificación de los arrendatarios, el conocimiento de su reputación, la organización de la disponibilidad y un mayor control sobre sus alquileres.
+
+![User Persona - Propietario Arrendador](assets/img/user-persona-propietario.png)
 
 #### 2.3.2. User Task Matrix.
 
+El User Task Matrix permite comparar las principales tareas que realizan actualmente los User Personas para alcanzar sus objetivos dentro del proceso de alquiler de vehículos, las tareas consideradas corresponden a actividades propias de cada segmento y pueden realizarse independientemente de la existencia de Veygo.
+
+Para la evaluación se utilizan los niveles de frecuencia Always, Sometimes y Rarely, mientras que la importancia se clasifica como High, Medium o Low.
+
+| **Tareas** | **Adriana Torres - Cliente/Arrendataria** |  | **Carlos Mendoza - Propietario/Arrendador** |  |
+|---|---|---|---|---|
+|  | **Frecuencia** | **Importancia** | **Frecuencia** | **Importancia** |
+| Identificar la necesidad y fechas del alquiler | Always | High | — | — |
+| Buscar vehículos disponibles | Always | High | — | — |
+| Comparar características, precio y condiciones de los vehículos | Always | High | — | — |
+| Consultar la disponibilidad para las fechas requeridas | Always | High | Always | High |
+| Revisar los requisitos y documentación necesarios | Always | High | — | — |
+| Evaluar la confiabilidad de la otra parte | Always | High | Always | High |
+| Promocionar u ofrecer el vehículo en alquiler | — | — | Always | High |
+| Atender consultas de posibles arrendatarios | — | — | Always | High |
+| Verificar la identidad y documentación del arrendatario | — | — | Always | High |
+| Organizar las fechas y condiciones del alquiler | — | — | Always | High |
+| Coordinar el lugar y horario de entrega | Always | High | Always | High |
+| Revisar el estado del vehículo antes de la entrega | Sometimes | High | Always | High |
+| Llevar un registro de los alquileres realizados | — | — | Sometimes | High |
+| Devolver o recibir nuevamente el vehículo | Always | High | Always | High |
+| Revisar el estado del vehículo al finalizar el alquiler | Sometimes | High | Always | High |
+
+A partir de la matriz se observa que ambos segmentos coinciden en tareas de alta importancia relacionadas con la disponibilidad, la evaluación de la confiabilidad de la otra parte y la coordinación de la entrega, esto refleja que la confianza y la correcta organización del alquiler constituyen necesidades transversales dentro del dominio.
+
+Las principales diferencias se encuentran en las actividades previas y posteriores al alquiler. Adriana dedica mayor atención a la búsqueda, comparación y selección de alternativas, mientras que Carlos realiza tareas relacionadas con la promoción del vehículo, verificación del cliente, organización de fechas y control de la operación. Asimismo, el propietario tiene una participación más activa en la revisión del estado del vehículo y en el registro de los alquileres realizados.
+
 #### 2.3.3. User Journey Mapping.
 
+Los User Journey Maps representan el recorrido completo que siguen actualmente los usuarios de cada segmento durante el proceso de alquiler de un vehículo. Se desarrollaron en versión As-Is, por lo que muestran la experiencia actual de los usuarios sin considerar todavía la existencia de Veygo.
+
+El recorrido del cliente comprende desde el momento en que surge la necesidad de alquilar un vehículo hasta su utilización y devolución, por su parte, el recorrido del propietario comienza con la promoción de su vehículo y continúa con el contacto con posibles clientes, su verificación, la coordinación de las condiciones y finalmente la entrega y recuperación del vehículo.
+
+##### User Journey Map - Adriana Torres
+
+Para el segmento de clientes se identificaron cinco etapas principales: necesidad, búsqueda, evaluación, coordinación y alquiler/devolución, el punto de mayor fricción se encuentra durante la evaluación, debido principalmente a la incertidumbre respecto a la disponibilidad real del vehículo y la confiabilidad del propietario.
+Durante la coordinación también pueden presentarse dificultades relacionadas con la distancia, la seguridad del punto de entrega y la necesidad de utilizar múltiples mensajes o llamadas para concretar el alquiler.
+
+![User Journey Map - Cliente Arrendatario](assets/img/user-journey-segmento1-veygo.png)
+
+Las oportunidades identificadas se relacionan principalmente con la centralización de información, una disponibilidad más confiable, mecanismos de verificación y reputación, así como una mejor coordinación de lugares de entrega cercanos y seguros.
+
+##### User Journey Map - Carlos Mendoza
+
+Para el segmento de propietarios se identificaron las etapas de promoción, contacto, verificación, coordinación y entrega/cierre. Los momentos de mayor preocupación se presentan durante la verificación del posible arrendatario y al momento de entregar el vehículo, debido a la incertidumbre sobre la confiabilidad del cliente y el estado en el que será devuelto el automóvil.
+
+![User Journey Map - Propietario Arrendador](assets/img/user-journey-segmento2-veygo.png)
+
+Entre las oportunidades encontradas destacan la posibilidad de centralizar la información de los posibles clientes, contar con mecanismos de identidad y reputación, organizar la disponibilidad y conservar un registro más claro de los alquileres y del estado de los vehículos.
+
 #### 2.3.4. Empathy Mapping.
+
+Con la finalidad de comprender con mayor profundidad la perspectiva de ambos segmentos, se elaboró un Empathy Map para cada User Persona, para su construcción se consideraron los comportamientos, opiniones, necesidades y frustraciones encontrados durante las entrevistas, organizándolos según lo que cada usuario ve, escucha, dice, hace, piensa y siente, finalmente se identificaron sus principales Pains y Gains.
+
+##### Empathy Map - Adriana Torres
+
+El Empathy Map de Adriana evidencia que el cliente busca principalmente seguridad, información confiable, disponibilidad actualizada y facilidad para encontrar un vehículo adecuado y cercano. Entre sus principales preocupaciones se encuentran la desconfianza hacia canales informales, la falta de información sobre los propietarios, los cambios inesperados de disponibilidad y los desplazamientos innecesarios para recoger un vehículo.
+Como principales ganancias esperadas se identifican una mayor confianza en los propietarios, información clara, alternativas cercanas, facilidad para comparar vehículos y una reducción del tiempo empleado durante la búsqueda y coordinación.
+
+![Empathy Map - Cliente Arrendatario](assets/img/empathy-map-cliente-veygo.png)
+
+##### Empathy Map - Carlos Mendoza
+
+El Empathy Map de Carlos muestra una preocupación constante por la seguridad de su vehículo y la confiabilidad de los arrendatarios, el propietario necesita conocer con quién está realizando el trato, comprobar la identidad y documentación del cliente y tener mayor control sobre las condiciones del alquiler.
+Sus principales Pains están relacionados con la falta de información sobre los clientes, el uso de canales informales, la gestión manual de algunas operaciones y el riesgo asociado a entregar el vehículo a una persona desconocida, entre sus Gains destacan contar con arrendatarios verificados, conocer opiniones o reseñas de clientes anteriores, organizar mejor sus alquileres y disponer de información centralizada.
+
+![Empathy Map - Propietario Arrendador](assets/img/empathy-map-propietario-veygo.png)
 
 ### 2.4. Big Picture EventStorming.
 
