@@ -1,1 +1,31 @@
-#chapter3
+## 3.2 Historias de usuario
+
+En esta sección se definen las Historias de Usuario (User Stories) estructuradas en función de los dos segmentos objetivo de Veygo: **Clientes (Arrendatarios)** y **Propietarios (Arrendadores)**. Cada historia sigue el formato estándar (*Como [Rol] Quiero [Acción] Para [Beneficio]*) e incluye sus respectivos criterios de aceptación bajo la estructura BDD (*Dado que / Cuando / Entonces*).
+
+---
+
+### 3.2.1. Tabla de Épicos del Proyecto Veygo
+
+| ID de Épico | Título | Descripción |
+| :--- | :--- | :--- |
+| *EP-01* | Landing Page y Captura de Interés | Página pública de inicio para presentar los beneficios de Veygo, testimonios, formulario de contacto y llamados a la acción para registrarse como cliente o propietario. |
+| *EP-02* | Registro, Autenticación y Verificación de Identidad | Creación de cuenta, inicio de sesión seguro y verificación documental de identidad (DNI/Brevete) para garantizar transacciones confiables entre usuarios. |
+| *EP-03* | Búsqueda Geolocalizada y Mapa de Cercanía | Implementación del mapa interactivo en tiempo real para visualizar vehículos (autos y motos) disponibles cercanos a la ubicación de entrega del cliente. |
+| *EP-04* | Filtros Avanzados de Vehículos | Sistema de filtrado por tipo de vehículo (auto/moto), transmisión (manual/automática), motorización (eléctrica/combustible) y rango de precio. |
+| *EP-05* | Gestión de Publicaciones de Vehículos | Flujo para que los propietarios puedan registrar, editar y gestionar sus vehículos, subiendo características, tarifas e imágenes. |
+| *EP-06* | Calendario Dinámico y Gestión de Disponibilidad | Control de fechas en tiempo real para evitar solapamientos de reservas y permitir al propietario gestionar la disponibilidad de su flota. |
+| *EP-07* | Proceso de Reserva y Gestión de Solicitudes | Flujo completo para que el cliente solicite un vehículo, confirme fechas de alquiler y reciba la validación del propietario sin canales informales. |
+| *EP-08* | Panel Administrativo y Métricas para Propietarios | Dashboard privado para propietarios con visión general de vehículos activos, total de transacciones completadas e ingresos generados. |
+| *EP-09* | Sistema de Calificaciones, Reseñas y Reputación | Evaluaciones bidireccionales post-alquiler para construir confianza dentro del ecosistema de Veygo. |
+
+### 3.2.2. Detalle de Historias de Usuario
+
+| ID | Título | Descripción | Criterios de aceptación | EpicID |
+| :--- | :--- | :--- | :--- | :--- |
+| **US01** | Verificación de Identidad de Usuarios | Como usuario registrado (cliente o propietario), quiero subir mi documento oficial (DNI) y Licencia de Conducir, para validar mi identidad antes de realizar transacciones y generar confianza en la comunidad. | **Escenario 1: Carga de documentos de identidad**<br>**Dado que** el usuario registrado ingresa a su perfil y no está verificado<br>**Cuando** cargue las fotos legibles del anverso y reverso de su DNI y Brevete vigente<br>**Entonces** el sistema cambiará el estado de la cuenta a "En Verificación" y enviará una notificación al validar la cuenta. | EP-02 |
+| **US02** | Inicio de Sesión Seguro | Como usuario registrado (cliente o propietario), quiero iniciar sesión con mis credenciales, para acceder de forma segura a mi perfil, publicaciones y reservas activas. | **Escenario 1: Autenticación exitosa**<br>**Dado que** el usuario ingresa a la pantalla de inicio de sesión<br>**Cuando** ingrese sus credenciales válidas<br>**Entonces** el sistema le otorgará acceso y lo redirigirá a su panel principal según su rol. | EP-02 |
+| **US03** | Búsqueda de Vehículos Cercanos en Mapa | Como cliente (arrendatario), quiero visualizar un mapa interactivo con autos y motos disponibles cerca de mi posición, para seleccionar el punto de entrega más conveniente. | **Escenario 1: Visualización geolocalizada**<br>**Dado que** el cliente otorga permisos de geolocalización a la aplicación<br>**Cuando** acceda a la vista principal del mapa<br>**Entonces** la plataforma desplegará marcadores interactivos mostrando los vehículos disponibles dentro de su radio cercano. | EP-03 |
+| **US04** | Filtrado por Transmisión y Tipo de Energía | Como cliente con preferencias específicas de conducción, quiero filtrar los vehículos por tipo de transmisión (manual) y motorización (eléctrica), para encontrar rápidamente opciones que se adapten a mi uso. | **Escenario 1: Aplicación de filtros combinados**<br>**Dado que** el cliente se encuentra en la pantalla de exploración<br>**Cuando** seleccione los filtros "Transmisión Manual" y "Motor Eléctrico"<br>**Entonces** el catálogo y el mapa actualizarán sus resultados mostrando únicamente los vehículos que cumplan ambos criterios. | EP-04 |
+| **US05** | Sincronización Automática de Disponibilidad | Como propietario de un vehículo, quiero que el calendario bloquee automáticamente las fechas confirmadas para alquiler, para evitar el cruce de fechas o dobles reservas sobre una misma unidad. | **Escenario 1: Bloqueo de fechas ocupadas**<br>**Dado que** una reserva ha sido confirmada por el propietario<br>**Cuando** un cliente consulte el calendario de disponibilidad de ese vehículo<br>**Entonces** el sistema mostrará las fechas ocupadas deshabilitadas e impedirá seleccionar ese rango de días. | EP-06 |
+| **US06** | Métricas de Flota y Transacciones | Como propietario (arrendador), quiero visualizar un panel administrativo con el resumen de mis vehículos activos y transacciones completadas, para monitorear el desempeño de mi actividad de alquiler. | **Escenario 1: Visualización del panel de control**<br>**Dado que** el propietario ingresa a la sección "Panel Administrativo"<br>**Cuando** cargue el tablero principal<br>**Entonces** la interfaz presentará tarjetas dinámicas con el número de vehículos registrados, reservas completadas e ingresos acumulados. | EP-08 |
+| **US07** | Evaluación Mutua Post-Alquiler | Como cliente o propietario tras finalizar un alquiler, quiero otorgar una puntuación (1 a 5 estrellas) y dejar una reseña, para fomentar la transparencia y reputación en la comunidad. | **Escenario 1: Publicación de calificación**<br>**Dado que** el estado de la reserva cambia a "Completado"<br>**Cuando** cualquiera de las partes acceda al detalle de la reserva finalizada<br>**Entonces** se habilitará un formulario para calificar el servicio y publicar un comentario en el perfil del usuario. | EP-09 |
