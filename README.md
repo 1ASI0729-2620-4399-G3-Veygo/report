@@ -20,7 +20,7 @@
 |        | Fabrizio Hamet Cano Ortiz       |
 |        | Marlon Alessandro Flores Siguas |
 |U20241A995| Ivonne Beatriz Ibañez Torres    |
-|        | Eddo Su Caletti                 |
+|U20221A390        | Eddo Su Caletti                 |
 
   <br>
   <h2 >Periodo 2026-2</h2>
