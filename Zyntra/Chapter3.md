@@ -77,3 +77,49 @@ _Figura 2. Impact Mapping-Elaboración propia. Nota: BG3 mide la adopción real 
 
 ![ImpactMap3](assets/img/Impact%20map_Veygo3.png)
 _Figura 3. Impact Mapping-Elaboración propia. Nota: BG4 ataca el problema identificado en las 5w's y 2 h's, medible como tasa porcentual con plazo definido._
+
+---
+
+## 3.3. Product Backlog
+
+ahora agreog el lenk papae
+
+
+| # Orden | User Story Id | Título | Descripción | Story Points |
+| :--- | :--- | :--- | :--- | :--- |
+| 1 | US09 | Buscador Rápido de Vehículos | Como visitante, deseo ingresar ubicación, fechas y categoría, para iniciar de inmediato la búsqueda de vehículos. | 3 |
+| 2 | US11 | Visualización de Vehículos Destacados | Como visitante, deseo conocer vehículos destacados con su información principal, para evaluar opciones atractivas. | 2 |
+| 3 | US10 | Exploración por Categorías de Propósito | Como visitante, deseo conocer categorías de uso, para filtrar el catálogo según el tipo de experiencia que busco. | 2 |
+| 4 | US08 | Navegación Principal y Selector de Idioma | Como visitante, deseo navegar entre secciones y cambiar el idioma, para orientarme y consultar la información en mi idioma. | 3 |
+| 5 | US12 | Redirección a Registro según Rol | Como visitante, deseo acceder al registro correspondiente a mi intención, para iniciar el proceso adecuado directamente. | 2 |
+| 6 | US22 | Sección de Confianza y Seguridad | Como visitante, deseo conocer las medidas de seguridad de la plataforma, para decidir con confianza si registrarme. | 1 |
+| 7 | US23 | Sección de Preguntas Frecuentes | Como visitante, deseo consultar preguntas frecuentes, para resolver dudas antes de registrarme. | 1 |
+| 8 | US24 | Suscripción a Novedades | Como visitante, deseo registrar mi correo para recibir novedades, para mantenerme informado antes de registrarme. | 2 |
+| 9 | US34 | Endpoint de Contenido Optimizado para Landing Page | Como developer, deseo exponer un endpoint con soporte de cache HTTP para el contenido de la landing, para reducir la cantidad de datos transferidos por petición. | 3 |
+| 10 | US35 | Endpoint de Recursos de Internacionalización (i18n) | Como developer, deseo exponer un endpoint que retorne textos traducidos según el idioma solicitado, para soportar el cambio de idioma en el cliente. | 3 |
+| 11 | US36 | Endpoint de Registro de Eventos de Conversión | Como developer, deseo exponer un endpoint que reciba eventos de interacción, para alimentar la analítica de conversión de la landing. | 2 |
+| 12 | US02 | Inicio de Sesión Seguro | Como usuario registrado, deseo iniciar sesión con mis credenciales, para acceder de forma segura a mi perfil y reservas. | 3 |
+| 13 | US25 | Endpoint de Registro y Autenticación | Como developer, deseo exponer endpoints de registro, login y renovación de sesión, para que los clientes gestionen la autenticación de forma segura. | 5 |
+| 14 | US01 | Verificación de Identidad de Usuarios | Como usuario registrado, deseo subir mi DNI y Brevete, para validar mi identidad antes de realizar transacciones. | 5 |
+| 15 | US26 | Endpoint de Verificación de Identidad | Como developer, deseo exponer un endpoint que reciba documentos y actualice el estado de verificación, para automatizar la validación documental. | 5 |
+| 16 | US15 | Publicación de Nuevo Vehículo | Como propietario, deseo registrar un vehículo con sus características y tarifa, para ofrecerlo en alquiler. | 5 |
+| 17 | US29 | Endpoints CRUD de Publicación de Vehículos | Como developer, deseo exponer endpoints CRUD para vehículos, para soportar la gestión de flota de los propietarios. | 8 |
+| 18 | US16 | Edición o Retiro de Publicación | Como propietario, deseo editar o retirar un vehículo publicado, para mantener actualizada mi oferta. | 3 |
+| 19 | US03 | Búsqueda de Vehículos Cercanos | Como cliente, deseo ubicar vehículos disponibles cerca de mi posición, para elegir el punto de entrega más conveniente. | 5 |
+| 20 | US27 | Endpoint de Búsqueda Geolocalizada | Como developer, deseo exponer un endpoint que retorne vehículos por coordenadas y radio, para soportar la búsqueda por cercanía. | 5 |
+| 21 | US04 | Filtrado por Transmisión y Energía | Como cliente, deseo filtrar vehículos por transmisión y motorización, para encontrar opciones acordes a mis necesidades. | 3 |
+| 22 | US28 | Endpoint de Filtros de Catálogo | Como developer, deseo exponer un endpoint que combine parámetros de filtro, para acotar resultados a las preferencias del cliente. | 3 |
+| 23 | US05 | Sincronización Automática de Disponibilidad | Como propietario, deseo que el calendario bloquee fechas confirmadas, para evitar cruces de reservas. | 5 |
+| 24 | US30 | Endpoint de Calendario de Disponibilidad | Como developer, deseo exponer un endpoint que retorne y actualice el calendario de un vehículo, para evitar solapamiento de reservas. | 5 |
+| 25 | US17 | Solicitud de Reserva | Como cliente, deseo enviar una solicitud de alquiler, para iniciar el proceso sin canales informales. | 5 |
+| 26 | US31 | Endpoints de Solicitud y Confirmación de Reserva | Como developer, deseo exponer endpoints para crear y actualizar el estado de una reserva, para soportar el flujo completo entre cliente y propietario. | 8 |
+| 27 | US18 | Confirmación o Rechazo de Solicitud | Como propietario, deseo aceptar o rechazar solicitudes recibidas, para controlar el acceso a mi vehículo. | 3 |
+| 28 | US19 | Cancelación de Reserva | Como cliente o propietario, deseo cancelar una reserva confirmada, para liberar el vehículo ante cambios de planes. | 3 |
+| 29 | US20 | Historial de Reservas | Como cliente o propietario, deseo consultar mi historial de reservas, para dar seguimiento a mi actividad. | 2 |
+| 30 | US21 | Notificaciones de Actividad | Como usuario registrado, deseo recibir notificaciones de cambios en mis solicitudes y reservas, para estar informado. | 3 |
+| 31 | US06 | Métricas de Flota y Transacciones | Como propietario, deseo visualizar el resumen de mis vehículos y transacciones, para monitorear mi desempeño. | 3 |
+| 32 | US32 | Endpoint de Métricas del Propietario | Como developer, deseo exponer un endpoint que agregue métricas de vehículos, reservas e ingresos, para alimentar el panel administrativo. | 5 |
+| 33 | US07 | Evaluación Mutua Post-Alquiler | Como cliente o propietario, deseo calificar y reseñar tras un alquiler, para fomentar transparencia y reputación. | 3 |
+| 34 | US33 | Endpoint de Calificaciones y Reseñas | Como developer, deseo exponer un endpoint para registrar y consultar calificaciones, para soportar el sistema de reputación. | 5 |
+| 35 | US13 | Recuperación de Contraseña | Como usuario registrado, deseo restablecer mi contraseña vía correo, para recuperar el acceso si la olvido. | 2 |
+| 36 | US14 | Edición de Perfil de Usuario | Como usuario registrado, deseo actualizar mis datos personales, para mantener mi información vigente. | 2 |
