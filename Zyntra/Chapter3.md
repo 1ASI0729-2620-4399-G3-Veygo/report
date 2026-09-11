@@ -61,7 +61,7 @@ Las Historias de Usuario describen de manera detallada las funcionalidades del s
 | US35 | Endpoint de Recursos de Internacionalización (i18n) | Como developer, quiero exponer un endpoint que retorne textos traducidos según el idioma solicitado, para soportar el cambio de idioma en el cliente. | • Los idiomas soportados son español ("es") e inglés ("en"). | **Scenario 1 - Idioma soportado:**<br>**Given** GET /i18n/{locale} con un código soportado<br>**When** el servidor localiza el recurso<br>**Then** retorna 200 con el diccionario de textos<br><br>**Scenario 2 - Idioma no soportado:**<br>**Given** GET /i18n/{locale} con un código no soportado<br>**When** el servidor valida el parámetro<br>**Then** retorna 404 e informa los idiomas disponibles | EP-01 |
 | US36 | Endpoint de Registro de Eventos de Conversión | Como developer, quiero exponer un endpoint que reciba eventos de interacción, para alimentar la analítica de conversión de la landing. | • Todo evento requiere el campo obligatorio "event_type". | **Scenario 1 - Evento válido:**<br>**Given** POST /analytics/events con tipo de evento válido y parámetros de sesión<br>**When** el servidor valida la estructura del evento<br>**Then** retorna 202 y encola el evento<br><br>**Scenario 2 - Campo faltante:**<br>**Given** POST /analytics/events sin el campo "event_type"<br>**When** el servidor valida el payload<br>**Then** retorna 400 indicando el campo faltante | EP-01 |
 
-_(Tabla 1. User Stories del del proyecto - Elaboración propia)_
+_(Tabla 2. User Stories del del proyecto - Elaboración propia)_
 
 ---
 
@@ -82,7 +82,11 @@ _Figura 3. Impact Mapping-Elaboración propia. Nota: BG4 ataca el problema ident
 
 ## 3.3. Product Backlog
 
-ahora agreog el lenk papae
+![Product Backlog](assets/img/ProductBacklog.png)
+_Figura 4. Product Backlog - Elaboración propia. Nota: Esta figura muestra la tabla lista realizada por el grupo para ordenar el product backlog del proyecto en Jira_
+
+**Link:** https://ivonneibanez.atlassian.net/jira/software/projects/PBV/list?jql=project%20%3D%20PBV%20ORDER%20BY%20cf%5B10019%5D%20ASC
+
 
 
 | # Orden | User Story Id | Título | Descripción | Story Points |
@@ -123,3 +127,5 @@ ahora agreog el lenk papae
 | 34 | US33 | Endpoint de Calificaciones y Reseñas | Como developer, deseo exponer un endpoint para registrar y consultar calificaciones, para soportar el sistema de reputación. | 5 |
 | 35 | US13 | Recuperación de Contraseña | Como usuario registrado, deseo restablecer mi contraseña vía correo, para recuperar el acceso si la olvido. | 2 |
 | 36 | US14 | Edición de Perfil de Usuario | Como usuario registrado, deseo actualizar mis datos personales, para mantener mi información vigente. | 2 |
+
+_Tabla 3. Product Backlog-Veygo. Nota: Se prioriza según el orden de implementación_
