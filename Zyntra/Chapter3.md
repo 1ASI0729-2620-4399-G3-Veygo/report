@@ -61,6 +61,19 @@ Las Historias de Usuario describen de manera detallada las funcionalidades del s
 | US35 | Endpoint de Recursos de Internacionalización (i18n) | Como developer, quiero exponer un endpoint que retorne textos traducidos según el idioma solicitado, para soportar el cambio de idioma en el cliente. | • Los idiomas soportados son español ("es") e inglés ("en"). | **Scenario 1 - Idioma soportado:**<br>**Given** GET /i18n/{locale} con un código soportado<br>**When** el servidor localiza el recurso<br>**Then** retorna 200 con el diccionario de textos<br><br>**Scenario 2 - Idioma no soportado:**<br>**Given** GET /i18n/{locale} con un código no soportado<br>**When** el servidor valida el parámetro<br>**Then** retorna 404 e informa los idiomas disponibles | EP-01 |
 | US36 | Endpoint de Registro de Eventos de Conversión | Como developer, quiero exponer un endpoint que reciba eventos de interacción, para alimentar la analítica de conversión de la landing. | • Todo evento requiere el campo obligatorio "event_type". | **Scenario 1 - Evento válido:**<br>**Given** POST /analytics/events con tipo de evento válido y parámetros de sesión<br>**When** el servidor valida la estructura del evento<br>**Then** retorna 202 y encola el evento<br><br>**Scenario 2 - Campo faltante:**<br>**Given** POST /analytics/events sin el campo "event_type"<br>**When** el servidor valida el payload<br>**Then** retorna 400 indicando el campo faltante | EP-01 |
 
-_(Tabla 1. Useer Stories del del proyecto - Elaboración propia)_
+_(Tabla 1. User Stories del del proyecto - Elaboración propia)_
 
-Estas son las 39 User Stories que definen el ciclo de vida de Veygo. 
+---
+
+## 3.2. Impact Mapping 
+
+En esta sección se expone el Impact Mapping del proyecto, una tecnica que conecta los objetivos de negocio con las funcionalidades a desarrollar. El proceso inicio con la definición de los Business Goals bajo criterios SMART, seguido de la identificación de los Actores (User Personas) que influyen en su cumplimiento. Para cada actor se establecieron los Impacts esperados en su comportamiento y, a partir de ellos, se listaron los Deliverables que podrían generarlos. Finalmente, cada deliverable se vinculó con User Stories concretas que lo hacen tangible.
+
+![ImpactMap1](assets/img/Impact%20map_Veygo1.png)
+_Figura 1. Impact Mapping-Elaboración propia. Nota:BG1 y BG2 son especificos, medibles, alcanzables para una etapa de validación en Lima y relevante. Definidos en plazo de 6 meses._
+
+![ImpactMap2](assets/img/Impact%20map_Veygo2.png)
+_Figura 2. Impact Mapping-Elaboración propia. Nota: BG3 mide la adopción real de la plataforma, coherente con Hypotehsis Statement 5._
+
+![ImpactMap3](assets/img/Impact%20map_Veygo3.png)
+_Figura 3. Impact Mapping-Elaboración propia. Nota: BG4 ataca el problema identificado en las 5w's y 2 h's, medible como tasa porcentual con plazo definido._
