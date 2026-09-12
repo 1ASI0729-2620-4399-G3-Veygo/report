@@ -17,7 +17,7 @@
 | Código | Nombre                          |
 | :---: | :---: |
 |        | Josue Antonio Flores Apaico     |
-|        | Fabrizio Hamet Cano Ortiz       |
+|U202410869| Fabrizio Hamet Cano Ortiz       |
 |U202415412| Marlon Alessandro Flores Siguas |
 |U20241A995| Ivonne Beatriz Ibañez Torres    |
 |        | Eddo Su Caletti                 |
