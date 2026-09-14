@@ -1,4 +1,8 @@
-## 3.2 User Stories
+# Capítulo III: Requirements Specification
+
+---
+
+## 3.1 User Stories
 
 En esta sección se definen las Historias de Usuario (User Stories) y las Historias Técnicas (Technical Stories) de Veygo, estructuradas a partir de los Épicos identificados. Se consideran tres tipos de rol para la redacción: **Cliente** y **Propietario** (usuarios autenticados de la plataforma), **Visitante** (rol base para las historias del sitio web estático o Landing Page) y **Developer** (rol utilizado en las Historias Técnicas orientadas al API RESTful). Cada historia sigue el formato estándar (Como [Rol] Quiero [Acción] Para [Beneficio]), Escenarios y sus Criterios de Aceptación se redactan en tiempo presente, tercera persona, sin referencias a interfaz de usuario, siguiendo la estructura Gherkin (Given–When–Then / Dado que–Cuando–Entonces).
 
@@ -6,7 +10,7 @@ En esta sección se definen las Historias de Usuario (User Stories) y las Histor
 
 Las Epics representan agrupaciones de alto nivel que organizan las funcionalidades principales de Veygo. Cada épica reúne un conjunto de historias de usuario relacionadas, permitiendo estructurar el sistema en bloques funcionales y facilitar la planificación del desarrollo de manera clara y escalable. En la gestión ágil, mantener una jerarquía clara donde las Épicas grandes se desglosan en Historias de Usuario específicas es fundamental para organizar el flujo de trabajo del equipo de desarrollo.
 
-| Epic ID | Title | Description | Acceptance Critera | Related to (Epic ID) |
+| Epic ID | Title | Description | Acceptance Criteria | Related to (Epic ID) |
 | :--- | :--- | :--- | :--- | :--- |
 | **EP-01** | Landing Page y Captura de Interés | **Como visitante**, **quiero** conocer la propuesta de valor de Veygo y explorar sus categorías de vehículos, **para** decidir si registrarme como cliente o como propietario. | No aplicable | No aplicable |
 | **EP-02** | Registro, Autenticación y Verificación de Identidad | **Como usuario**, **quiero** registrarme, iniciar sesión y verificar mi identidad, **para** acceder a la plataforma de forma segura y generar confianza en mis transacciones. | No aplicable | No aplicable |
@@ -61,7 +65,7 @@ Las Historias de Usuario describen de manera detallada las funcionalidades del s
 | US35 | Endpoint de Recursos de Internacionalización (i18n) | Como developer, quiero exponer un endpoint que retorne textos traducidos según el idioma solicitado, para soportar el cambio de idioma en el cliente. | • Los idiomas soportados son español ("es") e inglés ("en"). | **Scenario 1 - Idioma soportado:**<br>**Given** GET /i18n/{locale} con un código soportado<br>**When** el servidor localiza el recurso<br>**Then** retorna 200 con el diccionario de textos<br><br>**Scenario 2 - Idioma no soportado:**<br>**Given** GET /i18n/{locale} con un código no soportado<br>**When** el servidor valida el parámetro<br>**Then** retorna 404 e informa los idiomas disponibles | EP-01 |
 | US36 | Endpoint de Registro de Eventos de Conversión | Como developer, quiero exponer un endpoint que reciba eventos de interacción, para alimentar la analítica de conversión de la landing. | • Todo evento requiere el campo obligatorio "event_type". | **Scenario 1 - Evento válido:**<br>**Given** POST /analytics/events con tipo de evento válido y parámetros de sesión<br>**When** el servidor valida la estructura del evento<br>**Then** retorna 202 y encola el evento<br><br>**Scenario 2 - Campo faltante:**<br>**Given** POST /analytics/events sin el campo "event_type"<br>**When** el servidor valida el payload<br>**Then** retorna 400 indicando el campo faltante | EP-01 |
 
-_(Tabla 2. User Stories del del proyecto - Elaboración propia)_
+_(Tabla 2. User Stories del proyecto - Elaboración propia)_
 
 ---
 
