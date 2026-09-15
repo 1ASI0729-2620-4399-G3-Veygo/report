@@ -91,8 +91,6 @@ _Figura 4. Product Backlog - Elaboración propia. Nota: Esta figura muestra la t
 
 **Link:** https://ivonneibanez.atlassian.net/jira/software/projects/PBV/list?jql=project%20%3D%20PBV%20ORDER%20BY%20cf%5B10019%5D%20ASC
 
-
-
 | Story ID | Título| Descripción| Criterios de aceptación| EpicID|
 | :--: | :--| :-- | :-- | :--: |
 | US01     | Verificación de Identidad de Usuarios               | Como usuario registrado, quiero subir mi DNI y Brevete, para validar mi identidad antes de realizar transacciones.                                                 | **Scenario 1 - Carga exitosa:**<br>**Given** que el usuario no tiene su cuenta verificada<br>**When** carga imágenes legibles del anverso y reverso de su DNI y Brevete vigente<br>**Then** el sistema cambia el estado a "En Verificación" y notifica la recepción<br><br>**Scenario 2 - Documento inválido:**<br>**Given** que el usuario carga un documento ilegible, incompleto o que excede el tamaño permitido<br>**When** el sistema valida el archivo<br>**Then** rechaza la carga e indica el motivo                                       | EP-02         |
