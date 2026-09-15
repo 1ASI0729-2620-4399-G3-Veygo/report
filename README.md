@@ -18,7 +18,7 @@
 | :---: | :---: |
 |        | Josue Antonio Flores Apaico     |
 |        | Fabrizio Hamet Cano Ortiz       |
-|        | Marlon Alessandro Flores Siguas |
+|U202415412| Marlon Alessandro Flores Siguas |
 |U20241A995| Ivonne Beatriz Ibañez Torres    |
 |U20221A390        | Eddo Su Caletti                 |
 
