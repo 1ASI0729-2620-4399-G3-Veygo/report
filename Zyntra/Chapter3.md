@@ -24,7 +24,7 @@ Las Epics representan agrupaciones de alto nivel que organizan las funcionalidad
 
 _(Tabla 1. Epics del proyecto - Elaboración propia)_
 
-Las Historias de Usuario describen de manera detallada las funcionalidades del sistema desde la perspectiva de los distintos actores de Veygo. Cada historia especifica el objetivo del usuario, sus criterios de aceptación y escenarios de uso, lo que permite validar el comportamiento esperado del sistema. Esto facilita una comprensión clara de los requerimientos y guía el desarrollo incremental del producto.
+Las Historias de Usuario describen de manera detallada las funcionalidades del sistema desde la perspectiva de los distintos actores de Veygo. Cada historia especifica el objetivo del usuario, sus criterios de aceptación y escenarios de uso, lo que permite validar el comportamiento esperado del sistema. Esto facilita una comprensión clara de los requerimientos y guía el desarrollo incremental del producto  dado.
 
 | Story ID | Título | Descripción | Criterios de aceptación | EpicID |
 | :--- | :--- | :--- | :--- | :--- |
