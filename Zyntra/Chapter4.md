@@ -400,6 +400,13 @@ Link: <a href="https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlW
 Link de video: <a href="https://drive.google.com/file/d/1a2MVvUp9paguAafOVfuw7knAl7k0A4na/view?usp=sharing
 " style="color: blue;"> https://drive.google.com/file/d/1a2MVvUp9paguAafOVfuw7knAl7k0A4na/view?usp=sharing </a>
 
+### 4.6. Domain-Driven Software Architecture
+
+#### 4.6.1. Software Architecture Context Diagram
+
+A continuación, presentamos el modelo C4 de nuestro software, el cual nos servirá como guía durante el desarrollo, permitiéndonos comprender mejor la arquitectura del sistema y la interacción entre sus diferentes componentes.
+
+<img src="assets/img/cap4/SoftwareArchitectureContextDiagram.png" alt="Availability" width="" height="">
 
 
 
