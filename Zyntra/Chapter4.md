@@ -415,8 +415,13 @@ A continuación, presentamos el modelo C4 de nuestro software, el cual nos servi
 
 #### 4.6.3. Software Architecture Components Diagrams
 
-<img src="assets/img/cap4/SoftwareArchitectureComponentsDiagram.png" alt="Availability" width="" height="">
+Diagrama de Componentes de la API RESTful
 
+<img src="assets/img/cap4/ComponentsAPI.png" alt="ComponentsAPI">
+
+Diagrama de Componentes de la Aplicación Web (SPA)
+
+<img src="assets/img/cap4/ComponentsSPA.png" alt="ComponentsSPA">
 
 
 ### 4.7. Software Object-Oriented Design
