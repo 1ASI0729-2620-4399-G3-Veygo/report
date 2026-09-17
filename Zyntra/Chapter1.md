@@ -8,7 +8,7 @@
 
 **Misión:** Nuestra misión es proporcionar una plataforma segura y confiable donde ofrecer tus vehículos como alquiler o buscar un vehículo para alquilar.
 **Visión:** Nuestra vision es la de convertirnos en la plataforma de alquiler de vehículos más confiable y segura del Perú, donde tanto los dueños como los clientes 
-puedan interactuar de una manera rápida y sencilla.
+puedan interactuar de una manera rápida y sencilla con lo explicado.
 
 
 ### 1.1.2. Perfiles de integrantes del equipo
