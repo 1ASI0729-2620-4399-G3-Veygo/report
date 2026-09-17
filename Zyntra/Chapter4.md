@@ -419,8 +419,13 @@ A continuación, presentamos el modelo C4 de nuestro software, el cual nos servi
 
 
 
+### 4.7. Software Object-Oriented Design
 
+El diseño orientado a objetos de Veygo es un elemento fundamental para el desarrollo del software. El sistema ha sido estructurado de acuerdo con las reglas de negocio de la plataforma, buscando crear componentes claros y organizados que faciliten su implementación, mantenimiento y futuras modificaciones por parte del equipo.
 
+#### 4.7.1. Class Diagrams
+
+<img src="assets/img/cap4/ClassDiagrams.png" alt="Availability" width="" height="">
 
 
 
