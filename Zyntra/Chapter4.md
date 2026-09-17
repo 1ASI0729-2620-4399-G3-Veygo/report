@@ -408,6 +408,10 @@ A continuación, presentamos el modelo C4 de nuestro software, el cual nos servi
 
 <img src="assets/img/cap4/SoftwareArchitectureContextDiagram.png" alt="Availability" width="" height="">
 
+#### 4.6.2. Software Architecture Container Diagrams
+
+<img src="assets/img/cap4/SoftwareArchitectureContainerDiagrams.png" alt="Availability" width="" height="">
+
 
 
 
