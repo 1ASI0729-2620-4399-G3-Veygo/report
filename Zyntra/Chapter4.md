@@ -390,7 +390,15 @@ En conjunto, los mockups permiten apreciar la propuesta visual de Veygo y cómo 
 
 Link: <a href="https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571" style="color: blue;"> https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571 </a>
 
+### 4.5. Web Applications Prototyping
 
+<img src="assets/img/cap4/WebApplicationsPrototyping.jpg" alt="Edit Vehicle" width="" height="">
+
+Link: <a href="https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571" style="color: blue;"> https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571 </a>
+
+
+Link de video: <a href="https://drive.google.com/file/d/1a2MVvUp9paguAafOVfuw7knAl7k0A4na/view?usp=sharing
+" style="color: blue;"> https://drive.google.com/file/d/1a2MVvUp9paguAafOVfuw7knAl7k0A4na/view?usp=sharing </a>
 
 
 
