@@ -384,6 +384,14 @@ En conjunto, los mockups permiten apreciar la propuesta visual de Veygo y cómo 
 
 <img src="assets/img/cap4/Edit Vehicle.png" alt="Edit Vehicle" width="" height="">
 
+#### 4.4.3. Web Applications User Flow Diagrams
+
+<img src="assets/img/cap4/UserFlowDiagrams.jpg" alt="Edit Vehicle" width="" height="">
+
+Link: <a href="https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571" style="color: blue;"> https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571 </a>
+
+
+
 
 
 
