@@ -317,6 +317,8 @@ A través de estas representaciones, se puede comprender la distribución de los
 
 <img src="assets/img/cap4/image 1.png" alt="Image 1" width="" height="">
 
+<img src="assets/img/cap4/image 9.png" alt="Image 9" width="" height="">
+
 <img src="assets/img/cap4/image 2.png" alt="Image 2" width="" height="">
 
 <img src="assets/img/cap4/image 3.png" alt="Image 3" width="" height="">
@@ -331,13 +333,64 @@ A través de estas representaciones, se puede comprender la distribución de los
 
 <img src="assets/img/cap4/image 8.png" alt="Image 8" width="" height="">
 
-<img src="assets/img/cap4/image 9.png" alt="Image 9" width="" height="">
-
 <img src="assets/img/cap4/image 10.png" alt="Image 10" width="" height="">
 
 <img src="assets/img/cap4/image 11.png" alt="Image 11" width="" height="">
 
-<img src="assets/img/cap4/image 12.png" alt="Image 12" width="" height="">
+
+#### 4.4.2. Web Applications Mock-ups
+
+Los mockups que se presentan a continuación muestran una representación detallada de la apariencia visual final de Veygo, nuestra plataforma digital orientada a facilitar el alquiler de vehículos y conectar de manera eficiente a arrendatarios y arrendadores. Cada interfaz ha sido diseñada cuidadosamente para ofrecer una experiencia moderna, intuitiva y fácil de utilizar, considerando las necesidades específicas de ambos tipos de usuarios.
+
+Estas propuestas visuales reflejan cómo será la experiencia final dentro de la plataforma, mostrando la distribución de los contenidos, los elementos de interacción y las principales funcionalidades disponibles. Asimismo, permiten visualizar de manera más precisa la navegación y el funcionamiento de Veygo, desde la búsqueda y reserva de vehículos por parte de los arrendatarios hasta la publicación, gestión de vehículos y administración de reservas por parte de los arrendadores.
+
+En conjunto, los mockups permiten apreciar la propuesta visual de Veygo y cómo el diseño planteado busca brindar una experiencia de alquiler de vehículos clara, organizada y eficiente para los distintos usuarios de la plataforma.
+
+<img src="assets/img/cap4/Sign in.png" alt="Sign In" width="" height="">
+
+<img src="assets/img/cap4/Lessor Sign Up.png" alt="Lessor Sign Up" width="" height="">
+
+<img src="assets/img/cap4/Tenant Sign Up.png" alt="Tenant Sign Up" width="" height="">
+
+<img src="assets/img/cap4/Tenant Dashboard.png" alt="Tenant Dashboard" width="" height="">
+
+<img src="assets/img/cap4/Search Vehicles.png" alt="Search Vehicles" width="" height="">
+
+<img src="assets/img/cap4/My Reservations.png" alt="My Reservations" width="" height="">
+
+<img src="assets/img/cap4/Favorites.png" alt="Favorites" width="" height="">
+
+<img src="assets/img/cap4/Messages.png" alt="Messages" width="" height="">
+
+<img src="assets/img/cap4/My Profile.png" alt="My Profile" width="" height="">
+
+<img src="assets/img/cap4/Vehicle Details.png" alt="Vehicle Details" width="" height="">
+
+<img src="assets/img/cap4/Booking Confirmation.png" alt="Booking Confirmation" width="" height="">
+
+<img src="assets/img/cap4/Lessor Dashboard.png" alt="Lessor Dashboard" width="" height="">
+
+<img src="assets/img/cap4/My Vehicles.png" alt="My Vehicles" width="" height="">
+
+<img src="assets/img/cap4/My Reservations (1).png" alt="My Reservations" width="" height="">
+
+<img src="assets/img/cap4/Availability.png" alt="Availability" width="" height="">
+
+<img src="assets/img/cap4/Transactions.png" alt="Transactions" width="" height="">
+
+<img src="assets/img/cap4/Ratings.png" alt="Ratings" width="" height="">
+
+<img src="assets/img/cap4/Vehicle Details (1).png" alt="Vehicle Details" width="" height="">
+
+<img src="assets/img/cap4/Edit Vehicle.png" alt="Edit Vehicle" width="" height="">
+
+
+
+
+
+
+
+
 
 
 
