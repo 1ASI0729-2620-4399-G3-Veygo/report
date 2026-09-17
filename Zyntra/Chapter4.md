@@ -313,7 +313,31 @@ A través de estas representaciones, se puede comprender la distribución de los
 <img src="assets/img/cap4/Edit Vehicle — Wireframe.png" alt="Vehicle Details Wireframe" width="" height="">
 
 
+#### 4.4.2. Web Applications Wireflow Diagrams
 
+<img src="assets/img/cap4/image 1.png" alt="Image 1" width="" height="">
+
+<img src="assets/img/cap4/image 2.png" alt="Image 2" width="" height="">
+
+<img src="assets/img/cap4/image 3.png" alt="Image 3" width="" height="">
+
+<img src="assets/img/cap4/image 4.png" alt="Image 4" width="" height="">
+
+<img src="assets/img/cap4/image 5.png" alt="Image 5" width="" height="">
+
+<img src="assets/img/cap4/image 6.png" alt="Image 6" width="" height="">
+
+<img src="assets/img/cap4/image 7.png" alt="Image 7" width="" height="">
+
+<img src="assets/img/cap4/image 8.png" alt="Image 8" width="" height="">
+
+<img src="assets/img/cap4/image 9.png" alt="Image 9" width="" height="">
+
+<img src="assets/img/cap4/image 10.png" alt="Image 10" width="" height="">
+
+<img src="assets/img/cap4/image 11.png" alt="Image 11" width="" height="">
+
+<img src="assets/img/cap4/image 12.png" alt="Image 12" width="" height="">
 
 
 
