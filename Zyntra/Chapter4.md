@@ -427,8 +427,17 @@ El diseño orientado a objetos de Veygo es un elemento fundamental para el desar
 
 <img src="assets/img/cap4/ClassDiagrams.png" alt="Availability" width="" height="">
 
+### 4.8. Database Design
 
+Para la persistencia de los datos de la plataforma CareLink, se ha optado por un modelo de base de datos relacional, implementado en MySQL. Esta decisión se basa en la naturaleza estructurada y transaccional de los datos del dominio (perfiles, registros médicos, suscripciones), lo que garantiza la integridad y consistencia de la información.
 
+El diseño del esquema refleja directamente la separación lógica de los Bounded Contexts definidos en la arquitectura, agrupando las tablas por su área de responsabilidad para facilitar el entendimiento y el mantenimiento.
+
+#### 4.8.1. Database Diagram
+
+Antes de revisar el diagrama de base de datos de Veygo, es importante comprender cómo se relacionan las principales entidades del sistema. La base de datos gestiona información de Usuarios, Vehículos, Licencias de Conducir, Disponibilidad, Fotos, Reservas, Favoritos, Mensajes, Reseñas, Pagos y Transacciones. Estas tablas se encuentran relacionadas de acuerdo con las funcionalidades de la plataforma; por ejemplo, un usuario puede registrar vehículos y licencias, publicar su disponibilidad, realizar reservas, guardar vehículos como favoritos y gestionar mensajes y reseñas. Asimismo, las reservas se vinculan con los pagos y sus respectivas transacciones. A continuación, se presenta el diagrama que representa gráficamente estas relaciones.
+
+<img src="assets/img/cap4/DatabaseDiagram.png" alt="Availability" width="" height="">
 
 
 
