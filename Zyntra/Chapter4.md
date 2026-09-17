@@ -267,6 +267,53 @@ Los siguientes mockups representan una visión más cercana a la landing Page de
 
 #### 4.4.1. Web Applications Wireframes
 
+Los wireframes que se presentan a continuación representan la estructura visual y las principales funcionalidades de **Veygo**, una plataforma digital orientada a facilitar el alquiler y la gestión de vehículos, conectando de manera eficiente a arrendatarios y arrendadores. Las interfaces han sido diseñadas buscando proporcionar una experiencia de usuario intuitiva, clara y accesible para ambos tipos de usuarios.
+
+Cada pantalla ha sido planteada para facilitar tareas como la búsqueda y reserva de vehículos, la gestión de publicaciones y disponibilidad, el seguimiento de reservas, la administración de vehículos y la comunicación entre los usuarios. Asimismo, los wireframes permiten visualizar cómo se organiza la información y cómo los usuarios interactuarán con las diferentes funcionalidades de la plataforma.
+
+A través de estas representaciones, se puede comprender la distribución de los elementos en cada sección, las herramientas disponibles y los principales recorridos de navegación dentro de **Veygo**. De esta manera, el diseño busca contribuir a una experiencia de alquiler de vehículos más organizada, sencilla y eficiente para todos los usuarios de la plataforma.
+
+
+<img src="assets/img/cap4/Veygo - Sign In Wireframe.png" alt="Veygo Sign In Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Veygo - Lessor Sign Up Wireframe.png" alt="Veygo Lessor Sign Up Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Veygo - Sign Up Wireframe.png" alt="Veygo Sign Up Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Tenant Dashboard Wireframe.png" alt="Availability Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Search Vehicles - Wireframe.png" alt="Booking Confirmation Wireframe" width="" height="">
+
+<img src="assets/img/cap4/My Reservations — Wireframe.png" alt="Edit Vehicle Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Favorites-Wireframe.png" alt="Favorites Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Messages-Wireframe.png" alt="Lessor Dashboard Wireframe" width="" height="">
+
+<img src="assets/img/cap4/My Profile — Wireframe.png" alt="Lessor Reservations Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Vehicle Details — Wireframe.png" alt="Messages Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Booking Confirmation — Wireframe.png" alt="My Profile Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Lessor Dashboard — Wireframe.png" alt="My Reservations Wireframe" width="" height="">
+
+<img src="assets/img/cap4/My Vehicles — Wireframe.png" alt="My Vehicles Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Lessor Reservations — Wireframe.png" alt="Ratings Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Availability-Wireframe.png" alt="Search Vehicles Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Transactions — Wireframe.png" alt="Tenant Dashboard Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Ratings — Wireframe.png" alt="Transactions Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Vehicle Details — Lessor Wireframe.png" alt="Vehicle Details Lessor Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Edit Vehicle — Wireframe.png" alt="Vehicle Details Wireframe" width="" height="">
+
+
+
 
 
 
