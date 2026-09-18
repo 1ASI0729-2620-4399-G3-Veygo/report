@@ -324,7 +324,6 @@ Una vez finalizadas todas las tareas, el propietario del repositorio realizó la
 
 A continuación, se presentan los nombres de usuario de los integrantes del equipo, junto con algunos de los commits realizados por cada miembro:
 
-### 5.2.1.4. Development Evidence for Sprint Review
 
 | Repository | Branch | Commit Id | Commit Message | Commited by | Committed on (Date) |
 |---|---|---|---|---|---|
@@ -338,10 +337,39 @@ Enlace de historial de commits: https://github.com/1ASI0729-2620-4399-G3-Veygo/l
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
-Al término del Sprint 1, el equipo logró implementar y desplegar satisfactoriamente la primera versión de la Landing Page del sistema Zyntra. La página se encuentra disponible públicamente mediante GitHub Pages.
+Al término del Sprint 1, el equipo logró implementar y desplegar satisfactoriamente la primera versión de la Landing Page del sistema Veygo. La página se encuentra disponible públicamente mediante GitHub Pages.
 
+Link de la página: https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/
 
-<!-- Aca tendremos que detallar las caracteristicas de la landingpage, como el hero, los apartados, el footer -ivn -->
+<h4>Navbar, Hero y estadísticas</h4>
+
+![Veygo1](assets/img/Veygo1.png)
+
+Barra de navegación con selector de idioma, hero principal ("Encuentra el vehículo que necesitas. Alquila con confianza.") con visual del vehículo, tarjetas de segmentación de usuarios (alquilar / publicar vehículo) y la banda de estadísticas de impacto (500+ vehículos, 1,200+ usuarios, 100% garantía, 4.9/5 satisfacción).
+
+<h4>Buscador de vehículos y categorías</h4>
+
+![Veygo2](assets/img/Veygo2.png)
+
+Formulario "¿Dónde y cuándo necesitas un vehículo?" con campos de ubicación, fechas y necesidad, seguido de la sección de categorías con las 5 tarjetas filtrables (Trabajo diario, Familiar y viajes, Trabajo & carga, Aventura todo terreno, Premium & eléctricos), cada una con imagen representativa.
+
+<h4>Proceso operativo y vehículos destacados</h4>
+
+![Veygo3](assets/img/Veygo3.png)
+
+Sección "Así funciona Veygo" con el flujo de 4 pasos (crear cuenta, encontrar vehículo, reservar y pagar, disfrutar el viaje), seguida del grid de vehículos destacados con imagen, tipo de transmisión, calificación, ubicación, capacidad de pasajeros y precio por día.
+
+<h4>Confianza y testimonios</h4>
+
+![Veygo4](assets/img/Veygo4.png)
+
+Sección de Confianza con los tres pilares de seguridad (verificación de identidad con IA, registro de estado pre/post, calificaciones de reputación) y la sección de Testimonios con las tres reseñas de la comunidad (Renato, Mariana, Gianfranco), cada una con foto, rol y calificación de 5 estrellas.
+
+<h4>CTA final y footer</h4>
+
+Llamado a la acción de cierre ("¿Listo para vivir la movilidad del futuro en Lima?") con botones de registro gratuito y soporte por WhatsApp, junto con el footer completo: enlaces de navegación, soporte, redes sociales y datos de respaldo de Veygo S.A.C.
+
+![Veygo5](assets/img/Veygo5.png)
 
 #### 5.2.1.6. Services Documentation Evidence for Sprint Review
 
@@ -349,9 +377,19 @@ Durante el Sprint 1, el alcance de implementación se limitó exclusivamente al 
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-<!--Descripción hhhh y despliegue como su nombre lo dice kkkkkkk  -->
+Durante el Sprint 1, el alcance de la implementación y los objetivos definidos en el Sprint Backlog se centraron exclusivamente en el desarrollo de la Landing Page de Veygo. En esta etapa inicial, el equipo priorizó la creación de una interfaz principal que permitiera presentar de manera clara la propuesta de valor de la plataforma —conectar a propietarios y arrendatarios de vehículos en Lima Metropolitana de forma segura y transparente—, así como sus principales funcionalidades, a través de secciones como el Hero, la segmentación de usuarios, el buscador de vehículos, las categorías, el proceso operativo, los vehículos destacados, la Confianza y los Testimonios.
 
+El trabajo realizado incluyó el diseño visual, la estructuración del contenido y la organización de las secciones clave de la Landing Page, asegurando una experiencia intuitiva, atractiva y alineada con las necesidades identificadas en las fases previas de investigación. Asimismo, se buscó que la página cumpliera con criterios básicos de usabilidad, coherencia visual y comunicación efectiva —reforzados con el soporte bilingüe español/inglés y el diseño responsive— facilitando que cualquier usuario comprenda rápidamente el propósito del sistema y los dos flujos principales del negocio: alquilar un vehículo o publicar el propio.
+
+Cabe resaltar que, debido a la naturaleza introductoria de este Sprint, no se contempló el desarrollo de otras funcionalidades adicionales del sistema, como la conexión con el backend, el flujo completo de autenticación o el procesamiento real de reservas y pagos. El enfoque estuvo completamente orientado a establecer una base sólida a través de la Landing Page, la cual servirá como punto de partida para futuras iteraciones del proyecto. Las siguientes etapas del desarrollo, donde se abordarán nuevas funcionalidades y componentes del sistema —como la integración con el backend, el registro e inicio de sesión funcionales y la gestión real de vehículos y reservas—, se encuentran planificadas para los próximos Sprints, en los cuales se continuará ampliando progresivamente el alcance del producto.
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
-<!-- captura del commits over time del github de la landing page-->
+Durante este Sprint, el equipo concentró sus actividades de implementación y colaboración en el desarrollo de la Landing Page. Para garantizar un trabajo ordenado y con trazabilidad, se utilizó Git como sistema de control de versiones sobre un repositorio público alojado en GitHub, bajo la organización 1ASI0729-2620-4399-G3-Veygo.
+
+A continuación, se presentan las capturas de los analíticos de GitHub que evidencian la participación, los commits y los additions de todos los miembros del equipo durante este Sprint:
+
+![aditions general](assets/img/Commits_sprint1.png)
+
+![commits](assets/img/additions_sprint1_users.png)
+
