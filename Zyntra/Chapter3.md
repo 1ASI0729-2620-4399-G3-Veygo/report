@@ -108,7 +108,6 @@ _Figura 4. Product Backlog - Elaboración propia. Nota: Esta figura muestra la t
 **Link:** https://ivonneibanez.atlassian.net/jira/software/projects/PBV/list?jql=project%20%3D%20PBV%20ORDER%20BY%20cf%5B10019%5D%20ASC
 
 
-
 | # Orden | User Story Id | Título | Descripción | Story Points |
 | :--- | :--- | :--- | :--- | :--- |
 | 1 | US09 | Buscador Rápido de Vehículos | Como visitante, deseo ingresar ubicación, fechas y categoría, para iniciar de inmediato la búsqueda de vehículos. | 3 |
