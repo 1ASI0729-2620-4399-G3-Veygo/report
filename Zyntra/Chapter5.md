@@ -1,7 +1,5 @@
 # Capítulo V: Product Implementation, Validation & Deployment.
 
----
-
 ## 5.1. Software Configuration Management.
 
 Software Configuration Management (SCM), es un conjunto de actividades y procesos que tiene como objetivo organizar y supervisar los cambios que se realizan en el software durante su desarrollo, usaremos esto para garantizar que nuestro producto se mantenga consistente, funcional y confiable, a medida que evoluciona con el tiempo. 
@@ -57,8 +55,10 @@ Para la gestión del código fuente del proyecto, el equipo utilizará Git como 
 
 <h4>Repositorios en Github</h4>
 
-Landing Page:
-Acceptance Test (.feature):
+**Landing Page:** Repositorio público para la página de presentación del producto
+https://github.com/1ASI0729-2620-4399-G3-Veygo/landing-Page
+
+**Acceptance Test:** Repositorio en el que se encuentran los archivos (.feature) en formato Gherkin.
 
 
 <h4>Implementación de Gitflow</h4>
