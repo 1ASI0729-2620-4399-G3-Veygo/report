@@ -259,7 +259,7 @@ Distrito: Los Olivos
  
 **Detalles de la entrevista:**
  
-[[URL de la entrevista]()] — Duración de la entrevista: [4:51]
+[[URL de la entrevista](https://drive.google.com/file/d/1qEhT1fvgC09HdDXzRPTrgDkUVPTtdTVm/view?usp=drive_link)] — Duración de la entrevista: [4:51]
  
 **Transcripción resumen de entrevista:**
 Jordan mostró interés en la plataforma, ya que considera que le brindaría un control más claro sobre el alquiler de sus vehículos. Valoró especialmente las medidas de seguridad que podrían proteger tanto a arrendadores como a arrendatarios, y destacó que contar con un **sistema de reseñas de clientes anteriores** sería una herramienta valiosa para identificar inquilinos confiables y evitar problemas.
@@ -278,7 +278,7 @@ Distrito: San Juan de Lurigancho
  
 **Detalles de la entrevista:**
  
-[[URL de la entrevista]()] — Duración de la entrevista: [5:33]
+[[URL de la entrevista](https://drive.google.com/file/d/1qEhT1fvgC09HdDXzRPTrgDkUVPTtdTVm/view?usp=drive_link)] — Duración de la entrevista: [5:33]
  
 **Transcripción resumen de entrevista:**
 Jose se mostró gratamente impresionado con el producto presentado, ya que incorpora las **medidas de seguridad** que, según indica, siempre se buscan al momento de arrendar un vehículo a un tercero. Señaló que le gustaría que la plataforma también contara con funciones para ver opiniones o comentarios de otros usuarios que ya la hayan utilizado, lo cual aumentaría aún más la confianza.
@@ -297,7 +297,7 @@ Distrito: Bellavista, Callao
  
 **Detalles de la entrevista:**
  
-[[URL de la entrevista]()] — Duración de la entrevista: [3:54]
+[[URL de la entrevista](https://drive.google.com/file/d/1qEhT1fvgC09HdDXzRPTrgDkUVPTtdTVm/view?usp=drive_link)] — Duración de la entrevista: [3:54]
  
 **Transcripción resumen de entrevista:**
 Juan combina su trabajo en un colegio con el alquiler de su Toyota Yaris para generar ingresos adicionales. Es una persona práctica y organizada que gestiona su negocio **manualmente mediante un registro en Excel**, operando principalmente en zonas cercanas a su domicilio.
