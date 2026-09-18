@@ -53,20 +53,17 @@ En esta sección se indica el URL del repositorio utilizado para la elaboración
 
 ### AV1
 
-Durante el desarrollo de la entrega AV1, el equipo distribuyó la elaboración del informe asignando capítulos y secciones específicas a cada integrante según sus áreas de responsabilidad. Cada miembro realizó sus aportes directamente en el repositorio de GitHub mediante commits en ramas individuales, siguiendo la convención de
-Conventional Commits, y luego integrando los cambios mediante Pull Requests hacia la rama develop y después pasando todo a la rama main. Todos los integrantes participaron activamente en la redacción de secciones del informe, asegurando coherencia y calidad en el contenido entregado.
-
+Durante el desarrollo de la entrega AV1, el equipo distribuyó la elaboración del informe asignando capítulos y secciones específicas a cada integrante según sus áreas de responsabilidad. Cada miembro realizó sus aportes directamente en el repositorio de GitHub mediante commits en ramas individuales, siguiendo la convención de Conventional Commits, y luego integrando los cambios mediante Pull Requests hacia la rama develop y después pasando todo a la rama main. Todos los integrantes participaron activamente en la redacción de secciones del informe, asegurando coherencia y calidad en el contenido entregado. 
 Se presenta la evidencia de trabajo segun los Insights de Github.
 
-<!--foto de insight con la opción de agregación-->
+![aditions1](Zyntra/assets/img/report_1_additions.png)
 
-foto de inshig, commits, merge requst y eso 
-
+![network1](Zyntra/assets/img/Network_1.png)
 
 ---
 
 
-<!--falta actualizar los indices, recomeindo hacerlo al final -ivn -->
+# Indice
 
 - [Student Outcome](#student-outcome)
 
