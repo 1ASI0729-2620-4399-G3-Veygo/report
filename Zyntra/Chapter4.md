@@ -267,12 +267,182 @@ Los siguientes mockups representan una visión más cercana a la landing Page de
 
 #### 4.4.1. Web Applications Wireframes
 
+Los wireframes que se presentan a continuación representan la estructura visual y las principales funcionalidades de **Veygo**, una plataforma digital orientada a facilitar el alquiler y la gestión de vehículos, conectando de manera eficiente a arrendatarios y arrendadores. Las interfaces han sido diseñadas buscando proporcionar una experiencia de usuario intuitiva, clara y accesible para ambos tipos de usuarios.
+
+Cada pantalla ha sido planteada para facilitar tareas como la búsqueda y reserva de vehículos, la gestión de publicaciones y disponibilidad, el seguimiento de reservas, la administración de vehículos y la comunicación entre los usuarios. Asimismo, los wireframes permiten visualizar cómo se organiza la información y cómo los usuarios interactuarán con las diferentes funcionalidades de la plataforma.
+
+A través de estas representaciones, se puede comprender la distribución de los elementos en cada sección, las herramientas disponibles y los principales recorridos de navegación dentro de **Veygo**. De esta manera, el diseño busca contribuir a una experiencia de alquiler de vehículos más organizada, sencilla y eficiente para todos los usuarios de la plataforma.
 
 
+<img src="assets/img/cap4/Veygo - Sign In Wireframe.png" alt="Veygo Sign In Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Veygo - Lessor Sign Up Wireframe.png" alt="Veygo Lessor Sign Up Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Veygo - Sign Up Wireframe.png" alt="Veygo Sign Up Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Tenant Dashboard Wireframe.png" alt="Availability Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Search Vehicles - Wireframe.png" alt="Booking Confirmation Wireframe" width="" height="">
+
+<img src="assets/img/cap4/My Reservations — Wireframe.png" alt="Edit Vehicle Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Favorites-Wireframe.png" alt="Favorites Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Messages-Wireframe.png" alt="Lessor Dashboard Wireframe" width="" height="">
+
+<img src="assets/img/cap4/My Profile — Wireframe.png" alt="Lessor Reservations Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Vehicle Details — Wireframe.png" alt="Messages Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Booking Confirmation — Wireframe.png" alt="My Profile Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Lessor Dashboard — Wireframe.png" alt="My Reservations Wireframe" width="" height="">
+
+<img src="assets/img/cap4/My Vehicles — Wireframe.png" alt="My Vehicles Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Lessor Reservations — Wireframe.png" alt="Ratings Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Availability-Wireframe.png" alt="Search Vehicles Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Transactions — Wireframe.png" alt="Tenant Dashboard Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Ratings — Wireframe.png" alt="Transactions Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Vehicle Details — Lessor Wireframe.png" alt="Vehicle Details Lessor Wireframe" width="" height="">
+
+<img src="assets/img/cap4/Edit Vehicle — Wireframe.png" alt="Vehicle Details Wireframe" width="" height="">
 
 
+#### 4.4.2. Web Applications Wireflow Diagrams
+
+<img src="assets/img/cap4/image 1.png" alt="Image 1" width="" height="">
+
+<img src="assets/img/cap4/image 9.png" alt="Image 9" width="" height="">
+
+<img src="assets/img/cap4/image 2.png" alt="Image 2" width="" height="">
+
+<img src="assets/img/cap4/image 3.png" alt="Image 3" width="" height="">
+
+<img src="assets/img/cap4/image 4.png" alt="Image 4" width="" height="">
+
+<img src="assets/img/cap4/image 5.png" alt="Image 5" width="" height="">
+
+<img src="assets/img/cap4/image 6.png" alt="Image 6" width="" height="">
+
+<img src="assets/img/cap4/image 7.png" alt="Image 7" width="" height="">
+
+<img src="assets/img/cap4/image 8.png" alt="Image 8" width="" height="">
+
+<img src="assets/img/cap4/image 10.png" alt="Image 10" width="" height="">
+
+<img src="assets/img/cap4/image 11.png" alt="Image 11" width="" height="">
 
 
+#### 4.4.2. Web Applications Mock-ups
+
+Los mockups que se presentan a continuación muestran una representación detallada de la apariencia visual final de Veygo, nuestra plataforma digital orientada a facilitar el alquiler de vehículos y conectar de manera eficiente a arrendatarios y arrendadores. Cada interfaz ha sido diseñada cuidadosamente para ofrecer una experiencia moderna, intuitiva y fácil de utilizar, considerando las necesidades específicas de ambos tipos de usuarios.
+
+Estas propuestas visuales reflejan cómo será la experiencia final dentro de la plataforma, mostrando la distribución de los contenidos, los elementos de interacción y las principales funcionalidades disponibles. Asimismo, permiten visualizar de manera más precisa la navegación y el funcionamiento de Veygo, desde la búsqueda y reserva de vehículos por parte de los arrendatarios hasta la publicación, gestión de vehículos y administración de reservas por parte de los arrendadores.
+
+En conjunto, los mockups permiten apreciar la propuesta visual de Veygo y cómo el diseño planteado busca brindar una experiencia de alquiler de vehículos clara, organizada y eficiente para los distintos usuarios de la plataforma.
+
+<img src="assets/img/cap4/Sign in.png" alt="Sign In" width="" height="">
+
+<img src="assets/img/cap4/Lessor Sign Up.png" alt="Lessor Sign Up" width="" height="">
+
+<img src="assets/img/cap4/Tenant Sign Up.png" alt="Tenant Sign Up" width="" height="">
+
+<img src="assets/img/cap4/Tenant Dashboard.png" alt="Tenant Dashboard" width="" height="">
+
+<img src="assets/img/cap4/Search Vehicles.png" alt="Search Vehicles" width="" height="">
+
+<img src="assets/img/cap4/My Reservations.png" alt="My Reservations" width="" height="">
+
+<img src="assets/img/cap4/Favorites.png" alt="Favorites" width="" height="">
+
+<img src="assets/img/cap4/Messages.png" alt="Messages" width="" height="">
+
+<img src="assets/img/cap4/My Profile.png" alt="My Profile" width="" height="">
+
+<img src="assets/img/cap4/Vehicle Details.png" alt="Vehicle Details" width="" height="">
+
+<img src="assets/img/cap4/Booking Confirmation.png" alt="Booking Confirmation" width="" height="">
+
+<img src="assets/img/cap4/Lessor Dashboard.png" alt="Lessor Dashboard" width="" height="">
+
+<img src="assets/img/cap4/My Vehicles.png" alt="My Vehicles" width="" height="">
+
+<img src="assets/img/cap4/My Reservations (1).png" alt="My Reservations" width="" height="">
+
+<img src="assets/img/cap4/Availability.png" alt="Availability" width="" height="">
+
+<img src="assets/img/cap4/Transactions.png" alt="Transactions" width="" height="">
+
+<img src="assets/img/cap4/Ratings.png" alt="Ratings" width="" height="">
+
+<img src="assets/img/cap4/Vehicle Details (1).png" alt="Vehicle Details" width="" height="">
+
+<img src="assets/img/cap4/Edit Vehicle.png" alt="Edit Vehicle" width="" height="">
+
+#### 4.4.3. Web Applications User Flow Diagrams
+
+<img src="assets/img/cap4/UserFlowDiagrams.jpg" alt="Edit Vehicle" width="" height="">
+
+Link: <a href="https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571" style="color: blue;"> https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571 </a>
+
+### 4.5. Web Applications Prototyping
+
+<img src="assets/img/cap4/WebApplicationsPrototyping.jpg" alt="Edit Vehicle" width="" height="">
+
+Link: <a href="https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571" style="color: blue;"> https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571 </a>
+
+
+Link de video: <a href="https://drive.google.com/file/d/1a2MVvUp9paguAafOVfuw7knAl7k0A4na/view?usp=sharing
+" style="color: blue;"> https://drive.google.com/file/d/1a2MVvUp9paguAafOVfuw7knAl7k0A4na/view?usp=sharing </a>
+
+### 4.6. Domain-Driven Software Architecture
+
+#### 4.6.1. Software Architecture Context Diagram
+
+A continuación, presentamos el modelo C4 de nuestro software, el cual nos servirá como guía durante el desarrollo, permitiéndonos comprender mejor la arquitectura del sistema y la interacción entre sus diferentes componentes.
+
+<img src="assets/img/cap4/SoftwareArchitectureContextDiagram.png" alt="Availability" width="" height="">
+
+#### 4.6.2. Software Architecture Container Diagrams
+
+<img src="assets/img/cap4/SoftwareArchitectureContainerDiagrams.png" alt="Availability" width="" height="">
+
+
+#### 4.6.3. Software Architecture Components Diagrams
+
+Diagrama de Componentes de la API RESTful
+
+<img src="assets/img/cap4/ComponentsAPI.png" alt="ComponentsAPI">
+
+Diagrama de Componentes de la Aplicación Web (SPA)
+
+<img src="assets/img/cap4/ComponentsSPA.png" alt="ComponentsSPA">
+
+
+### 4.7. Software Object-Oriented Design
+
+El diseño orientado a objetos de Veygo es un elemento fundamental para el desarrollo del software. El sistema ha sido estructurado de acuerdo con las reglas de negocio de la plataforma, buscando crear componentes claros y organizados que faciliten su implementación, mantenimiento y futuras modificaciones por parte del equipo.
+
+#### 4.7.1. Class Diagrams
+
+<img src="assets/img/cap4/ClassDiagrams.png" alt="Availability" width="" height="">
+
+### 4.8. Database Design
+
+Para la persistencia de los datos de la plataforma CareLink, se ha optado por un modelo de base de datos relacional, implementado en MySQL. Esta decisión se basa en la naturaleza estructurada y transaccional de los datos del dominio (perfiles, registros médicos, suscripciones), lo que garantiza la integridad y consistencia de la información.
+
+El diseño del esquema refleja directamente la separación lógica de los Bounded Contexts definidos en la arquitectura, agrupando las tablas por su área de responsabilidad para facilitar el entendimiento y el mantenimiento.
+
+#### 4.8.1. Database Diagram
+
+Antes de revisar el diagrama de base de datos de Veygo, es importante comprender cómo se relacionan las principales entidades del sistema. La base de datos gestiona información de Usuarios, Vehículos, Licencias de Conducir, Disponibilidad, Fotos, Reservas, Favoritos, Mensajes, Reseñas, Pagos y Transacciones. Estas tablas se encuentran relacionadas de acuerdo con las funcionalidades de la plataforma; por ejemplo, un usuario puede registrar vehículos y licencias, publicar su disponibilidad, realizar reservas, guardar vehículos como favoritos y gestionar mensajes y reseñas. Asimismo, las reservas se vinculan con los pagos y sus respectivas transacciones. A continuación, se presenta el diagrama que representa gráficamente estas relaciones.
+
+<img src="assets/img/cap4/DatabaseDiagram.png" alt="Availability" width="" height="">
 
 
 
