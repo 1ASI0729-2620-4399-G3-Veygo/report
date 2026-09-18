@@ -443,12 +443,3 @@ El diseño del esquema refleja directamente la separación lógica de los Bounde
 Antes de revisar el diagrama de base de datos de Veygo, es importante comprender cómo se relacionan las principales entidades del sistema. La base de datos gestiona información de Usuarios, Vehículos, Licencias de Conducir, Disponibilidad, Fotos, Reservas, Favoritos, Mensajes, Reseñas, Pagos y Transacciones. Estas tablas se encuentran relacionadas de acuerdo con las funcionalidades de la plataforma; por ejemplo, un usuario puede registrar vehículos y licencias, publicar su disponibilidad, realizar reservas, guardar vehículos como favoritos y gestionar mensajes y reseñas. Asimismo, las reservas se vinculan con los pagos y sus respectivas transacciones. A continuación, se presenta el diagrama que representa gráficamente estas relaciones.
 
 <img src="assets/img/cap4/DatabaseDiagram.png" alt="Availability" width="" height="">
-
-
-
-
-
-
-
-
-
