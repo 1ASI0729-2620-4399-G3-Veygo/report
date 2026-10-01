@@ -1,1 +1,7 @@
-#conclusiones
+# Conclusiones
+
+- El Sprint 1 permitió al equipo cumplir satisfactoriamente con el objetivo planteado en el Sprint Backlog: el desarrollo completo de la Landing Page de Veygo como punto de entrada principal a la plataforma. Se logró construir una interfaz funcional, visualmente coherente y alineada con la propuesta de valor del producto, cubriendo la totalidad de las secciones planificadas —Hero, segmentación de usuarios, buscador de vehículos, categorías, proceso operativo, vehículos destacados, Confianza, Testimonios y footer— junto con soporte bilingüe (español/inglés) y un diseño adaptable a distintos dispositivos.
+
+- Asimismo, se concluye que, al tratarse de un Sprint de carácter introductorio, el alcance se mantuvo intencionalmente acotado a la capa de presentación, sin abordar aún la lógica de negocio ni la integración con un backend. Esta decisión permitió priorizar la calidad y coherencia de la primera impresión que recibirá el usuario, sentando una base sólida sobre la cual construir las funcionalidades transaccionales del producto.
+
+- Como resultado, el equipo se encuentra en condiciones de avanzar hacia los siguientes Sprints, donde el foco estará puesto en la integración del formulario de búsqueda y los flujos de registro e inicio de sesión con un backend real, la incorporación del banco de imágenes definitivo del producto, y la implementación de pruebas de accesibilidad y rendimiento, ampliando de forma progresiva el alcance funcional de Veygo.
