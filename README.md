@@ -1,30 +1,52 @@
 <div align = "center">
   
   <img style="height: 150px" src="Zyntra/assets/img/UPClogo.png">
+  
   <h1>Universidad Peruana de Ciencias Aplicadas</h1>
-  <h2 >Carrera de Ingeniería de Software</h2>
+  <h2>Carrera de Ingeniería de Software</h2>
+  
   <br>
+  
   <h2>1ASI0730</h2>
   <h2>Aplicaciones Web</h2>
-  <h2 >Sección: 2620</h2>
-  <h2 >NRC: 16712</h2>
-  <br>
-  <h2 >Startup: Zyntra</h2>
-  <h2 >Producto: Veygo</h2>
-  <br>
-  <h3 >Integrantes:</h3>
 
-| Código | Nombre                          |
-| :---: | :---: |
-|U20201F773|Josue Antonio Flores Apaico|
-|U202410869|Fabrizio Hamet Cano Ortiz|
-|U202415412|Marlon Alessandro Flores Siguas|
-|U20241A995|Ivonne Beatriz Ibañez Torres|
-|U20221A390| Eddo Su Caletti|
+  <h3>NRC</h3>
+  <h2>16712</h2>
+  
+  <br>
+  
+  <h1>Informe del Trabajo Final</h1>
 
   <br>
-  <h2 >Periodo 2026-2</h2>
-  <h3>Agosto del 2026</h3>
+
+  <h3>Docente</h3>
+  <h2>Sánchez Seña, Alberto Wilmer</h2>
+
+  <br>
+
+  <h3>Equipo</h3>
+  <h2>Zyntra</h2>
+
+  <h3>Proyecto</h3>
+  <h2>Veygo</h2>
+
+  <br>
+
+  <h3>Integrantes</h3>
+
+| Código | Apellidos y Nombres |
+| :---: | :--- |
+| U20201F773 | Josue Antonio Flores Apaico |
+| U202410869 | Fabrizio Hamet Cano Ortiz |
+| U202415412 | Marlon Alessandro Flores Siguas |
+| U20241A995 | Ivonne Beatriz Ibañez Torres |
+| U20221A390 | Eddo Su Caletti |
+
+  <br>
+  
+  <h3>Periodo 202620</h3>
+  <h3>Septiembre 2026</h3>
+  
 </div>
 
 ---
