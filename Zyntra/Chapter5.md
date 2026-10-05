@@ -393,3 +393,22 @@ A continuación, se presentan las capturas de los analíticos de GitHub que evid
 
 ![commits](assets/img/additions_sprint1_users.png)
 
+### 5.2.2. Sprint 2
+#### 5.2.2.1.Sprint Planning 2.
+
+#### 5.2.2.2. Aspect Leaders and Collaborators.
+
+#### 5.2.2.3.Sprint Backlog 2.
+
+#### 5.2.2.4.Development Evidence for Sprint Review.
+
+#### 5.2.2.5.Execution Evidence for Sprint Review.
+Se adjuntan evidencias del despliegue de la primera version del frontend, cubriendo las user stories previamente mencionadas
+
+#### 5.2.2.6.Services Documentation Evidence for Sprint Review.
+Nuestro frontend consumen diversos endpoints localizados en la carpeta server en la raíz de nuestro proyecto:
+
+
+#### 5.2.2.7.Software Deployment Evidence for Sprint Review.
+
+#### 5.2.2.8.Team Collaboration Insights during Sprint.
