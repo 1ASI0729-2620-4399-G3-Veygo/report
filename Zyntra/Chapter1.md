@@ -7,7 +7,7 @@
 **Veygo** es una plataforma digital innovadora diseñada para simplificar y optimizar el proceso de alquiler vehicular (automóviles y motocicletas) entre arrendadores (propietarios particulares o agencias) y potenciales clientes. La solución integra un ecosistema digital seguro e intuitivo que facilita la verificación de identidad (login), la búsqueda geolocalizada mediante un mapa en tiempo real para ubicar vehículos cercanos al punto de entrega, la selección personalizada a través de filtros especializados (como tipo de energía: eléctrico, o transmisión: manual), un calendario dinámico de disponibilidad actualizado al instante y un panel administrativo completo con métricas clave como el total de vehículos activos y transacciones completadas.
 
 **Misión:** Nuestra misión es proporcionar una plataforma segura y confiable donde ofrecer tus vehículos como alquiler o buscar un vehículo para alquilar.
-**Visión:** Nuestra vision es la de convertirnos en la plataforma de alquiler de vehículos más confiable y segura del Perú, donde tanto los dueños como los clientes 
+**Visión:** Nuestra visión es la de convertirnos en la plataforma de alquiler de vehículos más confiable y segura del Perú, donde tanto los dueños como los clientes 
 puedan interactuar de una manera rápida y sencilla con lo explicado.
 
 
@@ -38,7 +38,7 @@ El mercado de alquiler de transporte personal (carros y motos) enfrenta serias i
   * Carencia de paneles de control para medir el desempeño de su negocio (transacciones completadas y volumen de vehículos).
   * Inseguridad al entregar vehículos sin un proceso claro de autenticación y verificación de identidad.
 
-Con el propósito de entender mas a fondo las necesidades de nuestros usuarios, analizaremos sus antecedentes y la problemática utilizando la técnica **5W’s & 2H’s**. Según Progress Lean (2014), esta herramienta se basa en siete preguntas clave: What? (¿Cuál es el problema?), When? (¿Cuándo estamos viendo el problema?¿En qué momento del día y/o del progreso en cuestión?), Where? (¿Dónde estamos viendo este problema?¿En dónde estamos viendo el problema?), Who? (¿A quién le sucede? ¿A quienes afecta?), Why? (¿Porqué sucede el problema?), How? (¿Cómo ocurre el problema?) y How Much? (¿Cuántos problemas se dan en un día?¿Una semana?¿En un mes?¿Cuánto dinero está implicado?).
+Con el propósito de entender más a fondo las necesidades de nuestros usuarios, analizaremos sus antecedentes y la problemática utilizando la técnica **5W’s & 2H’s**. Según Progress Lean (2014), esta herramienta se basa en siete preguntas clave: What? (¿Cuál es el problema?), When? (¿Cuándo estamos viendo el problema?¿En qué momento del día y/o del progreso en cuestión?), Where? (¿Dónde estamos viendo este problema?¿En dónde estamos viendo el problema?), Who? (¿A quién le sucede? ¿A quienes afecta?), Why? (¿Porqué sucede el problema?), How? (¿Cómo ocurre el problema?) y How Much? (¿Cuántos problemas se dan en un día?¿Una semana?¿En un mes?¿Cuánto dinero está implicado?).
 
 
  **What**
@@ -67,7 +67,7 @@ de vehículos opacan a los dueños particulares que buscan ofrecer sus vehículo
  **How**
 _¿En qué condiciones los clientes usan nuestro producto?_
 Implementando una plataforma segura que garantice tanto al cliente como al dueño una experiencia segura y confiable 
-incorporando un sistema de evaluación y reseñas, donde ambos puedan calificar su experiencia de alquiler, asi como exigiendo documentos
+incorporando un sistema de evaluación y reseñas, donde ambos puedan calificar su experiencia de alquiler, así como exigiendo documentos
 importantes tales como DNI, Brevete, etc.
 
  **How much**
@@ -76,9 +76,13 @@ El problema afecta tanto a propietarios que buscan generar ingresos con sus veh�
 
 
 ### 1.2.2 Lean UX Process
-Lean UX es un enfoque de diseño de experiencia de usuario adaptado a entornos de trabajo ágils, que combina tre bases conceptuales: los principios de desing thinking centrados en las necesidades reales del usuario, las prácticas del desarrollo ágil orientadas al trabajo iterativo e incremental en equipos multidiciplinarios, y los principios de Lean Starup, enfocados en validar hipótesis de negocio con el menor desperdicio de recursos posible (Gothelf & Seiden, 2021). Su propósito central es reducir el riesgo de construir soluciones que no generen valor, promoviendo la colaboración constante entre el equipo y los usuarios finales antes de inventir en el desarrollo.
+Lean UX es un enfoque de diseño de experiencia de usuario adaptado a entornos de trabajo ágiles, que combina tres bases conceptuales: los principios de design thinking centrados en las necesidades reales del usuario, las prácticas del desarrollo ágil orientadas al trabajo iterativo e incremental en equipos multidisciplinarios, y los principios de Lean Startup, enfocados en validar hipótesis de negocio con el menor desperdicio de recursos posible (Gothelf & Seiden, 2021). Su propósito central es reducir el riesgo de construir soluciones que no generen valor, promoviendo la colaboración constante entre el equipo y los usuarios finales antes de invertir en el desarrollo.
 
-Siguiendo la 3ra edición del libro, que organiza el proceso alrededor del Lean UX Canvas, el equipo desarrollo cuatro etapas para transformar la idea de Veygo en una propuesta validada: la declaración del **Problem Statement**, que enmarca el problema desde la perspectiva de propietarios y arrendatarios de vehículos; la identificación de **Assumptions**, donde se explicitan las creencias del equipo sobre el negocio, los usuarios y las funcionalidades necesarias; la formulación de **Hypothesis Statements**, que traducen dichas creencias en enunciados comprobables; y finalmente el **Lean UX Canvas**, que consolida visualmente todos los elementos anteriores.
+Siguiendo la tercera edición de Lean UX y la estructura del Lean UX Canvas propuesta por Jeff Gothelf, el equipo organizó el proceso de descubrimiento de Veygo partiendo del problema de negocio y de los resultados de negocio esperados. Posteriormente, se identificaron los principales usuarios, los resultados y beneficios que estos esperan obtener, y las posibles soluciones o funcionalidades capaces de producir dichos cambios de comportamiento.
+
+A partir de estas relaciones se formularon hipótesis comprobables siguiendo la estructura: Business Outcome -> User -> User Outcome/Benefit -> Feature. De esta manera, cada funcionalidad propuesta para Veygo se considera una hipótesis y no una solución definitiva, y su valor dependerá de que genere un cambio observable en el comportamiento del usuario que contribuya directamente a un resultado de negocio.
+
+Finalmente, las hipótesis permiten identificar los supuestos de mayor riesgo y definir qué debe aprender primero el equipo mediante experimentos de validación antes de realizar una inversión significativa en desarrollo.
 
 #### 1.2.2.1. Lean UX Problem Statements
 
@@ -90,7 +94,7 @@ Nuestro producto, Veygo, abordará esta brecha mediante una plataforma digital q
 
 Nuestro enfoque inicial estará dirigido a jóvenes y adultos en Perú que necesitan alquilar un vehículo para sus actividades personales, laborales o turísticas, y a propietarios particulares o pequeñas agencias que desean generar ingresos mediante el alquiler de sus automóviles o motocicletas de manera segura.
 
-Sabremos que tenemos éxito cuando observemos un incremento en el número de usuarios registrados, vehículos publicados, búsquedas y alquileres completados, así como una reducción de cancelaciones relacionadas con problemas de disponibilidad o desconfianza entre clientes y propietarios y un alto nivel de satisfacción de los usuarios.
+Sabremos que estamos resolviendo el problema cuando observemos un incremento en la proporción de búsquedas que culminan en reservas confirmadas y alquileres completados, una mayor cantidad de vehículos con disponibilidad actualizada, un incremento de transacciones entre usuarios verificados y una reducción de cancelaciones ocasionadas por conflictos de disponibilidad.
 
 #### 1.2.2.2. Lean UX Assumptions
 
@@ -102,13 +106,13 @@ Sabremos que tenemos éxito cuando observemos un incremento en el número de usu
 - Creemos que inicialmente Lima será un mercado adecuado para validar el modelo de negocio debido a la concentración de usuarios, vehículos y actividades comerciales y turísticas.
 
 **Business Outcome Assumptions**
-- Creemos que el éxito del negocio se reflejará en un crecimiento sostenido del número de usuarios registrados en Veygo.
-- Creemos que un indicador importante de éxito será el incremento del número de vehículos publicados y disponibles para alquiler.
-- Creemos que el número de alquileres completados será una métrica fundamental para evaluar la adopción de la plataforma.
-- Creemos que una reducción en las cancelaciones relacionadas con problemas de disponibilidad indicará que la plataforma está solucionando una de las principales dificultades del proceso de alquiler.
-- Creemos que un alto porcentaje de usuarios que vuelvan a utilizar la plataforma demostrará que Veygo genera suficiente valor para fomentar la retención.
-- Creemos que un incremento en la percepción de confianza y seguridad de los usuarios se reflejará en una mayor tasa de alquileres completados entre usuarios verificados.
-- Creemos que la satisfacción de los propietarios con la gestión de su actividad de alquiler será un indicador de retención de este segmento en la plataforma.
+- Creemos que incrementar la proporción de búsquedas que culminan en una reserva confirmada será un indicador de mayor adopción de Veygo.
+- Creemos que incrementar la cantidad de alquileres completados dentro de la plataforma será uno de los principales indicadores de generación de valor para Veygo.
+- Creemos que reducir la proporción de cancelaciones ocasionadas por conflictos de disponibilidad permitirá incrementar la cantidad de reservas que culminan exitosamente.
+- Creemos que incrementar la proporción de usuarios que realizan nuevamente una reserva demostrará que la plataforma genera suficiente valor para fomentar la retención.
+- Creemos que incrementar la proporción de alquileres completados entre usuarios con identidad verificada evidenciará que los mecanismos de confianza favorecen las transacciones.
+- Creemos que incrementar la proporción de propietarios que mantienen vehículos activos y con disponibilidad actualizada contribuirá a mantener una oferta suficiente dentro de la plataforma.
+- Creemos que incrementar la proporción de propietarios que gestionan sus reservas y vehículos directamente desde Veygo permitirá reducir la dependencia de medios informales de administración.
 
 **User Assumptions**
 - Creemos que los principales usuarios de Veygo serán jóvenes y adultos que necesitan alquilar automóviles o motocicletas por periodos determinados.
@@ -118,13 +122,14 @@ Sabremos que tenemos éxito cuando observemos un incremento en el número de usu
 - Creemos que tanto clientes como propietarios necesitarán registrarse y proporcionar información que permita verificar su identidad antes de realizar transacciones.
 
 **User Outcome and Benefit Assumptions**
-- Creemos que los clientes desean encontrar vehículos disponibles cerca de su ubicación de manera rápida y sencilla.
-- Creemos que los clientes desean comparar vehículos según características como tipo de vehículo, transmisión, tipo de energía, precio y disponibilidad.
-- Creemos que los clientes desean conocer con anticipación la disponibilidad real del vehículo para evitar problemas durante la reserva.
-- Creemos que los propietarios desean gestionar fácilmente la disponibilidad de sus vehículos y evitar cruces entre reservas.
-- Creemos que los propietarios desean contar con mecanismos que les permitan reducir el riesgo asociado a entregar sus vehículos a personas desconocidas.
-- Creemos que ambos segmentos desean contar con información y reseñas de otros usuarios para tomar decisiones de alquiler con mayor confianza.
-- Creemos que los propietarios desean visualizar el desempeño de sus vehículos, reservas e ingresos en un solo lugar para tomar mejores decisiones sobre su actividad de alquiler.
+- Creemos que los clientes necesitan localizar rápidamente vehículos disponibles cerca de su ubicación.
+- Creemos que los clientes necesitan reducir el tiempo y esfuerzo necesarios para identificar vehículos que cumplan con sus preferencias.
+- Creemos que los clientes necesitan comprobar la disponibilidad real de un vehículo antes de iniciar una reserva.
+- Creemos que los clientes necesitan evaluar la confiabilidad de un propietario antes de confirmar un alquiler.
+- Creemos que los clientes necesitan registrar y confirmar una solicitud de alquiler sin depender de llamadas o mensajes externos.
+- Creemos que los propietarios necesitan mantener actualizada la disponibilidad de sus vehículos sin generar cruces entre reservas.
+- Creemos que los propietarios necesitan evaluar la confiabilidad de los clientes antes de aceptar una solicitud.
+- Creemos que los propietarios necesitan consultar el desempeño de sus vehículos, reservas y transacciones desde un mismo lugar.
 
 **Feature Assumptions**
 - Creemos que un sistema de registro, inicio de sesión y verificación de identidad permitirá aumentar la seguridad y confianza entre clientes y propietarios.
@@ -137,39 +142,51 @@ Sabremos que tenemos éxito cuando observemos un incremento en el número de usu
 
 #### 1.2.2.3 Lean UX Hypothesis Statements
 **Hypothesis Statement 1 — Registro y verificación**
-**Creemos** que lograremos incrementar la tasa de alquileres completados entre usuarios verificados, si clientes y propietarios logran sentirse seguros al interactuar y realizar alquileres con usuarios cuya identidad ha sido verificada, mediante un sistema de registro, inicio de sesión y verificación de identidad.
-**Sabremos** que nuestra hipótesis es válida si aumenta el porcentaje de usuarios que completan el proceso de registro y se incrementa la cantidad de alquileres realizados entre usuarios verificados.
+
+**Creemos que** aumentaremos la cantidad de alquileres completados si clientes y propietarios deciden continuar con una reserva después de verificar la identidad de la contraparte mediante un sistema de registro, inicio de sesión y verificación de identidad.
+
+**Sabremos que nuestra hipótesis es válida** si aumenta la proporción de usuarios verificados que participan en reservas confirmadas y alquileres completados.
 
 **Hypothesis Statement 2 — Geolocalización**
-**Creemos** que lograremos incrementar el número de búsquedas y reservas realizadas, si los clientes logran encontrar rápidamente vehículos disponibles cerca de su ubicación, mediante un mapa con geolocalización de vehículos.
-**Sabremos** que nuestra hipótesis es válida si los usuarios utilizan el mapa para localizar vehículos y aumenta la conversión de búsquedas en reservas.
+
+**Creemos que** aumentaremos la cantidad de reservas y alquileres completados si los clientes logran localizar rápidamente vehículos disponibles cerca de su ubicación mediante un mapa con geolocalización.
+
+**Sabremos que nuestra hipótesis es válida** si aumenta la proporción de usuarios que, después de utilizar el mapa, seleccionan un vehículo e inician una reserva.
 
 **Hypothesis Statement 3 — Filtros de búsqueda**
-**Creemos** que lograremos incrementar la eficiencia de búsqueda y la cantidad de reservas, si los clientes logran encontrar vehículos que se ajusten a sus necesidades específicas, mediante un sistema de filtros por características como tipo de vehículo, transmisión, energía, precio y disponibilidad.
-**Sabremos** que nuestra hipótesis es válida si los usuarios utilizan los filtros y disminuye el tiempo promedio necesario para encontrar un vehículo adecuado.
 
-**Hypothesis Statement 4 — Disponibilidad**
-**Creemos** que lograremos reducir los conflictos y cancelaciones de reservas, si los propietarios logran mantener actualizada la disponibilidad de sus vehículos, mediante un calendario dinámico de disponibilidad.
-**Sabremos** que nuestra hipótesis es válida si disminuyen las reservas canceladas debido a conflictos de fechas y aumenta el porcentaje de vehículos con disponibilidad correctamente actualizada.
+**Creemos que** aumentaremos la cantidad de reservas si los clientes logran reducir el tiempo y esfuerzo necesarios para encontrar un vehículo compatible con sus necesidades mediante filtros por tipo de vehículo, transmisión, energía, precio y disponibilidad.
 
-**Hypothesis Statement 5 — Reservas**
-**Creemos** que lograremos incrementar el número de alquileres completados, si los clientes logran evitar la negociación informal por llamadas o mensajes y obtener la certeza de que su solicitud fue registrada correctamente, mediante un sistema de reservas integrado en la plataforma.
+**Sabremos que nuestra hipótesis es válida** si disminuye el tiempo promedio de búsqueda y aumenta la proporción de búsquedas filtradas que culminan en el inicio de una reserva.
 
-**Sabremos** que nuestra hipótesis es válida si aumenta el porcentaje de solicitudes de alquiler que culminan en una reserva confirmada.
+**Hypothesis Statement 4 — Calendario de disponibilidad**
 
+**Creemos que** reduciremos las cancelaciones ocasionadas por conflictos de disponibilidad si los propietarios logran mantener actualizadas las fechas disponibles de sus vehículos mediante un calendario dinámico.
+
+**Sabremos que nuestra hipótesis es válida** si disminuye la proporción de reservas canceladas por cruces de fechas y aumenta la cantidad de vehículos con disponibilidad actualizada.
+
+**Hypothesis Statement 5 — Sistema de reservas**
+
+**Creemos que** aumentaremos la cantidad de reservas confirmadas y alquileres completados si los clientes logran registrar y confirmar una solicitud sin depender de llamadas o mensajes externos mediante un sistema de reservas integrado.
+
+**Sabremos que nuestra hipótesis es válida** si aumenta la proporción de solicitudes realizadas dentro de Veygo que culminan en una reserva confirmada.
 
 **Hypothesis Statement 6 — Calificaciones y reseñas**
-**Creemos** que lograremos incrementar la tasa de alquileres completados entre usuarios verificados, si clientes y propietarios logran consultar experiencias anteriores antes de realizar un alquiler, mediante un sistema de calificaciones y reseñas para ambas partes.
-**Sabremos** que nuestra hipótesis es válida si aumenta el porcentaje de usuarios que consultan las reseñas y mejora la valoración promedio de confianza y satisfacción de la plataforma.
+
+**Creemos que** aumentaremos la cantidad de alquileres completados y la repetición de uso de Veygo si clientes y propietarios logran evaluar la confiabilidad de la contraparte antes de realizar una transacción mediante un sistema de calificaciones y reseñas.
+
+**Sabremos que nuestra hipótesis es válida** si aumenta la proporción de usuarios que consultan reseñas antes de reservar y la cantidad de usuarios que realizan nuevamente un alquiler.
 
 **Hypothesis Statement 7 — Panel administrativo**
-**Creemos** que lograremos incrementar la eficiencia de gestión de los propietarios, si los propietarios particulares y pequeñas agencias logran conocer el desempeño de sus vehículos y transacciones, mediante un panel administrativo con métricas de vehículos activos, reservas y transacciones completadas.
-**Sabremos** que nuestra hipótesis es válida si los propietarios utilizan regularmente el panel y disminuye el tiempo empleado en gestionar y consultar información sobre sus vehículos.
+
+**Creemos que** aumentaremos la cantidad de vehículos publicados y activos si los propietarios logran gestionar con mayor facilidad sus vehículos, reservas y transacciones mediante un panel administrativo con métricas de gestión.
+
+**Sabremos que nuestra hipótesis es válida** si aumenta la proporción de propietarios que mantienen vehículos activos, disponibilidad actualizada y utilizan regularmente el panel.
 
 #### 1.2.2.4. Lean UX Canvas
 <center>
 
-![Lean ux](assets/img/LeanUXCanva.png)
+![Lean ux](assets/img/lean-ux-canvas-veygo.png)
 
 </center>
 
@@ -195,10 +212,10 @@ Fuente: https://gestion.pe/economia/empresas/mas-peruanos-viajaran-en-2025-los-p
 **Segmento 2: Propietarios particulares (arrendadores)**
 
 _Caracteristicas demográficas:_
-Adultos propietarios de automóviles o motocicletas en Lima, con interés en generar ingresos adicionales mediante el alquiler de sus vehiculos.
+Adultos propietarios de automóviles o motocicletas en Lima, con interés en generar ingresos adicionales mediante el alquiler de sus vehículos.
 
 _Información de sustento:_
 - Según la Encuesta Nacional de Hogares del INEI, en 2024 apenas el 11.73% de los hogares peruanos contaba con un automóvil o camioneta, mientras que la tenencia de motocicletas alcanzó el 16.73%, consolidándose la motocicleta como el vehículo más presente en los hogares del país.
-- El parque de motocicletas en Perú supera los 4 millones de unidades, de las cuales aproximadamente 1.2 millones se concentran en Lima, siendo esta concentración un argumento clave para priorizar Lima como mercado inicial de validación (coherente con tu Business Assumption sobre Lima). 
+- El parque de motocicletas en Perú supera los 4 millones de unidades, de las cuales aproximadamente 1.2 millones se concentran en Lima, siendo esta concentración un argumento clave para priorizar Lima como mercado inicial de validación (coherente con el Business Assumption que prioriza Lima como mercado inicial). 
 
 Fuente: https://m.panamericana.pe/eldominical/locales/470867-crece-venta-motos-41-6-supera-160-mil-unidades-vendidas
