@@ -607,36 +607,300 @@ Los sistemas externos corresponden a los External Systems identificados en el De
 
 #### 4.6.3. Software Architecture Container Diagrams
 
-<img src="assets/img/cap4/SoftwareArchitectureContainerDiagrams.png" alt="Availability" width="" height="">
+El Software Architecture Container Diagram corresponde al segundo nivel del C4 Model y descompone el sistema Veygo en sus contenedores, es decir, en las unidades que se despliegan de forma independiente. El diagrama muestra la responsabilidad de cada contenedor, las tecnologías seleccionadas y la forma en que se comunican entre sí y con los sistemas externos. Fue elaborado con Structurizr DSL.
 
+<img src="assets/img/cap4/SoftwareArchitectureContainerDiagrams.png" alt="Software Architecture Container Diagram de Veygo">
+
+| Container | Tecnología | Responsabilidad |
+|---|---|---|
+| **Landing Page** | HTML5, CSS3, JavaScript | Presenta la propuesta de valor de Veygo y dirige a los visitantes al registro como Renter u Owner. |
+| **Web Application** | Vue, JavaScript, PrimeVue | Single-page application que se ejecuta en el navegador. Permite al Renter buscar y reservar vehículos, y al Owner gestionar su flota, disponibilidad, reservas e ingresos. |
+| **RESTful API** | ASP.NET Core, C#, Entity Framework Core | Expone las capacidades del negocio organizadas por bounded contexts (IAM, Fleet, Booking, Payment, Reputation, Communication y Notification) y se documenta con OpenAPI (Swagger). |
+| **Database** | MySQL Server | Almacena la información de usuarios, perfiles, vehículos, disponibilidad, reservas, pagos, reseñas, conversaciones y notificaciones. |
+
+La comunicación entre los contenedores se realiza de la siguiente manera:
+
+- El **Visitor** accede a la **Landing Page**, desde la cual es redirigido a la **Web Application** para registrarse o iniciar sesión.
+- El **Renter** y el **Owner** interactúan con la **Web Application**, que consume la **RESTful API** mediante peticiones HTTPS con formato JSON.
+- La **Web Application** obtiene los mapas y la ubicación de los vehículos directamente del **Map Service (OpenStreetMap)**.
+- La **RESTful API** persiste la información en la **Database** a través de Entity Framework Core, y se integra con el **Payment Gateway** para los pagos y reembolsos, y con el **Identity Verification Service** para validar documentos y licencias de conducir.
+
+Los módulos de negocio de la RESTful API no se representan como contenedores, ya que forman parte de una misma unidad de despliegue. Su descomposición en bounded contexts y capas se detalla en los Component Diagrams de la siguiente sección.
 
 #### 4.6.4. Software Architecture Components Diagrams
 
-Diagrama de Componentes de la API RESTful
+Los Software Architecture Component Diagrams corresponden al tercer nivel del C4 Model y descomponen cada contenedor de Veygo en sus componentes principales, mostrando sus responsabilidades, sus detalles de implementación y tecnología, y la forma en que interactúan. Se presentan los diagramas de los contenedores que concentran la lógica de la solución: la **Web Application** y la **RESTful API**. La Landing Page no se descompone porque es una página estática, y la Database no contiene componentes de software. Los diagramas fueron elaborados con Structurizr DSL.
 
-<img src="assets/img/cap4/ComponentsAPI.png" alt="ComponentsAPI">
+En ambos contenedores se aplicaron los siguientes patrones de arquitectura:
 
-Diagrama de Componentes de la Aplicación Web (SPA)
+| Patrón | Cómo se refleja en los diagramas |
+|---|---|
+| **Domain-Driven Design (Bounded Contexts)** | Los componentes se agrupan por los bounded contexts identificados en el Design-Level EventStorming (sección 4.6.1): IAM, Profiles, Fleet, Booking, Payment, Reputation, Engagement, Communication, Notification y Dashboard. |
+| **Layered Architecture** | Cada bounded context se organiza en las capas **Interfaces**, **Application**, **Domain** e **Infrastructure**, diferenciadas por color en los diagramas de la RESTful API. |
+| **CQRS** | Las operaciones que modifican el estado se atienden en los **Command Services** y las consultas en los **Query Services**. |
+| **Repository y Unit of Work** | Los **Repositories** encapsulan el acceso a datos con Entity Framework Core, y el **Unit of Work** confirma los cambios de cada command en una sola transacción. |
+| **Domain Events (Observer)** | Las policies del EventStorming se implementan como eventos de dominio que publican los Command Services y atienden los **Event Handlers** de otros contextos. Por ejemplo, `BookingConfirmed` bloquea fechas en Fleet, procesa el pago en Payment y genera una notificación. |
+| **Assembler** | Los Controllers transforman los resources de la API en commands y queries, y los aggregates en resources de respuesta. |
 
-<img src="assets/img/cap4/ComponentsSPA.png" alt="ComponentsSPA">
+##### Web Application Component Diagram
+
+<img src="assets/img/cap4/ComponentsWebApplication.png" alt="Component Diagram de la Web Application">
+
+La Web Application, desarrollada con Vue, JavaScript y PrimeVue, se organiza en un módulo por bounded context. Cada módulo contiene las capas domain (entidades y value objects), application (store), infrastructure (API client y assemblers) y presentation (views y components).
+
+| Componente | Tecnología | Responsabilidad |
+|---|---|---|
+| **Router** | Vue Router | Define las rutas de la aplicación y las protege según el rol del usuario (Renter u Owner). |
+| **Internationalization** | vue-i18n | Traduce la interfaz al inglés (idioma por defecto) y al español. |
+| **Shared Kernel** | JavaScript, Axios, PrimeVue | Contiene el cliente base de la API con su interceptor de errores, los value objects compartidos y los componentes de layout. Es el único componente que se comunica con la RESTful API. |
+| **Domain Event Bus** | JavaScript | Publica los eventos de dominio de la interfaz para que el módulo de notificaciones reaccione a ellos. |
+| **IAM, Profiles, Fleet, Booking, Payment, Reputation, Engagement, Communication, Notification y Dashboard Modules** | Vue, JavaScript, PrimeVue | Implementan las vistas y casos de uso de cada bounded context. El módulo Fleet obtiene además los mapas del Map Service (OpenStreetMap). |
+
+##### RESTful API Component Diagrams
+
+La RESTful API, desarrollada con ASP.NET Core, C# y Entity Framework Core, se presenta en un diagrama de componentes compartidos y un diagrama por bounded context, para que cada uno se pueda leer con claridad.
+
+**Componentes compartidos**
+
+<img src="assets/img/cap4/ComponentsApiOverview.png" alt="Component Diagram de la RESTful API - componentes compartidos">
+
+| Componente | Capa | Tecnología | Responsabilidad |
+|---|---|---|---|
+| **Request Authorization Middleware** | Interfaces | ASP.NET Core Middleware | Valida el token de cada petición antes de que llegue a los controllers. |
+| **Token Service** | Infrastructure | C#, JWT | Genera y valida los JSON Web Tokens. |
+| **Hashing Service** | Infrastructure | C#, BCrypt | Cifra y verifica las contraseñas de los usuarios. |
+| **Unit of Work** | Infrastructure | C#, Entity Framework Core | Confirma los cambios de cada command en una sola transacción. |
+| **Application DbContext** | Infrastructure | Entity Framework Core | Mapea los aggregates de todos los bounded contexts a las tablas de la base de datos. |
+
+Cada bounded context de la API contiene los siguientes componentes:
+
+| Componente | Capa | Tecnología | Responsabilidad |
+|---|---|---|---|
+| **Controller** | Interfaces | ASP.NET Core Web API Controller | Expone los endpoints REST del contexto y transforma los resources mediante assemblers. |
+| **Command Service** | Application | C# Class | Atiende los commands del contexto y aplica las reglas de negocio. |
+| **Query Service** | Application | C# Class | Atiende las consultas del contexto. |
+| **Event Handler** | Application | C# Class | Reacciona a eventos de dominio de otros contextos (solo en Fleet, Payment y Notification). |
+| **Domain Model** | Domain | C# Classes | Contiene los aggregates, entities, value objects, eventos de dominio e interfaces de repositorio. |
+| **Repository** | Infrastructure | C#, Entity Framework Core | Implementa las interfaces de repositorio del dominio. |
+
+**IAM Bounded Context**
+
+<img src="assets/img/cap4/ComponentsIam.png" alt="Component Diagram - IAM Bounded Context">
+
+Gestiona el registro, el inicio de sesión y la verificación de identidad. El IAM Command Service usa el Token Service y el Hashing Service, y valida los documentos con el Identity Verification Service.
+
+**Profiles Bounded Context**
+
+<img src="assets/img/cap4/ComponentsProfiles.png" alt="Component Diagram - Profiles Bounded Context">
+
+Gestiona los datos personales, la licencia de conducir y las preferencias del usuario.
+
+**Fleet Bounded Context**
+
+<img src="assets/img/cap4/ComponentsFleet.png" alt="Component Diagram - Fleet Bounded Context">
+
+Gestiona el registro, la publicación y la disponibilidad de los vehículos. Su Event Handler bloquea o libera fechas ante los eventos de Booking y actualiza la calificación del vehículo ante `ReviewPublished`.
+
+**Booking Bounded Context**
+
+<img src="assets/img/cap4/ComponentsBooking.png" alt="Component Diagram - Booking Bounded Context">
+
+Gestiona el ciclo de vida de la reserva. Antes de aceptar una solicitud, consulta la disponibilidad del vehículo en Fleet, y al confirmar o cancelar una reserva publica eventos de dominio hacia Fleet, Payment y Notification.
+
+**Payment Bounded Context**
+
+<img src="assets/img/cap4/ComponentsPayment.png" alt="Component Diagram - Payment Bounded Context">
+
+Gestiona los pagos, los reembolsos y las transacciones del Owner. Su Event Handler procesa el pago al confirmarse una reserva y el reembolso al cancelarse, a través del Payment Gateway.
+
+**Reputation Bounded Context**
+
+<img src="assets/img/cap4/ComponentsReputation.png" alt="Component Diagram - Reputation Bounded Context">
+
+Gestiona las reseñas y calificaciones, y publica `ReviewPublished` para que Fleet actualice la calificación del vehículo.
+
+**Engagement Bounded Context**
+
+<img src="assets/img/cap4/ComponentsEngagement.png" alt="Component Diagram - Engagement Bounded Context">
+
+Gestiona los vehículos favoritos del Renter.
+
+**Communication Bounded Context**
+
+<img src="assets/img/cap4/ComponentsCommunication.png" alt="Component Diagram - Communication Bounded Context">
+
+Gestiona las conversaciones y los mensajes entre Owner y Renter, y publica `MessageSent` para notificar al destinatario.
+
+**Notification Bounded Context**
+
+<img src="assets/img/cap4/ComponentsNotification.png" alt="Component Diagram - Notification Bounded Context">
+
+Genera las notificaciones de los usuarios a partir de los eventos de dominio de Booking y Communication.
+
+**Dashboard Bounded Context**
+
+<img src="assets/img/cap4/ComponentsDashboard.png" alt="Component Diagram - Dashboard Bounded Context">
+
+Construye las métricas del Owner y del Renter consultando los Query Services de Booking, Payment y Reputation, sin almacenar información propia.
+
 
 
 ### 4.7. Software Object-Oriented Design
 
-El diseño orientado a objetos de Veygo es un elemento fundamental para el desarrollo del software. El sistema ha sido estructurado de acuerdo con las reglas de negocio de la plataforma, buscando crear componentes claros y organizados que faciliten su implementación, mantenimiento y futuras modificaciones por parte del equipo.
+### 4.7. Software Object-Oriented Design
+
+En esta sección se presenta el diseño orientado a objetos de Veygo con mayor nivel de detalle sobre la implementación de los componentes de cada bounded context. Los diagramas parten del modelo obtenido en el Design-Level EventStorming (sección 4.6.1) y de los Component Diagrams de la RESTful API (sección 4.6.4), por lo que mantienen los mismos nombres de aggregates, commands, eventos y servicios.
+
+Las principales características consideradas en los diagramas son:
+
+- **Nomenclatura en inglés**, de acuerdo con el Ubiquitous Language (sección 2.5) y las convenciones de codificación del proyecto.
+- **Tactical Design de Domain-Driven Design**: cada clase indica su rol mediante un estereotipo: `<<Aggregate Root>>`, `<<Entity>>`, `<<Value Object>>`, `<<Domain Event>>`, `<<Specification>>`, `<<enumeration>>` e `<<interface>>`.
+- **Encapsulamiento**: los atributos son privados (`-`) y solo se modifican mediante métodos públicos (`+`) que validan las reglas de negocio. Los métodos internos de validación son privados (`-`) y los métodos para las clases derivadas son protegidos (`#`).
+- **Patrones de diseño**: Repository (interfaces `I...Repository` que extienden `IBaseRepository<TEntity>`), Unit of Work, CQRS (interfaces `I...CommandService` e `I...QueryService`), Factory Method (`Booking.Request`), Specification (`VehicleSearchCriteria`), Domain Events (Observer) y Facade como Anti-Corruption Layer entre bounded contexts (`IFleetContextFacade`).
+- **Relaciones** con nombre, dirección y multiplicidad. Se utiliza composición (rombo relleno) para los value objects y entidades que forman parte de un aggregate, herencia para las clases base y dependencia (línea punteada) para los eventos que publica cada aggregate.
+
+Los diagramas fueron elaborados con Mermaid como Diagram-as-Code.
 
 #### 4.7.1. Class Diagrams
 
-<img src="assets/img/cap4/ClassDiagrams.png" alt="Availability" width="" height="">
+Se presenta un Class Diagram de UML para la RESTful API por cada bounded context, además del Shared Kernel que contiene las clases base reutilizadas por todos los contextos. El bounded context Dashboard no tiene modelo de dominio propio, ya que construye sus métricas consultando los Query Services de Booking, Payment y Reputation.
+
+##### Shared Kernel
+
+<img src="assets/img/cap4/ClassDiagramSharedKernel.png" alt="Class Diagram - Shared Kernel">
+
+Contiene la clase abstracta `AggregateRoot`, que registra los eventos de dominio de cada aggregate mediante el método protegido `AddDomainEvent`; las interfaces `IBaseRepository<TEntity>`, `IUnitOfWork` e `IDomainEventPublisher`; y los value objects compartidos `Money` y `DateRange`.
+
+##### IAM Bounded Context
+
+<img src="assets/img/cap4/ClassDiagramIam.png" alt="Class Diagram - IAM Bounded Context">
+
+El aggregate `User` se identifica por el value object `EmailAddress` y tiene un `UserRole` (Renter u Owner). El `IUserCommandService` utiliza las interfaces `ITokenService`, `IHashingService` e `IIdentityVerificationService`, cuyas implementaciones pertenecen a la capa de infraestructura.
+
+##### Profiles Bounded Context
+
+<img src="assets/img/cap4/ClassDiagramProfiles.png" alt="Class Diagram - Profiles Bounded Context">
+
+El aggregate `Profile` agrupa los value objects `PersonName`, `DriverLicense` y `UserPreferences`. El método `CanBook` verifica que la licencia de conducir esté verificada y vigente antes de permitir una reserva.
+
+##### Fleet Bounded Context
+
+<img src="assets/img/cap4/ClassDiagramFleet.png" alt="Class Diagram - Fleet Bounded Context">
+
+Contiene dos aggregates. `Vehicle` gestiona la publicación del vehículo, su tarifa diaria (`Money`), su ubicación (`VehicleLocation`) y sus fotos (`VehiclePhoto`). `VehicleAvailability` gestiona los periodos bloqueados (`BlockedPeriod`), ya sea por una reserva o por decisión del Owner. La búsqueda se modela con el patrón Specification mediante `VehicleSearchCriteria`.
+
+##### Booking Bounded Context
+
+<img src="assets/img/cap4/ClassDiagramBooking.png" alt="Class Diagram - Booking Bounded Context">
+
+El aggregate `Booking` se crea con el Factory Method estático `Request` y controla su ciclo de vida mediante `BookingStatus`. Cada transición (`Confirm`, `Reject`, `Cancel`, `RegisterPickup`, `RegisterReturn`) valida el estado actual con el método privado `EnsureStatus` y publica el evento de dominio correspondiente. Para no depender del modelo de Fleet, el `IBookingCommandService` consulta la disponibilidad a través de la fachada `IFleetContextFacade`.
+
+##### Payment Bounded Context
+
+<img src="assets/img/cap4/ClassDiagramPayment.png" alt="Class Diagram - Payment Bounded Context">
+
+El aggregate `Payment` registra el cobro de una reserva y su posible reembolso, y genera los `Transaction` que conforman los ingresos del Owner. La integración con el sistema externo se abstrae en la interfaz `IPaymentGateway`, y el value object `IncomeSummary` resume los ingresos de un periodo.
+
+##### Reputation Bounded Context
+
+<img src="assets/img/cap4/ClassDiagramReputation.png" alt="Class Diagram - Reputation Bounded Context">
+
+El aggregate `Review` contiene el value object `Rating`, que valida que la calificación esté entre 1 y 5. El value object `ReputationSummary` calcula el `ReputationLevel` del vehículo o del Owner.
+
+##### Engagement Bounded Context
+
+<img src="assets/img/cap4/ClassDiagramEngagement.png" alt="Class Diagram - Engagement Bounded Context">
+
+El aggregate `Favorite` relaciona a un Renter con un vehículo guardado como favorito.
+
+##### Communication Bounded Context
+
+<img src="assets/img/cap4/ClassDiagramCommunication.png" alt="Class Diagram - Communication Bounded Context">
+
+El aggregate `Conversation` contiene los `Message` intercambiados entre el Owner y el Renter de un vehículo, y publica el evento `MessageSent` al enviarse un mensaje.
+
+##### Notification Bounded Context
+
+<img src="assets/img/cap4/ClassDiagramNotification.png" alt="Class Diagram - Notification Bounded Context">
+
+El aggregate `Notification` se crea a partir de los eventos de dominio de otros contextos. Las clases `BookingEventsHandler` y `MessageSentHandler` implementan la interfaz `IDomainEventHandler<TEvent>` y utilizan el `INotificationCommandService` para generar las notificaciones.
+
 
 ### 4.8. Database Design
 
-Para la persistencia de los datos de la plataforma CareLink, se ha optado por un modelo de base de datos relacional, implementado en MySQL. Esta decisión se basa en la naturaleza estructurada y transaccional de los datos del dominio (perfiles, registros médicos, suscripciones), lo que garantiza la integridad y consistencia de la información.
+Para la persistencia de la información de Veygo se eligió una base de datos relacional implementada en **MySQL Server**, a la que la RESTful API accede mediante **Entity Framework Core**. Esta decisión responde a la naturaleza estructurada y transaccional del dominio: reservas que no deben cruzarse, pagos asociados a cada reserva y reseñas únicas por alquiler. Estas reglas requieren integridad referencial y consistencia en la información.
 
-El diseño del esquema refleja directamente la separación lógica de los Bounded Contexts definidos en la arquitectura, agrupando las tablas por su área de responsabilidad para facilitar el entendimiento y el mantenimiento.
+Las principales características consideradas en el diseño son:
 
-#### 4.8.1. Database Diagram
+- **Organización por bounded context**: las tablas se agrupan según los bounded contexts definidos en el Design-Level EventStorming (sección 4.6.1) y corresponden a los aggregates y entidades de los Class Diagrams (sección 4.7.1).
+- **Nomenclatura en inglés**: nombres de tablas en plural y columnas en `snake_case`, de acuerdo con las convenciones del proyecto.
+- **Claves primarias** `id` de tipo `BIGINT AUTO_INCREMENT` en todas las tablas, y **claves foráneas** con el formato `<entidad>_id`.
+- **Constraints**: `NOT NULL` en los campos obligatorios, `UNIQUE` para los valores que no pueden repetirse (por ejemplo, `email`, `plate` o una sola reseña por reserva), `CHECK` para las reglas de negocio simples (calificación entre 1 y 5, fecha de fin posterior a la fecha de inicio) y `ENUM` para los estados y tipos definidos en el dominio.
+- **Value Objects como columnas**: los value objects del dominio (`Money`, `DateRange`, `VehicleLocation`, `DriverLicense`, `UserPreferences`) se almacenan como columnas de la tabla de su aggregate mediante owned entities de Entity Framework Core. Por ejemplo, `Money` se guarda como `daily_rate_amount` y `daily_rate_currency`.
+- **Columnas de auditoría** `created_at` y `updated_at` en las tablas de los aggregates.
 
-Antes de revisar el diagrama de base de datos de Veygo, es importante comprender cómo se relacionan las principales entidades del sistema. La base de datos gestiona información de Usuarios, Vehículos, Licencias de Conducir, Disponibilidad, Fotos, Reservas, Favoritos, Mensajes, Reseñas, Pagos y Transacciones. Estas tablas se encuentran relacionadas de acuerdo con las funcionalidades de la plataforma; por ejemplo, un usuario puede registrar vehículos y licencias, publicar su disponibilidad, realizar reservas, guardar vehículos como favoritos y gestionar mensajes y reseñas. Asimismo, las reservas se vinculan con los pagos y sus respectivas transacciones. A continuación, se presenta el diagrama que representa gráficamente estas relaciones.
+Los diagramas fueron elaborados con Mermaid como Diagram-as-Code.
 
-<img src="assets/img/cap4/DatabaseDiagram.png" alt="Availability" width="" height="">
+#### 4.8.1. Database Diagrams
+
+Se presenta un Database Diagram por cada bounded context. En cada diagrama, las tablas que pertenecen a otro bounded context se muestran solo con su clave primaria, para evidenciar las relaciones sin repetir su estructura completa. Al final se incluye un diagrama general con las claves de todas las tablas.
+
+##### IAM Bounded Context
+
+<img src="assets/img/cap4/DatabaseDiagramIAM.png" alt="Database Diagram - IAM Bounded Context">
+
+La tabla `users` almacena las credenciales y el rol de cada usuario. El correo electrónico es único y la contraseña se guarda cifrada en `password_hash`.
+
+##### Profiles Bounded Context
+
+<img src="assets/img/cap4/DatabaseDiagramProfiles.png" alt="Database Diagram - Profiles Bounded Context">
+
+La tabla `profiles` tiene una relación uno a uno con `users` (`user_id` es único) y almacena los datos personales, la licencia de conducir y las preferencias del usuario. El número de documento y el de licencia son únicos.
+
+##### Fleet Bounded Context
+
+<img src="assets/img/cap4/DatabaseDiagramFleet.png" alt="Database Diagram - Fleet Bounded Context">
+
+La tabla `vehicles` pertenece a un Owner (`owner_id`) y tiene una placa única. Sus fotos se almacenan en `vehicle_photos`. La disponibilidad se gestiona en `vehicle_availabilities` (una por vehículo) y en `blocked_periods`, que registra los periodos bloqueados por una reserva o por decisión del Owner.
+
+##### Booking Bounded Context
+
+<img src="assets/img/cap4/DatabaseDiagramBooking.png" alt="Database Diagram - Booking Bounded Context">
+
+La tabla `bookings` relaciona un vehículo con su Renter y su Owner, almacena el periodo de alquiler y el total, y controla el estado de la reserva. La tabla `vehicle_handovers` registra la entrega y la devolución del vehículo, con una sola fila por tipo y reserva.
+
+##### Payment Bounded Context
+
+<img src="assets/img/cap4/DatabaseDiagramPayment.png" alt="Database Diagram - Payment Bounded Context">
+
+La tabla `payments` registra un único pago por reserva y su referencia en la pasarela de pagos. La tabla `transactions` almacena los ingresos y reembolsos del Owner por vehículo y reserva, y sirve de base para el reporte de transacciones.
+
+##### Reputation Bounded Context
+
+<img src="assets/img/cap4/DatabaseDiagramReputation.png" alt="Database Diagram - Reputation Bounded Context">
+
+La tabla `reviews` permite una sola reseña por reserva (`booking_id` es único) y restringe la calificación a valores entre 1 y 5.
+
+##### Engagement Bounded Context
+
+<img src="assets/img/cap4/DatabaseDiagramEngagement.png" alt="Database Diagram - Engagement Bounded Context">
+
+La tabla `favorites` relaciona un Renter con un vehículo, sin permitir duplicados para el mismo par `(renter_id, vehicle_id)`.
+
+##### Communication Bounded Context
+
+<img src="assets/img/cap4/DatabaseDiagramCommunication.png" alt="Database Diagram - Communication Bounded Context">
+
+La tabla `conversations` agrupa los mensajes entre el Owner y el Renter de un vehículo, con una sola conversación por combinación de vehículo y participantes. La tabla `messages` almacena el contenido, el remitente y el estado de lectura.
+
+##### Notification Bounded Context
+
+<img src="assets/img/cap4/DatabaseDiagramNotification.png" alt="Database Diagram - Notification Bounded Context">
+
+La tabla `notifications` almacena los avisos generados a partir de los eventos de dominio, con su tipo, el recurso relacionado y el estado de lectura.
+
+##### Diagrama general
+
+<img src="assets/img/cap4/DatabaseDiagramOverview.png" alt="Database Diagram general de Veygo">
+
+El diagrama general muestra las claves primarias, foráneas y únicas de las 17 tablas de Veygo, y evidencia cómo se relacionan los bounded contexts a nivel de persistencia.
