@@ -609,7 +609,7 @@ Los sistemas externos corresponden a los External Systems identificados en el De
 
 El Software Architecture Container Diagram corresponde al segundo nivel del C4 Model y descompone el sistema Veygo en sus contenedores, es decir, en las unidades que se despliegan de forma independiente. El diagrama muestra la responsabilidad de cada contenedor, las tecnologías seleccionadas y la forma en que se comunican entre sí y con los sistemas externos. Fue elaborado con Structurizr DSL.
 
-<img src="assets/img/cap4/SoftwareArchitectureContainerDiagrams.png" alt="Software Architecture Container Diagram de Veygo">
+<img src="assets/img/cap4/Software-Architecture-Container-Diagrams.png" alt="Software Architecture Container Diagram de Veygo">
 
 | Container | Tecnología | Responsabilidad |
 |---|---|---|
