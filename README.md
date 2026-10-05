@@ -87,6 +87,9 @@ Se presenta la evidencia de trabajo segun los Insights de Github.
 Durante la etapa TB1, el equipo realizó la revisión y corrección de las observaciones brindadas por el profesor sobre la entrega AV1, mejorando la documentación y los requisitos del proyecto. Asimismo, se inició la implementación del Frontend web, desarrollando la Landing Page y los componentes de los módulos de Booking y Engagement. Los avances fueron gestionados mediante GitHub, utilizando commits bajo la convención de Conventional Commits, ramas individuales y Pull Requests para integrar los cambios hacia develop y posteriormente main.
 Se presenta la evidencia del trabajo realizado según los Insights de GitHub.
 
+![aditions1](Zyntra/assets/img/report_2_additions.png)
+
+![network1](Zyntra/assets/img/Network_2.png)
 
 
 # Indice
