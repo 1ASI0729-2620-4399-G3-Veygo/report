@@ -186,7 +186,7 @@ Sabremos que estamos resolviendo el problema cuando observemos un incremento en 
 #### 1.2.2.4. Lean UX Canvas
 <center>
 
-![Lean ux](assets/img/LeanUXCanva.png)
+![Lean ux](assets/img/lean-ux-canvas-veygo.png)
 
 </center>
 
