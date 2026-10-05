@@ -402,18 +402,215 @@ Link de video: <a href="https://drive.google.com/file/d/1a2MVvUp9paguAafOVfuw7kn
 
 ### 4.6. Domain-Driven Software Architecture
 
-#### 4.6.1. Software Architecture Context Diagram
+#### 4.6.1. Design-Level EventStorming
 
-A continuación, presentamos el modelo C4 de nuestro software, el cual nos servirá como guía durante el desarrollo, permitiéndonos comprender mejor la arquitectura del sistema y la interacción entre sus diferentes componentes.
+A partir de los resultados del Big Picture EventStorming presentado en la sección 2.4, el equipo realizó una sesión de Design-Level EventStorming con el objetivo de profundizar en el modelado del dominio de Veygo desde la perspectiva de Domain-Driven Design. Mientras que el Big Picture permitió obtener una visión general del proceso de alquiler de vehículos entre propietarios y arrendatarios, en esta etapa se analizó cada proceso con mayor nivel de detalle para identificar los **Commands**, **Actors**, **Aggregates**, **Policies**, **Read Models** y **External Systems** que intervienen, hasta llegar a la definición de los **Bounded Contexts** de la solución.
 
-<img src="assets/img/cap4/SoftwareArchitectureContextDiagram.png" alt="Availability" width="" height="">
+La sesión se realizó de forma remota en **Miro** el día **05/10/2026**, con una duración aproximada de **1 hora y 30 minutos**, y contó con la participación de todos los integrantes del equipo Zyntra. Se siguió la guía de referencia de Design-Level EventStorming (https://bit.ly/dles-guide), priorizando los procesos núcleo del negocio: la publicación de vehículos y el ciclo de vida de una reserva.
 
-#### 4.6.2. Software Architecture Container Diagrams
+Link del tablero: <a href="https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR282TW53OTIwYmlaeDF0bGR3cHQxRFN0R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=980875429092" style="color: blue;">[LINK DE MIRO]</a>
+
+##### Notación utilizada
+
+Para mantener una lectura uniforme del tablero se utilizó la notación estándar de EventStorming. Los nombres de los elementos se escribieron en inglés, de acuerdo con el Ubiquitous Language definido en la sección 2.5.
+
+| Color | Elemento | Descripción | Ejemplo en Veygo |
+|---|---|---|---|
+| Naranja | **Domain Event** | Hecho relevante del negocio que ya ocurrió, redactado en pasado. | `BookingRequested` |
+| Azul | **Command** | Acción o intención que provoca un evento. | `RequestBooking` |
+| Amarillo (pequeño) | **Actor** | Persona o rol que ejecuta el command. | Renter, Owner |
+| Amarillo (grande) | **Aggregate** | Entidad que recibe el command, valida sus reglas y emite el evento. | `Booking` |
+| Lila | **Policy** | Regla reactiva del tipo "cuando ocurre X, entonces se ejecuta Y". | Cuando se confirma una reserva, se bloquean las fechas del vehículo. |
+| Verde | **Read Model** | Información que el actor consulta para tomar una decisión (Query). | Calendario de disponibilidad del vehículo |
+| Rosado | **External System** | Sistema externo con el que interactúa la solución. | Pasarela de pagos, servicio de mapas |
+| Rojo | **Hotspot** | Problema, duda o riesgo identificado en el proceso. | Solicitudes simultáneas para un mismo vehículo |
+E:\Documentos2026\Aplic.Web\RP\report\Zyntra\assets\img\f0.png
+<img src="assets/img/cap4/f0.png" alt="Notación de Design-Level EventStorming">
+
+##### Paso 1: Depuración de los eventos del Big Picture
+
+En primer lugar, se retomaron los eventos identificados en el Big Picture EventStorming y se depuraron: se eliminaron los eventos duplicados, se unificaron los nombres de acuerdo con el Ubiquitous Language y se redactaron todos en tiempo pasado. Luego, los eventos se ordenaron cronológicamente dentro de cada proceso del negocio.
+
+| Proceso | Domain Events |
+|---|---|
+| Registro y verificación | `UserRegistered`, `IdentityVerified`, `DriverLicenseVerified`, `ProfileUpdated` |
+| Publicación de vehículos | `VehicleRegistered`, `VehiclePhotosUploaded`, `VehiclePublished`, `VehicleUnpublished`, `RentalRateUpdated` |
+| Disponibilidad | `DatesBlocked`, `DatesUnblocked` |
+| Búsqueda y selección | `VehicleAddedToFavorites`, `VehicleRemovedFromFavorites` |
+| Reserva | `BookingRequested`, `BookingConfirmed`, `BookingRejected`, `BookingCancelled` |
+| Ejecución del alquiler | `VehiclePickedUp`, `VehicleReturned`, `VehicleConditionReported` |
+| Pago | `PaymentProcessed`, `PaymentFailed`, `RefundIssued`, `OwnerPayoutRegistered` |
+| Reputación | `ReviewPublished`, `VehicleRatingUpdated`, `OwnerRatingUpdated` |
+| Comunicación | `ConversationStarted`, `MessageSent`, `NotificationSent` |
+
+<img src="assets/img/cap4/f1.png" alt="Depuración de eventos del dominio">
+
+##### Paso 2: Identificación de Commands y Actors
+
+Para cada evento se identificó el command que lo origina y el actor que lo ejecuta. En los casos en los que el evento no es provocado por una persona, sino por una regla del sistema, el command se asoció a una policy (paso 4).
+
+| Actor | Command | Domain Event |
+|---|---|---|
+| Renter / Owner | `SignUp` | `UserRegistered` |
+| Renter / Owner | `VerifyIdentity` | `IdentityVerified` |
+| Renter | `RegisterDriverLicense` | `DriverLicenseVerified` |
+| Owner | `RegisterVehicle` | `VehicleRegistered` |
+| Owner | `PublishVehicle` / `UnpublishVehicle` | `VehiclePublished` / `VehicleUnpublished` |
+| Owner | `BlockDates` / `UnblockDates` | `DatesBlocked` / `DatesUnblocked` |
+| Renter | `AddVehicleToFavorites` | `VehicleAddedToFavorites` |
+| Renter | `RequestBooking` | `BookingRequested` |
+| Owner | `ConfirmBooking` / `RejectBooking` | `BookingConfirmed` / `BookingRejected` |
+| Renter / Owner | `CancelBooking` | `BookingCancelled` |
+| Owner | `RegisterPickup` | `VehiclePickedUp` |
+| Owner | `RegisterReturn` | `VehicleReturned` |
+| Renter | `PublishReview` | `ReviewPublished` |
+| Renter / Owner | `SendMessage` | `MessageSent` |
+
+<img src="assets/img/cap4/f2.png" alt="Commands y Actors">
+
+##### Paso 3: Identificación de Aggregates y reglas de negocio
+
+A continuación, se identificaron los aggregates responsables de recibir cada command, validar las reglas de negocio (invariantes) y emitir los eventos correspondientes.
+
+| Aggregate | Commands que recibe | Reglas de negocio (invariantes) |
+|---|---|---|
+| `User` | `SignUp`, `VerifyIdentity`, `RegisterDriverLicense` | El correo electrónico es único. Un Renter solo puede reservar si su licencia de conducir está verificada y vigente. |
+| `Vehicle` | `RegisterVehicle`, `PublishVehicle`, `UnpublishVehicle`, `UpdateRentalRate` | Solo el Owner del vehículo puede modificarlo. Un vehículo solo puede publicarse si tiene fotos, tarifa, ubicación y seguro vigente. |
+| `VehicleAvailability` | `BlockDates`, `UnblockDates` | No se pueden bloquear fechas que ya tienen una reserva confirmada. |
+| `Booking` | `RequestBooking`, `ConfirmBooking`, `RejectBooking`, `CancelBooking`, `RegisterPickup`, `RegisterReturn` | El periodo de alquiler no puede cruzarse con otra reserva confirmada ni con fechas bloqueadas. Un Renter no puede reservar su propio vehículo. Solo se puede confirmar o rechazar una reserva pendiente. |
+| `Payment` | `ProcessPayment`, `IssueRefund` | El monto debe coincidir con el total de la reserva. Solo se reembolsa una reserva cancelada según las condiciones de cancelación. |
+| `Review` | `PublishReview` | Solo se puede calificar un alquiler completado, y una sola vez por reserva. |
+| `Conversation` | `StartConversation`, `SendMessage` | Solo participan el Owner y el Renter relacionados con el vehículo o la reserva. |
+
+<img src="assets/img/cap4/f3.png" alt="Aggregates y reglas de negocio">
+
+##### Paso 4: Identificación de Policies
+
+Luego, se identificaron las policies que conectan los procesos entre sí, es decir, las reacciones automáticas del sistema ante un evento.
+
+| Cuando ocurre... | Entonces se ejecuta... |
+|---|---|
+| `BookingRequested` | Notificar al Owner que tiene una nueva solicitud (`SendNotification`). |
+| `BookingConfirmed` | Bloquear las fechas del periodo en la disponibilidad del vehículo y procesar el pago (`ProcessPayment`). |
+| `BookingRejected` / `BookingCancelled` | Liberar las fechas, emitir el reembolso si corresponde (`IssueRefund`) y notificar a la otra parte. |
+| `PaymentFailed` | Cancelar la reserva y notificar al Renter. |
+| `VehicleReturned` | Registrar el ingreso del Owner (`RegisterOwnerPayout`) y habilitar la calificación del alquiler. |
+| `ReviewPublished` | Recalcular la calificación del vehículo y del Owner. |
+| `MessageSent` | Notificar al destinatario del mensaje. |
+
+<img src="assets/img/cap4/f4.png" alt="Policies">
+
+##### Paso 5: Identificación de Read Models y External Systems
+
+Se identificó la información que cada actor necesita consultar antes de ejecutar un command (Queries), así como los sistemas externos con los que interactúa la solución.
+
+| Read Model (Query) | Actor | Uso |
+|---|---|---|
+| Resultados de búsqueda de vehículos (`SearchVehicles`) | Renter | Filtrar por ubicación, fechas, tipo, precio y calificación antes de reservar. |
+| Detalle del vehículo (`GetVehicleById`) | Renter | Revisar características, tarifa, ubicación y reputación del Owner. |
+| Calendario de disponibilidad (`GetVehicleAvailability`) | Renter / Owner | Verificar fechas libres, reservadas y bloqueadas. |
+| Solicitudes de reserva (`GetOwnerBookings`) | Owner | Decidir si confirma o rechaza una solicitud. |
+| Mis reservas (`GetRenterBookings`) | Renter | Seguir el estado de sus reservas. |
+| Historial de transacciones (`GetOwnerTransactions`) | Owner | Revisar los ingresos por periodo y por vehículo. |
+| Reseñas del vehículo (`GetVehicleReviews`) | Renter / Owner | Conocer la reputación del vehículo y del Owner. |
+
+| External System | Uso |
+|---|---|
+| Pasarela de pagos | Procesar los pagos de las reservas y los reembolsos. |
+| Servicio de mapas (OpenStreetMap) | Mostrar la ubicación de los vehículos y calcular su cercanía. |
+| Servicio de verificación de identidad | Validar el documento de identidad y la licencia de conducir. |
+
+<img src="assets/img/cap4/f5.png" alt="Read Models y External Systems">
+
+##### Paso 6: Revisión de los hotspots del Big Picture
+
+Los hotspots identificados en el Big Picture EventStorming se revisaron a la luz del nuevo modelo, y se tomó una decisión de diseño para cada uno.
+
+| Hotspot | Decisión de diseño |
+|---|---|
+| Disponibilidad desactualizada de los vehículos | El aggregate `VehicleAvailability` se actualiza mediante policies cada vez que una reserva se confirma, se rechaza o se cancela. |
+| Retrasos en la verificación de identidad | La verificación se delega a un External System y se valida como invariante del aggregate `User` antes de permitir una reserva. |
+| Solicitudes simultáneas de un mismo vehículo | El aggregate `Booking` valida que el periodo no se cruce con otra reserva confirmada al momento de confirmarla. |
+| Coordinación del punto de entrega | El Owner y el Renter coordinan mediante el contexto de Communication, y la entrega se registra con `RegisterPickup`. |
+| Diferencias en el estado del vehículo tras el alquiler | Al registrar la devolución (`RegisterReturn`) se emite `VehicleConditionReported` con el estado del vehículo. |
+
+<img src="assets/img/cap4/f6.png" alt="Read Models y External Systems">
+
+##### Paso 7: Definición de los Bounded Contexts
+
+Finalmente, los aggregates se agruparon según su responsabilidad y su lenguaje, lo que dio lugar a los Bounded Contexts de Veygo. Cada uno se contrastó con los sub-dominios habituales de una plataforma SaaS orientada a servicios.
+
+| Bounded Context | Tipo | Sub-dominio de referencia | Responsabilidad |
+|---|---|---|---|
+| **IAM** | Generic | Identity and Access Management | Registro, inicio de sesión, roles (Owner, Renter) y verificación de identidad. |
+| **Profiles** | Supporting | Profiles and Preferences Management | Datos personales, licencia de conducir y preferencias del usuario. |
+| **Fleet** | Core | Resource and Asset Management | Registro y publicación de vehículos, tarifas y disponibilidad. |
+| **Booking** | Core | Service Design and Planning / Service Execution and Monitoring | Ciclo de vida de la reserva: solicitud, confirmación, entrega, devolución y cancelación. |
+| **Payment** | Supporting | Subscriptions and Payment Management | Pagos de reservas, reembolsos e ingresos del Owner. |
+| **Reputation** | Supporting | Loyalty and Engagement | Reseñas y calificaciones de vehículos y propietarios. |
+| **Engagement** | Supporting | Loyalty and Engagement | Vehículos favoritos del Renter. |
+| **Communication** | Supporting | Service Execution and Monitoring | Conversaciones y mensajes entre Owner y Renter. |
+| **Notification** | Supporting | Service Execution and Monitoring | Avisos generados a partir de los eventos del dominio. |
+| **Dashboard** | Supporting | Dashboard and Analytics | Métricas de reservas, ingresos y calificación para el Owner. |
+
+<img src="assets/img/cap4/f7.png" alt="Bounded Contexts de Veygo">
+
+##### Flujo principal modelado: reserva de un vehículo
+
+El siguiente flujo resume cómo se conectan los elementos del modelo en el proceso núcleo de Veygo:
+
+1. El **Renter** consulta el read model *Resultados de búsqueda* y el *Calendario de disponibilidad*.
+2. El **Renter** ejecuta `RequestBooking` sobre el aggregate `Booking`, que valida que el periodo esté libre y emite `BookingRequested`.
+3. La policy de notificación avisa al **Owner**, quien consulta *Solicitudes de reserva* y ejecuta `ConfirmBooking`.
+4. El aggregate `Booking` emite `BookingConfirmed`. Las policies bloquean las fechas en `VehicleAvailability` y ejecutan `ProcessPayment` contra la pasarela de pagos.
+5. En la fecha de inicio, el **Owner** registra `RegisterPickup` (`VehiclePickedUp`). Al finalizar, registra `RegisterReturn` (`VehicleReturned`).
+6. La policy de cierre registra el ingreso del Owner y habilita al **Renter** para ejecutar `PublishReview`, que actualiza la reputación del vehículo y del Owner.
+
+<img src="assets/img/cap4/f8.png" alt="Flujo de reserva modelado en Design-Level EventStorming">
+
+##### Resultado de la sesión
+
+Como resultado del Design-Level EventStorming, el equipo obtuvo un modelo detallado del dominio de Veygo. Este modelo sirve como base para los diagramas de arquitectura (C4 Model), el diagrama de clases y el diseño de la base de datos presentados en las siguientes secciones.
+
+| Bounded Context | Aggregates | Commands | Domain Events | Queries |
+|---|---|---|---|---|
+| IAM | `User` | `SignUp`, `SignIn`, `VerifyIdentity` | `UserRegistered`, `IdentityVerified` | `GetUserById` |
+| Profiles | `Profile` | `UpdateProfile`, `RegisterDriverLicense`, `UpdatePreferences` | `ProfileUpdated`, `DriverLicenseVerified` | `GetProfileByUserId` |
+| Fleet | `Vehicle`, `VehicleAvailability` | `RegisterVehicle`, `PublishVehicle`, `UnpublishVehicle`, `BlockDates`, `UnblockDates` | `VehicleRegistered`, `VehiclePublished`, `DatesBlocked` | `SearchVehicles`, `GetVehicleById`, `GetVehicleAvailability` |
+| Booking | `Booking` | `RequestBooking`, `ConfirmBooking`, `RejectBooking`, `CancelBooking`, `RegisterPickup`, `RegisterReturn` | `BookingRequested`, `BookingConfirmed`, `BookingRejected`, `BookingCancelled`, `VehiclePickedUp`, `VehicleReturned` | `GetRenterBookings`, `GetOwnerBookings` |
+| Payment | `Payment`, `Transaction` | `ProcessPayment`, `IssueRefund`, `RegisterOwnerPayout` | `PaymentProcessed`, `PaymentFailed`, `RefundIssued` | `GetOwnerTransactions` |
+| Reputation | `Review` | `PublishReview` | `ReviewPublished`, `VehicleRatingUpdated` | `GetVehicleReviews`, `GetOwnerReviews` |
+| Engagement | `Favorite` | `AddVehicleToFavorites`, `RemoveVehicleFromFavorites` | `VehicleAddedToFavorites` | `GetRenterFavorites` |
+| Communication | `Conversation` | `StartConversation`, `SendMessage` | `ConversationStarted`, `MessageSent` | `GetUserConversations` |
+| Notification | `Notification` | `SendNotification`, `MarkNotificationAsRead` | `NotificationSent` | `GetUserNotifications` |
+| Dashboard | — (read model) | — | — | `GetOwnerDashboard` |
+
+
+#### 4.6.2. Software Architecture Context Diagram
+
+El Software Architecture Context Diagram corresponde al primer nivel del C4 Model y presenta a Veygo como una caja negra, mostrando quiénes la utilizan y con qué sistemas externos interactúa. Este diagrama permite comprender el alcance de la solución sin entrar en detalles técnicos y sirve como punto de partida para los diagramas de contenedores y componentes presentados en las siguientes secciones. El diagrama fue elaborado con Structurizr DSL.
+
+<img src="assets/img/cap4/SoftwareArchitectureContextDiagram.png" alt="Software Architecture Context Diagram de Veygo">
+
+En el centro del diagrama se encuentra el sistema **Veygo**, la plataforma peer-to-peer de alquiler de vehículos que conecta a propietarios con arrendatarios en Lima. A su alrededor se ubican los actores y sistemas con los que interactúa:
+
+| Elemento | Tipo | Relación con Veygo |
+|---|---|---|
+| **Visitor** | Person | Explora la Landing Page para conocer la propuesta de Veygo y se registra como Renter u Owner. |
+| **Renter** | Person | Busca vehículos cercanos, solicita reservas (bookings), realiza el pago y califica el alquiler. |
+| **Owner** | Person | Publica sus vehículos, gestiona su disponibilidad y confirma o rechaza las reservas recibidas. |
+| **Payment Gateway** | External System | Procesa los pagos de las reservas y los reembolsos en caso de cancelación. |
+| **Map Service (OpenStreetMap)** | External System | Provee los mapas y la ubicación de los vehículos para la búsqueda por cercanía y el punto de entrega. |
+| **Identity Verification Service** | External System | Valida el documento de identidad y la licencia de conducir antes de permitir una reserva. |
+
+Los sistemas externos corresponden a los External Systems identificados en el Design-Level EventStorming (sección 4.6.1). La mensajería entre propietarios y arrendatarios y las notificaciones no se consideran sistemas externos, ya que forman parte de los bounded contexts Communication y Notification de la propia solución.
+
+#### 4.6.3. Software Architecture Container Diagrams
 
 <img src="assets/img/cap4/SoftwareArchitectureContainerDiagrams.png" alt="Availability" width="" height="">
 
 
-#### 4.6.3. Software Architecture Components Diagrams
+#### 4.6.4. Software Architecture Components Diagrams
 
 Diagrama de Componentes de la API RESTful
 
