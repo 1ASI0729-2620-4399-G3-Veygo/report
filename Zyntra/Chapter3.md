@@ -89,8 +89,7 @@ _Figura 3. Impact Mapping-Elaboración propia. Nota: BG4 ataca el problema ident
 ![Product Backlog](assets/img/ProductBacklog.png)
 _Figura 4. Product Backlog - Elaboración propia. Nota: Esta figura muestra la tabla lista realizada por el grupo para ordenar el product backlog del proyecto en Jira_
 
-**Link:** https://ivonneibanez.atlassian.net/jira/software/projects/PBV/list?jql=project%20%3D%20PBV%20ORDER%20BY%20cf%5B10019%5D%20ASC
-
+**Link:** https://ivonneibanez.atlassian.net/?continue=https%3A%2F%2Fivonneibanez.atlassian.net%2Fwelcome%2Fsoftware%3FprojectId%3D10002&atlOrigin=eyJpIjoiM2Y3NTc4N2YxZDY1NDEzZGE3ZGVmYzNhZmYzZDk3NGIiLCJwIjoiamlyYS1zb2Z0d2FyZSJ9
 
 | # Orden | User Story Id | Título | Descripción | Story Points |
 | :--- | :--- | :--- | :--- | :--- |
