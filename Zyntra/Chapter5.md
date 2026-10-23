@@ -6,233 +6,449 @@ Software Configuration Management (SCM), es un conjunto de actividades y proceso
 
 ### 5.1.1. Software Development Environment Configuration.
 
-En esta sección pasamos a referenciar los productos de software que usamos como equipo para colaborar en la realización de este proyecto, considerando actividades como Project Management, Requirement Management, Product UX/UI Design, Software Development, Software Testing y Software Documentation.
+En esta sección se presentan los productos de software que el equipo utilizó para colaborar en el desarrollo de Veygo, organizados según las actividades del ciclo de vida del proyecto: Project Management, Requirement Management, Product UX/UI Design, Software Development, Software Testing, Software Deployment y Software Documentation.
 
+<h4>Project Management</h4>
 
-<h4>Project Management: </h4>
+Herramientas utilizadas para planificar los Sprints, dar seguimiento a las tareas y mantener la comunicación del equipo.
 
-Los productos de software que usamos aquí, nos ayudó como equipo a gestionar tareas, tiempos, recursos y comunicación.
+- **Jira Software:** herramienta de gestión ágil en la que el equipo administró el Product Backlog, las Epics, las User Stories y las Technical Stories, y organizó cada Sprint en un tablero con los estados To Do, In Process, To Review y Done. Disponible en: https://ivonneibanez.atlassian.net/jira/software/projects/PBV/boards/3
+- **WhatsApp:** aplicación de mensajería que el equipo utilizó como canal principal de coordinación, mediante un grupo privado en el que se compartieron avances, archivos y enlaces, y se acordaron las fechas límite de cada entrega.
+- **Discord:** plataforma de comunicación por voz y texto que se utilizó para las reuniones de Sprint Planning, Sprint Review y Retrospective, así como para resolver dudas en tiempo real durante el desarrollo.
 
-- **Whatsapp:** Es una aplicación de mensajería ampliamente utilizada para la comunicación rápida y eficaz. Permite a los usuarios compartir mensajes de texto, fotos, videos, enlaces, videollamadas y documentos. Usamos sus funciones para mantenernos en contacto a través de un grupo privado donde coordinamos avances, compartimos archivos y enlaces. Además, establecíamos fechas límite y organizamos el cumplimiento de metas mediante una comunicación constante, lo que permitió un mejor seguimiento del progreso del equipo.
+<h4>Requirement Management</h4>
 
-- **Discord:** Es una aplicación de mensajería que permite comunicarse mediante canales de voz y texto. La utilizamos para realizar reuniones cortas y aclarar dudas en tiempo real mediante llamadas de voz. También aprovechamos su función de recordatorios y notificaciones para mantener un control adecuado del tiempo y asegurar el cumplimiento de las tareas asignadas.
+Herramientas utilizadas para documentar, priorizar y verificar los requisitos del producto.
 
-<h4>Requirement Management:</h4>
+- **Jira Software:** se utilizó para registrar las User Stories y Technical Stories con su Epic, su estimación en Story Points y su prioridad, de modo que cada ítem del Product Backlog mantiene el mismo identificador que en el informe.
+- **Gherkin:** lenguaje con el que se redactaron los criterios de aceptación de cada historia en archivos `.feature`, siguiendo la estructura Given–When–Then. Estos archivos se encuentran en el repositorio de Acceptance Tests: https://github.com/1ASI0729-2620-4399-G3-Veygo/Veygo-AcceptanceTests
 
-Las herramientas que vamos a especificar ahora, nos ayudaron a documentar, rastrear y verificar que cada requisito está implementado correctamente.
+<h4>Product UX/UI Design</h4>
 
-- **Git:** Es un sistema de control de versiones que se utiliza para rastrear los cambios en el código fuente durante el desarrollo de software. Permite a los desarrolladores trabajar en el mismo proyecto simultáneamente, facilitando la colaboración al permitirles crear, fusionar y gestionar diferentes versiones del código de manera eficiente. Funciona tomando instantáneas de los archivos cada vez que se confirma un cambio, almacenando un historial completo y seguro de todas las modificaciones. Lo usamos para registrar los cambios realizados del código dentro de github.
+Herramientas utilizadas para la investigación de usuarios, el diseño de la experiencia y el modelado del dominio.
 
-<h4>Product UX/UI Design: </h4>
+- **Figma:** herramienta de diseño colaborativo con la que se elaboraron la guía de estilos, los wireframes, los mock-ups y el prototipo de la Landing Page y del Frontend Web Application.
+- **UXPressia:** plataforma en la que se elaboraron los User Personas, los User Journey Maps, los Empathy Maps y el Impact Mapping.
+- **Miro:** pizarra colaborativa que se utilizó para el Big Picture EventStorming, el Design-Level EventStorming, los User Flow Diagrams y el flujo del prototipo.
+- **Structurizr:** herramienta de Diagram-as-Code con la que se elaboraron los diagramas del C4 Model (Context, Container y Component).
+- **Mermaid:** lenguaje de Diagram-as-Code con el que se elaboraron los Class Diagrams y los Database Diagrams.
 
-Acá usamos una herramienta que nos permite diseñar pantallas, prototipos interactivos y flujos de navegación.
+<h4>Software Development</h4>
 
-- **Figma:** Es una plataforma de diseño de interfaces que permite crear prototipos interactivos de forma colaborativa. Con esta herramienta diseñamos las pantallas de nuestro producto, tanto en su versión desktop como mobile, asegurando una experiencia de usuario clara, moderna y funcional. Además, nos permitió trabajar en equipo en tiempo real y compartir avances con facilidad.
+Herramientas, lenguajes y librerías utilizados para programar los productos de software.
 
-<h4>Software Development:</h4>
+- **WebStorm y Visual Studio Code:** entornos de desarrollo con los que se programaron la Landing Page y el Frontend Web Application.
+- **HTML5, CSS3 y JavaScript:** tecnologías con las que se desarrolló la Landing Page, incluyendo el soporte de idiomas español e inglés.
+- **Vue 3 (v3.5) y Vite (v8):** framework de JavaScript y herramienta de construcción con los que se desarrolló el Frontend Web Application como una Single-Page Application organizada por bounded contexts.
+- **PrimeVue (v5) y PrimeIcons:** librería de componentes de interfaz utilizada para construir las vistas de la aplicación con un diseño consistente.
+- **Vue Reactivity API (`reactive`):** se utilizó para implementar los stores de la capa de aplicación de cada bounded context (por ejemplo, `bookingStore` o `fleetStore`), que mantienen el estado y coordinan las llamadas a la API.
+- **Vue Router (v5):** librería de enrutamiento con la que se definieron las rutas de la aplicación y las guardas de navegación por rol (arrendatario y propietario).
+- **vue-i18n (v11):** librería de internacionalización que permite mostrar la aplicación en inglés y en español.
+- **Axios (v1):** cliente HTTP con el que la capa de infraestructura consume los endpoints de la Fake API.
+- **Leaflet y OpenStreetMap:** librería y servicio de mapas con los que se implementó la búsqueda de vehículos cercanos.
+- **json-server (v0.17):** herramienta con la que se implementó la Fake API que simula los Web Services de Veygo durante el Sprint 2.
+- **Git y GitHub:** sistema de control de versiones y plataforma de repositorios con los que el equipo aplicó GitFlow, trabajó en ramas `feature/*` e integró los cambios mediante Pull Requests. Los repositorios del proyecto se detallan en la sección 5.1.2.
 
-Esta es la etapa donde vamos a especificar las herramientas que usamos para programar.
+<h4>Software Testing</h4>
 
-- **Visual Studio Code:** Es un editor de código fuente desarrollado por Microsoft que soporta múltiples lenguajes de programación. Lo empleamos para desarrollar el código del proyecto utilizando tecnologías como HTML y CSS.
+Herramientas utilizadas para verificar el funcionamiento y la adaptabilidad de los productos.
 
-- **GitHub:** Es una plataforma de alojamiento de repositorios basada en Git, que permite gestionar versiones del código y colaborar entre desarrolladores de manera organizada. La empleamos para almacenar nuestro proyecto en un repositorio remoto, realizar control de versiones y sincronizar los cambios realizados por cada integrante del equipo. Además, facilitó la revisión de código, la creación de ramas de desarrollo y la integración continua del producto.
+- **Google Chrome y Chrome DevTools:** navegador y herramientas de desarrollo con los que se verificó el comportamiento de la Landing Page y del Frontend Web Application, se inspeccionaron las peticiones a la Fake API y se probó el diseño responsive en distintos tamaños de pantalla.
+- **Gherkin:** los escenarios de los archivos `.feature` se utilizaron como guía para validar manualmente que cada funcionalidad implementada cumpliera sus criterios de aceptación.
 
-<h4>Software Testing:</h4>
+<h4>Software Deployment</h4>
 
-La herramienta que usamos para verificar que nuestro prototipo se vea correctamente.
+Plataformas utilizadas para publicar los productos de software y hacerlos accesibles desde Internet.
 
-- **Chrome:** Utilizamos el navegador Chrome para realizar las pruebas de visualización y comportamiento del prototipo, verificando su correcto funcionamiento en distintos tamaños de pantalla y su compatibilidad con los lenguajes de desarrollo implementados (HTML y CSS).
+- **GitHub Pages:** servicio con el que se desplegó la Landing Page desde la rama `main` de su repositorio: https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/
+- **Firebase Hosting:** servicio con el que se desplegó el Frontend Web Application mediante Firebase CLI: https://veygo-web-app.web.app
+- **Render:** plataforma en la que se desplegó la Fake API como Web Service de Node.js: https://veygo-fake-api.onrender.com/api/v1
 
-<h4>Software Documentation:</h4>
+<h4>Software Documentation</h4>
 
-La herramienta especificada acá, nos permitió organizar, escribir y compartir la información del proyecto
+Herramientas utilizadas para elaborar la documentación del proyecto y del código.
 
-- **.MD:** Un archivo con la extensión .md es un archivo de texto plano que utiliza el lenguaje de marcado Markdown, diseñado para ser legible y fácil de escribir. Usamos esta extensión para guardar documentación dentro del código.
+- **Markdown y GitHub:** el informe del proyecto se redactó en archivos Markdown en el repositorio `report`, de forma colaborativa mediante ramas y Pull Requests.
+- **JSDoc:** convención de comentarios con la que se documentaron las clases, entidades, servicios y stores del Frontend Web Application.
 
-### 5.1.2. Source Code Management. 
+### 5.1.2. Source Code Management.
 
-Para la gestión del código fuente del proyecto, el equipo utilizará Git como sistema de control de versiones distribuido, y GitHub como plataforma central de colaboración. Esto permitirá mantener un historial completo de los cambios realizados, facilitar el trabajo colaborativo entre los integrantes del equipo y asegurar la trazabilidad de todas las versiones del software.
+Para la gestión del código fuente, el equipo utilizó Git como sistema de control de versiones distribuido y GitHub como plataforma de colaboración. Todos los repositorios del proyecto se encuentran en la organización **1ASI0729-2620-4399-G3-Veygo**, lo que permite mantener un historial completo de los cambios, trabajar de forma paralela y asegurar la trazabilidad entre el código, las User Stories y los Sprints.
 
-<h4>Repositorios en Github</h4>
+<h4>Repositorios en GitHub</h4>
 
-**Landing Page:** Repositorio público para la página de presentación del producto
-https://github.com/1ASI0729-2620-4399-G3-Veygo/landing-Page
+| Producto | Repositorio | Descripción |
+|:---|:---|:---|
+| Organización | https://github.com/1ASI0729-2620-4399-G3-Veygo | Agrupa todos los repositorios del proyecto. |
+| Informe del proyecto | https://github.com/1ASI0729-2620-4399-G3-Veygo/report | Documentación del Trabajo Final en formato Markdown. |
+| Landing Page | https://github.com/1ASI0729-2620-4399-G3-Veygo/landing-Page | Sitio estático de presentación del producto (HTML, CSS y JavaScript). |
+| Frontend Web Application | https://github.com/1ASI0729-2620-4399-G3-Veygo/frontend | Single-Page Application desarrollada con Vue 3, que incluye la Fake API en la carpeta `server/`. |
+| Acceptance Tests | https://github.com/1ASI0729-2620-4399-G3-Veygo/Veygo-AcceptanceTests | Archivos `.feature` en Gherkin con los criterios de aceptación de las User Stories y Technical Stories. |
+| RESTful API (Backend) | https://github.com/1ASI0729-2620-4399-G3-Veygo/backend | Repositorio creado para los Web Services en ASP.NET Core, cuya implementación inicia en el Sprint 3. |
 
-**Acceptance Test:** Repositorio en el que se encuentran los archivos (.feature) en formato Gherkin.
-https://github.com/1ASI0729-2620-4399-G3-Veygo/Veygo-AcceptanceTests
+<h4>Workflow de ramificación: GitFlow</h4>
 
-<h4>Implementación de Gitflow</h4>
-El equipo adoptará el modelo de ramificación GitFlow, propuesto por Vincent Driessen, como flujo de trabajo estándar para el control de versiones.
+El equipo adoptó el modelo de ramificación GitFlow, propuesto por Vincent Driessen, como flujo de trabajo para el control de versiones.
 
-<h4>Ramas principales</h4>
+**Ramas principales**
 
-_main_: Contiene el código estable y listo para producción. Cada commit en esta rama representa una versión liberada del proyecto.
-_develop_: Contiene el código con las últimas funcionalidades integradas, en preparación para la siguiente versión estable.  Es la base sobre la que se crean nuevas ramas de características (features).
+- `main`: contiene el código estable y listo para producción. Es la rama desde la que se despliega cada producto.
+- `develop`: integra las funcionalidades terminadas antes de pasarlas a `main`. Es la base desde la que se crean las ramas de funcionalidad.
 
-<h4>Ramas de soporte</h4>
-Además de las dos ramas principales, se implementarán las siguientes ramas temporales:
+**Ramas de soporte**
 
-- Feature branches: Su propósito será desarrollar nuevas funcionalidades o mejoras.
-- Release branches: Es para denominar una nueva versión estable del proyecto.
-- Hotfix branches: Aca corregiremos errores críticos detectados en producción.
+- `feature/*`: se crea una rama por funcionalidad o bounded context a partir de `develop`, por ejemplo `feature/fleet`, `feature/booking` o `feature/communication`. Al terminar, se integra a `develop` mediante un Pull Request.
+- `release/*`: se crea desde `develop` para preparar una nueva versión estable antes de integrarla a `main`.
+- `hotfix/*`: se crea desde `main` para corregir errores críticos detectados en producción, y se integra tanto a `main` como a `develop`.
+
+**Aplicación en cada repositorio**
+
+| Repositorio | Ramas utilizadas | Aplicación de GitFlow |
+|:---|:---|:---|
+| `frontend` | `main`, `develop`, `feature/app-setup`, `feature/shared`, `feature/router`, `feature/i18n`, `feature/iam`, `feature/fleet`, `feature/booking`, `feature/engagement`, `feature/communication`, `feature/dashboard`, `feature/payment`, `feature/reputation`, `feature/notification` | Cada integrante desarrolló su bounded context en una rama `feature/*`, que se integró a `develop` mediante los Pull Requests #1 al #14. Luego `develop` se integró a `main` con el Pull Request #15 para el despliegue. |
+| `report` | `main`, `develop`, `Capitulo1` a `Capitulo5`, `StudentOutcome` | Cada capítulo se elaboró en su propia rama, que se integró a `develop` y luego a `main` mediante Pull Requests. |
+| `landing-Page` | `main` | En el Sprint 1 se trabajó directamente sobre `main`. En la retrospectiva del Sprint 1 se identificó esta práctica como una oportunidad de mejora, y a partir del Sprint 2 se aplicó GitFlow completo. |
+| `Veygo-AcceptanceTests` | `main` | Repositorio de documentación con una sola rama, ya que sus archivos no se despliegan. |
+
+**Flujo general de trabajo**
+
+1. El integrante actualiza `develop` y crea su rama `feature/<nombre>`.
+2. Realiza sus commits siguiendo Conventional Commits.
+3. Publica la rama y abre un Pull Request hacia `develop`, que es revisado por otro integrante del equipo.
+4. Cuando las funcionalidades del Sprint están integradas, `develop` se integra a `main` mediante un Pull Request y se despliega.
+5. La versión publicada se etiqueta en `main` siguiendo Semantic Versioning.
 
 <h4>Semantic Versioning</h4>
 
-_Aplicaremos Semantic Versioning 2.0.0_ para etiquetar las versiones del proyecto, con este formato:
-**MAJOR.MINOR.PATCH**, siendo “MAJOR” un cambio incompatible con versiones anteriores, “MINOR” un agregado de nuevas funcionalidades y “PATCH” una corrección o mejoras sin afectar su compatibilidad.
+Las versiones de los productos se identifican con Semantic Versioning 2.0.0, con el formato **MAJOR.MINOR.PATCH**:
 
-- Ejemplo: v1.0.0 (primera versión), v1,1,0 (funcionalidad agregada) y v1.1.1 (corrección menor).
+- **MAJOR:** cambios incompatibles con versiones anteriores.
+- **MINOR:** nuevas funcionalidades compatibles con la versión anterior.
+- **PATCH:** correcciones que no afectan la compatibilidad.
+
+Ejemplo: `v1.0.0` (primera versión estable), `v1.1.0` (nueva funcionalidad) y `v1.1.1` (corrección menor).
+
+| Repositorio | Versión | Contenido |
+|:---|:---|:---|
+| `landing-Page` | `v1.0.0` | Primera versión de la Landing Page (Sprint 1). |
+| `landing-Page` | `v1.1.0` | Redirección de los CTA y del buscador al Frontend Web Application (Sprint 2). |
+| `frontend` | `v1.0.0` | Primera versión del Frontend Web Application integrada con la Fake API (Sprint 2). |
 
 <h4>Conventional Commits</h4>
 
-A partir de la segunda actualización (porque la primera llevará el nombre de “base”), los mensajes commit seguirán la especificación Conventional Commits, con el formato:  **tipo(especificación):descripción**
-los tipos podrian ser: **feat** (nueva funcionalidad), **fix** (corrección de una parte del código), **docs**(cambios en la documentación), **style**(ajuste de formato), **refactor**(cambios en el codigo que no modifiquen la apariencia ni el comportamiento), **test** (modificación de prueba) y **chore** (tareas de mantenimiento o configuración)
+Los mensajes de commit siguen la especificación Conventional Commits, redactados en inglés y con el formato:
 
-- Ejemplo: feat(formulario): se agrego una validación al correo electrónico, fix(navbar): se corrigio error en la alineación, docs(README):se actualizo instrucciones.
+```
+<type>(<scope>): <description>
+```
 
-<h4>Flujo general de trabajo</h4>
+Los tipos utilizados son:
 
-- Cada integrante clona el repositorio y crea su propia rama feature/ para trabajar en una nueva tarea.
-- Cuando termina, se realiza un merge hacia develop mediante pull request.
-Una vez integradas todas las funcionalidades planificadas, se crea una rama release/ para pruebas finales.
-- Si la versión es aprobada, se fusiona a main, se etiqueta con su número de versión y se elimina la rama release/.
-- En caso de detectar errores en producción, se genera una rama hotfix/ para resolverlos rápidamente.
+| Tipo | Uso |
+|:---|:---|
+| `feat` | Nueva funcionalidad. |
+| `fix` | Corrección de un error. |
+| `docs` | Cambios en la documentación. |
+| `style` | Cambios de formato o estilos que no alteran la lógica. |
+| `refactor` | Reestructuración del código sin cambiar su comportamiento. |
+| `test` | Creación o modificación de pruebas. |
+| `build` | Cambios en dependencias o en la configuración de construcción. |
+| `chore` | Tareas de mantenimiento o configuración. |
 
-### 5.1.3. Source Code Style Guide & Conventions. 
+El `scope` indica el bounded context o el módulo afectado. Ejemplos tomados de los repositorios del proyecto:
 
-En esta sección se detallan las convenciones de estilo y las estructuras empleadas en el desarrollo del sitio web, abarcando los lenguajes HTML, CSS, JavaScript y Gherkin. Estas normas fueron adoptadas con el propósito de mantener un código limpio, organizado y fácilmente mantenible por todos los integrantes del equipo.
+- `feat(fleet): add vehicle entity, value objects and search criteria`
+- `fix(communication): correct communication store path`
+- `build: add fake-api script`
+- `style: add veygo global styles and design tokens`
+- `docs(chapter3): add user stories US37-US50 and technical stories TS51-TS57 with acceptance scenarios`
 
-<h4> Convenciones HTML </h4>
+### 5.1.3. Source Code Style Guide & Conventions.
 
-- **Estructura semántica:** se utilizan etiquetas semánticas de HTML5 (`header`, `nav`, `main`, `section`, `article`, `footer`) en lugar de `div` genéricos, de modo que cada bloque de la página refleje su función dentro del documento.
-- **Indentación:** 4 espacios por nivel de anidamiento, sin uso de tabulaciones.
-- **Nomenclatura de atributos `id` y `class`:**
-  - Los `id` se escriben en `camelCase` (`searchForm`, `formMessage`, `languageBtn`), ya que se utilizan como ganchos (*hooks*) para el JavaScript.
-  - Las `class` se escriben en `kebab-case` (`segment-card`, `hero-copy`, `btn-primary`), siguiendo un patrón similar a BEM para variantes (`segment-card.owner` como modificador de `segment-card`).
-- **Comentarios de sección:** cada bloque principal de la landing (`HERO`, `SEGMENTOS`, `CATEGORÍAS`, `TESTIMONIOS`, `CTA FINAL`, `FOOTER`) se delimita con un comentario HTML en mayúsculas, lo que facilita la navegación dentro del archivo:
+En esta sección se detallan las convenciones de estilo y de nomenclatura que el equipo aplicó en los productos de Veygo: la Landing Page (HTML, CSS y JavaScript), el Frontend Web Application (Vue 3 y JavaScript) y los Acceptance Tests (Gherkin). Estas convenciones permiten mantener un código limpio, organizado y fácil de mantener por todos los integrantes del equipo. Como regla general, los nombres en el código, los comentarios técnicos y los mensajes de commit se escriben en inglés, de acuerdo con el Ubiquitous Language definido en la sección 2.5.
+
+Como referencia se tomaron las siguientes guías:
+
+- Google HTML/CSS Style Guide: https://google.github.io/styleguide/htmlcssguide.html
+- Vue.js Style Guide: https://vuejs.org/style-guide/
+- Gherkin Reference: https://cucumber.io/docs/gherkin/reference/
+- Conventional Commits: https://www.conventionalcommits.org/en/v1.0.0/
+
+<h4>Landing Page: convenciones HTML</h4>
+
+- **Estructura semántica:** se utilizan etiquetas semánticas de HTML5 (`header`, `nav`, `main`, `section`, `article`, `footer`) en lugar de `div` genéricos, de modo que cada bloque refleje su función dentro del documento.
+- **Indentación:** 4 espacios por nivel de anidamiento, sin tabulaciones.
+- **Atributos `id` y `class`:**
+  - Los `id` se escriben en `camelCase` (`searchForm`, `formMessage`, `languageBtn`) y se reservan como ganchos (*hooks*) para JavaScript.
+  - Las `class` se escriben en `kebab-case` (`segment-card`, `hero-copy`, `btn-primary`), con un patrón similar a BEM para las variantes (`segment-card owner`).
+- **Comentarios de sección:** cada bloque principal se delimita con un comentario HTML en mayúsculas (`<!-- HERO -->`, `<!-- FOOTER -->`).
+- **Anclas de navegación:** los enlaces internos usan fragmentos (`#inicio`, `#buscar`) que coinciden con el `id` de la sección.
+- **Internacionalización:** todo texto visible incorpora un atributo con una clave en `snake_case`, que `script.js` resuelve en tiempo de ejecución: `data-i18n` (texto), `data-i18n-html` (texto con HTML), `data-i18n-placeholder` (placeholder) y `data-i18n-aria` (`aria-label`).
+- **Accesibilidad:** toda imagen incluye un atributo `alt` descriptivo, y los controles sin texto visible llevan `aria-label`.
+
 ```html
-  <!-- HERO -->
-  <section class="hero section" id="inicio">
-    ...
-  </section>
+<!-- HERO -->
+<section class="hero section" id="inicio">
+    <h1 data-i18n-html="hero_title">Encuentra el vehículo<br>que necesitas.</h1>
+</section>
 ```
-- **Espaciado entre bloques:** se deja una línea en blanco entre elementos hijos y dos líneas en blanco entre secciones distintas, priorizando la legibilidad sobre la compacidad del archivo.
-- **Anclas de navegación:** los enlaces internos usan fragmentos (`#inicio`, `#buscar`, `#registro`) que coinciden exactamente con el `id` de la sección referenciada.
-- **Internacionalización (i18n):** todo texto visible que deba traducirse incorpora un atributo `data-i18n` (o su variante) con una clave descriptiva en `snake_case`, que es resuelta en tiempo de ejecución por `script.js`:
-  - `data-i18n` → contenido de texto plano.
-  - `data-i18n-html` → contenido que admite HTML embebido (p. ej. saltos de línea o `span` con estilos).
-  - `data-i18n-placeholder` → atributo `placeholder` de un `input`.
-  - `data-i18n-aria` → atributo `aria-label`, para mantener la accesibilidad también traducida.
-- **Accesibilidad:** toda etiqueta `img` incluye un atributo `alt` descriptivo; los controles interactivos que no tienen texto visible (como el botón de flecha `arrow-btn`) llevan `aria-label` mediante `data-i18n-aria`.
 
-<h4> Convenciones CSS </h4>
+<h4>Landing Page: convenciones CSS</h4>
 
-- **Variables globales:** los colores, sombras y valores reutilizables se centralizan como propiedades personalizadas dentro de `:root`, con nombres en `kebab-case` prefijados con `--` (`--blue`, `--blue-dark`, `--muted`, `--shadow`). Esto evita valores "mágicos" repetidos y facilita el mantenimiento de la identidad visual de Veygo.
+- **Variables globales:** los colores, sombras y valores reutilizables se declaran como propiedades personalizadas en `:root`, en `kebab-case` (`--blue`, `--blue-dark`, `--text`, `--shadow`), y se reutilizan con `var()` en toda la hoja de estilos.
+- **Reset base:** al inicio del archivo se normalizan márgenes, rellenos y `box-sizing` con un selector universal.
+- **Nomenclatura de clases:** `kebab-case` en todos los selectores. No se utilizan `id` para aplicar estilos.
+- **Formato de las reglas:** las reglas simples se escriben en una sola línea y las de los componentes con más propiedades, en varias líneas.
+- **Diseño responsive:** se aplica un enfoque *desktop-first*, con las adaptaciones agrupadas al final del archivo en `@media (max-width: 900px)` y `@media (max-width: 600px)`.
+- **Medidas fluidas:** los anchos de sección se calculan con funciones de CSS como `width: min(1400px, calc(100% - 80px))`.
+
 ```css
-  :root{
-    --blue:#1464f4;
-    --blue-dark:#0e1b45;
-    --text:#17213d;
-    --shadow:0 8px 28px rgba(22,39,76,.08);
-  }
+:root {
+    --blue: #2563EB;
+    --blue-dark: #172554;
+    --shadow: 0 8px 28px rgba(22, 39, 76, .08);
+}
 ```
-- **Reset base:** al inicio del archivo se normalizan márgenes, rellenos y `box-sizing` con un selector universal (`*{box-sizing:border-box;margin:0;padding:0}`), garantizando un comportamiento consistente entre navegadores.
-- **Nomenclatura de clases:** `kebab-case` en todos los selectores (`.hero-copy`, `.segment-card`, `.final-cta-image`), evitando IDs para aplicar estilos (los `id` se reservan exclusivamente para JavaScript).
-- **Estilo de escritura de reglas:** se combinan dos formatos según la complejidad del componente:
-  - **Compacto en una sola línea** para reglas simples o utilitarias (`.brand{display:flex;align-items:center;gap:7px;...}`), priorizando la densidad del archivo.
-  - **Expandido en múltiples líneas** para componentes con más propiedades o que requieren mayor claridad visual (`.process-item`, `.final-cta`), separando propiedades relacionadas con líneas en blanco.
-- **Enfoque responsive:** el diseño es *desktop-first*; las adaptaciones a pantallas menores se definen con `@media (max-width: 900px)` y `@media (max-width: 600px)`, agrupando todas las reglas de un mismo breakpoint en un solo bloque al final de la hoja de estilos.
-- **Medidas fluidas:** los anchos de sección se calculan con funciones modernas de CSS (`width:min(1400px,calc(100% - 80px))`) para adaptarse tanto a pantallas grandes como pequeñas sin necesidad de múltiples reglas fijas.
-- **Comentarios:** se usan comentarios breves en mayúsculas para marcar subsecciones dentro de bloques largos (p. ej. `/* REDES */`, `/* PARTE INFERIOR */` dentro del `footer`).
 
-<h4> Convenciones JavaScript </h4>
+<h4>Landing Page: convenciones JavaScript</h4>
 
-- **Organización por archivos:** la lógica de interacción se separa de los datos de traducción. `script.js` contiene únicamente comportamiento (eventos, validaciones, scroll), mientras que `language/es.js` y `language/en.js` exponen diccionarios de traducción como constantes globales (`translationsES`, `translationsEN`), cargados antes de `script.js` en el HTML.
-- **Nomenclatura de variables y funciones:** `camelCase` para variables y funciones (`languageBtn`, `currentLanguage`, `cambiarIdioma`); las funciones con impacto directo en la interfaz se nombran en español, en línea con el resto del código orientado a negocio.
-- **Diccionarios de traducción:** las claves de `translationsES` / `translationsEN` se agrupan por sección de la landing y se preceden de un comentario en mayúsculas (`// NAVBAR`, `// HERO`, `// SEGMENTOS`), replicando el mismo criterio de organización usado en el HTML y el CSS:
+- **Organización por archivos:** `script.js` contiene solo el comportamiento (eventos, validaciones y scroll), mientras que `language/es.js` y `language/en.js` contienen los diccionarios de traducción (`translationsES`, `translationsEN`), agrupados por sección.
+- **Nomenclatura:** `camelCase` para variables y funciones (`languageBtn`, `currentLanguage`) y `UPPER_SNAKE_CASE` para constantes globales.
+- **Selección del DOM:** `document.getElementById` para elementos únicos y `document.querySelectorAll` para colecciones (`[data-i18n]`).
+- **Eventos:** los listeners se registran con `addEventListener` y funciones flecha para callbacks cortos.
+- **Persistencia:** el idioma seleccionado se guarda en `localStorage` con una clave que lleva el prefijo del proyecto (`veygoLanguage`).
+- **Validaciones:** los formularios se validan antes de enviarse, y los mensajes se muestran en un contenedor dedicado (`#formMessage`) en lugar de `alert()`.
+
+<h4>Frontend Web Application: organización del código</h4>
+
+El código fuente se organiza por **bounded context**, siguiendo los contextos definidos en el Design-Level EventStorming (sección 4.6.1). Cada contexto se divide en cuatro capas:
+
+```
+src/
+├── booking/                    # Un directorio por bounded context
+│   ├── domain/model/           # Entidades, value objects y enumeraciones
+│   ├── application/            # Store del contexto (estado y casos de uso)
+│   ├── infrastructure/         # API, resources y assemblers
+│   └── presentation/           # Vistas, componentes y composables
+│       ├── views/
+│       ├── components/
+│       └── composables/
+├── fleet/  iam/  engagement/  communication/  payment/
+├── reputation/  notification/  dashboard/
+├── shared/                     # Shared kernel: BaseApi, value objects, layout
+├── router/index.js             # Rutas y guardas de navegación
+├── locales/en.json, es.json    # Textos de la interfaz
+├── i18n.js
+└── main.js
+```
+
+- **Dependencias entre capas:** `presentation` usa `application` y `domain`; `application` usa `infrastructure` y `domain`; `domain` no depende de ninguna otra capa. Los value objects compartidos (`Money`, `DateRange`, `DateTime`) y los componentes de layout se ubican en `shared`.
+- **Imports:** se utiliza el alias `@/` para referenciar la carpeta `src` (`@/shared/domain/model/money.js`), e incluyen siempre la extensión del archivo.
+
+<h4>Frontend Web Application: nomenclatura</h4>
+
+| Elemento | Convención | Ejemplo |
+|:---|:---|:---|
+| Carpetas | `kebab-case`, en singular para los bounded contexts | `booking/`, `presentation/components/` |
+| Entidades | `<nombre>.entity.js` | `booking.entity.js` |
+| Value objects y enumeraciones | `<nombre>.js` | `date-range.js`, `booking-status.js` |
+| Stores | `<contexto>.store.js` | `booking.store.js` |
+| Servicios de API | `<contexto>-api.js` | `booking-api.js` |
+| Resources | `<contexto>-resources.js` | `booking-resources.js` |
+| Assemblers | `<nombre>.assembler.js` | `booking.assembler.js` |
+| Vistas | `kebab-case.vue`, nombradas por pantalla | `owner-bookings.vue`, `booking-confirmation.vue` |
+| Componentes | `kebab-case.vue`, nombrados por elemento | `booking-item.vue`, `booking-status-tag.vue` |
+| Composables | `use-<nombre>.js`, que exporta `use<Nombre>` | `use-booking-details.js` → `useBookingDetails` |
+| Clases | `PascalCase` | `Booking`, `BookingApi`, `BookingAssembler` |
+| Instancias de store | `camelCase` con sufijo `Store` | `bookingStore`, `fleetStore` |
+| Variables y funciones | `camelCase` | `loadRenterBookings`, `formatMoney` |
+| Enumeraciones | `PascalCase` con valores en minúsculas | `BookingStatus.CONFIRMED = 'confirmed'` |
+| Rutas | `kebab-case`, con prefijo de rol | `/renter/bookings`, `/owner/vehicles` |
+| Claves de i18n | `kebab-case`, agrupadas por contexto | `booking.cancel-booking` |
+| Variables de entorno | `UPPER_SNAKE_CASE` con prefijo `VITE_` | `VITE_VEYGO_API_URL` |
+
+<h4>Frontend Web Application: estilo de código</h4>
+
+- **Componentes:** todos los componentes y vistas utilizan `<script setup>` (Composition API), con el orden `<script setup>`, `<template>` y `<style scoped>`.
+- **Uso de componentes:** los componentes se importan en `PascalCase` y se usan con esa misma notación en el template (`<PageHeader />`, `<VehicleSpecs />`).
+- **Formato:** 4 espacios de indentación, comillas simples en JavaScript y punto y coma al final de cada instrucción.
+- **Stores:** cada store es un objeto reactivo (`reactive`) que expone el estado (`loading`, `errors` y los datos del contexto) y acciones que devuelven una `Promise`. Las vistas no llaman a la API directamente: lo hacen a través del store.
+- **Infraestructura:** cada servicio de API extiende `BaseApi` y define sus endpoints con `BaseEndpoint`. Los assemblers convierten las respuestas de la API en entidades del dominio y viceversa.
+- **Textos:** ningún texto visible se escribe directamente en el template; todos se obtienen de `locales/en.json` y `locales/es.json` mediante `t('<contexto>.<clave>')`.
+- **Documentación:** las clases, los stores y sus métodos se documentan con JSDoc (`@param`, `@returns`, `@type`).
+
 ```javascript
-  const translationsES = {
+/**
+ * Application service (store) for the Booking bounded context.
+ */
+export const bookingStore = reactive({
+    /** @type {Booking[]} Bookings of the signed-in renter. */
+    renterBookings: [],
+    loading: false,
+    errors: [],
 
-      // NAVBAR
-      nav_home: "Inicio",
-      nav_login: "Iniciar sesión",
-
-      // HERO
-      hero_badge: "✦ La nueva era de movilidad en Lima Metropolitana",
-      hero_title: 'Encuentra el vehículo<br>que necesitas.',
-  };
+    /**
+     * Loads the bookings of a renter.
+     * @param {number} renterId - The renter identifier.
+     * @returns {Promise<void>}
+     */
+    loadRenterBookings(renterId) {
+        this.loading = true;
+        return bookingApi.getBookingsByRenterId(renterId)
+            .then(response => {
+                this.renterBookings = BookingAssembler.toEntitiesFromResponse(response);
+            });
+    }
+});
 ```
-- **Selección de elementos del DOM:** se privilegia `document.getElementById` para elementos únicos referenciados por `id` (formularios, botones, contenedores) y `document.querySelectorAll` para colecciones de elementos que comparten una `class` o un atributo `data-*` (`.segment-card`, `[data-i18n]`).
-- **Manejo de eventos:** los listeners se agregan con `addEventListener`, usando funciones flecha para callbacks cortos; cuando el evento no debe propagarse a manejadores externos (p. ej. el menú de idioma), se invoca explícitamente `event.stopPropagation()`.
-- **Persistencia simple:** las preferencias del usuario que deben sobrevivir a un recargo de página (idioma seleccionado) se guardan en `localStorage` bajo una clave con prefijo del proyecto (`veygoLanguage`), evitando colisiones con otras claves genéricas.
-- **Validaciones de formulario:** se realizan en el cliente antes de cualquier envío, mostrando el mensaje de error o éxito en un contenedor dedicado (`#formMessage`) en lugar de usar `alert()`, salvo en acciones de demostración explícitamente marcadas como tales.
 
-<h4> Convenciones Gherkin </h4>
+<h4>Acceptance Tests: convenciones Gherkin</h4>
 
-- **Organización de archivos:** cada historia de usuario se traduce en un archivo `.feature` independiente, nombrado con el patrón `USxx_titulo-de-la-historia.feature` (por ejemplo, `US15_publicacion_de_nuevo_vehiculo.feature`), lo que permite ubicar rápidamente el escenario correspondiente a cada historia.
-- **Etiquetado (`tags`):** todo `Feature` incluye etiquetas `@USxx` y `@EP-xx` en la línea superior, para poder filtrar la ejecución de pruebas por historia individual o por épica completa (`cucumber --tags "@EP-07"`).
-- **Estructura del encabezado:** cada `Feature` describe el objetivo de negocio siguiendo el formato "Como / quiero / para", manteniendo la trazabilidad directa con la historia de usuario original.
+- **Organización de archivos:** cada historia se traduce en un archivo `.feature` independiente, nombrado con su identificador y su título en `snake_case`: `USxx_titulo_de_la_historia.feature` para las User Stories y `TSxx_titulo_de_la_historia.feature` para las Technical Stories (por ejemplo, `US17_solicitud_de_reserva.feature`).
+- **Etiquetas:** cada `Feature` incluye las etiquetas de la historia y de su Epic (`@US17 @EP-07`), para filtrar la ejecución por historia o por Epic.
+- **Encabezado:** cada `Feature` describe la historia con el formato "Como / quiero / para", lo que mantiene la trazabilidad con la sección 3.1.
+- **Escenarios:** los `Scenario` se nombran de forma breve y descriptiva en español, e incluyen el flujo principal y al menos un flujo alternativo.
+- **Redacción de pasos:** los pasos se escriben en tercera persona y en tiempo presente. En las User Stories se usa lenguaje de negocio, y en las Technical Stories se indica el verbo HTTP, la ruta y el código de respuesta esperado.
+- **Formato:** 2 espacios de indentación para el `Feature`, 4 para los `Scenario` y sus pasos, y una línea en blanco entre escenarios.
+
 ```gherkin
-  @US17 @EP-07
-  Feature: Solicitud de Reserva
-    Como cliente
-    quiero enviar una solicitud de alquiler
-    para iniciar el proceso sin canales informales
+@US17 @EP-07
+Feature: Solicitud de reserva
+  Como cliente
+  quiero enviar una solicitud de alquiler
+  para iniciar el proceso sin canales informales
+
+    Scenario: Fechas disponibles
+      Given el cliente tiene su identidad verificada
+      When solicita un vehículo para un rango de fechas disponible
+      Then el sistema registra la reserva en estado "Pendiente"
 ```
-- **Nomenclatura de escenarios:** los `Scenario` se nombran de forma breve y descriptiva en español, evitando ambigüedad (`Solicitud válida`, `Conflicto de fechas`).
-- **Redacción de pasos:** cada paso `Given/When/Then` se redacta en tercera persona y en tiempo presente, distinguiendo dos niveles de lenguaje según el tipo de historia:
-  - **Escenarios orientados a usuario final:** lenguaje de negocio, sin detalles técnicos (`Given vehículo disponible en las fechas seleccionadas`).
-  - **Escenarios orientados a backend/API:** lenguaje técnico explícito, incluyendo verbo HTTP, ruta y código de respuesta esperado (`Given POST /bookings con fechas disponibles`, `Then el servidor retorna 201 con estado "pending"`).
-- **Indentación:** 2 espacios para el encabezado del `Feature`, y 4 espacios para los `Scenario` y sus pasos `Given/When/Then`, manteniendo una jerarquía visual consistente en todo el archivo.
-- **Separación de escenarios:** se deja una línea en blanco entre cada `Scenario` dentro de un mismo `Feature`, para facilitar la lectura cuando existen múltiples casos (éxito y error) por historia.
 
-### 5.1.4. Software Deployment Configuration. 
 
-En esta sección, daremos el paso a paso para realizar el deploy de nuestra página dentro de github.
+### 5.1.4. Software Deployment Configuration.
 
-<h4>Deploy con GitHub Pages: </h4>
+En esta sección se describe la configuración utilizada para desplegar los productos de Veygo y hacerlos accesibles desde Internet. Cada producto se despliega desde la rama `main` de su repositorio, de modo que solo el código integrado y revisado mediante Pull Requests llega a producción.
 
-Primero, nos ubicamos en el repositorio de GitHub de nuestro proyecto “landing-Page”  y nos dirigimos a los ajustes, ubicado en la parte superior en la barra horizontal.
+| Producto | Plataforma | Repositorio y origen | Build | URL |
+|:---|:---|:---|:---|:---|
+| Landing Page | GitHub Pages | `landing-Page`, rama `main`, carpeta raíz | No requiere (sitio estático) | https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/ |
+| Frontend Web Application | Firebase Hosting | `frontend`, rama `main`, carpeta `dist` | `npm run build` | https://veygo-web-app.web.app |
+| Fake API | Render (Web Service, Node.js) | `frontend`, rama `main`, carpeta `server` | `npm install` | https://veygo-fake-api.onrender.com/api/v1 |
 
-![paso1](assets/img/Pas01.png)
+<h4>Variables de entorno del Frontend Web Application</h4>
 
-Dentro de ajustes, nos dirigimos a la opción “Pages”  ubicada en la parte izquierda en un menú vertical.
+El Frontend Web Application obtiene la URL de la API desde variables de entorno de Vite, por lo que el mismo código funciona en desarrollo y en producción sin modificaciones:
 
-![paso2](assets/img/Pas02.png)
+| Archivo | Uso | `VITE_VEYGO_API_URL` |
+|:---|:---|:---|
+| `.env.development` | `npm run dev` (entorno local) | `http://localhost:3000/api/v1` |
+| `.env.production` | `npm run build` (despliegue) | `https://veygo-fake-api.onrender.com/api/v1` |
 
-Dentro, buscaras la sección “Branch”  donde encontraras un boton, el cual tiene por defecto “None”, entonces, seleccionamos el botón desplegable y eliges la opción “main”, posteriormente presionamos el botón “save”, para guardar los cambios y tenga efecto. 
+Las claves privadas, como la licencia de PrimeUI, se definen en `.env.local`, archivo que no se sube al repositorio.
 
-![paso2](assets/img/Pas03.png)
+<h4>Despliegue de la Landing Page en GitHub Pages</h4>
 
-Finalmente, tendrás que refrescar la página
+1. En el repositorio `landing-Page`, se ingresó a **Settings**, ubicado en la barra superior.
 
-![paso2](assets/img/Pas04.png)
+![Paso 1: Settings del repositorio](assets/img/Pas01.png)
 
-Y con esto, podrás visualizar el link para visitar la página: https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/
+2. En el menú lateral izquierdo, se seleccionó la opción **Pages**.
 
+![Paso 2: Opción Pages](assets/img/Pas02.png)
+
+3. En la sección **Build and deployment**, se eligió **Deploy from a branch** como origen, y en **Branch** se seleccionó la rama `main` con la carpeta raíz (`/root`). Luego se presionó **Save**.
+
+![Paso 3: Selección de la rama main](assets/img/Pas03.png)
+
+4. Después de unos minutos, al actualizar la página, GitHub Pages muestra la URL pública del sitio. Cada nuevo commit en `main` vuelve a publicar la Landing Page de forma automática.
+
+![Paso 4: Sitio publicado](assets/img/Pas04.png)
+
+<h4>Despliegue del Frontend Web Application en Firebase Hosting</h4>
+
+El Frontend Web Application se despliega como sitio estático en Firebase Hosting (plan gratuito Spark), en el proyecto `veygo-web-app`. La configuración se registra en el archivo `firebase.json` del repositorio:
+
+```json
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "rewrites": [{ "source": "**", "destination": "/index.html" }]
+  }
+}
+```
+
+- `public: "dist"` indica que se publica la carpeta generada por `npm run build`.
+- La regla `rewrites` redirige todas las rutas a `index.html`, lo que permite que Vue Router resuelva rutas como `/renter/bookings` al recargar la página.
+
+El proceso de despliegue sigue estos comandos:
+
+```bash
+npm install -g firebase-tools   # Instala Firebase CLI (una sola vez)
+firebase login                  # Inicia sesión con la cuenta del proyecto
+firebase use --add              # Vincula el proyecto veygo-web-app (.firebaserc)
+npm run build                   # Genera la carpeta dist con .env.production
+firebase deploy --only hosting  # Publica la aplicación
+```
+
+<h4>Despliegue de la Fake API en Render</h4>
+
+La Fake API se despliega en Render como un **Web Service** de Node.js, a partir de la carpeta `server` del repositorio `frontend`. Su archivo `server/package.json` define el comando de inicio:
+
+```json
+{
+  "scripts": {
+    "start": "json-server db.json --routes routes.json --host 0.0.0.0 --port ${PORT:-3000}"
+  },
+  "dependencies": {
+    "json-server": "0.17.4"
+  }
+}
+```
+
+La configuración del servicio en Render es la siguiente:
+
+| Parámetro | Valor |
+|:---|:---|
+| Nombre del servicio | `veygo-fake-api` |
+| Lenguaje | Node |
+| Rama | `main` |
+| Root Directory | `server` |
+| Build Command | `npm install` |
+| Start Command | `npm start` |
+| Tipo de instancia | Free |
+
+El archivo `routes.json` agrega el prefijo `/api/v1` a todos los recursos, de modo que la Fake API expone las mismas rutas que tendrá la RESTful API. Render vuelve a desplegar el servicio de forma automática con cada commit en `main`.
+
+En el plan gratuito, el servicio se suspende tras un periodo de inactividad, por lo que la primera petición puede tardar hasta un minuto en responder.
+
+Las capturas del proceso completo de despliegue en Render y en Firebase Hosting se presentan en la sección 5.2.2.7.
 
 ## 5.2. Landing Page, Services & Applications Implementation. 
 
 ### 5.2.1. Sprint 1
 
-Para este primer Sprint, el equipo estableció como objetivo principal la implementación y despliegue de la primera versión de la Landing Page del sistema Zyntra.
+Para el primer Sprint, el equipo estableció como objetivo implementar y desplegar la primera versión de la Landing Page de **Veygo**. La Landing Page presenta la propuesta de valor del producto, permite cambiar el idioma entre español e inglés, iniciar una búsqueda rápida de vehículos y dirigir al visitante al registro según su rol (cliente o propietario).
 
-| ID   | User Story| Epic| Priority |SP |
-| :-- | :-- | :-- | :-- | :-- |
-| US08 | Navegación Principal y Selector de Idioma| EP-01 | High| 3  |
-| US09 | Buscador Rápido de Vehículos| EP-01 | High| 3  |
-| US10 | Exploración por Categorías de Propósito| EP-01 | Medium   | 2  |
-| US11 | Visualización de Vehículos Destacados| EP-01 | Medium   | 3  |
-| US12 | Redirección a Registro según Rol| EP-01 | Medium   | 2  |
-| US22 | Sección de Confianza y Seguridad| EP-01 | Medium   | 2  |
-| US23 | Sección de Preguntas Frecuentes| EP-01 | Low| 2  |
-| US24 | Suscripción a Novedades| EP-01 | Low| 1  |
-| US34 | Endpoint de Contenido Optimizado para Landing Page| EP-01 | Medium   | 3  |
-| US35 | Endpoint de Recursos de Internacionalización (i18n)| EP-01 | High     | 3  |
-| US36 | Endpoint de Registro de Eventos de Conversión| EP-01 | Medium   | 2  |
-| | | |**Total Story Points**| **26** |
+El alcance del Sprint comprende las User Stories de la Epic EP-01 (Landing Page y Captura de Interés) que corresponden al sitio estático. Las Technical Stories TS34, TS35 y TS36, que exponen endpoints de soporte para la Landing Page, se planificaron para los Sprints en los que se implementa la RESTful API.
+
+| ID | User Story | Epic | Priority | Story Points |
+| :-- | :-- | :-- | :-- | :--: |
+| US08 | Navegación principal y selector de idioma | EP-01 | High | 3 |
+| US09 | Buscador rápido de vehículos | EP-01 | High | 3 |
+| US10 | Exploración por categorías de propósito | EP-01 | Medium | 2 |
+| US11 | Visualización de vehículos destacados | EP-01 | Medium | 2 |
+| US12 | Redirección a registro según rol | EP-01 | High | 2 |
+| US22 | Sección de confianza y seguridad | EP-01 | Medium | 1 |
+| US48 | Sección "Cómo funciona" | EP-01 | Medium | 1 |
+| US49 | Sección de testimonios | EP-01 | Low | 1 |
+| US23 | Sección de preguntas frecuentes | EP-01 | Low | 1 |
+| US24 | Suscripción a novedades | EP-01 | Low | 2 |
+| | | | **Total Story Points** | **18** |
 
 #### 5.2.1.1. Sprint Planning 1
+
+La reunión de Sprint Planning 1 se realizó al inicio de la implementación del producto, después de completar los artefactos de investigación, especificación y diseño de los Capítulos I al IV. En ella, el equipo definió el objetivo del Sprint, seleccionó las User Stories de la Landing Page desde el Product Backlog y distribuyó las tareas entre los integrantes.
 
 | Campo | Detalle |
 |---|---|
@@ -240,13 +456,13 @@ Para este primer Sprint, el equipo estableció como objetivo principal la implem
 | **Fecha** | 2026-09-09 |
 | **Hora** | 05:49 PM |
 | **Lugar** | Reunión virtual vía Google Meet |
-| **Preparado por** | Josue Antonio Flores Apaico|
-| **Asistentes** |Josue Antonio Flores Apaico, Fabrizio Hamet Cano Ortiz, Marlon Alessandro Flores Siguas, Ivonne Beatriz Ibañez Torres y Eddo Su Caletti|
-| **Resumen del Review del Sprint 0** | Durante la fase previa (Sprint 0), el equipo definió el backlog completo del producto (36 historias de usuario distribuidas en 9 épicas), redactó los criterios de aceptación en formato Gherkin para cada historia, y desarrolló una primera versión funcional de la landing page (HTML/CSS/JS) con selector de idioma ES/EN, buscador rápido y las secciones principales de valor. Sin embargo, esta versión aún no había sido validada formalmente contra los criterios de aceptación definidos ni conectada a los endpoints de backend planificados. |
-| **Resumen de la Retrospectiva del Sprint 0** | El equipo identificó que, si bien se avanzó rápido en la construcción visual de la landing page, faltó verificar que cada sección cumpliera con los criterios de aceptación (Gherkin) de las historias de la épica EP-01, y que el contenido aún no estaba conectado a los endpoints de backend previstos (contenido cacheado, i18n, analítica de conversión). Se acordó que el Sprint 1 se enfocaría exclusivamente en cerrar esa brecha para la landing page antes de avanzar a otros módulos del sistema. |
-| **Objetivo del Sprint 1** | Nuestro enfoque está en validar y perfeccionar la primera versión pública de la landing page de Veygo contra sus criterios de aceptación, y conectarla a sus dos endpoints de backend de soporte (contenido cacheado de landing e internacionalización) para que la experiencia sea completamente dinámica en lugar de estática. Consideramos que se entrega un producto listo para demo cuando un visitante puede abrir la landing page, cambiar instantáneamente entre español e inglés, realizar una búsqueda rápida de vehículos, explorar categorías y vehículos destacados, y ser redirigido al flujo de registro correcto (cliente o propietario) — todo esto validado contra los escenarios Gherkin de las historias US08 a US12, US22 a US24 y US34 a US36. Esto se confirmará mediante pruebas manuales end-to-end directamente sobre la URL desplegada de la landing page, verificadas contra los criterios de aceptación definidos en los archivos `.feature` correspondientes. |
-| **Velocity del Sprint N** | 30 |
-| **Suma de Story Points** | 27 |
+| **Preparado por** | Josue Antonio Flores Apaico |
+| **Asistentes** | Josue Antonio Flores Apaico, Fabrizio Hamet Cano Ortiz, Marlon Alessandro Flores Siguas, Ivonne Beatriz Ibañez Torres y Eddo Su Caletti |
+| **Resumen del Review del Sprint anterior** | No aplica, ya que es el primer Sprint de implementación. Como punto de partida, el equipo contaba con el Product Backlog priorizado, los criterios de aceptación en Gherkin, la guía de estilos, la arquitectura de información y los wireframes y mock-ups de la Landing Page elaborados en el Capítulo IV. |
+| **Resumen de la Retrospectiva del Sprint anterior** | No aplica, ya que es el primer Sprint de implementación. Para este Sprint, el equipo acordó dividir el trabajo por archivo de la Landing Page (estructura HTML, estilos CSS, interactividad en JavaScript y diccionarios de traducción) para que cada integrante pudiera avanzar en paralelo. |
+| **Objetivo del Sprint 1** | Nuestro enfoque está en publicar la primera versión de la Landing Page de Veygo, que presenta la propuesta de valor del producto en español e inglés. Creemos que esto permite a los visitantes de Lima entender cómo funciona Veygo, confiar en la plataforma y decidir si registrarse como cliente o como propietario. Esto se confirmará cuando un visitante pueda abrir la Landing Page desplegada en GitHub Pages, cambiar el idioma, realizar una búsqueda rápida, explorar las categorías y los vehículos destacados, y llegar al registro según su rol, de acuerdo con los criterios de aceptación de las User Stories del Sprint. |
+| **Velocity del Sprint 1** | 20 |
+| **Suma de Story Points** | 18 |
 
 #### 5.2.1.2. Aspect Leaders and Collaborators
 
@@ -314,32 +530,49 @@ Enlace del Jira: https://ivonneibanez.atlassian.net/jira/software/projects/PBV/b
 | | | Traducción de textos (ES) | 0.5 hr | Fabrizio | TO DO |
 | | | Traducción de textos (EN) | 0.5 hr | Marlon | TO DO |
 
-#### 5.2.1.4. Development Evidence for Sprint Review. 
+#### 5.2.1.4. Development Evidence for Sprint Review.
 
-El equipo trabajó de manera coordinada durante el desarrollo del proyecto, asignando tareas específicas a cada integrante de acuerdo con el flujo de trabajo establecido.
+Durante este Sprint se implementó la primera versión de la Landing Page de Veygo con HTML5, CSS3 y JavaScript. El trabajo se distribuyó por archivo, de acuerdo con los aspectos definidos en la sección 5.2.1.2:
 
-Posteriormente, cada miembro registró y subió sus avances al repositorio de GitHub, donde fueron revisados para su posterior integración en la rama `develop`.
+- **Estructura HTML (`index.html`):** Josue Flores implementó las secciones de la página (navbar, hero, segmentos, estadísticas, buscador, categorías, proceso, vehículos destacados, confianza, testimonios, CTA final y footer).
+- **Estilos (`styles.css`):** Eddo Su Caletti implementó el diseño visual y las reglas responsive.
+- **Interactividad (`script.js`):** Ivonne Ibañez implementó el selector de idioma, la validación del buscador y los eventos de la página.
+- **Traducción al español (`language/es.js`):** Fabrizio Cano implementó el diccionario de textos en español.
+- **Traducción al inglés (`language/en.js`):** Marlon Flores implementó el diccionario de textos en inglés.
 
-Una vez finalizadas todas las tareas, el propietario del repositorio realizó la fusión de la rama `develop` con la rama `main`, permitiendo así habilitar la visualización de la landing page mediante GitHub Pages.
+En este Sprint, los integrantes registraron sus avances directamente en la rama `main` del repositorio `landing-Page`, desde la que se publica el sitio en GitHub Pages. En la retrospectiva del Sprint se identificó que esta práctica, junto con algunos mensajes de commit que no siguieron Conventional Commits, debía mejorarse. Por ello, a partir del Sprint 2 el equipo aplicó GitFlow con ramas `feature/*`, Pull Requests hacia `develop` y commits en inglés con el formato Conventional Commits.
 
-A continuación, se presentan los nombres de usuario de los integrantes del equipo, junto con algunos de los commits realizados por cada miembro:
+Repositorio de la Landing Page: https://github.com/1ASI0729-2620-4399-G3-Veygo/landing-Page
 
+A continuación, se presentan los commits más representativos de cada integrante. El historial completo del Sprint 1 está compuesto por 46 commits.
 
-| Repository | Branch | Commit Id | Commit Message | Commited by | Committed on (Date) |
-|---|---|---|---|---|---|
-|Landing-Page | main | 892b6456be9fbf25045372cc1dd3f12c3de51f19 | feat: add language | Josue Flores | 14/09/2026 |
-|Landing-Page | main | 9b33ba0c6232d000fe2d1c756e20e8879847b953 | Script:GetElementByID |Ivonne Ibañez| 14/09/2026 |
-|Landing-Page | main | f62792236b5f7651fc0c9132ae7f0b537848225a | ffeat(i18n): add Spanish testimonials and CTA translations | Marlon Flores | 14/09/2026 |
-|Landing-Page | main | b0d22e7a162063e73c698e171a939e3932d460db | feat(i18n): add Spanish navbar and hero translations | Fabrizio Cano| 14/09/2026 |
-|Landing-Page | main | b93de97144fe1ff04e0df6252eca680601b9b268 | feat: Last part of styles.css|Eddo Su| 14/09/2026 |
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed by | Committed on (Date) |
+|---|---|---|---|---|---|---|
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | 23c1076 | feat: add index.html | — | Josue Flores | 15/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | 0ca627e | feat: add search | — | Josue Flores | 15/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | 892b645 | feat: add language | — | Josue Flores | 15/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | a8bd74c | feat: first part of styles.css | — | Eddo Su Caletti | 14/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | 1a2666c | feat: Part four of styles.css | — | Eddo Su Caletti | 14/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | b93de97 | feat: Last part of styles.css | — | Eddo Su Caletti | 14/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | 9b33ba0 | Script:GetElementByID | — | Ivonne Ibañez | 15/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | 9cadf40 | Script:Cambio de idioma | — | Ivonne Ibañez | 15/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | 8ff16bb | Script:Event | — | Ivonne Ibañez | 15/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | b0d22e7 | feat(i18n): add Spanish navbar and hero translations | — | Fabrizio Cano | 14/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | 97e3ee2 | feat(i18n): add Spanish search and category translations | — | Fabrizio Cano | 14/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | f1bdf85 | feat(i18n): add Spanish footer and form messages | — | Fabrizio Cano | 14/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | b501a56 | feat: add English navbar and hero translations | — | Marlon Flores | 14/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | 69e7396 | feat: add English vehicle and trust translations | — | Marlon Flores | 14/09/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/landing-Page | main | f376d85 | feat: add English footer and form messages | — | Marlon Flores | 14/09/2026 |
 
-Enlace de historial de commits: https://github.com/1ASI0729-2620-4399-G3-Veygo/landing-Page/commits/main/?before=892b6456be9fbf25045372cc1dd3f12c3de51f19+35
+Enlace del historial de commits: https://github.com/1ASI0729-2620-4399-G3-Veygo/landing-Page/commits/main
 
 #### 5.2.1.5. Execution Evidence for Sprint Review
 
 Al término del Sprint 1, el equipo logró implementar y desplegar satisfactoriamente la primera versión de la Landing Page del sistema Veygo. La página se encuentra disponible públicamente mediante GitHub Pages.
 
 Link de la página: https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/
+
+Link del video de la Landing: https://drive.google.com/file/d/1l8ePdIv1fKThjkbrtdvrguK2p1-xVeVd/view?usp=sharing
 
 <h4>Navbar, Hero y estadísticas</h4>
 
@@ -377,11 +610,30 @@ Durante el Sprint 1, el alcance de implementación se limitó exclusivamente al 
 
 #### 5.2.1.7. Software Deployment Evidence for Sprint Review
 
-Durante el Sprint 1, el alcance de la implementación y los objetivos definidos en el Sprint Backlog se centraron exclusivamente en el desarrollo de la Landing Page de Veygo. En esta etapa inicial, el equipo priorizó la creación de una interfaz principal que permitiera presentar de manera clara la propuesta de valor de la plataforma —conectar a propietarios y arrendatarios de vehículos en Lima Metropolitana de forma segura y transparente—, así como sus principales funcionalidades, a través de secciones como el Hero, la segmentación de usuarios, el buscador de vehículos, las categorías, el proceso operativo, los vehículos destacados, la Confianza y los Testimonios.
+En este Sprint se desplegó la primera versión de la Landing Page de Veygo en **GitHub Pages**, siguiendo la configuración descrita en la sección 5.1.4. El sitio se publica desde la rama `main` del repositorio `landing-Page`, por lo que cada commit integrado en esa rama genera automáticamente una nueva publicación.
 
-El trabajo realizado incluyó el diseño visual, la estructuración del contenido y la organización de las secciones clave de la Landing Page, asegurando una experiencia intuitiva, atractiva y alineada con las necesidades identificadas en las fases previas de investigación. Asimismo, se buscó que la página cumpliera con criterios básicos de usabilidad, coherencia visual y comunicación efectiva —reforzados con el soporte bilingüe español/inglés y el diseño responsive— facilitando que cualquier usuario comprenda rápidamente el propósito del sistema y los dos flujos principales del negocio: alquilar un vehículo o publicar el propio.
+| Producto | Plataforma | Repositorio | Rama / carpeta | URL |
+|:---|:---|:---|:---|:---|
+| Landing Page | GitHub Pages | https://github.com/1ASI0729-2620-4399-G3-Veygo/landing-Page | `main` / raíz | https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/ |
 
-Cabe resaltar que, debido a la naturaleza introductoria de este Sprint, no se contempló el desarrollo de otras funcionalidades adicionales del sistema, como la conexión con el backend, el flujo completo de autenticación o el procesamiento real de reservas y pagos. El enfoque estuvo completamente orientado a establecer una base sólida a través de la Landing Page, la cual servirá como punto de partida para futuras iteraciones del proyecto. Las siguientes etapas del desarrollo, donde se abordarán nuevas funcionalidades y componentes del sistema —como la integración con el backend, el registro e inicio de sesión funcionales y la gestión real de vehículos y reservas—, se encuentran planificadas para los próximos Sprints, en los cuales se continuará ampliando progresivamente el alcance del producto.
+El despliegue se realizó con los siguientes pasos:
+
+1. En **Settings → Pages** del repositorio, se configuró como origen **Deploy from a branch**, con la rama `main` y la carpeta raíz (`/root`).
+
+![Configuración de GitHub Pages](assets/img/deploy-01-pages-settings.png)
+
+2. Al registrar los commits del Sprint en `main`, GitHub ejecutó automáticamente el flujo **pages-build-deployment**, que construye y publica el sitio. Su ejecución puede revisarse en la pestaña **Actions** del repositorio.
+
+![Ejecución de pages-build-deployment en GitHub Actions](assets/img/deploy-02-pages-actions.png)
+
+3. Al finalizar el flujo, GitHub Pages mostró el mensaje **"Your site is live"** con la URL pública de la Landing Page.
+
+![Sitio publicado en GitHub Pages](assets/img/deploy-02-pages-actions.png)
+
+4. Finalmente, se verificó el funcionamiento de la Landing Page desplegada en el navegador, comprobando el cambio de idioma, el buscador y los enlaces de navegación.
+
+![Landing Page desplegada](assets/img/deploy-04-landing-live.png)
+
 
 #### 5.2.1.8. Team Collaboration Insights during Sprint
 
