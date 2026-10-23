@@ -624,7 +624,7 @@ El despliegue se realizó con los siguientes pasos:
 
 2. Al registrar los commits del Sprint en `main`, GitHub ejecutó automáticamente el flujo **pages-build-deployment**, que construye y publica el sitio. Su ejecución puede revisarse en la pestaña **Actions** del repositorio.
 
-![Ejecución de pages-build-deployment en GitHub Actions](assets/img/deploy-02-pages-actions.png)
+![Ejecución de pages-build-deployment en GitHub Actions](assets/img/Pas03.png)
 
 3. Al finalizar el flujo, GitHub Pages mostró el mensaje **"Your site is live"** con la URL pública de la Landing Page.
 
@@ -646,12 +646,19 @@ A continuación, se presentan las capturas de los analíticos de GitHub que evid
 ![commits](assets/img/additions_sprint1_users.png)
 
 ### 5.2.2. Sprint 2
-Para el segundo Sprint, el equipo se enfocó en implementar y desplegar la primera versión del **Frontend Web Application** de Veygo. La aplicación permite a los arrendatarios buscar, reservar y calificar vehículos, y a los propietarios publicar su flota, gestionar la disponibilidad, atender solicitudes y revisar sus ingresos. La aplicación consume una Fake API (json-server) que simula los Web Services que se implementarán en el siguiente Sprint con ASP.NET Core.
+Para el segundo Sprint, el equipo se enfocó en implementar y desplegar la primera versión del **Frontend Web Application** de Veygo. La aplicación permite a los arrendatarios registrarse, buscar, reservar y calificar vehículos, guardar favoritos y comunicarse con los propietarios; y a los propietarios, publicar su flota, gestionar la disponibilidad, atender solicitudes y revisar sus ingresos y transacciones. La aplicación consume una Fake API (json-server) que simula los Web Services que se implementarán en el siguiente Sprint con ASP.NET Core.
+
+A continuación, se presentan las historias de usuario seleccionadas para este Sprint:
 
 | ID | User Story | Epic | Priority | SP |
 | :-- | :-- | :-- | :-- | :-- |
+| US37 | Registro de Usuario por Rol | EP-02 | High | 3 |
 | US02 | Inicio de Sesión Seguro | EP-02 | High | 3 |
+| US14 | Edición de Perfil de Usuario | EP-02 | Low | 2 |
 | US03 | Búsqueda de Vehículos Cercanos | EP-03 | High | 5 |
+| US38 | Detalle del Vehículo | EP-03 | High | 3 |
+| US40 | Inicio del Arrendatario | EP-03 | Medium | 2 |
+| US39 | Vehículos Favoritos | EP-03 | Low | 2 |
 | US04 | Filtrado por Transmisión y Energía | EP-04 | High | 3 |
 | US15 | Publicación de Nuevo Vehículo | EP-05 | High | 5 |
 | US16 | Edición o Retiro de Publicación | EP-05 | Medium | 3 |
@@ -661,27 +668,28 @@ Para el segundo Sprint, el equipo se enfocó en implementar y desplegar la prime
 | US19 | Cancelación de Reserva | EP-07 | Medium | 3 |
 | US20 | Historial de Reservas | EP-07 | Medium | 2 |
 | US21 | Notificaciones de Actividad | EP-07 | Medium | 3 |
+| US41 | Mensajería entre Cliente y Propietario | EP-07 | Medium | 5 |
 | US06 | Métricas de Flota y Transacciones | EP-08 | Medium | 3 |
+| US42 | Historial de Transacciones y Reporte | EP-08 | Medium | 3 |
 | US07 | Evaluación Mutua Post-Alquiler | EP-09 | Medium | 3 |
-| US14 | Edición de Perfil de Usuario | EP-02 | Low | 2 |
-| | | | **Total Story Points** | **48** |
+| | | | **Total Story Points** | **66** |
 
-#### 5.2.2.1.Sprint Planning 2.
+#### 5.2.2.1. Sprint Planning 2.
 La reunión de Sprint Planning 2 se realizó después de la revisión del Sprint 1. En ella el equipo revisó lo alcanzado con la Landing Page, acordó mejoras en la forma de trabajo y seleccionó las historias de usuario del Frontend Web Application que se implementarían en este Sprint.
 
 | Campo | Detalle |
 |---|---|
 | **Sprint #** | Sprint 2 |
-| **Fecha** | [YYYY-MM-DD] |
-| **Hora** | [HH:MM PM] |
+| **Fecha** | 2026-09-16 |
+| **Hora** | 08:00 PM |
 | **Lugar** | Reunión virtual vía Google Meet |
 | **Preparado por** | Josue Antonio Flores Apaico |
 | **Asistentes** | Josue Antonio Flores Apaico, Fabrizio Hamet Cano Ortiz, Marlon Alessandro Flores Siguas, Ivonne Beatriz Ibañez Torres y Eddo Su Caletti |
 | **Resumen del Review del Sprint 1** | En el Sprint 1 se implementó y desplegó en GitHub Pages la primera versión de la Landing Page de Veygo, con navegación, selector de idioma (ES/EN), buscador rápido, categorías, vehículos destacados, sección de confianza y redirección al registro según el rol. Quedaron pendientes las secciones de preguntas frecuentes y suscripción a novedades. |
 | **Resumen de la Retrospectiva del Sprint 1** | El equipo valoró la división del trabajo por archivos, pero identificó que los commits no siguieron siempre Conventional Commits y que se trabajó directamente sobre `main`. Para este Sprint se acordó aplicar GitFlow (ramas `feature/*` hacia `develop` mediante Pull Requests), usar Conventional Commits en inglés y organizar el código por bounded contexts. |
-| **Objetivo del Sprint 2** | Nuestro enfoque está en entregar la primera versión del Frontend Web Application de Veygo, en la que el arrendatario puede buscar, reservar y calificar vehículos, y el propietario puede publicar su flota, gestionar su disponibilidad y atender las solicitudes. Creemos que esto entrega a arrendatarios y propietarios de Lima un canal confiable para alquilar vehículos sin intermediarios informales. Esto se confirmará cuando un arrendatario complete una reserva y el propietario la confirme desde la aplicación desplegada, viendo ambos la notificación correspondiente. |
-| **Velocity del Sprint 2** | 50 |
-| **Suma de Story Points** | 48 |
+| **Objetivo del Sprint 2** | Nuestro enfoque está en entregar la primera versión del Frontend Web Application de Veygo, en la que el arrendatario puede registrarse, buscar, reservar y calificar vehículos, y el propietario puede publicar su flota, gestionar su disponibilidad, atender las solicitudes y revisar sus transacciones. Creemos que esto entrega a arrendatarios y propietarios de Lima un canal confiable para alquilar vehículos sin intermediarios informales. Esto se confirmará cuando un arrendatario complete una reserva y el propietario la confirme desde la aplicación desplegada, viendo ambos la notificación correspondiente. |
+| **Velocity del Sprint 2** | 66 |
+| **Suma de Story Points** | 66 |
 
 #### 5.2.2.2. Aspect Leaders and Collaborators.
 Los aspectos de este Sprint corresponden a los bounded contexts del Frontend Web Application, definidos en el Design-Level EventStorming (sección 4.6.1), además de la configuración base y el despliegue. Cada integrante lideró al menos un aspecto y colaboró en la revisión de los Pull Requests de los demás.
@@ -689,142 +697,91 @@ Los aspectos de este Sprint corresponden a los bounded contexts del Frontend Web
 | Team Member | GitHub Username | IAM, Shared, i18n y Router | Fleet | Booking | Engagement | Communication | Dashboard | Payment, Reputation y Notification | Deployment (Render y Firebase) |
 |---|---|---|---|---|---|---|---|---|---|
 | **Flores Apaico, Josué Antonio** | **JosueFloresAp** | **L** | **L** | C | C | C | C | **L** | **L** |
-| **Su Caletti, Eddo** | **Asaltron520** | C | C | **L** | C | C | C | C | C |
+| **Su Caletti, Eddo** | **Asalreon520** | C | C | **L** | C | C | C | C | C |
 | **Ibañez Torres, Ivonne Beatriz** | **MarlonLasarte** | C | C | C | C | C | **L** | C | C |
 | **Cano Ortiz, Fabrizio Hamet** | **Fabrizioco01** | C | C | C | C | **L** | C | C | C |
 | **Flores Siguas, Marlon Alessandro** | **MarlonFS965** | C | C | C | **L** | C | C | C | C |
 
 _(Nota: L = Leader, C = Collaborator)_
 
-
 #### 5.2.2.3. Sprint Backlog 2
 
-El objetivo principal de este Sprint fue implementar y desplegar la primera versión del Frontend Web Application de Veygo, organizada por bounded contexts y conectada a una Fake API desplegada.
+El objetivo principal de este Sprint fue implementar y desplegar la primera versión del Frontend Web Application de Veygo, organizada por bounded contexts y conectada a una Fake API desplegada. Las historias de usuario seleccionadas se descompusieron en tareas de entre 4 y 8 horas, que se gestionaron en Jira con los estados To Do, In Process, To Review y Done. Una tarea pasó a Done solo después de que su Pull Request fuera revisado e integrado a `develop`.
 
 A continuación, se presenta una captura de pantalla del tablero de control para el Sprint 2:
 
-![sprint2](assets/img/sprint2/sprint2-board.png)
+![Tablero del Sprint 2 en Jira](assets/img/sprint2-board.png)
 
-Enlace del Jira: https://ivonneibanez.atlassian.net/jira/software/projects/PBV/boards/3?filter=&groupBy=none
+Enlace del Jira: https://josueflores9283.atlassian.net/jira/software/projects/SCRUM/boards/1?filter=&groupBy=none&atlOrigin=eyJpIjoiZDBjZGY3NGYwMDVkNDFjOTlkN2ZmNzZmOTUyM2YxZTQiLCJwIjoiaiJ9
 
 | Sprint # | Sprint 2 | | | | | | |
 |---|---|---|---|---|---|---|---|
 | **Story Id** | **Story Title** | **Task Id** | **Task Title** | **Task Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
-| US02 | Inicio de Sesión Seguro | T01 | Modelo de dominio IAM | Implementar la entidad `User`, `UserRole`, `DriverLicense` y `UserPreferences`. | 2 | Josué | Done |
-| | | T02 | Servicio y store de IAM | Implementar `IamApi`, `UserAssembler`, almacenamiento de sesión y el store de IAM. | 3 | Josué | Done |
-| | | T03 | Vistas de inicio de sesión y registro | Implementar las vistas de sign-in y sign-up por rol, con validaciones. | 3 | Josué | Done |
-| | | T04 | Guardas de navegación | Proteger las rutas privadas y separar las vistas por rol. | 2 | Josué | Done |
-| US14 | Edición de Perfil de Usuario | T05 | Vista de perfil | Implementar la edición de datos personales, foto, licencia, preferencias y contraseña. | 3 | Josué | Done |
-| US03 | Búsqueda de Vehículos Cercanos | T06 | Modelo y API de Fleet | Implementar `Vehicle`, `VehicleLocation`, `FleetApi` y `VehicleAssembler`. | 3 | Josué | Done |
-| | | T07 | Búsqueda con mapa | Implementar la vista de búsqueda con mapa de OpenStreetMap (Leaflet) y tarjetas de vehículos. | 4 | Josué | Done |
-| US04 | Filtrado por Transmisión y Energía | T08 | Filtros de catálogo | Implementar `VehicleSearchCriteria` (Specification) y el panel de filtros. | 3 | Josué | Done |
-| US15 | Publicación de Nuevo Vehículo | T09 | Formulario de vehículo | Implementar el formulario con carga de fotos, especificaciones y tarifas. | 4 | Josué | Done |
-| US16 | Edición o Retiro de Publicación | T10 | Gestión de flota | Implementar Mis vehículos, el detalle del propietario, edición y publicar/retirar. | 3 | Josué | Done |
-| US05 | Sincronización Automática de Disponibilidad | T11 | Calendario de disponibilidad | Implementar el calendario con días reservados y el bloqueo y desbloqueo de fechas. | 4 | Josué | Done |
-| US17 | Solicitud de Reserva | T12 | Modelo y store de Booking | Implementar la entidad `Booking`, el assembler, la API y el store con validación de disponibilidad. | 4 | Eddo | Done |
-| | | T13 | Confirmación de reserva | Implementar la vista de confirmación con el cálculo del total. | 3 | Eddo | Done |
-| US18 | Confirmación o Rechazo de Solicitud | T14 | Solicitudes del propietario | Implementar la vista de reservas del propietario con aceptar y rechazar. | 2 | Eddo | Done |
-| US19 | Cancelación de Reserva | T15 | Cancelación | Implementar la cancelación desde las reservas del arrendatario y del propietario. | 1 | Eddo | Done |
-| US20 | Historial de Reservas | T16 | Mis reservas | Implementar la lista de reservas del arrendatario con filtro por estado. | 2 | Eddo | Done |
-| US21 | Notificaciones de Actividad | T17 | Contexto Notification | Implementar la entidad, la API, el store y los handlers de eventos de dominio. | 3 | Josué | Done |
-| | | T18 | Campana de notificaciones | Implementar el componente de notificaciones en la barra superior. | 2 | Josué | Done |
-| | | T19 | Mensajería | Implementar conversaciones y mensajes entre arrendatario y propietario. | 4 | Fabrizio | Done |
-| US06 | Métricas de Flota y Transacciones | T20 | Panel del propietario | Implementar el inicio del propietario con métricas y accesos rápidos. | 3 | Ivonne | Done |
-| | | T21 | Transacciones | Implementar el historial de transacciones, el gráfico por vehículo y el reporte CSV. | 3 | Josué | Done |
-| US07 | Evaluación Mutua Post-Alquiler | T22 | Reseñas | Implementar el registro de reseñas y la vista de calificaciones con nivel de reputación. | 3 | Josué | Done |
-| — | Favoritos (soporte de US03) | T23 | Vehículos favoritos | Implementar el contexto Engagement y la vista de favoritos. | 2 | Marlon | Done |
-| — | Inicio del arrendatario | T24 | Panel del arrendatario | Implementar el inicio del arrendatario con búsqueda rápida y recomendados. | 2 | Ivonne | Done |
-| — | Configuración base | T25 | Shared kernel e i18n | Implementar `BaseApi`, `BaseEndpoint`, error interceptor, value objects, layout e idiomas EN/ES. | 4 | Josué | Done |
-| — | Fake API | T26 | Fake API | Implementar la base de datos y rutas de json-server con datos de prueba. | 2 | Josué | Done |
-| — | Despliegue | T27 | Despliegue | Desplegar la Fake API en Render y la aplicación en Firebase Hosting. | 2 | Josué | Done |
+| US37 | Registro de Usuario por Rol | T01 | Modelo de dominio y servicio de IAM | Implementar las entidades `User`, `UserRole`, `DriverLicense` y `UserPreferences`, además de `IamApi`, `UserAssembler`, el almacenamiento de sesión y el store de IAM. | 6 | Josué | Done |
+| | | T02 | Vista de registro por rol | Implementar el registro con selección de rol (arrendatario o propietario), campos según el rol y validaciones. | 4 | Josué | Done |
+| US02 | Inicio de Sesión Seguro | T03 | Inicio de sesión y guardas de navegación | Implementar la vista de inicio de sesión, la protección de rutas privadas y la separación de vistas por rol. | 5 | Josué | Done |
+| US14 | Edición de Perfil de Usuario | T04 | Vista de perfil | Implementar la edición de datos personales, foto, licencia de conducir, preferencias y contraseña. | 4 | Josué | Done |
+| US03 | Búsqueda de Vehículos Cercanos | T05 | Modelo y API de Fleet | Implementar `Vehicle`, `VehicleLocation`, `FleetApi`, `VehicleAssembler` y el store de Fleet. | 5 | Josué | Done |
+| | | T06 | Búsqueda con mapa | Implementar la vista de búsqueda con mapa de OpenStreetMap (Leaflet) y tarjetas de vehículos con su precio. | 6 | Josué | Done |
+| US38 | Detalle del Vehículo | T07 | Vista de detalle del vehículo | Implementar la galería, especificaciones, ubicación de recojo, datos del propietario y selección de fechas. | 4 | Josué | Done |
+| US40 | Inicio del Arrendatario | T08 | Panel del arrendatario | Implementar el inicio del arrendatario con búsqueda rápida, categorías, recomendados, mapa y próximas reservas. | 4 | Ivonne | Done |
+| US39 | Vehículos Favoritos | T09 | Contexto Engagement y favoritos | Implementar la entidad, la API y el store de favoritos, el botón de guardar y la vista de favoritos. | 4 | Marlon | Done |
+| US04 | Filtrado por Transmisión y Energía | T10 | Filtros de catálogo | Implementar `VehicleSearchCriteria` (Specification) y el panel de filtros por precio, transmisión, combustible y calificación. | 4 | Josué | Done |
+| US15 | Publicación de Nuevo Vehículo | T11 | Formulario de vehículo | Implementar el formulario con datos básicos, especificaciones, equipamiento, tarifas y carga de fotos. | 5 | Josué | Done |
+| US16 | Edición o Retiro de Publicación | T12 | Gestión de flota | Implementar Mis vehículos, el detalle del propietario, la edición y la publicación o retiro de vehículos. | 4 | Josué | Done |
+| US05 | Sincronización Automática de Disponibilidad | T13 | Calendario de disponibilidad | Implementar el calendario con días reservados, pendientes y bloqueados, y el bloqueo y desbloqueo de fechas. | 6 | Josué | Done |
+| US17 | Solicitud de Reserva | T14 | Modelo y store de Booking | Implementar la entidad `Booking`, el assembler, la API y el store con la validación de disponibilidad. | 5 | Eddo | Done |
+| | | T15 | Confirmación de reserva | Implementar la vista de confirmación con el resumen de días, precio, depósito y cálculo del total. | 4 | Eddo | Done |
+| US18 | Confirmación o Rechazo de Solicitud | T16 | Solicitudes del propietario | Implementar la vista de reservas del propietario con aceptar y rechazar, y filtros por estado y vehículo. | 4 | Eddo | Done |
+| US19 | Cancelación de Reserva | T17 | Cancelación de reservas | Implementar la cancelación desde las reservas del arrendatario y del propietario, con las reglas de cambio de estado. | 4 | Eddo | Done |
+| US20 | Historial de Reservas | T18 | Mis reservas | Implementar la lista de reservas del arrendatario con filtro por estado y acceso a calificar los alquileres finalizados. | 4 | Eddo | Done |
+| US21 | Notificaciones de Actividad | T19 | Contexto Notification y campana | Implementar la entidad, la API, el store, los handlers de eventos de dominio y la campana de notificaciones. | 6 | Josué | Done |
+| US41 | Mensajería entre Cliente y Propietario | T20 | Mensajería | Implementar el contexto Communication con conversaciones y mensajes entre arrendatario y propietario. | 6 | Fabrizio | Done |
+| US06 | Métricas de Flota y Transacciones | T21 | Panel del propietario | Implementar el inicio del propietario con métricas de vehículos, reservas, ingresos y calificación promedio. | 4 | Ivonne | Done |
+| US42 | Historial de Transacciones y Reporte | T22 | Transacciones | Implementar el historial de transacciones por rango de fechas, los gráficos por mes y por vehículo, y la descarga del reporte CSV. | 5 | Josué | Done |
+| US07 | Evaluación Mutua Post-Alquiler | T23 | Reseñas y reputación | Implementar el registro de reseñas y la vista de calificaciones con distribución de estrellas y nivel de reputación. | 5 | Josué | Done |
+| — | Configuración base | T24 | Shared kernel, layout e i18n | Implementar `BaseApi`, `BaseEndpoint`, el error interceptor, los value objects compartidos, el layout y los idiomas EN/ES. | 6 | Josué | Done |
+| — | Fake API | T25 | Fake API con json-server | Implementar la base de datos, las rutas con el prefijo `/api/v1` y los datos de prueba. | 4 | Josué | Done |
+| — | Despliegue | T26 | Despliegue | Desplegar la Fake API en Render y la aplicación en Firebase Hosting con las variables de entorno de producción. | 4 | Josué | Done |
 
 #### 5.2.2.4. Development Evidence for Sprint Review
 
-Durante este Sprint se implementó la primera versión del Frontend Web Application de Veygo con Vue 3, JavaScript, PrimeVue, Vue Router, Pinia, vue-i18n, Axios y Leaflet. El código se organizó por bounded contexts (IAM, Fleet, Booking, Engagement, Reputation, Payment, Communication, Notification y Dashboard), cada uno con sus capas domain, infrastructure, application y presentation.
+Durante este Sprint se implementó la primera versión del Frontend Web Application de Veygo con Vue 3, JavaScript, PrimeVue, Vue Router, vue-i18n, Axios y Leaflet. El estado de cada bounded context se gestionó con stores basados en la API de reactividad de Vue (`reactive`). El código se organizó por bounded contexts (IAM, Fleet, Booking, Engagement, Reputation, Payment, Communication, Notification y Dashboard), cada uno con sus capas domain, application, infrastructure y presentation, además de un contexto `shared` con los elementos comunes.
 
-El equipo aplicó GitFlow: cada funcionalidad se desarrolló en su propia rama `feature/*`, que se integró a `develop` mediante Pull Requests (#1 al #14). Finalmente, `develop` se integró a `main` (Pull Request #15) para el despliegue. Todos los mensajes siguen Conventional Commits.
+El equipo aplicó GitFlow: cada funcionalidad se desarrolló en su propia rama `feature/*`, que se integró a `develop` mediante Pull Requests (#1 al #14). Finalmente, `develop` se integró a `main` mediante el Pull Request #15 para el despliegue. La mayoría de los commits siguen la convención Conventional Commits (`tipo(alcance): descripción`). Algunos commits de las ramas `feature/booking` y `feature/dashboard` no respetaron este formato. Para el siguiente Sprint, la convención se aplicará en todos los commits.
 
 Repositorio del Frontend Web Application: https://github.com/1ASI0729-2620-4399-G3-Veygo/frontend
 
+A continuación, se presentan los commits más representativos de cada bounded context. El historial completo se encuentra en el enlace al final de esta sección.
+
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed by | Committed on (Date) |
 |---|---|---|---|---|---|---|
-| 1ASI0729-2620-4399-G3-Veygo/frontend | main | f68ef1f | chore: initial commit | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/fleet | d8e5c0c | feat(fleet): add vehicle entity, value objects and search criteria | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/fleet | 1a2c9aa | feat(fleet): add fleet api and vehicle assembler | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/fleet | daf735e | feat(fleet): add fleet and availability stores | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/fleet | 25a5ea3 | feat(fleet): add vehicle card, filters, map and calendar components | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/fleet | e58e8a0 | feat(fleet): add vehicle search, detail, form and availability views | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/fleet | 199b954 | build: add project dependencies | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/fleet | f5bf814 | chore: remove example store | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/iam | 18f32cb | feat(iam): add user entity, user role, driver license and preferences | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/iam | a0c6715 | feat(iam): add iam api, user assembler and session storage | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/iam | bf7e240 | feat(iam): add iam store | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/iam | 8af593e | feat(iam): add auth panel, auth scene, role option and user profile components | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/iam | 6dfdd4b | feat(iam): add sign-in, sign-up and profile views | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/iam | ab370f8 | build: add leaflet and json-server dependencies | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/i18n | 37aac26 | chore(i18n): add vue-i18n configuration | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/notification | 20a50b1 | feat(notification): add notification entity | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/payment | 85e8f1b | feat(payment): add transaction entity and income summary | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/reputation | e624b06 | feat(reputation): add review entity and reputation summary | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/reputation | 1258c73 | feat(reputation): add reputation api, resources and review assembler | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/reputation | 14cc09d | feat(reputation): add reputation store | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/reputation | bbf4f6c | feat(reputation): add review item and review dialog components | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/reputation | 1a5b01e | feat(reputation): add owner ratings view | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/router | 63df29b | feat(router): add routes and role-based navigation guard | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | c163b09 | feat(shared): add value objects money, date range, date time, url and string validator | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | 2e4202c | feat(shared): add domain event bus | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | 218489a | feat(api): add base api and base endpoint | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | f762ef5 | feat(api): add error interceptor | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | cb34cc2 | feat(shared): add image file reader | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | 055127a | feat(shared): add formatting composable, lima districts and theme helper | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | 6e618e4 | feat(ui): add layout, top bar, navigation menu, footer and language switcher | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | 2335354 | feat(ui): add page header, stat card, bar chart and unavailable content components | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | 9462bcc | feat(ui): add page not found and terms and conditions views | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 6ebf174 | feat(booking): implement booking store with availability validation and status lifecycle actions. | — | Asaltron520 | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | b989b62 | feat(booking): implement booking store with availability validation and status lifecycle actions. | — | Asaltron520 | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 39f3f1f | feat(booking): implement booking store with availability validation and status lifecycle actions. | — | Asaltron520 | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 907a74f | feat(creation):Create Booking | — | Eddo Su caletti | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 546a5e3 | Delete src/Booking | — | Eddo Su caletti | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | ca75a6a | Create booking.store.js | — | Eddo Su caletti | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | d844441 | Delete src/application directory | — | Eddo Su caletti | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 7a8bd60 | Create booking.entity.js | — | Eddo Su caletti | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | e3a3638 | Delete src/booking/domain/model directory | — | Eddo Su caletti | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | af146c0 | implement booking store with availability validation and status lifecycle actions | — | Asaltron520 | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 6fa347d | add Booking domain entity with validation, pricing, and lifecycle methods | — | Asaltron520 | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | d896e2b | implement data mapper assembler and API service client for bookings | — | Asaltron520 | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 8e66b5c | implement BookingItem, BookingStatusFilter, and BookingStatusTag UI components | — | Asaltron520 | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | b9e4f31 | add useBookingDetails composable to resolve vehicle and user references | — | Asaltron520 | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 04cbdc0 | implement booking confirmation view, owner requests dashboard, and renter bookings list | — | Asaltron520 | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | b9e1f2f | refactor name booking-api | — | Asaltron520 | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/engagement | 43690c7 | feat(engagement): add favorite vehicles view | — | Marlon Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | main | f68ef1f | chore: initial commit | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | 218489a | feat(api): add base api and base endpoint | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | 2e4202c | feat(shared): add domain event bus | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | 6e618e4 | feat(ui): add layout, top bar, navigation menu, footer and language switcher | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/i18n | 37aac26 | chore(i18n): add vue-i18n configuration | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/iam | 18f32cb | feat(iam): add user entity, user role, driver license and preferences | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/iam | 6dfdd4b | feat(iam): add sign-in, sign-up and profile views | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/router | 63df29b | feat(router): add routes and role-based navigation guard | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/fleet | d8e5c0c | feat(fleet): add vehicle entity, value objects and search criteria | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/fleet | e58e8a0 | feat(fleet): add vehicle search, detail, form and availability views | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 6fa347d | add Booking domain entity with validation, pricing, and lifecycle methods | — | Eddo Su Caletti | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 6ebf174 | feat(booking): implement booking store with availability validation and status lifecycle actions. | — | Eddo Su Caletti | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/booking | 04cbdc0 | implement booking confirmation view, owner requests dashboard, and renter bookings list | — | Eddo Su Caletti | 05/10/2026 |
 | 1ASI0729-2620-4399-G3-Veygo/frontend | feature/engagement | c8aad59 | feat(engagement): add favorite entity | — | Marlon Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/engagement | 1b227ce | feat(engagement): add favorite assembler | — | Marlon Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/engagement | 9c9ecfb | feat(engagement): add engagement resources | — | Marlon Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/engagement | 0cca9c9 | feat(engagement): add engagement api | — | Marlon Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/engagement | 035c433 | feat(engagement): add engagement store | — | Marlon Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/communication | cd3d35b | feat(communication): add communication store | — | Fabrizio Cano | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/engagement | 43690c7 | feat(engagement): add favorite vehicles view | — | Marlon Flores | 05/10/2026 |
 | 1ASI0729-2620-4399-G3-Veygo/frontend | feature/communication | 2bfc308 | feat(communication): add conversation entity | — | Fabrizio Cano | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/communication | 235ae82 | fix(communication): correct communication store path | — | Fabrizio Cano | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/communication | 228c06f | fix(communication): remove incorrect communication store path | — | Fabrizio Cano | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/communication | ad9bcd1 | feat(communication): add message entity | — | Fabrizio Cano | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/communication | b136891 | feat(communication): add communication api | — | Fabrizio Cano | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/communication | fce1560 | feat(communication): add communication resources | — | Fabrizio Cano | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/communication | 8c2363a | feat(communication): add conversation assembler | — | Fabrizio Cano | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/communication | 941d108 | feat(communication): add message assembler | — | Fabrizio Cano | 05/10/2026 |
 | 1ASI0729-2620-4399-G3-Veygo/frontend | feature/communication | cf2d1e8 | feat(communication): add messages view | — | Fabrizio Cano | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/dashboard | 1c75905 | FEATURE(dashboard):quick-actions | — | MarlonLasarte | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/dashboard | 3b23a82 | FEATURE(dashboard):owner-home | — | MarlonLasarte | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/dashboard | 10473d4 | FEATURE(dashboard):renter-home | — | MarlonLasarte | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | 2a36108 | chore: add environment files | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | 652d172 | chore: add favicon, brand, vehicle and avatar images | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | 455e824 | style: add veygo global styles and design tokens | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | 8049332 | feat(app): register primevue, i18n, pinia and router and restore session | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | b7b0e93 | feat(fake-api): add json-server database and routes | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | ffdd01d | build: add fake-api script | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | 9972fed | fix(build): move fake-api script into scripts section | — | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | main | db4889c | feat(firebase): add firebase hosting configuration | — | Josue Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/dashboard | 3b23a82 | FEATURE(dashboard):owner-home | — | Ivonne Ibañez | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/dashboard | 10473d4 | FEATURE(dashboard):renter-home | — | Ivonne Ibañez | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/reputation | 1a5b01e | feat(reputation): add owner ratings view | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/payment | 85e8f1b | feat(payment): add transaction entity and income summary | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/notification | 20a50b1 | feat(notification): add notification entity | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | b7b0e93 | feat(fake-api): add json-server database and routes | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | main | db4889c | feat(firebase): add firebase hosting configuration | — | Josué Flores | 05/10/2026 |
 
-_(Los commits no incluyen un cuerpo de mensaje; la descripción completa del cambio está en el título del commit.)_
+_(Los commits no incluyen un cuerpo de mensaje; la descripción del cambio está en el título del commit.)_
 
 Enlace del historial de commits: https://github.com/1ASI0729-2620-4399-G3-Veygo/frontend/commits/main
 
@@ -832,122 +789,143 @@ Enlace de los Pull Requests: https://github.com/1ASI0729-2620-4399-G3-Veygo/fron
 
 #### 5.2.2.5. Execution Evidence for Sprint Review
 
-Al término del Sprint 2, el equipo implementó y desplegó la primera versión del Frontend Web Application de Veygo. La aplicación ofrece dos experiencias según el rol del usuario: el arrendatario puede buscar vehículos por ubicación, fechas y tipo, revisar su detalle, reservarlos, guardarlos como favoritos, calificar sus alquileres y conversar con el propietario; el propietario puede publicar y editar vehículos, gestionar su disponibilidad, aceptar o rechazar solicitudes, revisar sus transacciones y calificaciones, y recibir notificaciones. La interfaz está disponible en inglés (idioma por defecto) y en español, y se adapta a pantallas móviles.
+Al término del Sprint 2, el equipo implementó y desplegó la primera versión del Frontend Web Application de Veygo. La aplicación ofrece dos experiencias según el rol del usuario: el arrendatario puede buscar vehículos por ubicación, fechas y tipo, revisar su detalle, reservarlos, guardarlos como favoritos, calificar sus alquileres y conversar con el propietario; el propietario puede publicar y editar vehículos, gestionar su disponibilidad, aceptar o rechazar solicitudes y revisar sus transacciones y calificaciones. Ambos roles reciben notificaciones sobre el estado de sus reservas y los mensajes nuevos. La interfaz está disponible en inglés (idioma por defecto) y en español.
 
 Link de la aplicación: https://veygo-web-app.web.app
 
-Link del video: [URL del video en Microsoft Stream]
+Link del video: https://drive.google.com/file/d/1PieO7ejladIV7ItzjTtMbdd-lqVBScS3/view?usp=sharing
 
 Cuentas de prueba (contraseña `Veygo2026!`): `leo.ramos@veygo.pe` (arrendatario) y `laura.torres@veygo.pe` (propietario).
+
+| User Story | Evidencia |
+|---|---|
+| US37, US02 | Registro por rol e inicio de sesión |
+| US40, US03, US04 | Inicio del arrendatario, búsqueda con mapa y filtros |
+| US38, US17 | Detalle del vehículo y confirmación de reserva |
+| US20, US19 | Historial y cancelación de reservas |
+| US39 | Vehículos favoritos |
+| US41, US21 | Mensajería y notificaciones |
+| US14 | Perfil del usuario |
+| US06 | Inicio del propietario con métricas |
+| US15, US16 | Publicación, edición y retiro de vehículos |
+| US05 | Calendario de disponibilidad |
+| US18 | Aceptación o rechazo de solicitudes |
+| US42 | Transacciones y reporte |
+| US07 | Calificaciones y reseñas |
 
 <h4>Inicio de sesión y registro</h4>
 
 ![Inicio de sesión](assets/img/sprint2/exec-01-sign-in.png)
 
-Vista de inicio de sesión con el formulario sobre una escena animada de carretera nocturna y selector de idioma.
+**US02.** Vista de inicio de sesión con el formulario sobre una escena animada de carretera nocturna y selector de idioma.
 
 ![Registro](assets/img/sprint2/exec-02-sign-up.png)
 
-Registro con selección de rol (arrendatario o propietario). Los campos cambian según el rol elegido y el mensaje de la derecha se adapta al tipo de usuario.
+**US37.** Registro con selección de rol (arrendatario o propietario). Los campos cambian según el rol elegido y el mensaje de la derecha se adapta al tipo de usuario.
 
 <h4>Arrendatario: inicio y búsqueda</h4>
 
 ![Inicio del arrendatario](assets/img/sprint2/exec-03-renter-home.png)
 
-Inicio del arrendatario con buscador por ubicación, fecha de inicio, fecha fin y tipo de vehículo, accesos por categoría, vehículos recomendados, mapa de vehículos cercanos y próximas reservas.
+**US40.** Inicio del arrendatario con buscador por ubicación, fecha de inicio, fecha fin y tipo de vehículo, accesos por categoría, vehículos recomendados, mapa de vehículos cercanos y próximas reservas.
 
 ![Búsqueda de vehículos](assets/img/sprint2/exec-04-vehicle-search.png)
 
-Búsqueda con filtros por precio, transmisión, combustible y calificación, resultados disponibles en las fechas elegidas y mapa de OpenStreetMap con el precio de cada vehículo.
+**US03 y US04.** Búsqueda con filtros por precio, transmisión, combustible y calificación, resultados disponibles en las fechas elegidas y mapa de OpenStreetMap con el precio de cada vehículo.
 
 <h4>Arrendatario: detalle y reserva</h4>
 
 ![Detalle del vehículo](assets/img/sprint2/exec-05-vehicle-detail.png)
 
-Detalle del vehículo con galería, especificaciones, ubicación de recojo, datos del propietario y selección de fechas.
+**US38.** Detalle del vehículo con galería, especificaciones, ubicación de recojo, datos del propietario y selección de fechas.
 
 ![Confirmación de reserva](assets/img/sprint2/exec-06-booking-confirmation.png)
 
-Confirmación de la reserva con el resumen de días, precio y depósito. Antes de crearla, el sistema verifica que las fechas no se crucen con otra reserva o con días bloqueados.
+**US17.** Confirmación de la reserva con el resumen de días, precio y depósito. Antes de crearla, el sistema verifica que las fechas no se crucen con otra reserva o con días bloqueados.
 
 ![Mis reservas](assets/img/sprint2/exec-07-renter-bookings.png)
 
-Historial de reservas filtrable por estado, con opciones para cancelar y calificar los alquileres finalizados.
+**US20 y US19.** Historial de reservas filtrable por estado, con opciones para cancelar y calificar los alquileres finalizados.
 
 ![Favoritos](assets/img/sprint2/exec-08-favorites.png)
 
-Vehículos guardados como favoritos.
+**US39.** Vehículos guardados como favoritos.
 
 <h4>Comunicación, notificaciones y perfil</h4>
 
 ![Mensajes](assets/img/sprint2/exec-09-messages.png)
 
-Mensajería entre arrendatario y propietario.
+**US41.** Mensajería entre arrendatario y propietario.
 
 ![Notificaciones](assets/img/sprint2/exec-10-notifications.png)
 
-Campana de notificaciones con los cambios de estado de las reservas y los mensajes nuevos.
+**US21.** Campana de notificaciones con los cambios de estado de las reservas y los mensajes nuevos.
 
 ![Perfil](assets/img/sprint2/exec-11-profile.png)
 
-Perfil del usuario con datos personales, licencia de conducir, estadísticas y preferencias de idioma, notificaciones y modo oscuro.
+**US14.** Perfil del usuario con datos personales, licencia de conducir, estadísticas y preferencias de idioma, notificaciones y modo oscuro.
 
 <h4>Propietario: inicio y flota</h4>
 
 ![Inicio del propietario](assets/img/sprint2/exec-12-owner-home.png)
 
-Inicio del propietario con métricas de vehículos, próximas reservas, ingresos del mes y calificación promedio, junto con accesos rápidos.
+**US06.** Inicio del propietario con métricas de vehículos, próximas reservas, ingresos del mes y calificación promedio, junto con accesos rápidos.
 
 ![Mis vehículos](assets/img/sprint2/exec-13-owner-vehicles.png)
 
-Gestión de la flota: búsqueda, filtros, publicación o retiro, edición y detalle de cada vehículo.
+**US16.** Gestión de la flota: búsqueda, filtros, publicación o retiro, edición y detalle de cada vehículo.
 
 ![Detalle del vehículo para el propietario](assets/img/sprint2/exec-14-owner-vehicle-detail.png)
 
-Detalle del vehículo desde la perspectiva del propietario, con precios, información adicional, disponibilidad y estadísticas.
+**US16.** Detalle del vehículo desde la perspectiva del propietario, con precios, información adicional, disponibilidad y estadísticas.
 
 ![Agregar vehículo](assets/img/sprint2/exec-15-vehicle-form.png)
 
-Formulario de publicación con datos básicos, especificaciones, equipamiento, información adicional y carga de fotos.
+**US15.** Formulario de publicación con datos básicos, especificaciones, equipamiento, información adicional y carga de fotos.
 
 <h4>Propietario: disponibilidad, reservas, transacciones y calificaciones</h4>
 
 ![Disponibilidad](assets/img/sprint2/exec-16-availability.png)
 
-Calendario de disponibilidad por vehículo con días reservados, pendientes y bloqueados, y acciones para bloquear o desbloquear fechas.
+**US05.** Calendario de disponibilidad por vehículo con días reservados, pendientes y bloqueados, y acciones para bloquear o desbloquear fechas.
 
 ![Reservas del propietario](assets/img/sprint2/exec-17-owner-bookings.png)
 
-Solicitudes de reserva con opciones para aceptar o rechazar, y filtros por estado y vehículo.
+**US18.** Solicitudes de reserva con opciones para aceptar o rechazar, y filtros por estado y vehículo.
 
 ![Transacciones](assets/img/sprint2/exec-18-transactions.png)
 
-Transacciones con rango de fechas editable, resumen de ingresos, gráfico por mes y por vehículo, historial y descarga del reporte.
+**US42.** Transacciones con rango de fechas editable, resumen de ingresos, gráfico por mes y por vehículo, historial y descarga del reporte.
 
 ![Calificaciones](assets/img/sprint2/exec-19-ratings.png)
 
-Calificaciones con el promedio, la distribución de estrellas, las reseñas de los clientes y la calificación por vehículo.
+**US07.** Calificaciones con el promedio, la distribución de estrellas, las reseñas de los clientes y la calificación por vehículo.
 
 #### 5.2.2.6. Services Documentation Evidence for Sprint Review
 
-En este Sprint no se implementaron los Web Services en ASP.NET Core; están planificados para el siguiente Sprint, donde se documentarán con OpenAPI (Swagger). Para que el Frontend Web Application funcione con datos reales, el equipo implementó una **Fake API** con json-server, que expone los mismos recursos REST que tendrá la API definitiva bajo el prefijo `/api/v1`. La Fake API está desplegada en Render.
+En este Sprint no se implementaron los Web Services en ASP.NET Core; están planificados para el siguiente Sprint, donde se documentarán con OpenAPI (Swagger). Para que el Frontend Web Application funcione con datos persistentes, el equipo implementó una **Fake API** con json-server, que expone los recursos REST que tendrá la API definitiva bajo el prefijo `/api/v1`. El prefijo se configuró en `routes.json` (`"/api/v1/*": "/$1"`), y la Fake API está desplegada en Render.
 
 URL base: https://veygo-fake-api.onrender.com/api/v1
 
 Repositorio (carpeta `server/`): https://github.com/1ASI0729-2620-4399-G3-Veygo/frontend/tree/main/server
 
+Todas las llamadas se realizan desde la capa de infraestructura de cada bounded context (`*-api.js`), que extiende las clases compartidas `BaseApi` y `BaseEndpoint`. Las listas usan además los parámetros de json-server `_sort`, `_order` y `_limit` para ordenar y limitar los resultados.
+
 | Recurso | Endpoint | Acciones utilizadas | Sintaxis de llamada | Parámetros | Uso en la aplicación |
 |---|---|---|---|---|---|
-| Users | `/users` | GET, PATCH, DELETE | `GET /api/v1/users?email={email}` <br> `GET /api/v1/users/{id}` <br> `PATCH /api/v1/users/{id}` | `email`, `password`, `id` | Inicio de sesión, registro, perfil y eliminación de cuenta. |
-| Users | `/users` | POST | `POST /api/v1/users` | Body: datos del usuario | Registro de arrendatarios y propietarios. |
-| Vehicles | `/vehicles` | GET, POST, PUT, PATCH, DELETE | `GET /api/v1/vehicles?published=true` <br> `GET /api/v1/vehicles?ownerId={id}` <br> `GET /api/v1/vehicles/{id}` | `published`, `ownerId`, `id` | Catálogo, búsqueda, detalle y gestión de la flota. |
-| Bookings | `/bookings` | GET, POST, PATCH | `GET /api/v1/bookings?renterId={id}` <br> `GET /api/v1/bookings?ownerId={id}` <br> `GET /api/v1/bookings?vehicleId={id}` <br> `PATCH /api/v1/bookings/{id}` | `renterId`, `ownerId`, `vehicleId` | Solicitud, confirmación, rechazo, cancelación e historial de reservas. |
-| Blocked dates | `/blockedDates` | GET, POST, DELETE | `GET /api/v1/blockedDates?vehicleId={id}` | `vehicleId` | Bloqueo y desbloqueo de fechas en el calendario. |
-| Favorites | `/favorites` | GET, POST, DELETE | `GET /api/v1/favorites?renterId={id}` | `renterId` | Vehículos favoritos. |
-| Reviews | `/reviews` | GET, POST | `GET /api/v1/reviews?vehicleId={id}` <br> `GET /api/v1/reviews?ownerId={id}` | `vehicleId`, `ownerId` | Reseñas y reputación. |
-| Conversations | `/conversations` | GET, POST, PATCH | `GET /api/v1/conversations?ownerId={id}` <br> `GET /api/v1/conversations?renterId={id}` | `ownerId`, `renterId` | Lista de conversaciones. |
-| Messages | `/messages` | GET, POST | `GET /api/v1/messages?conversationId={id}` | `conversationId` | Mensajes de una conversación. |
-| Notifications | `/notifications` | GET, POST, PATCH | `GET /api/v1/notifications?userId={id}` | `userId` | Campana de notificaciones. |
+| Users | `/users` | GET, POST, PATCH, DELETE | `GET /api/v1/users?email={email}&password={password}` <br> `GET /api/v1/users?email={email}` <br> `GET /api/v1/users/{id}` <br> `POST /api/v1/users` <br> `PATCH /api/v1/users/{id}` <br> `DELETE /api/v1/users/{id}` | `email`, `password`, `id`, body con los datos del usuario | Inicio de sesión, validación de correo duplicado, registro, edición de perfil y contraseña, y eliminación de cuenta. |
+| Vehicles | `/vehicles` | GET, POST, PUT, PATCH, DELETE | `GET /api/v1/vehicles?published=true` <br> `GET /api/v1/vehicles?ownerId={id}` <br> `GET /api/v1/vehicles/{id}` <br> `POST /api/v1/vehicles` <br> `PUT /api/v1/vehicles/{id}` <br> `PATCH /api/v1/vehicles/{id}` <br> `DELETE /api/v1/vehicles/{id}` | `published`, `ownerId`, `id`, body con los datos del vehículo | Catálogo, búsqueda, detalle, publicación, edición, publicar o retirar y eliminación de vehículos. |
+| Blocked dates | `/blockedDates` | GET, POST, DELETE | `GET /api/v1/blockedDates?vehicleId={id}` <br> `POST /api/v1/blockedDates` <br> `DELETE /api/v1/blockedDates/{id}` | `vehicleId`, `id` | Bloqueo y desbloqueo de fechas en el calendario de disponibilidad. |
+| Bookings | `/bookings` | GET, POST, PATCH | `GET /api/v1/bookings?renterId={id}` <br> `GET /api/v1/bookings?ownerId={id}` <br> `GET /api/v1/bookings?vehicleId={id}` <br> `POST /api/v1/bookings` <br> `PATCH /api/v1/bookings/{id}` | `renterId`, `ownerId`, `vehicleId`, `id`, body con el nuevo estado | Solicitud, confirmación, rechazo, cancelación e historial de reservas, y cálculo de transacciones e ingresos. |
+| Favorites | `/favorites` | GET, POST, DELETE | `GET /api/v1/favorites?renterId={id}` <br> `POST /api/v1/favorites` <br> `DELETE /api/v1/favorites/{id}` | `renterId`, `id` | Guardar y quitar vehículos favoritos. |
+| Reviews | `/reviews` | GET, POST | `GET /api/v1/reviews?vehicleId={id}` <br> `GET /api/v1/reviews?ownerId={id}` <br> `POST /api/v1/reviews` | `vehicleId`, `ownerId` | Registro de reseñas y cálculo de la reputación. |
+| Conversations | `/conversations` | GET, POST, PATCH | `GET /api/v1/conversations?renterId={id}` <br> `GET /api/v1/conversations?ownerId={id}` <br> `POST /api/v1/conversations` <br> `PATCH /api/v1/conversations/{id}` | `renterId`, `ownerId`, `id` | Lista de conversaciones y actualización del último mensaje. |
+| Messages | `/messages` | GET, POST, PATCH | `GET /api/v1/messages?conversationId={id}` <br> `POST /api/v1/messages` <br> `PATCH /api/v1/messages/{id}` | `conversationId`, `id` | Envío de mensajes y marcado como leídos. |
+| Notifications | `/notifications` | GET, POST, PATCH | `GET /api/v1/notifications?userId={id}` <br> `POST /api/v1/notifications` <br> `PATCH /api/v1/notifications/{id}` | `userId`, `id` | Campana de notificaciones y marcado como leídas. |
+
+El bounded context Payment no tiene un endpoint propio en la Fake API: las transacciones y el resumen de ingresos se calculan en el frontend a partir de las reservas confirmadas y completadas.
+
+> **Nota:** en la Fake API, el inicio de sesión se resuelve con una consulta `GET` por correo y contraseña, porque json-server no ofrece autenticación. En los Web Services del siguiente Sprint, este flujo se reemplazará por `POST /api/v1/authentication/sign-in`, con contraseñas cifradas mediante BCrypt y un token JWT, según lo definido en el Capítulo IV.
 
 Ejemplo de respuesta de `GET /api/v1/bookings/1`:
 
@@ -968,7 +946,7 @@ Ejemplo de respuesta de `GET /api/v1/bookings/1`:
 }
 ```
 
-La respuesta devuelve la reserva con el vehículo, el arrendatario y el propietario relacionados, el periodo de alquiler, el precio y el estado (`pending`, `confirmed`, `rejected`, `cancelled` o `completed`).
+La respuesta devuelve la reserva con los identificadores del vehículo, el arrendatario y el propietario, el periodo de alquiler, el precio y el estado (`pending`, `confirmed`, `rejected`, `cancelled` o `completed`).
 
 Ejemplo de respuesta de `GET /api/v1/reviews?vehicleId=1` (primer elemento):
 
@@ -985,15 +963,18 @@ Ejemplo de respuesta de `GET /api/v1/reviews?vehicleId=1` (primer elemento):
 }
 ```
 
-![Fake API desplegada](assets/img/sprint2/fake-api-vehicles.png)
+![Fake API desplegada](assets/img/fake-api-vehicles.png)
 
 Respuesta de `GET /api/v1/vehicles` desde la Fake API desplegada en Render.
 
-| Repository | Branch | Commit Id | Commit Message | Committed by | Committed on (Date) |
-|---|---|---|---|---|---|
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | b7b0e93 | feat(fake-api): add json-server database and routes | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | ffdd01d | build: add fake-api script | Josue Flores | 05/10/2026 |
-| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | 9972fed | fix(build): move fake-api script into scripts section | Josue Flores | 05/10/2026 |
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed by | Committed on (Date) |
+|---|---|---|---|---|---|---|
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/iam | ab370f8 | build: add leaflet and json-server dependencies | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | 218489a | feat(api): add base api and base endpoint | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/shared | f762ef5 | feat(api): add error interceptor | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | b7b0e93 | feat(fake-api): add json-server database and routes | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | ffdd01d | build: add fake-api script | — | Josué Flores | 05/10/2026 |
+| 1ASI0729-2620-4399-G3-Veygo/frontend | feature/app-setup | 9972fed | fix(build): move fake-api script into scripts section | — | Josué Flores | 05/10/2026 |
 
 #### 5.2.2.7. Software Deployment Evidence for Sprint Review
 
@@ -1055,20 +1036,35 @@ La configuración de Firebase se registró en el repositorio con el commit `db48
 
 #### 5.2.2.8. Team Collaboration Insights during Sprint
 
-Durante este Sprint el equipo trabajó en el repositorio `frontend` de la organización 1ASI0729-2620-4399-G3-Veygo aplicando GitFlow. Cada integrante desarrolló su bounded context en una rama `feature/*` y la integró a `develop` mediante Pull Requests; luego `develop` se integró a `main` para el despliegue.
+Durante este Sprint el equipo trabajó en el repositorio `frontend` de la organización 1ASI0729-2620-4399-G3-Veygo aplicando GitFlow. Cada integrante desarrolló su bounded context en una rama `feature/*` y la integró a `develop` mediante un Pull Request; finalmente, `develop` se integró a `main` mediante el Pull Request #15 para el despliegue.
 
-| Integrante | Rama(s) | Commits |
-|---|---|---|
-| Flores Apaico, Josué Antonio | feature/fleet, feature/iam, feature/i18n, feature/notification, feature/payment, feature/reputation, feature/router, feature/shared, feature/app-setup | 40 |
-| Su Caletti, Eddo | feature/booking | 16 |
-| Cano Ortiz, Fabrizio Hamet | feature/communication | 10 |
-| Flores Siguas, Marlon Alessandro | feature/engagement | 6 |
-| Ibañez Torres, Ivonne Beatriz | feature/dashboard | 3 |
+El repositorio registra 89 commits en la rama `main`: 75 commits de desarrollo y 14 commits de merge generados al integrar los Pull Requests. La siguiente tabla resume los commits de desarrollo de cada integrante:
+
+| Integrante | Cuenta(s) de GitHub | Rama(s) | Pull Request(s) | Commits |
+|---|---|---|---|---|
+| Flores Apaico, Josué Antonio | JosueFloresAp | feature/fleet, feature/iam, feature/i18n, feature/notification, feature/payment, feature/reputation, feature/router, feature/shared, feature/app-setup | #1, #3, #4, #5, #6, #7, #8, #9, #14 y #15 | 40 |
+| Su Caletti, Eddo | Asaltron520 / Eddo Su caletti | feature/booking | #10 | 16 |
+| Cano Ortiz, Fabrizio Hamet | Fabrizioco01 | feature/communication | #12 | 10 |
+| Flores Siguas, Marlon Alessandro | MarlonFS965 | feature/engagement | #11 | 6 |
+| Ibañez Torres, Ivonne Beatriz | MarlonLasarte | feature/dashboard | #13 | 3 |
+| | | | **Total** | **75** |
+
+_(Nota: Eddo Su Caletti realizó commits desde dos configuraciones de Git distintas, por lo que GitHub los muestra con dos nombres. La cuenta `MarlonLasarte` pertenece a Ivonne Ibañez.)_
+
+La carga de commits no fue equilibrada: Josué Flores concentró la configuración base, los contextos compartidos y el despliegue. Para el siguiente Sprint, el equipo acordó distribuir los bounded contexts del backend de forma más equitativa.
 
 A continuación, se presentan las capturas de los analíticos de GitHub que evidencian la participación de los miembros del equipo durante este Sprint:
 
-![Contributors](assets/img/sprint2/insights-contributors.png)
+![Contributors](assets/img/insights-contributors.png)
 
-![Commits](assets/img/sprint2/insights-commits.png)
+Contribuciones por integrante en el repositorio `frontend`.
 
-![Network](assets/img/sprint2/insights-network.png)
+![Commits](assets/img/insights-commits.png)
+
+Actividad de commits durante el Sprint.
+
+![Network](assets/img/insights-network.png)
+
+Gráfico de red con las ramas `feature/*` integradas a `develop` y `main`.
+
+![Pulse](assets/img/pulse.png)
