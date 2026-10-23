@@ -255,11 +255,15 @@ La navegación en **Veygo** está diseñada para que los usuarios puedan desplaz
 
 Estos wireframes permiten visualizar de manera detallada la estructura propuesta para la página de aterrizaje. A través de ellos, se pueden identificar sus principales elementos, funcionalidades y la forma en que los usuarios interactuarán y navegarán por el sitio.
 
+Link Figma: https://www.figma.com/design/SEiYHFz3wVGVUoymJZZUdA/Veygo?node-id=0-1&t=s5puAtwOsOt4UFq3-1
+
  <img src="assets/img/cap4/wireframe-landing.png" alt="logo" width="" height="">
 
 #### 4.3.2. Landing Page Mock-up
 
 Los siguientes mockups representan una visión más cercana a la landing Page de Veygo:
+
+Link Figma: https://www.figma.com/design/SEiYHFz3wVGVUoymJZZUdA/Veygo?node-id=0-1&t=s5puAtwOsOt4UFq3-1
 
  <img src="assets/img/cap4/Landingpage.png" alt="logo" width="" height="">
 
@@ -273,6 +277,7 @@ Cada pantalla ha sido planteada para facilitar tareas como la búsqueda y reserv
 
 A través de estas representaciones, se puede comprender la distribución de los elementos en cada sección, las herramientas disponibles y los principales recorridos de navegación dentro de **Veygo**. De esta manera, el diseño busca contribuir a una experiencia de alquiler de vehículos más organizada, sencilla y eficiente para todos los usuarios de la plataforma.
 
+Link Figma: https://www.figma.com/design/SEiYHFz3wVGVUoymJZZUdA/Veygo?node-id=3-224&t=s5puAtwOsOt4UFq3-1
 
 <img src="assets/img/cap4/Veygo - Sign In Wireframe.png" alt="Veygo Sign In Wireframe" width="" height="">
 
@@ -315,6 +320,8 @@ A través de estas representaciones, se puede comprender la distribución de los
 
 #### 4.4.2. Web Applications Wireflow Diagrams
 
+Link Figma: https://www.figma.com/design/SEiYHFz3wVGVUoymJZZUdA/Veygo?node-id=2011-14&t=s5puAtwOsOt4UFq3-1
+
 <img src="assets/img/cap4/image 1.png" alt="Image 1" width="" height="">
 
 <img src="assets/img/cap4/image 9.png" alt="Image 9" width="" height="">
@@ -338,13 +345,15 @@ A través de estas representaciones, se puede comprender la distribución de los
 <img src="assets/img/cap4/image 11.png" alt="Image 11" width="" height="">
 
 
-#### 4.4.2. Web Applications Mock-ups
+#### 4.4.3. Web Applications Mock-ups
 
 Los mockups que se presentan a continuación muestran una representación detallada de la apariencia visual final de Veygo, nuestra plataforma digital orientada a facilitar el alquiler de vehículos y conectar de manera eficiente a arrendatarios y arrendadores. Cada interfaz ha sido diseñada cuidadosamente para ofrecer una experiencia moderna, intuitiva y fácil de utilizar, considerando las necesidades específicas de ambos tipos de usuarios.
 
 Estas propuestas visuales reflejan cómo será la experiencia final dentro de la plataforma, mostrando la distribución de los contenidos, los elementos de interacción y las principales funcionalidades disponibles. Asimismo, permiten visualizar de manera más precisa la navegación y el funcionamiento de Veygo, desde la búsqueda y reserva de vehículos por parte de los arrendatarios hasta la publicación, gestión de vehículos y administración de reservas por parte de los arrendadores.
 
 En conjunto, los mockups permiten apreciar la propuesta visual de Veygo y cómo el diseño planteado busca brindar una experiencia de alquiler de vehículos clara, organizada y eficiente para los distintos usuarios de la plataforma.
+
+Link Figma: https://www.figma.com/design/SEiYHFz3wVGVUoymJZZUdA/Veygo?node-id=3-224&t=s5puAtwOsOt4UFq3-1
 
 <img src="assets/img/cap4/Sign in.png" alt="Sign In" width="" height="">
 
@@ -384,17 +393,17 @@ En conjunto, los mockups permiten apreciar la propuesta visual de Veygo y cómo 
 
 <img src="assets/img/cap4/Edit Vehicle.png" alt="Edit Vehicle" width="" height="">
 
-#### 4.4.3. Web Applications User Flow Diagrams
+#### 4.4.4. Web Applications User Flow Diagrams
 
 <img src="assets/img/cap4/UserFlowDiagrams.jpg" alt="Edit Vehicle" width="" height="">
 
-Link: <a href="https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571" style="color: blue;"> https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571 </a>
+Link: https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR29JWEJKcDNKclFtT3p0Y2lGcXIrSkhBd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=326343372635
 
 ### 4.5. Web Applications Prototyping
 
 <img src="assets/img/cap4/WebApplicationsPrototyping.jpg" alt="Edit Vehicle" width="" height="">
 
-Link: <a href="https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571" style="color: blue;"> https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3BDY2V0ZVI3RE5ETXpuaG5tOFhRZnRhWWluRVAxeXRuUUgwWDl3Mk1qRGVRPT0hdjE=?share_link_id=825034209571 </a>
+Link: https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3JheDVYUkNLT3lMbnJJcU1pbGRiOTF0R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=820187149633
 
 
 Link de video: <a href="https://drive.google.com/file/d/1a2MVvUp9paguAafOVfuw7knAl7k0A4na/view?usp=sharing
@@ -408,7 +417,7 @@ A partir de los resultados del Big Picture EventStorming presentado en la secci�
 
 La sesión se realizó de forma remota en **Miro** el día **05/10/2026**, con una duración aproximada de **1 hora y 30 minutos**, y contó con la participación de todos los integrantes del equipo Zyntra. Se siguió la guía de referencia de Design-Level EventStorming (https://bit.ly/dles-guide), priorizando los procesos núcleo del negocio: la publicación de vehículos y el ciclo de vida de una reserva.
 
-Link del tablero: <a href="https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR282TW53OTIwYmlaeDF0bGR3cHQxRFN0R2lncW1vRmFBVnlLcVJzTmdFdlNRPT0hdjE=?share_link_id=980875429092" style="color: blue;">[LINK DE MIRO]</a>
+Link del tablero: https://miro.com/welcomeonboard/N1NoQnVob0VXWlViY1NnRHA5K2hWL2FlWko4NXlVaC9IK3Fhek1QOWJ1ZUxZQ05VRi90TTlCbE9NUGhBVXFmUVFPSUhxeUdiVlNGMjEydmZrdG5uaVhRVFVhTG83RFgwTEhTSUN1bWZHR3FwQXlBK2FRM3JJN0xpSlFwV0Njck9QdGo1ZEV3bUdPQWRZUHQzSGl6V2NBPT0hdjE=?share_link_id=653983037271
 
 ##### Notación utilizada
 
@@ -424,7 +433,7 @@ Para mantener una lectura uniforme del tablero se utilizó la notación estánda
 | Verde | **Read Model** | Información que el actor consulta para tomar una decisión (Query). | Calendario de disponibilidad del vehículo |
 | Rosado | **External System** | Sistema externo con el que interactúa la solución. | Pasarela de pagos, servicio de mapas |
 | Rojo | **Hotspot** | Problema, duda o riesgo identificado en el proceso. | Solicitudes simultáneas para un mismo vehículo |
-E:\Documentos2026\Aplic.Web\RP\report\Zyntra\assets\img\f0.png
+
 <img src="assets/img/cap4/f0.png" alt="Notación de Design-Level EventStorming">
 
 ##### Paso 1: Depuración de los eventos del Big Picture
@@ -744,8 +753,6 @@ Genera las notificaciones de los usuarios a partir de los eventos de dominio de 
 Construye las métricas del Owner y del Renter consultando los Query Services de Booking, Payment y Reputation, sin almacenar información propia.
 
 
-
-### 4.7. Software Object-Oriented Design
 
 ### 4.7. Software Object-Oriented Design
 
