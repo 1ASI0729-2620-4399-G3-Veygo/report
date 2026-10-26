@@ -162,7 +162,7 @@ Ocupación: Estudiante universitario (UPC)
 **Detalles de la entrevista:**
 
 ![Foto Entrevista](assets/img/Entrevista-Segmento2.jpeg) <br>
-[[URL de la entrevista](https://youtu.be/C-CCBMB-hx8?si=CsbbWmsPkPQl6bDD)] — Duración de la entrevista: [7:37]
+[[URL de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQDBlJ29Nj3AR54gD6yFv5gzARTewdrKbZkZqUEjxWcEImc?e=5ZZQcC)] — Duración de la entrevista: [7:37]
  
 **Transcripción resumen de entrevista:**
 Andre suele alquilar vehículos de transmisión manual, ya que prefiere evitar autos automáticos o eléctricos por considerar que tienden a malograrse con mayor frecuencia. Indica que las plataformas que usa habitualmente le exigen DNI, licencia de conducir vigente y datos personales, además de ser mayor de edad y cumplir con las condiciones que impone cada propietario.
@@ -325,13 +325,13 @@ Finalmente, Rosa manifestó que estaría dispuesta a utilizar **Veygo**, siempre
  
 **Entrevista 3**
 
-Nombre completo: Juan Diaz Banda
+Nombre completo: Rosa Medina
 
-Edad: 28 años
+Edad: 42 años
 
-Papel desempeñado: Propietario/arrendador (profesor de colegio)
+Papel desempeñado: Propietaria y arrendadora de vehículos
 
-Distrito: Bellavista, Callao
+Distrito: Santiago de Surco
  
 **Detalles de la entrevista:**
 ![Foto Entrevista](assets/img/Entrevista-Segmento2-3.jpeg) <br>
@@ -339,7 +339,8 @@ Distrito: Bellavista, Callao
 [[URL de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQAr1YYTJJndQo73cCGv46GLAaKK0nBFiMttDKaXZnnf_z8?e=ePc1KP)] — Duración de la entrevista: [3:54]
  
 **Transcripción resumen de entrevista:**
-Rosa, residente en el distrito de Santiago de Surco, se dedica al alquiler de un SUV compacto con transmisión automática, un vehículo muy solicitado debido a las condiciones del tráfico en Lima.
+
+Rosa Medina, residente en el distrito de Santiago de Surco, se dedica al alquiler de un SUV compacto con transmisión automática, un vehículo muy solicitado debido a las condiciones del tráfico en Lima.
 
 Respecto al control de disponibilidad, señaló que actualmente enfrenta un caos operativo al gestionarlo todo con un Excel compartido en Google Drive, su calendario del celular y WhatsApp, lo que le toma mucho tiempo de coordinación y le genera el riesgo constante de cruzar fechas por error.
 
