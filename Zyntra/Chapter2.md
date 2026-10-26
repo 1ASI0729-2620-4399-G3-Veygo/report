@@ -336,12 +336,20 @@ Distrito: Bellavista, Callao
 **Detalles de la entrevista:**
 ![Foto Entrevista](assets/img/Entrevista-Segmento2-3.jpeg) <br>
 
-[[URL de la entrevista](https://drive.google.com/file/d/1qEhT1fvgC09HdDXzRPTrgDkUVPTtdTVm/view?usp=drive_link)] — Duración de la entrevista: [3:54]
+[[URL de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQAr1YYTJJndQo73cCGv46GLAaKK0nBFiMttDKaXZnnf_z8?e=ePc1KP)] — Duración de la entrevista: [3:54]
  
 **Transcripción resumen de entrevista:**
-Juan combina su trabajo en un colegio con el alquiler de su Toyota Yaris para generar ingresos adicionales. Es una persona práctica y organizada que gestiona su negocio **manualmente mediante un registro en Excel**, operando principalmente en zonas cercanas a su domicilio.
- 
-Para alquilar su vehículo exige DNI y licencia de conducir vigente, con un mínimo de un día y un máximo de una semana de alquiler. Promociona su servicio por Instagram y coordina los tratos por WhatsApp, pero reconoce que estos canales son **inseguros para manejar datos personales**. Muestra interés en migrar a una aplicación especializada que le permita ver reseñas de clientes, gestionar sus alquileres mediante un **panel de control** y reducir riesgos. Su perfil refleja la necesidad de una solución tecnológica más confiable y eficiente para su negocio.
+Rosa, residente en el distrito de Santiago de Surco, se dedica al alquiler de un SUV compacto con transmisión automática, un vehículo muy solicitado debido a las condiciones del tráfico en Lima.
+
+Respecto al control de disponibilidad, señaló que actualmente enfrenta un caos operativo al gestionarlo todo con un Excel compartido en Google Drive, su calendario del celular y WhatsApp, lo que le toma mucho tiempo de coordinación y le genera el riesgo constante de cruzar fechas por error.
+
+En relación con la verificación de identidad, indicó que hoy en día lo hace de forma rudimentaria pidiendo foto de DNI y brevete por WhatsApp, además de revisar multas y redes sociales, lo cual resulta desgastante; asimismo, manifestó que contar con un sistema de verificación de identidad integrado antes del primer contacto le daría muchísima tranquilidad y le permitiría filtrar a los curiosos.
+
+Sobre el calendario de disponibilidad, señaló que es un aspecto crítico y súper útil, destacando que una actualización automática del calendario le salvaría de alquilar un auto dos veces por error un mismo fin de semana.
+
+En cuanto al mapa y la ubicación, explicó que facilitaría muchísimo que la gente de la zona la encuentre rápido sin tener que dar tantas explicaciones por chat, optimizando la coordinación en puntos intermedios seguros como el Jockey Plaza o la puerta de su edificio.
+
+Finalmente, Rosa manifestó que estaría dispuesta de forma definitiva a migrar a Veygo como plataforma principal, reconociendo que si la herramienta junta la seguridad de la verificación de identidad, le quita el peso del Excel con un calendario automático y le ayuda con el mapa de entrega, profesionalizaría por completo su negocio de alquiler.
 
 #### 2.2.3 Análisis de entrevistas.
 A continuación se identifican, por cada segmento objetivo, las características objetivas y subjetivas más comunes, con su sustento estadístico y la referencia a las entrevistas de donde se extrae cada una. Estas características son la base para la construcción de los arquetipos de usuario.
