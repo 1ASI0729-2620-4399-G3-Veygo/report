@@ -334,7 +334,7 @@ Papel desempeñado: Propietaria y arrendadora de vehículos
 Distrito: Santiago de Surco
  
 **Detalles de la entrevista:**
-![Foto Entrevista](assets/img/Entrevista-Segmento2-3.jpeg) <br>
+![Foto Entrevista](assets/img/Entrevista-Segmento2-3.png) <br>
 
 [[URL de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQAr1YYTJJndQo73cCGv46GLAaKK0nBFiMttDKaXZnnf_z8?e=ePc1KP)] — Duración de la entrevista: [3:54]
  
