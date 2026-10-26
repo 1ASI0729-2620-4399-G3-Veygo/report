@@ -1068,3 +1068,689 @@ Actividad de commits durante el Sprint.
 Gráfico de red con las ramas `feature/*` integradas a `develop` y `main`.
 
 ![Pulse](assets/img/pulse.png)
+
+
+### 5.2.3. Sprint 3
+Para el tercer Sprint, el equipo se enfocó en implementar y desplegar la primera versión de los **RESTful Web Services** de Veygo con ASP.NET Core, Entity Framework Core y MySQL, documentados con OpenAPI (Swagger). Los Web Services reemplazan a la Fake API utilizada en el Sprint 2 y exponen los recursos de autenticación, vehículos, disponibilidad, reservas, favoritos, mensajería, notificaciones, perfil, métricas y reseñas, organizados por bounded contexts. Además, se desplegó una nueva versión del Frontend Web Application conectada a los Web Services, con autenticación mediante JWT, y una nueva versión de la Landing Page que completa las secciones pendientes del Sprint 1 e incorpora el Video About-the-Product.
+
+A continuación, se presentan las historias de usuario y technical stories seleccionadas para este Sprint:
+
+| ID | User Story / Technical Story | Epic | Priority | SP |
+| :-- | :-- | :-- | :-- | :-- |
+| TS25 | Endpoint de Registro y Autenticación | EP-02 | High | 5 |
+| TS54 | Endpoints de Perfil | EP-02 | Medium | 3 |
+| US43 | Cierre de Sesión | EP-02 | Medium | 1 |
+| TS27 | Endpoint de Búsqueda Geolocalizada | EP-03 | High | 5 |
+| TS51 | Endpoints de Favoritos | EP-03 | Low | 3 |
+| TS28 | Endpoint de Filtros de Catálogo | EP-04 | High | 3 |
+| TS29 | Endpoints CRUD de Publicación de Vehículos | EP-05 | High | 8 |
+| TS30 | Endpoint de Calendario de Disponibilidad | EP-06 | High | 5 |
+| TS31 | Endpoints de Solicitud y Confirmación de Reserva | EP-07 | High | 8 |
+| TS52 | Endpoints de Conversaciones y Mensajes | EP-07 | Medium | 5 |
+| TS53 | Endpoints de Notificaciones | EP-07 | Medium | 3 |
+| TS32 | Endpoint de Métricas del Propietario | EP-08 | Medium | 5 |
+| TS33 | Endpoint de Calificaciones y Reseñas | EP-09 | Medium | 5 |
+| TS57 | Documentación de la API con OpenAPI | Transversal | High | 3 |
+| US23 | Sección de Preguntas Frecuentes | EP-01 | Low | 1 |
+| US24 | Suscripción a Novedades | EP-01 | Low | 2 |
+| | | | **Total Story Points** | **65** |
+
+
+#### 5.2.3.1. Sprint Planning 3.
+La reunión de Sprint Planning 3 se realizó después de la revisión del Sprint 2. En ella el equipo revisó lo alcanzado con el Frontend Web Application, analizó las observaciones de la retrospectiva y seleccionó las technical stories de los Web Services y las historias de usuario de la Landing Page que se implementarían en este Sprint.
+
+| Campo | Detalle |
+|---|---|
+| **Sprint #** | Sprint 3 |
+| **Fecha** | 2026-10-23 |
+| **Hora** | 08:00 PM |
+| **Lugar** | Reunión virtual vía Google Meet |
+| **Preparado por** | Josue Antonio Flores Apaico |
+| **Asistentes** | Josue Antonio Flores Apaico, Fabrizio Hamet Cano Ortiz, Marlon Alessandro Flores Siguas, Ivonne Beatriz Ibañez Torres y Eddo Su Caletti |
+| **Resumen del Review del Sprint 2** | En el Sprint 2 se implementó y desplegó en Firebase Hosting la primera versión del Frontend Web Application de Veygo, con 20 historias de usuario (66 story points). El arrendatario puede registrarse, buscar vehículos en un mapa, filtrarlos, reservarlos, guardarlos como favoritos, calificar sus alquileres y comunicarse con el propietario; el propietario puede publicar y gestionar su flota, controlar la disponibilidad, atender solicitudes y revisar sus métricas, transacciones y calificaciones. La aplicación consume una Fake API con json-server desplegada en Render, que define los contratos REST que tendrán los Web Services. |
+| **Resumen de la Retrospectiva del Sprint 2** | El equipo valoró la organización del código por bounded contexts y el uso de GitFlow con Pull Requests, que permitieron trabajar en paralelo sin conflictos. Como oportunidades de mejora, identificó que la carga de trabajo no se distribuyó de forma equilibrada, que algunos commits no siguieron Conventional Commits y que el inicio de sesión de la Fake API enviaba la contraseña en la URL. Para este Sprint se acordó asignar a cada integrante al menos un bounded context de los Web Services y una tarea de integración en el frontend, revisar la convención de commits en cada Pull Request y aplicar autenticación con JWT y contraseñas cifradas con BCrypt. |
+| **Objetivo del Sprint 3** | Nuestro enfoque está en entregar la primera versión de los Web Services de Veygo y conectar el Frontend Web Application a ellos, reemplazando la Fake API. Creemos que esto entrega a arrendatarios y propietarios una plataforma segura y confiable, en la que sus cuentas, vehículos y reservas se almacenan de forma persistente y protegida. Esto se confirmará cuando un arrendatario inicie sesión con un token JWT, cree una reserva desde la aplicación desplegada, el propietario la confirme y ambos operaciones queden registradas en la base de datos MySQL y documentadas en Swagger. |
+| **Velocity del Sprint 3** | 66 |
+| **Suma de Story Points** | 65 |
+
+
+#### 5.2.3.2. Aspect Leaders and Collaborators.
+Los aspectos de este Sprint corresponden a los bounded contexts de los Web Services definidos en el Capítulo IV, además de la nueva versión de la Landing Page, la configuración transversal (shared kernel, internacionalización y documentación con OpenAPI) y el despliegue. A diferencia del Sprint 2, la carga se distribuyó de forma equilibrada: cada integrante lideró al menos un bounded context de los Web Services, se encargó de integrarlo en el Frontend Web Application y participó en la nueva versión de la Landing Page. Además, colaboró en la revisión de los Pull Requests de los demás.
+
+| Team Member | GitHub Username | IAM y Perfil | Fleet | Availability y Booking | Engagement, Communication y Notification | Reputation y Dashboard | Landing Page | Shared, i18n y OpenAPI | Deployment (Web Services, Web App y Landing) |
+|---|---|---|---|---|---|---|---|---|---|
+| **Flores Apaico, Josué Antonio** | **JosueFloresAp** | **L** | C | C | C | C | C | **L** | **L** |
+| **Flores Siguas, Marlon Alessandro** | **MarlonFS965** | C | **L** | C | C | C | C | C | C |
+| **Su Caletti, Eddo** | **Asalreon520** | C | C | **L** | C | C | C | C | C |
+| **Cano Ortiz, Fabrizio Hamet** | **Fabrizioco01** | C | C | C | **L** | C | C | C | C |
+| **Ibañez Torres, Ivonne Beatriz** | **MarlonLasarte** | C | C | C | C | **L** | **L** | C | C |
+
+_(Nota: L = Leader, C = Collaborator)_
+
+
+#### 5.2.3.3. Sprint Backlog 3.
+
+El objetivo principal de este Sprint fue implementar y desplegar la primera versión de los Web Services de Veygo, conectar a ellos el Frontend Web Application y publicar una nueva versión de la Landing Page con las secciones pendientes, atributos de accesibilidad (ARIA) e internacionalización en inglés y español latinoamericano. Las historias seleccionadas se descompusieron en tareas de entre 4 y 8 horas, gestionadas en Jira con los estados To Do, In Process, To Review y Done. Una tarea pasó a Done solo después de que su Pull Request fuera revisado e integrado a `develop`.
+
+A continuación, se presenta una captura de pantalla del tablero de control para el Sprint 3:
+
+![Tablero del Sprint 3 en Jira](assets/img/sprint3-board.png)
+
+Enlace del Jira: https://josueflores9283.atlassian.net/jira/software/projects/SCRUM/boards/1
+
+| Sprint # | Sprint 3 | | | | | | |
+|---|---|---|---|---|---|---|---|
+| **Story Id** | **Story Title** | **Task Id** | **Task Title** | **Task Description** | **Estimation (Hours)** | **Assigned To** | **Status** |
+| TS57 | Documentación de la API con OpenAPI | T01 | Esqueleto de los Web Services | Crear el proyecto ASP.NET Core organizado por bounded contexts, el shared kernel (entidad base, repositorio base, Unit of Work y AppDbContext con convención snake_case) y la conexión a MySQL con Entity Framework Core. | 8 | Josué | To Do |
+|  |  | T02 | OpenAPI e internacionalización | Configurar Swagger con la documentación de los endpoints y la internacionalización de los mensajes de la API en inglés (por defecto) y español latinoamericano (es-419). | 6 | Josué | To Do |
+| TS25 | Endpoint de Registro y Autenticación | T03 | Modelo de dominio de IAM | Implementar el agregado User con su rol, el cifrado de contraseñas con BCrypt y el servicio de generación y validación de tokens JWT. | 8 | Josué | To Do |
+|  |  | T04 | Endpoints de autenticación | Implementar sign-up y sign-in, el middleware de autorización por token y los recursos y assemblers de IAM. | 6 | Josué | To Do |
+| TS54 | Endpoints de Perfil | T05 | Endpoints de perfil | Implementar la consulta y edición del perfil, el cambio de contraseña y la eliminación de la cuenta. | 5 | Fabrizio | To Do |
+| US43 | Cierre de Sesión | T06 | Integración de IAM en el frontend | Reemplazar el inicio de sesión de la Fake API por los endpoints de IAM, enviar el token en el encabezado Authorization e implementar el cierre de sesión. | 5 | Josué | To Do |
+| TS29 | Endpoints CRUD de Publicación de Vehículos | T07 | Modelo de dominio de Fleet | Implementar el agregado Vehicle con sus value objects, el repositorio y la configuración de Entity Framework Core. | 8 | Marlon | To Do |
+|  |  | T08 | Endpoints CRUD de vehículos | Implementar la creación, consulta por id y por propietario, edición, publicación o retiro y eliminación de vehículos. | 8 | Marlon | To Do |
+|  |  | T09 | Integración de Fleet en el frontend | Conectar la búsqueda, el detalle y la gestión de flota a los endpoints de Fleet y ajustar los assemblers. | 5 | Marlon | To Do |
+| TS27 | Endpoint de Búsqueda Geolocalizada | T10 | Búsqueda geolocalizada | Implementar la consulta de vehículos publicados cercanos a una ubicación y disponibles en un rango de fechas. | 6 | Marlon | To Do |
+| TS28 | Endpoint de Filtros de Catálogo | T11 | Filtros de catálogo | Implementar los filtros por tipo, transmisión, combustible, precio y calificación en la consulta de vehículos. | 5 | Marlon | To Do |
+| TS30 | Endpoint de Calendario de Disponibilidad | T12 | Endpoints de disponibilidad | Implementar la consulta, el bloqueo y el desbloqueo de fechas, con la validación de cruces con reservas confirmadas. | 6 | Eddo | To Do |
+| TS31 | Endpoints de Solicitud y Confirmación de Reserva | T13 | Modelo de dominio de Booking | Implementar el agregado Booking con el cálculo del total, la validación de disponibilidad y las transiciones de estado. | 8 | Eddo | To Do |
+|  |  | T14 | Endpoints de reservas | Implementar la creación de reservas, la consulta por arrendatario, propietario y vehículo, y la confirmación, rechazo, cancelación y finalización. | 8 | Eddo | To Do |
+|  |  | T15 | Integración de Booking en el frontend | Conectar la reserva, el historial, las solicitudes del propietario y el calendario de disponibilidad a los Web Services. | 5 | Eddo | To Do |
+| TS52 | Endpoints de Conversaciones y Mensajes | T16 | Endpoints de mensajería | Implementar las entidades Conversation y Message y los endpoints para listar conversaciones, enviar mensajes y marcarlos como leídos. | 8 | Fabrizio | To Do |
+|  |  | T17 | Integración de Engagement, Communication y Notification | Conectar favoritos, mensajería y la campana de notificaciones a los Web Services. | 5 | Fabrizio | To Do |
+| TS53 | Endpoints de Notificaciones | T18 | Endpoints de notificaciones | Implementar la entidad Notification, sus endpoints y la creación automática ante cambios de estado de reservas y mensajes nuevos. | 6 | Fabrizio | To Do |
+| TS51 | Endpoints de Favoritos | T19 | Endpoints de favoritos | Implementar la consulta, el registro y la eliminación de vehículos favoritos del arrendatario. | 4 | Fabrizio | To Do |
+| TS33 | Endpoint de Calificaciones y Reseñas | T20 | Endpoints de reseñas | Implementar la entidad Review, el registro de reseñas, la consulta por vehículo y propietario y el resumen de reputación. | 6 | Ivonne | To Do |
+| TS32 | Endpoint de Métricas del Propietario | T21 | Endpoint de métricas del propietario | Implementar las métricas de vehículos activos, reservas, ingresos del mes, calificación promedio y transacciones por rango de fechas. | 8 | Ivonne | To Do |
+|  |  | T22 | Integración de Dashboard y Reputation | Conectar el inicio del propietario, las transacciones y las calificaciones a los Web Services. | 5 | Ivonne | To Do |
+| US23 | Sección de Preguntas Frecuentes | T23 | Sección de preguntas frecuentes | Implementar la sección de preguntas frecuentes de la Landing Page en inglés y español, con atributos ARIA. | 4 | Ivonne | To Do |
+| US24 | Suscripción a Novedades | T24 | Suscripción a novedades | Implementar el formulario de suscripción con validación del correo y mensaje de confirmación. | 4 | Ivonne | To Do |
+| — | Accesibilidad e i18n de la Landing Page | T25 | Accesibilidad de navegación y selector de idioma | Agregar atributos ARIA y textos en es-419 en el encabezado, el menú y el selector de idioma de la Landing Page. | 4 | Josué | To Do |
+| — | Accesibilidad e i18n de la Landing Page | T26 | Accesibilidad de categorías y destacados | Agregar atributos ARIA y textos en es-419 en las secciones de categorías y vehículos destacados de la Landing Page. | 4 | Marlon | To Do |
+| — | Accesibilidad e i18n de la Landing Page | T27 | Accesibilidad del buscador y proceso | Agregar atributos ARIA y textos en es-419 en el buscador rápido y la sección Cómo funciona de la Landing Page. | 4 | Eddo | To Do |
+| — | Accesibilidad e i18n de la Landing Page | T28 | Accesibilidad de confianza y testimonios | Agregar atributos ARIA y textos en es-419 en las secciones de confianza y testimonios de la Landing Page. | 4 | Fabrizio | To Do |
+| — | Despliegue | T29 | Despliegue de los Web Services | Crear la base de datos MySQL en la nube, desplegar los Web Services y configurar las variables de entorno y CORS. | 6 | Josué | To Do |
+| — | Despliegue | T30 | Despliegue de la Web App y la Landing Page | Apuntar el Frontend Web Application a los Web Services desplegados, incrustar el Video About-the-Product en la Landing Page y publicar ambas versiones. | 4 | Ivonne | To Do |
+
+#### 5.2.3.4. Development Evidence for Sprint Review.
+
+Durante este Sprint se implementó la primera versión de los RESTful Web Services de Veygo con ASP.NET Core, Entity Framework Core y MySQL, utilizando C# como lenguaje de programación. El código se organizó por bounded contexts (IAM, Fleet, Booking, Engagement, Communication, Notification, Reputation y Dashboard), cada uno con sus capas Domain, Application, Infrastructure e Interfaces, además de un contexto Shared con los elementos comunes. La autenticación se implementó con tokens JWT y contraseñas cifradas con BCrypt, y la documentación de los endpoints con OpenAPI (Swagger).
+
+Asimismo, se integró el Frontend Web Application con los Web Services, reemplazando la Fake API, y se publicó una nueva versión de la Landing Page con las secciones de preguntas frecuentes y suscripción a novedades, atributos ARIA e internacionalización en inglés y español latinoamericano.
+
+El equipo aplicó GitFlow en los tres repositorios: cada funcionalidad se desarrolló en una rama `feature/*`, integrada a `develop` mediante Pull Requests, y luego `develop` se integró a `main` para el despliegue. Todos los commits siguieron la convención Conventional Commits, y cada versión publicada se identificó con un tag de Semantic Versioning.
+
+Repositorios:
+- Web Services: https://github.com/1ASI0729-2620-4399-G3-Veygo/backend
+- Frontend Web Application: https://github.com/1ASI0729-2620-4399-G3-Veygo/frontend
+- Landing Page: https://github.com/1ASI0729-2620-4399-G3-Veygo/landing-Page
+
+A continuación, se presentan los commits más representativos de cada producto:
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed by | Committed on (Date) |
+|---|---|---|---|---|---|---|
+| (se completa con los commits reales) | | | | | | |
+
+Enlaces del historial de commits:
+- https://github.com/1ASI0729-2620-4399-G3-Veygo/backend/commits/main
+- https://github.com/1ASI0729-2620-4399-G3-Veygo/frontend/commits/main
+- https://github.com/1ASI0729-2620-4399-G3-Veygo/landing-Page/commits/main
+
+
+#### 5.2.3.5. Execution Evidence for Sprint Review.
+
+Al término del Sprint 3, el equipo desplegó la primera versión de los Web Services de Veygo y conectó a ellos el Frontend Web Application, que dejó de utilizar la Fake API. Los usuarios ahora se registran e inician sesión con contraseñas cifradas y un token JWT, y toda la información de vehículos, disponibilidad, reservas, favoritos, mensajes, notificaciones y reseñas se almacena de forma persistente en una base de datos MySQL. Además, se publicó una nueva versión de la Landing Page con las secciones de preguntas frecuentes y suscripción a novedades, atributos de accesibilidad (ARIA) y soporte para inglés (idioma por defecto) y español latinoamericano.
+
+Link de la Landing Page: https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/
+
+Link de la aplicación: https://veygo-web-app.web.app
+
+Link del video: https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing
+
+| User Story / Technical Story | Evidencia |
+|---|---|
+| US23, US24 | Nuevas secciones de la Landing Page |
+| TS25, US43 | Registro, inicio y cierre de sesión con JWT |
+| TS27, TS28 | Búsqueda geolocalizada y filtros desde los Web Services |
+| TS29 | Publicación y gestión de vehículos persistida |
+| TS30, TS31 | Disponibilidad y ciclo de vida de la reserva |
+| TS51, TS52, TS53 | Favoritos, mensajería y notificaciones |
+| TS32, TS33 | Métricas del propietario y reseñas |
+| TS54 | Edición de perfil y cambio de contraseña |
+
+<h4>Landing Page</h4>
+
+![Preguntas frecuentes](assets/img/sprint3/exec-01-landing-faq.png)
+
+**US23.** Sección de preguntas frecuentes con respuestas desplegables, disponible en inglés y español.
+
+![Suscripción a novedades](assets/img/sprint3/exec-02-landing-subscribe.png)
+
+**US24.** Formulario de suscripción a novedades con validación del correo y mensaje de confirmación.
+
+<h4>Autenticación con los Web Services</h4>
+
+![Inicio de sesión con JWT](assets/img/sprint3/exec-03-sign-in-jwt.png)
+
+**TS25.** Inicio de sesión contra los Web Services. En las herramientas de desarrollo del navegador se observa la petición `POST /api/v1/authentication/sign-in` y el token JWT devuelto, que la aplicación envía en el encabezado `Authorization` de las siguientes peticiones.
+
+![Cierre de sesión](assets/img/sprint3/exec-04-sign-out.png)
+
+**US43.** Opción de cierre de sesión en el menú del usuario, que elimina el token y redirige al inicio de sesión.
+
+<h4>Arrendatario</h4>
+
+![Búsqueda desde los Web Services](assets/img/sprint3/exec-05-vehicle-search.png)
+
+**TS27 y TS28.** Búsqueda de vehículos cercanos con filtros, con los resultados obtenidos de los Web Services.
+
+![Reserva persistida](assets/img/sprint3/exec-06-booking.png)
+
+**TS31.** Creación de una reserva. La solicitud queda registrada en la base de datos con estado `pending`.
+
+![Favoritos y mensajes](assets/img/sprint3/exec-07-favorites-messages.png)
+
+**TS51 y TS52.** Vehículos favoritos y mensajería con el propietario, almacenados en los Web Services.
+
+<h4>Propietario</h4>
+
+![Solicitud confirmada](assets/img/sprint3/exec-08-owner-confirm.png)
+
+**TS31 y TS53.** El propietario confirma la solicitud y el arrendatario recibe la notificación correspondiente.
+
+![Gestión de flota](assets/img/sprint3/exec-09-fleet.png)
+
+**TS29 y TS30.** Publicación de un vehículo y bloqueo de fechas en el calendario de disponibilidad.
+
+![Métricas y reseñas](assets/img/sprint3/exec-10-owner-dashboard.png)
+
+**TS32 y TS33.** Inicio del propietario con métricas calculadas por los Web Services y calificaciones recibidas.
+
+![Perfil](assets/img/sprint3/exec-11-profile.png)
+
+**TS54.** Edición del perfil y cambio de contraseña.
+
+
+#### 5.2.3.6. Services Documentation Evidence for Sprint Review.
+
+En este Sprint se implementó y documentó con OpenAPI (Swagger) la primera versión de los RESTful Web Services de Veygo, desarrollados con ASP.NET Core y Entity Framework Core. Los endpoints se organizan por bounded context, utilizan el prefijo `/api/v1` y reemplazan los recursos de la Fake API del Sprint 2. Todos los endpoints, salvo el registro y el inicio de sesión, requieren un token JWT en el encabezado `Authorization: Bearer {token}`. Los mensajes de la API se devuelven en inglés por defecto y en español latinoamericano cuando la petición incluye el encabezado `Accept-Language: es-419`. Los errores se devuelven en el formato estándar `ProblemDetails`.
+
+Documentación desplegada (Swagger UI): https://<url-de-los-web-services>/swagger
+
+Repositorio de los Web Services: https://github.com/1ASI0729-2620-4399-G3-Veygo/backend
+
+| Bounded Context | Endpoint | Acción | Sintaxis de llamada | Parámetros | Descripción del response |
+|---|---|---|---|---|---|
+| IAM | `/api/v1/authentication/sign-up` | POST | `POST /api/v1/authentication/sign-up` | Body: `firstName`, `lastName`, `email`, `password`, `role` (`renter` u `owner`) | `201 Created` con el usuario registrado, sin la contraseña. `409 Conflict` si el correo ya existe. |
+| IAM | `/api/v1/authentication/sign-in` | POST | `POST /api/v1/authentication/sign-in` | Body: `email`, `password` | `200 OK` con el id, el rol y el token JWT del usuario. `401 Unauthorized` si las credenciales son incorrectas. |
+| IAM | `/api/v1/users/{id}` | GET, PUT, DELETE | `GET /api/v1/users/{id}` <br> `PUT /api/v1/users/{id}` <br> `DELETE /api/v1/users/{id}` | Path: `id`. Body (PUT): datos personales, licencia y preferencias | Perfil del usuario, perfil actualizado o `204 No Content` al eliminar la cuenta. |
+| IAM | `/api/v1/users/{id}/password` | PATCH | `PATCH /api/v1/users/{id}/password` | Path: `id`. Body: `currentPassword`, `newPassword` | `204 No Content`. `400 Bad Request` si la contraseña actual no coincide. |
+| Fleet | `/api/v1/vehicles` | GET, POST | `GET /api/v1/vehicles?latitude={lat}&longitude={lng}&radiusKm={km}&startDate={fecha}&endDate={fecha}&type={tipo}&transmission={tipo}&fuelType={tipo}&minPrice={n}&maxPrice={n}&minRating={n}` <br> `GET /api/v1/vehicles?ownerId={id}` <br> `POST /api/v1/vehicles` | Query: ubicación, radio, fechas y filtros (todos opcionales), `ownerId`. Body (POST): datos del vehículo | Lista de vehículos publicados que cumplen los filtros, ordenados por distancia, o vehículo creado con `201 Created`. |
+| Fleet | `/api/v1/vehicles/{id}` | GET, PUT, PATCH, DELETE | `GET /api/v1/vehicles/{id}` <br> `PUT /api/v1/vehicles/{id}` <br> `PATCH /api/v1/vehicles/{id}/publication` <br> `DELETE /api/v1/vehicles/{id}` | Path: `id`. Body (PATCH): `published` | Detalle, vehículo actualizado, estado de publicación o `204 No Content`. |
+| Fleet | `/api/v1/vehicles/{vehicleId}/blocked-dates` | GET, POST, DELETE | `GET /api/v1/vehicles/{vehicleId}/blocked-dates` <br> `POST /api/v1/vehicles/{vehicleId}/blocked-dates` <br> `DELETE /api/v1/vehicles/{vehicleId}/blocked-dates/{id}` | Path: `vehicleId`, `id`. Body (POST): `startDate`, `endDate` | Fechas bloqueadas del vehículo. `409 Conflict` si el bloqueo se cruza con una reserva confirmada. |
+| Booking | `/api/v1/bookings` | GET, POST | `GET /api/v1/bookings?renterId={id}` <br> `GET /api/v1/bookings?ownerId={id}&status={estado}` <br> `GET /api/v1/bookings?vehicleId={id}` <br> `POST /api/v1/bookings` | Query: `renterId`, `ownerId`, `vehicleId`, `status`. Body (POST): `vehicleId`, `startDate`, `endDate`, `paymentMethod` | Lista de reservas o reserva creada en estado `pending`. `409 Conflict` si las fechas no están disponibles. |
+| Booking | `/api/v1/bookings/{id}` | GET, PATCH | `GET /api/v1/bookings/{id}` <br> `PATCH /api/v1/bookings/{id}/confirm` <br> `PATCH /api/v1/bookings/{id}/reject` <br> `PATCH /api/v1/bookings/{id}/cancel` <br> `PATCH /api/v1/bookings/{id}/complete` | Path: `id` | Reserva con su nuevo estado. `400 Bad Request` si la transición no es válida, por ejemplo al confirmar una reserva cancelada. |
+| Engagement | `/api/v1/favorites` | GET, POST, DELETE | `GET /api/v1/favorites?renterId={id}` <br> `POST /api/v1/favorites` <br> `DELETE /api/v1/favorites/{id}` | Query: `renterId`. Body (POST): `renterId`, `vehicleId` | Vehículos favoritos del arrendatario, favorito creado o `204 No Content`. |
+| Communication | `/api/v1/conversations` | GET, POST | `GET /api/v1/conversations?userId={id}` <br> `POST /api/v1/conversations` | Query: `userId`. Body (POST): `renterId`, `ownerId`, `vehicleId` | Conversaciones del usuario ordenadas por último mensaje, o conversación creada. |
+| Communication | `/api/v1/conversations/{id}/messages` | GET, POST | `GET /api/v1/conversations/{id}/messages` <br> `POST /api/v1/conversations/{id}/messages` <br> `PATCH /api/v1/messages/{id}/read` | Path: `id`. Body (POST): `content` | Mensajes de la conversación, mensaje enviado o `204 No Content` al marcarlo como leído. |
+| Notification | `/api/v1/notifications` | GET, PATCH | `GET /api/v1/notifications?userId={id}` <br> `PATCH /api/v1/notifications/{id}/read` | Query: `userId`. Path: `id` | Últimas notificaciones del usuario o `204 No Content` al marcarla como leída. |
+| Reputation | `/api/v1/reviews` | GET, POST | `GET /api/v1/reviews?vehicleId={id}` <br> `GET /api/v1/reviews?ownerId={id}` <br> `POST /api/v1/reviews` | Query: `vehicleId`, `ownerId`. Body (POST): `bookingId`, `rating`, `comment` | Reseñas o reseña creada. `409 Conflict` si la reserva ya tiene reseña y `400 Bad Request` si no está finalizada. |
+| Reputation | `/api/v1/owners/{ownerId}/reputation` | GET | `GET /api/v1/owners/{ownerId}/reputation` | Path: `ownerId` | Promedio, cantidad de reseñas, distribución de estrellas y nivel de reputación. |
+| Dashboard | `/api/v1/owners/{ownerId}/metrics` | GET | `GET /api/v1/owners/{ownerId}/metrics` | Path: `ownerId` | Vehículos activos, reservas próximas, ingresos del mes y calificación promedio. |
+| Dashboard | `/api/v1/owners/{ownerId}/transactions` | GET | `GET /api/v1/owners/{ownerId}/transactions?from={fecha}&to={fecha}` | Path: `ownerId`. Query: `from`, `to` | Transacciones del rango de fechas, con el total por mes y por vehículo. |
+
+Ejemplo de petición y respuesta de `POST /api/v1/authentication/sign-in`:
+
+```json
+{
+  "email": "leo.ramos@veygo.pe",
+  "password": "Veygo2026!"
+}
+```
+
+```json
+{
+  "id": 1,
+  "email": "leo.ramos@veygo.pe",
+  "role": "renter",
+  "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9..."
+}
+```
+
+La respuesta devuelve los datos básicos del usuario autenticado y el token JWT, que el Frontend Web Application almacena y envía en las siguientes peticiones.
+
+Ejemplo de petición y respuesta de `POST /api/v1/bookings`:
+
+```json
+{
+  "vehicleId": 1,
+  "startDate": "2026-11-20",
+  "endDate": "2026-11-23",
+  "paymentMethod": "card"
+}
+```
+
+```json
+{
+  "id": 16,
+  "vehicleId": 1,
+  "renterId": 1,
+  "ownerId": 2,
+  "startDate": "2026-11-20",
+  "endDate": "2026-11-23",
+  "pricePerDay": 180,
+  "totalPrice": 540,
+  "status": "pending",
+  "paymentMethod": "card",
+  "createdAt": "2026-11-05T15:30:00Z"
+}
+```
+
+El arrendatario se obtiene del token, por lo que no se envía en la petición. Los Web Services validan que las fechas no se crucen con reservas confirmadas ni con fechas bloqueadas, calculan el total y registran la reserva en estado `pending`.
+
+Ejemplo de error de `POST /api/v1/bookings` con `Accept-Language: es-419`:
+
+```json
+{
+  "title": "Conflict",
+  "status": 409,
+  "detail": "El vehículo no está disponible en las fechas seleccionadas."
+}
+```
+
+<h4>Interacción con la documentación</h4>
+
+![Swagger UI](assets/img/sprint3/swagger-01-overview.png)
+
+Vista general de Swagger UI con los endpoints agrupados por bounded context.
+
+![Autenticación en Swagger](assets/img/sprint3/swagger-02-sign-in.png)
+
+Ejecución de `POST /api/v1/authentication/sign-in` con la cuenta de prueba. El token obtenido se registra con el botón **Authorize** para probar los endpoints protegidos.
+
+![Creación de reserva en Swagger](assets/img/sprint3/swagger-03-create-booking.png)
+
+Ejecución de `POST /api/v1/bookings` con datos de muestra y respuesta `201 Created`.
+
+![Confirmación de reserva en Swagger](assets/img/sprint3/swagger-04-confirm-booking.png)
+
+Ejecución de `PATCH /api/v1/bookings/{id}/confirm` con la cuenta del propietario. La reserva cambia a estado `confirmed`.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed by | Committed on (Date) |
+|---|---|---|---|---|---|---|
+| (se completa con los commits reales de documentación) | | | | | | |
+
+
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review.
+
+En este Sprint se desplegaron tres productos: la primera versión de los **Web Services** en Render, con su base de datos MySQL en Aiven; una nueva versión del **Frontend Web Application** en Firebase Hosting, conectada a los Web Services; y una nueva versión de la **Landing Page** en GitHub Pages. Con este despliegue, la Fake API del Sprint 2 dejó de ser utilizada por la aplicación.
+
+| Producto | Plataforma | Versión | URL |
+|---|---|---|---|
+| Landing Page | GitHub Pages | v1.1.0 | https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/ |
+| Frontend Web Application | Firebase Hosting | v1.1.0 | https://veygo-web-app.web.app |
+| Web Services (RESTful API) | Render | v1.0.0 | https://<url-de-los-web-services>/swagger |
+| Base de datos MySQL | Aiven | — | (acceso privado) |
+
+<h4>Base de datos MySQL en Aiven</h4>
+
+1. Se creó una cuenta en Aiven y un servicio **MySQL** en el plan gratuito.
+
+![Aiven crear servicio](assets/img/sprint3/deploy-01-aiven-create-mysql.png)
+
+2. Una vez activo el servicio, se obtuvieron los datos de conexión (host, puerto, usuario y base de datos). Estos datos se registraron como variables de entorno en Render y no se incluyeron en el repositorio.
+
+![Aiven servicio activo](assets/img/sprint3/deploy-02-aiven-running.png)
+
+<h4>Despliegue de los Web Services en Render</h4>
+
+3. Se agregó al repositorio `backend` un `Dockerfile` multi-stage, que compila el proyecto con la imagen del SDK de .NET y lo ejecuta con la imagen de ASP.NET Core runtime.
+
+![Dockerfile](assets/img/sprint3/deploy-03-dockerfile.png)
+
+4. En Render se creó un nuevo **Web Service** a partir del repositorio `backend`, con la rama `main` y el entorno **Docker**.
+
+![Render nuevo servicio](assets/img/sprint3/deploy-04-render-backend-new.png)
+
+5. Se configuraron las variables de entorno: la cadena de conexión a MySQL (`ConnectionStrings__DefaultConnection`), la clave para firmar los tokens JWT (`TokenSettings__Secret`), el entorno (`ASPNETCORE_ENVIRONMENT=Production`) y los orígenes permitidos por CORS, que incluyen el dominio de Firebase Hosting.
+
+![Render variables de entorno](assets/img/sprint3/deploy-05-render-env-vars.png)
+
+6. Al iniciar, los Web Services crearon las tablas en la base de datos mediante Entity Framework Core. El despliegue terminó correctamente y la documentación quedó disponible en Swagger UI.
+
+![Render desplegado](assets/img/sprint3/deploy-06-render-backend-live.png)
+
+![Swagger desplegado](assets/img/sprint3/deploy-07-swagger-live.png)
+
+<h4>Nueva versión del Frontend Web Application en Firebase Hosting</h4>
+
+7. Se actualizó `.env.production` para que la variable de la URL base de la API apunte a los Web Services desplegados en Render, en lugar de la Fake API.
+
+![Variables de producción](assets/img/sprint3/deploy-08-env-production.png)
+
+8. Se generó la versión de producción con `npm run build` y se desplegó con `firebase deploy --only hosting`.
+
+![Firebase deploy](assets/img/sprint3/deploy-09-firebase-deploy.png)
+
+<h4>Nueva versión de la Landing Page en GitHub Pages</h4>
+
+9. Se integraron a `main` los cambios de la Landing Page (preguntas frecuentes, suscripción, atributos ARIA, textos en es-419 y el Video About-the-Product incrustado). GitHub Pages publicó automáticamente la nueva versión mediante el flujo `pages-build-deployment`.
+
+![GitHub Actions Landing Page](assets/img/sprint3/deploy-10-pages-actions.png)
+
+10. Se crearon los tags de versión de cada producto según Semantic Versioning: `v1.0.0` en `backend` y `v1.1.0` en `frontend` y `landing-Page`.
+
+![Releases](assets/img/sprint3/deploy-11-tags.png)
+
+
+#### 5.2.3.8. Team Collaboration Insights during Sprint.
+
+Durante este Sprint el equipo trabajó en los tres repositorios de la organización 1ASI0729-2620-4399-G3-Veygo aplicando GitFlow: `backend` para los Web Services, `frontend` para el Frontend Web Application y `landing-Page` para la Landing Page. Cada integrante desarrolló su bounded context de los Web Services en una rama `feature/*`, lo integró en el frontend y realizó una tarea en la Landing Page. Cada aporte se integró a `develop` mediante un Pull Request revisado por al menos otro integrante, y finalmente `develop` se integró a `main` para el despliegue.
+
+A diferencia del Sprint 2, la carga de trabajo se distribuyó de forma equilibrada: todos los integrantes participaron en la implementación de los tres productos, como se resume en la siguiente tabla.
+
+| Integrante | Web Services (`backend`) | Frontend Web Application (`frontend`) | Landing Page (`landing-Page`) | Total de commits |
+|---|---|---|---|---|
+| Flores Apaico, Josué Antonio | feature/shared-kernel, feature/iam — _n_ commits | feature/iam-integration — _n_ commits | feature/navigation-a11y — _n_ commits | _n_ |
+| Flores Siguas, Marlon Alessandro | feature/fleet — _n_ commits | feature/fleet-integration — _n_ commits | feature/catalog-a11y — _n_ commits | _n_ |
+| Su Caletti, Eddo | feature/booking — _n_ commits | feature/booking-integration — _n_ commits | feature/search-a11y — _n_ commits | _n_ |
+| Cano Ortiz, Fabrizio Hamet | feature/communication, feature/notification, feature/engagement, feature/profile — _n_ commits | feature/communication-integration — _n_ commits | feature/trust-a11y — _n_ commits | _n_ |
+| Ibañez Torres, Ivonne Beatriz | feature/reputation, feature/dashboard — _n_ commits | feature/dashboard-integration — _n_ commits | feature/faq, feature/subscription — _n_ commits | _n_ |
+| | | | **Total** | **_n_** |
+
+| Repositorio | Pull Requests integrados | Commits de desarrollo | Commits de merge | Tag de versión |
+|---|---|---|---|---|
+| backend | _n_ | _n_ | _n_ | v1.0.0 |
+| frontend | _n_ | _n_ | _n_ | v1.1.0 |
+| landing-Page | _n_ | _n_ | _n_ | v1.1.0 |
+
+A continuación, se presentan las capturas de los analíticos de GitHub que evidencian la participación de los miembros del equipo en cada repositorio durante este Sprint:
+
+<h4>Web Services</h4>
+
+![Contributors backend](assets/img/sprint3/insights-backend-contributors.png)
+
+Contribuciones por integrante en el repositorio `backend`.
+
+![Network backend](assets/img/sprint3/insights-backend-network.png)
+
+Gráfico de red con las ramas `feature/*` de los bounded contexts integradas a `develop` y `main`.
+
+<h4>Frontend Web Application</h4>
+
+![Contributors frontend](assets/img/sprint3/insights-frontend-contributors.png)
+
+Contribuciones por integrante en el repositorio `frontend` durante el Sprint 3.
+
+<h4>Landing Page</h4>
+
+![Contributors landing](assets/img/sprint3/insights-landing-contributors.png)
+
+Contribuciones por integrante en el repositorio `landing-Page`.
+
+## 5.3. Validation Interviews.
+
+En esta sección se registran las entrevistas de validación realizadas al término del Sprint 3, en las que usuarios de los dos segmentos objetivo de Veygo interactuaron con la Landing Page y con el Frontend Web Application desplegados. El objetivo fue comprobar si los productos permiten completar las tareas principales de cada segmento de forma sencilla, identificar problemas de usabilidad, arquitectura de información y diseño inclusivo, y contrastar los resultados con los supuestos e hipótesis planteados en el proceso de Lean UX.
+
+### 5.3.1. Diseño de Entrevistas.
+
+Las sesiones de validación se realizaron de forma virtual mediante Google Meet. El entrevistado compartió su pantalla mientras utilizaba los productos desplegados, y la sesión se grabó con su consentimiento. Cada sesión duró entre 15 y 20 minutos y siguió la técnica de pensamiento en voz alta (think aloud): el entrevistado comentó lo que veía, esperaba y le resultaba confuso mientras realizaba cada tarea, y el entrevistador solo intervino cuando el participante no pudo continuar.
+
+**Perfil de los participantes**
+
+| Segmento | Perfil | Cantidad |
+|---|---|---|
+| Segmento 1: Clientes / Arrendatarios | Personas de 18 a 40 años que viven en Lima, que han alquilado un vehículo o consideran hacerlo para viajes, trabajo o trámites, y que no cuentan con un vehículo propio disponible. | 3 a 5 |
+| Segmento 2: Propietarios particulares / Arrendadores | Personas que viven en Lima, que tienen un auto o una moto que no utilizan todos los días y que han alquilado su vehículo o les interesa generar ingresos con él. | 3 a 5 |
+
+**Estructura de la sesión**
+
+| Parte | Duración | Contenido |
+|---|---|---|
+| 1. Introducción | 2 min | Presentación del entrevistador, explicación del objetivo de la sesión, solicitud de consentimiento para grabar y datos del entrevistado (nombre, edad, distrito y ocupación). |
+| 2. Landing Page | 4 min | Tareas en la Landing Page, sin explicación previa del producto. |
+| 3. Web Application | 10 min | Tareas en la aplicación según el segmento, utilizando una cuenta de prueba. |
+| 4. Cierre | 3 min | Preguntas de cierre sobre la experiencia general. |
+
+**User flows evaluados en la Landing Page (ambos segmentos)**
+
+| # | Tarea | Qué se observa |
+|---|---|---|
+| L1 | Explicar con sus palabras qué ofrece Veygo después de recorrer la página durante un minuto. | Claridad de la propuesta de valor. |
+| L2 | Cambiar el idioma de la página a español o a inglés. | Visibilidad del selector de idioma. |
+| L3 | Encontrar la respuesta a una duda en la sección de preguntas frecuentes. | Organización y búsqueda de información. |
+| L4 | Registrarse como arrendatario o como propietario desde la Landing Page. | Claridad de la redirección según el rol. |
+
+**User flows evaluados en la Web Application: Segmento 1 (Arrendatarios)**
+
+| # | Tarea | User Stories relacionadas |
+|---|---|---|
+| A1 | Crear una cuenta como arrendatario e iniciar sesión. | US37, US02 |
+| A2 | Buscar un vehículo automático o eléctrico disponible cerca de su distrito para el próximo fin de semana. | US03, US04 |
+| A3 | Revisar el detalle de un vehículo y solicitar su reserva. | US38, US17 |
+| A4 | Guardar un vehículo como favorito y enviar un mensaje al propietario. | US39, US41 |
+| A5 | Revisar el estado de su reserva y cancelarla. | US20, US19 |
+
+**User flows evaluados en la Web Application: Segmento 2 (Propietarios)**
+
+| # | Tarea | User Stories relacionadas |
+|---|---|---|
+| P1 | Crear una cuenta como propietario e iniciar sesión. | US37, US02 |
+| P2 | Publicar un vehículo con fotos, especificaciones y precio por día. | US15 |
+| P3 | Bloquear en el calendario los días en que no podrá alquilar el vehículo. | US05 |
+| P4 | Aceptar o rechazar una solicitud de reserva pendiente. | US18, US21 |
+| P5 | Revisar sus ingresos del mes y las calificaciones recibidas. | US06, US42, US07 |
+
+**Preguntas después de cada tarea**
+
+- En una escala del 1 (muy difícil) al 7 (muy fácil), ¿qué tan fácil fue realizar esta tarea?
+- ¿Hubo algo que no esperabas o que te confundió?
+
+**Preguntas de cierre**
+
+1. ¿Qué fue lo que más te gustó de Veygo y qué fue lo que menos te gustó?
+2. ¿Confiarías en Veygo para alquilar un vehículo a un desconocido (o para alquilar el vehículo de un desconocido)? ¿Por qué?
+3. ¿Qué información o función te faltó para sentirte seguro durante el proceso?
+4. ¿Qué tan probable es que recomiendes Veygo a un amigo, del 0 al 10?
+5. ¿Hay algo más que quieras comentar sobre la experiencia?
+
+**Indicadores registrados por tarea:** tarea completada sin ayuda, completada con ayuda o no completada; tiempo aproximado; errores cometidos; y calificación de facilidad del 1 al 7.
+
+### 5.3.2. Registro de Entrevistas.
+
+A continuación, se registran las entrevistas de validación realizadas con cada segmento objetivo. Todas las sesiones se consolidaron en un solo video.
+
+Video de las entrevistas de validación: <URL del video en Microsoft Stream>
+
+![Video de entrevistas de validación](assets/img/sprint3/validation-video.png)
+
+#### Segmento 1: Clientes / Arrendatarios
+
+##### Entrevista 1
+
+| Campo | Detalle |
+|---|---|
+| **Nombres** | |
+| **Apellidos** | |
+| **Edad** | |
+| **Distrito** | |
+| **Ocupación** | |
+| **Fecha de la entrevista** | |
+| **Entrevistador** | |
+| **Inicio en el video** | 00:00 |
+| **Duración** | 00:00 |
+
+![Entrevista 1](assets/img/sprint3/validation-01.png)
+
+**Resumen:** (Redactar las principales apreciaciones del entrevistado sobre cada tarea: qué tareas completó con facilidad, dónde dudó o se equivocó, qué le gustó y qué le faltó, y sus respuestas más relevantes a las preguntas de cierre.)
+
+| Tarea | Resultado | Facilidad (1-7) | Observación principal |
+|---|---|---|---|
+| L1 | | | |
+| L2 | | | |
+| L3 | | | |
+| L4 | | | |
+| A1 | | | |
+| A2 | | | |
+| A3 | | | |
+| A4 | | | |
+| A5 | | | |
+
+(Repetir la estructura de la Entrevista 1 para las Entrevistas 2 y 3 del Segmento 1.)
+
+#### Segmento 2: Propietarios particulares / Arrendadores
+
+##### Entrevista 4
+
+| Campo | Detalle |
+|---|---|
+| **Nombres** | |
+| **Apellidos** | |
+| **Edad** | |
+| **Distrito** | |
+| **Ocupación** | |
+| **Vehículo que posee** | |
+| **Fecha de la entrevista** | |
+| **Entrevistador** | |
+| **Inicio en el video** | 00:00 |
+| **Duración** | 00:00 |
+
+![Entrevista 4](assets/img/sprint3/validation-04.png)
+
+**Resumen:** (Redactar las principales apreciaciones del entrevistado sobre cada tarea.)
+
+| Tarea | Resultado | Facilidad (1-7) | Observación principal |
+|---|---|---|---|
+| L1 | | | |
+| L2 | | | |
+| L3 | | | |
+| L4 | | | |
+| P1 | | | |
+| P2 | | | |
+| P3 | | | |
+| P4 | | | |
+| P5 | | | |
+
+(Repetir la estructura de la Entrevista 4 para las Entrevistas 5 y 6 del Segmento 2.)
+
+#### Resultados generales
+
+| Tarea | Completada sin ayuda | Completada con ayuda | No completada | Facilidad promedio (1-7) |
+|---|---|---|---|---|
+| L1 | | | | |
+| L2 | | | | |
+| L3 | | | | |
+| L4 | | | | |
+| A1 / P1 | | | | |
+| A2 | | | | |
+| A3 | | | | |
+| A4 | | | | |
+| A5 | | | | |
+| P2 | | | | |
+| P3 | | | | |
+| P4 | | | | |
+| P5 | | | | |
+
+(Redactar un párrafo con el análisis general: tareas más fáciles y más difíciles, problemas que se repitieron entre entrevistados y diferencias entre segmentos.)
+
+### 5.3.3. Evaluaciones según heurísticas.
+
+**UX Heuristics & Principles Evaluation**
+**Usability – Inclusive Design – Information Architecture**
+
+| Campo | Detalle |
+|---|---|
+| **CARRERA** | Ingeniería de Software |
+| **CURSO** | Aplicaciones Web |
+| **SECCIÓN** | <código de la sección> |
+| **PROFESORES** | <nombre del profesor> |
+| **AUDITOR** | Zyntra |
+| **CLIENTE(S)** | <nombres de los entrevistados> |
+
+**SITE o APP A EVALUAR:**
+
+Veygo: Landing Page (https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/) y Frontend Web Application (https://veygo-web-app.web.app).
+
+**TAREAS A EVALUAR:**
+
+El alcance de esta evaluación incluye la revisión de la usabilidad de las siguientes tareas:
+
+1. Comprensión de la propuesta de valor en la Landing Page.
+2. Cambio de idioma de la Landing Page y de la aplicación.
+3. Consulta de las preguntas frecuentes.
+4. Registro de un usuario nuevo según su rol e inicio de sesión.
+5. Búsqueda de vehículos cercanos con filtros.
+6. Consulta del detalle de un vehículo y solicitud de reserva.
+7. Registro de vehículos favoritos y envío de mensajes al propietario.
+8. Consulta y cancelación de una reserva.
+9. Publicación de un vehículo.
+10. Bloqueo de fechas en el calendario de disponibilidad.
+11. Aceptación o rechazo de una solicitud de reserva.
+12. Consulta de ingresos, transacciones y calificaciones del propietario.
+
+No están incluidas en esta versión de la evaluación las siguientes tareas:
+
+1. Verificación de identidad con DNI y licencia de conducir.
+2. Pago de la reserva y reembolso por cancelación.
+3. Registro de la entrega y devolución del vehículo.
+4. Recuperación de contraseña.
+
+**ESCALA DE SEVERIDAD:**
+
+Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
+
+| Nivel | Descripción |
+|---|---|
+| 1 | Problema superficial: puede ser fácilmente superado por el usuario u ocurre con muy poca frecuencia. No necesita ser arreglado a no ser que exista disponibilidad de tiempo. |
+| 2 | Problema menor: puede ocurrir un poco más frecuentemente o es un poco más difícil de superar para el usuario. Se le debería asignar una prioridad baja resolverlo de cara al siguiente release. |
+| 3 | Problema mayor: ocurre frecuentemente o los usuarios no son capaces de resolverlo. Es importante que sea corregido y se le debe asignar una prioridad alta. |
+| 4 | Problema muy grave: un error de gran impacto que impide al usuario continuar con el uso de la herramienta. Es imperativo que sea corregido antes del lanzamiento. |
+
+**TABLA RESUMEN:**
+
+| # | Problema | Escala de severidad | Heurística/Principio violada(o) |
+|---|---|---|---|
+| 1 | | | |
+| 2 | | | |
+| 3 | | | |
+| 4 | | | |
+| 5 | | | |
+
+**DESCRIPCIÓN DE PROBLEMAS:**
+
+**PROBLEMA #1:** <título del problema>
+
+**Severidad:** <1 a 4>
+
+**Heurística violada:** <Usability / Inclusive Design / Information Architecture: nombre de la heurística o principio>
+
+**Problema:** <descripción de lo que ocurrió, en qué pantalla y qué entrevistados lo experimentaron>
+
+![Problema 1](assets/img/sprint3/heuristic-01.png)
+
+**Recomendación:** <cambio propuesto para resolverlo>
+
+(Repetir la estructura para cada problema de la tabla resumen.)
+
+## 5.4. Video About-the-Product.
+
+El Video About-the-Product está dirigido a los visitantes de la Landing Page que desean conocer el modelo de negocio de Veygo y a los usuarios de la aplicación que quieren saber cómo realizar sus tareas principales. Con un tono cercano y confiable, el video presenta el problema de alquilar vehículos entre particulares por canales informales, la propuesta de Veygo para arrendatarios y propietarios, y una demostración de los flujos principales de la aplicación. Además, incluye testimonios de usuarios de ambos segmentos que participaron en las entrevistas de validación.
+
+| Tiempo | Sección | Contenido |
+|---|---|---|
+| 00:00 | Problema | Situaciones de arrendatarios y propietarios que alquilan vehículos por redes sociales o contactos, con desconfianza y coordinación informal. |
+| 00:20 | Propuesta de valor | Presentación de Veygo como marketplace seguro de alquiler de vehículos entre particulares en Lima. |
+| 00:35 | Arrendatario | Demostración de la búsqueda en el mapa, los filtros, el detalle del vehículo y la solicitud de reserva. |
+| 01:05 | Propietario | Demostración de la publicación de un vehículo, el calendario de disponibilidad, la confirmación de la reserva y las métricas. |
+| 01:35 | Confianza | Reseñas, reputación, notificaciones y mensajería dentro de la plataforma. |
+| 01:50 | Testimonios | Opinión de un arrendatario y de un propietario entrevistados en la validación. |
+| 02:20 | Cierre | Llamada a la acción para registrarse en Veygo y enlace a la plataforma. |
+
+![Video About-the-Product](assets/img/sprint3/about-the-product.png)
+
+Duración: 00:00
+
+Video en Microsoft Stream: <URL>
+
+Video en YouTube (incrustado en la Landing Page): <URL>
+
