@@ -451,7 +451,7 @@ El objetivo principal de este Sprint fue implementar y desplegar la primera vers
 
 A continuación, se presenta una captura de pantalla del tablero de control para el Sprint 2:
 
-![sprint2](assets/img/sprint2/sprint2-board.png)
+![sprint2](assets/img/sprint2/Sprint3Jira.png)
 
 Enlace del Jira: https://ivonneibanez.atlassian.net/jira/software/projects/PBV/boards/3?filter=&groupBy=none
 
