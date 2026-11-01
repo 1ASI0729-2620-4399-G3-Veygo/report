@@ -258,7 +258,9 @@ Papel desempeñado: Arrendador de un auto
 Distrito: Los Olivos
  
 **Detalles de la entrevista:**
- 
+
+![Foto Entrevista](assets/img/Entrevista-Segmento2-1.jpeg) <br>
+
 [[URL de la entrevista](https://drive.google.com/file/d/1qEhT1fvgC09HdDXzRPTrgDkUVPTtdTVm/view?usp=drive_link)] — Duración de la entrevista: [4:51]
  
 **Transcripción resumen de entrevista:**
@@ -277,7 +279,8 @@ Papel desempeñado: Arrendador de un auto
 Distrito: San Juan de Lurigancho
  
 **Detalles de la entrevista:**
- 
+![Foto Entrevista](assets/img/Entrevista-Segmento2-2.jpeg) <br>
+
 [[URL de la entrevista](https://drive.google.com/file/d/1qEhT1fvgC09HdDXzRPTrgDkUVPTtdTVm/view?usp=drive_link)] — Duración de la entrevista: [5:33]
  
 **Transcripción resumen de entrevista:**
@@ -296,7 +299,8 @@ Papel desempeñado: Propietario/arrendador (profesor de colegio)
 Distrito: Bellavista, Callao
  
 **Detalles de la entrevista:**
- 
+![Foto Entrevista](assets/img/Entrevista-Segmento2-3.jpeg) <br>
+
 [[URL de la entrevista](https://drive.google.com/file/d/1qEhT1fvgC09HdDXzRPTrgDkUVPTtdTVm/view?usp=drive_link)] — Duración de la entrevista: [3:54]
  
 **Transcripción resumen de entrevista:**
