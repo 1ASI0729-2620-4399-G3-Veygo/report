@@ -1560,13 +1560,41 @@ Las sesiones de validación se realizaron de forma virtual mediante Google Meet.
 
 A continuación, se registran las entrevistas de validación realizadas con cada segmento objetivo. Todas las sesiones se consolidaron en un solo video.
 
-Video de las entrevistas de validación: <URL del video en Microsoft Stream>
-
-![Video de entrevistas de validación](assets/img/sprint3/validation-video.png)
-
 #### Segmento 1: Clientes / Arrendatarios
 
 ##### Entrevista 1
+
+| Campo | Detalle |
+|---|---|
+| **Nombres** | Andrés José |
+| **Apellidos** | Herbay Pérez |
+| **Edad** | 20 años |
+| **Distrito** | Comas |
+| **Ocupación** | Estudiante de Ingeniería de Sistemas |
+| **Fecha de la entrevista** | [06/11/2026] |
+| **Entrevistador** | Marlon Flores Siguas |
+| **Inicio en el video** | 00:00 |
+| **Duración** | 16:31 |
+
+Video de las entrevistas de validación: [URL del video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQDPTOC20G0_RLh3RzwNurfiAeUgjeFlB2w5pFY4ObwXnS4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kZHBAq)
+
+![Entrevista 1](assets/img/sprint3/validation-01.png)
+
+**Resumen:** El entrevistado valoró la landing como interesante y llamativa, con buena distribución y colores que combinan. Le gustó que ofrezca dos idiomas y que la app concentre el chat, las reservas, la disponibilidad, las reseñas, los favoritos, el perfil, la seguridad y el mapa, de modo que no haga falta usar WhatsApp o llamadas. Le sorprendió positivamente encontrar el selector de idioma en la propia página (lo habitual es hallarlo en ajustes), además de las secciones de transacciones y disponibilidad. Calificó la landing con 6 sobre 7 ("casi perfecta"). En la aplicación web creó la cuenta como arrendatario y consultó dudas sobre el campo de licencia de conducir, que el entrevistador le indicó rellenar tal cual. Encontró el único vehículo eléctrico disponible sin problemas. Necesitó indicaciones del entrevistador para fijar la fecha de la reserva, para marcar un vehículo como favorito (se equivocó de pantalla y tuvo que repetir el paso) y para ubicar el mensaje al propietario y el estado de la reserva ("en mis reservas no hay todavía"). Calificó la facilidad de la app con 6 sobre 7 ("el comienzo es un poquito nuevo, pero ya luego le agarras la maña") y no encontró nada confuso. Lo que más le gustó fue el filtro por tipo de vehículo (es aficionado a las camionetas) y los favoritos, que le ahorran tiempo de búsqueda. No mencionó nada que le gustara menos. Considera que no le falta ninguna función y que la solicitud de datos personales (DNI) transmite confianza. Recomendaría Veygo con un 10 sobre 10 y comentó que le gustaría seguir explorando la aplicación.
+
+| Tarea | Resultado | Facilidad (1-7) | Observación principal |
+|---|---|---|---|
+| L1 | Completada sin ayuda | 6 | Entendió la propuesta de valor: app con chat, reservas, disponibilidad, reseñas, favoritos y mapa. Le pareció organizada y atractiva. |
+| L2 | Completada sin ayuda | 6 |  Le sorprendió que el selector estuviera en la propia página. |
+| L3 | Completada sin ayuda | 6 | Encontró la respuesta a su duda en la sección de preguntas frecuentes. |
+| L4 | Completada sin ayuda | 6 | Creó la cuenta directamente en la aplicación. |
+| A1 | Completada con ayuda | 6 | Dudó con el campo de licencia de conducir. El entrevistador le indicó rellenar el formulario tal cual. |
+| A2 | Completada sin ayuda | 6 | Encontró el único vehículo eléctrico disponible. |
+| A3 | Completada con ayuda | 6 | Revisó el detalle y solicitó la reserva, pero el entrevistador le indicó cómo agregar la fecha. |
+| A4 | Completada con ayuda | 6 | Se equivocó al marcar el favorito y repitió el paso. Dudó para enviar el mensaje al propietario ("aquí le doy clic, supongo"). |
+| A5 | Parcial, con ayuda | 6 | No vio su reserva en "Mis reservas" al inicio. El entrevistador le indicó dónde revisar el estado. Se observó la cancelación. |
+
+##### Entrevista 2
 
 | Campo | Detalle |
 |---|---|
@@ -1580,7 +1608,7 @@ Video de las entrevistas de validación: <URL del video en Microsoft Stream>
 | **Inicio en el video** | 00:00 |
 | **Duración** | 00:00 |
 
-![Entrevista 1](assets/img/sprint3/validation-01.png)
+![Entrevista 1](assets/img/sprint3/validation-02.png)
 
 **Resumen:** (Redactar las principales apreciaciones del entrevistado sobre cada tarea: qué tareas completó con facilidad, dónde dudó o se equivocó, qué le gustó y qué le faltó, y sus respuestas más relevantes a las preguntas de cierre.)
 
