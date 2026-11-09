@@ -1412,11 +1412,25 @@ En este Sprint se desplegaron tres productos: la primera versión de los **Web S
 
 ![Render nuevo servicio](assets/img/sprint3/deploy-04-render-backend-new.png)
 
+Adicionalmente, se seleccionó el repositorio `backend` de la organización de GitHub como fuente del servicio.
+
+![Selección del repositorio backend](assets/img/sprint3/deploy-04-render-backend-repository.png)
+
+Para su ejecución, se configuró el entorno Docker, utilizando el archivo `veygo-platform/Dockerfile` y el plan gratuito de Render.
+
+![Configuración de Docker y recursos en Render](assets/img/sprint3/deploy-04-render-backend-config.png)
+
 5. Se configuraron las variables de entorno: la cadena de conexión a MySQL (`ConnectionStrings__DefaultConnection`), la clave para firmar los tokens JWT (`TokenSettings__Secret`), el entorno (`ASPNETCORE_ENVIRONMENT=Production`) y los orígenes permitidos por CORS, que incluyen el dominio de Firebase Hosting.
 
 ![Render variables de entorno](assets/img/sprint3/deploy-05-render-env-vars.png)
 
 6. Al iniciar, los Web Services crearon las tablas en la base de datos mediante Entity Framework Core. El despliegue terminó correctamente y la documentación quedó disponible en Swagger UI.
+
+Durante el despliegue, Render ejecutó el proceso de construcción y preparación del servicio a partir del repositorio configurado.
+
+![Proceso de construcción del backend en Render](assets/img/sprint3/deploy-06-render-backend-building.png)
+
+Los registros de Render evidencian que el servicio alcanzó el estado `Live` y que la aplicación ASP.NET Core inició en el entorno de producción, utilizando el puerto 8080, asimismo, se observa la carga de datos de muestra, incluyendo vehículos, reservas y conversaciones.
 
 ![Render desplegado](assets/img/sprint3/deploy-06-render-backend-live.png)
 
@@ -1429,6 +1443,10 @@ En este Sprint se desplegaron tres productos: la primera versión de los **Web S
 ![Variables de producción](assets/img/sprint3/deploy-08-env-production.png)
 
 8. Se generó la versión de producción con `npm run build` y se desplegó con `firebase deploy --only hosting`.
+
+La compilación del Frontend Web Application se realizó mediante Vite, generando los archivos de producción en la carpeta `dist`.
+
+![Compilación del Frontend Web Application con Vite](assets/img/sprint3/deploy-09-frontend-build.png)
 
 ![Firebase deploy](assets/img/sprint3/deploy-09-firebase-deploy.png)
 
