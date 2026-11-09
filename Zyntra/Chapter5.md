@@ -1781,26 +1781,21 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 | # | Problema | Escala de severidad | Heurística/Principio violada(o) |
 |---|---|---|---|
-| 1 | | | |
-| 2 | | | |
-| 3 | | | |
-| 4 | | | |
-| 5 | | | |
+| 1 | Tipografía reducida en los títulos principales de la Landing Page | 2 | Inclusive Design: Visibilidad y legibilidad |
+| 2 | Restricción de selección continua en fechas de reserva | 3 | Usability: Flexibilidad y eficiencia de uso |
+| 3 | Falta de indicadores claros sobre antecedentes del arrendador | 3 | Information Architecture: Transparencia y confianza |
 
-**DESCRIPCIÓN DE PROBLEMAS:**
+**PROBLEMA #1:** Tipografía reducida en los títulos principales de la Landing Page
 
-**PROBLEMA #1:** <título del problema>
+**Severidad:** 2
 
-**Severidad:** <1 a 4>
+**Heurística violada:** Inclusive Design: Visibilidad y legibilidad
 
-**Heurística violada:** <Usability / Inclusive Design / Information Architecture: nombre de la heurística o principio>
+**Problema:** Durante las pruebas de usabilidad con los entrevistados, se observó que el texto inicial e informativo en la vista principal presenta grosores de línea y tamaños ligeramente reducidos, lo que genera ligera fatiga visual o dificultad de lectura rápida para usuarios con menor agudeza visual.
 
-**Problema:** <descripción de lo que ocurrió, en qué pantalla y qué entrevistados lo experimentaron>
+![Problema 1](assets/img/Capitulo%205/HeuristicaProblema1.png)
 
-![Problema 1](assets/img/sprint3/heuristic-01.png)
-
-**Recomendación:** <cambio propuesto para resolverlo>
-
+**Recomendación:** Aumentar el peso de fuente (*font-weight*) y el tamaño base de los títulos principales en la Landing Page, garantizando un contraste adecuado y una lectura inclusiva.
 (Repetir la estructura para cada problema de la tabla resumen.)
 
 ## 5.4. Video About-the-Product.
