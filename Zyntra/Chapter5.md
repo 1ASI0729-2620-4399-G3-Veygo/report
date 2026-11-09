@@ -1629,6 +1629,8 @@ Video de las entrevistas de validación: [URL del video en Microsoft Stream](htt
 
 ![Entrevista 2](assets/img/EntrevistaJoce.png)
 
+**Link de la entrevista:**[Entrevista 2](https://onedrive.live.com/?photosData=%2Fshare%2F2E1AE54FD7D52753%21s3f9811608ed747a1808878490e3d8d0a%3Fithint%3Dvideo%26e%3DNAm5zl%26migratedtospo%3Dtrue&cid=2E1AE54FD7D52753&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy8yZTFhZTU0ZmQ3ZDUyNzUzL0lRQmdFWmdfMTQ2aFI0Q0llRWtPUFkwS0FRZmdEXzE2bFNGeDVRSHZXU2syUlFZP2U9TkFtNXps&view=8)
+
 **Resumen:** La interfaz le parece bastante intuitava, muy bonita, le recuerda a las interfaces de reserva de vuelos, muy sencillas y prácticas. Jose comenta que estaría bien agregar como dato el kilometraje del auto.
 
 | Tarea | Resultado | Facilidad (Dificil 1-6 Sencillo) | Observación principal |
