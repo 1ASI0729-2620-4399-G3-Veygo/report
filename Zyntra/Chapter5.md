@@ -1641,6 +1641,33 @@ Video de las entrevistas de validación: [URL del video en Microsoft Stream](htt
 | A4 |Completada sin ayuda |6 |"Icono muy visible" |
 | A5 |Completada sin ayuda |5 |Mostro un poco de dificultad pero si llego a completar la acción |
 
+##### Entrevista 3
+
+| Campo | Detalle |
+|---|---|
+| **Nombres** | Joaquín |
+| **Apellidos** | Gutiérrez Quispe |
+| **Edad** | 19 |
+| **Distrito** | Villa María del Triunfo |
+| **Ocupación** | Estudiante y trabajador en empresa (McDonald's) |
+| **Fecha de la entrevista** | 8/11/2026 |
+| **Entrevistador** | Eddo Su Caletti  |
+| **Inicio en el video** | 00:00 |
+| **Duración** | 17:12 |
+
+![Entrevista 2](assets/img/Capitulo%205/JoaquinEntrevista.png)
+
+**Link de la entrevista:** [Entrevista 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410869_upc_edu_pe/IQCnrLavN52TTqYOrqpQTXneATHKu9M5XFFSah8Qrk2O358?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=1cN3Ec)
+
+**Resumen:** A Joaquín la interfaz le parece bastante intuitiva, muy bien estructurada y con imágenes de calidad que permiten ver con detalle los modelos de los autos y los precios. Comenta que las pestañas ayudan bastante a la navegación y destaca positivamente la opción del modo oscuro y la comunicación directa con el propietario mediante el chat. Como sugerencia, menciona que sería útil poder personalizar los días de reserva de forma salteada (no necesariamente en una sola tanda consecutiva) y considerar la visualización de antecedentes o mayor información de seguridad sobre los usuarios.
+
+| Tarea | Resultado | Facilidad (Dificil 1-7 Sencillo) | Observación principal |
+|---|---|---|---|
+| A1 (Landing Page / Exploración) | Completada sin ayuda | 7 | "Las ventanillas me ayudan a movilizarme, todo está bien estructurado y las imágenes tienen buena calidad." |
+| A2 (Registro de cuenta) | Completada sin ayuda | 7 | "Bastante sencillo, la forma en cómo emplear las opciones y apartados es muy fácil para un usuario nuevo." |
+| A3 (Selección de vehículo y detalles) | Completada sin ayuda | 7 | "Tiene lo que necesito saber del vehículo que deseo, la información es detallada." |
+| A4 (Envío de mensajes al propietario) | Completada sin ayuda | 7 | "Bastante sencillo, tengo acceso a contactarme directamente con la persona que pone en alquiler su auto." |
+| A5 (Proceso de reserva y perfil / modo oscuro) | Completada sin ayuda | 7 | "El término de pago es cómodo y el modo oscuro es más cómodo para la vista en la oscuridad." |
 
 #### Segmento 2: Propietarios particulares / Arrendadores
 
