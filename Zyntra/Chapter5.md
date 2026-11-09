@@ -1594,7 +1594,7 @@ A continuación, se registran las entrevistas de validación realizadas con cada
 | **Inicio en el video** | 00:00 |
 | **Duración** | 16:31 |
 
-Video de las entrevistas de validación: [URL del video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQDPTOC20G0_RLh3RzwNurfiAeUgjeFlB2w5pFY4ObwXnS4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kZHBAq)
+Video de la entrevista de validación: [URL del video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQDPTOC20G0_RLh3RzwNurfiAeUgjeFlB2w5pFY4ObwXnS4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kZHBAq)
 
 ![Entrevista 1](assets/img/validation-01.png)
 
@@ -1611,7 +1611,6 @@ Video de las entrevistas de validación: [URL del video en Microsoft Stream](htt
 | A3 | Completada con ayuda | 6 | Revisó el detalle y solicitó la reserva, pero el entrevistador le indicó cómo agregar la fecha. |
 | A4 | Completada con ayuda | 6 | Se equivocó al marcar el favorito y repitió el paso. Dudó para enviar el mensaje al propietario ("aquí le doy clic, supongo"). |
 | A5 | Parcial, con ayuda | 6 | No vio su reserva en "Mis reservas" al inicio. El entrevistador le indicó dónde revisar el estado. Se observó la cancelación. |
-
 
 ##### Entrevista 2
 
