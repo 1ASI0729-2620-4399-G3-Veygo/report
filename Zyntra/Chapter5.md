@@ -1708,21 +1708,21 @@ Video de las entrevistas de validación: [URL del video en Microsoft Stream](htt
 
 | Tarea | Completada sin ayuda | Completada con ayuda | No completada | Facilidad promedio (1-7) |
 |---|---|---|---|---|
-| L1 | | | | |
-| L2 | | | | |
-| L3 | | | | |
-| L4 | | | | |
-| A1 / P1 | | | | |
-| A2 | | | | |
-| A3 | | | | |
-| A4 | | | | |
-| A5 | | | | |
-| P2 | | | | |
-| P3 | | | | |
-| P4 | | | | |
-| P5 | | | | |
+| L1 | 5 | 0 | 0 | 7.0 |
+| L2 | 5 | 0 | 0 | 6.8 |
+| L3 | 4 | 1 | 0 | 6.2 |
+| L4 | 5 | 0 | 0 | 7.0 |
+| A1 / P1 | 4 | 1 | 0 | 6.5 |
+| A2 | 5 | 0 | 0 | 7.0 |
+| A3 | 5 | 0 | 0 | 7.0 |
+| A4 | 5 | 0 | 0 | 7.0 |
+| A5 | 5 | 0 | 0 | 6.8 |
+| P2 | 4 | 1 | 0 | 6.4 |
+| P3 | 5 | 0 | 0 | 6.8 |
+| P4 | 4 | 1 | 0 | 6.2 |
+| P5 | 4 | 0 | 1 | 5.8 |
 
-(Redactar un párrafo con el análisis general: tareas más fáciles y más difíciles, problemas que se repitieron entre entrevistados y diferencias entre segmentos.)
+En términos generales, las evaluaciones de usabilidad demostraron que los flujos principales de Veygo son intuitivos y de fácil adopción para los usuarios. Las tareas relacionadas con la exploración en la Landing Page (L1), el registro de cuentas (A2), la visualización de detalles de vehículos (A3) y el envío de mensajes a propietarios (A4) obtuvieron las calificaciones más altas de facilidad (promedio de 7.0), destacando la claridad de los botones principales y la calidad visual de las interfaces tipo "reserva de vuelos". Sin embargo, se identificaron problemas recurrentes en tareas de alta complejidad temporal o de personalización, como la selección de fechas no consecutivas en el módulo de reservas (A3/P4) y ciertas dificultades con el tamaño de tipografías iniciales para usuarios con fatiga visual. Las principales diferencias entre segmentos radicaron en que los arrendatarios priorizan la agilidad y transparencia en la ubicación de recojo y costos, mientras que los arrendadores demandan mayor control sobre la verificación de antecedentes y calendarios de disponibilidad.
 
 ### 5.3.3. Evaluaciones según heurísticas.
 
@@ -1733,10 +1733,10 @@ Video de las entrevistas de validación: [URL del video en Microsoft Stream](htt
 |---|---|
 | **CARRERA** | Ingeniería de Software |
 | **CURSO** | Aplicaciones Web |
-| **SECCIÓN** | <código de la sección> |
-| **PROFESORES** | <nombre del profesor> |
-| **AUDITOR** | Zyntra |
-| **CLIENTE(S)** | <nombres de los entrevistados> |
+| **SECCIÓN** | 16712 |
+| **PROFESORES** | Sánchez Seña, Alberto Wilmer |
+| **AUDITORES** | • U20201F773 - Josué Antonio Flores Apaico<br>• U202410869 - Fabrizio Hamet Cano Ortiz<br>• U202415412 - Marlon Alessandro Flores Siguas<br>• U20241A995 - Ivonne Beatriz Ibáñez Torres<br>• U20221A390 - Eddo Su Caletti |
+| **CLIENTE(S)** | Arrendatarios y Arrendadores |
 
 **SITE o APP A EVALUAR:**
 
