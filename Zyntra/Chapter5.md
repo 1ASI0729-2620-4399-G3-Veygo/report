@@ -1134,7 +1134,7 @@ El objetivo principal de este Sprint fue implementar y desplegar la primera vers
 
 A continuación, se presenta una captura de pantalla del tablero de control para el Sprint 3:
 
-![Tablero del Sprint 3 en Jira](assets/img/sprint3-board.png)
+![Tablero del Sprint 3 en Jira](assets/img/Capitulo%205/JiraSprint3.png)
 
 Enlace del Jira: https://josueflores9283.atlassian.net/jira/software/projects/SCRUM/boards/1
 
