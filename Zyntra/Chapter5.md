@@ -1802,11 +1802,11 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Severidad:** 3
 
-**Problema:** Durante las pruebas realizadas en campo, No se entiende porque no se puede seleccionar ciertas fechas en el calendarios, lo que genera desentendimiento en el usuario
+**Problema:** Durante las pruebas realizadas en campo, No se entiende porque no se puede seleccionar ciertas fechas en el calendarios, lo que genera desentendimiento en el usuario.
 
 ![Problema 1](assets/img/Capitulo%205/HeuristicaProblema2.png)
 
-**Recomendación:** Agregar elemento visual de aviso para indicar que las fechas seleccionadas no estan disponibles e indicar el motivo.
+**Recomendación:** Agregar elemento visual mas vistoso de aviso para indicar que las fechas seleccionadas no estan disponibles e indicar el motivo.
 
 ## 5.4. Video About-the-Product.
 
