@@ -1617,33 +1617,28 @@ Video de las entrevistas de validación: [URL del video en Microsoft Stream](htt
 
 | Campo | Detalle |
 |---|---|
-| **Nombres** | |
-| **Apellidos** | |
-| **Edad** | |
-| **Distrito** | |
-| **Ocupación** | |
-| **Fecha de la entrevista** | |
-| **Entrevistador** | |
+| **Nombres** | Jose |
+| **Apellidos** | Paredes |
+| **Edad** | 21|
+| **Distrito** | San Miguel |
+| **Ocupación** | Estudiante |
+| **Fecha de la entrevista** | 8/11/2026 |
+| **Entrevistador** | Ivonne Ibañez|
 | **Inicio en el video** | 00:00 |
-| **Duración** | 00:00 |
+| **Duración** | 09:30 |
 
-![Entrevista 1](assets/img/sprint3/validation-01.png)
+![Entrevista 2](assets/img/EntrevistaJoce.png)
 
-**Resumen:** (Redactar las principales apreciaciones del entrevistado sobre cada tarea: qué tareas completó con facilidad, dónde dudó o se equivocó, qué le gustó y qué le faltó, y sus respuestas más relevantes a las preguntas de cierre.)
+**Resumen:** La interfaz le parece bastante intuitava, muy bonita, le recuerda a las interfaces de reserva de vuelos, muy sencillas y prácticas. Jose comenta que estaría bien agregar como dato el kilometraje del auto.
 
-| Tarea | Resultado | Facilidad (1-7) | Observación principal |
+| Tarea | Resultado | Facilidad (Dificil 1-6 Sencillo) | Observación principal |
 |---|---|---|---|
-| L1 | | | |
-| L2 | | | |
-| L3 | | | |
-| L4 | | | |
-| A1 | | | |
-| A2 | | | |
-| A3 | | | |
-| A4 | | | |
-| A5 | | | |
+| A1 |Completada con ayuda inicial (brindar cuenta) |6 | "El boton es muy visible" |
+| A2 |Completada sin ayuda |6 |"Los carros son bastantes visibles" |
+| A3 |Completada sin ayuda |4 |"No llegue a comprender porque no pude reservar en cierta fecha" |
+| A4 |Completada sin ayuda |6 |"Icono muy visible" |
+| A5 |Completada sin ayuda |5 |Mostro un poco de dificultad pero si llego a completar la acción |
 
-(Repetir la estructura de la Entrevista 1 para las Entrevistas 2 y 3 del Segmento 1.)
 
 #### Segmento 2: Propietarios particulares / Arrendadores
 
