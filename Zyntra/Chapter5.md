@@ -1264,9 +1264,27 @@ Repositorios:
 
 A continuación, se presentan los commits más representativos de cada producto:
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed by | Committed on (Date) |
-|---|---|---|---|---|---|---|
-| (se completa con los commits reales) | | | | | | |
+| Repository | Branch | Commit Id | Commit Message |  Committed by | Committed on (Date) |
+|---|---|---|---|---|---|
+| backend |feature/booking |b098ab765095ba6230482acfcc24130caa19a3f1 |Implement assembler for update booking status request conversion |Asalreon520 | 5/11/26 |
+|backend |feature/booking |1cacec10f60fda7f08c0263d67f649306c577ba9 |Implement assembler for create booking request conversion |Asalreon520 |5/11/26 |
+|backend |feature/booking |60c862134a4d2365d2f958224ea2012f944e903a |Implement REST API endpoints for booking operations |Asalreon520 |5/11/26 |
+|backend |feature/communication |536b70b7d4a6ada009dad35abf69d82c3a5cefad |feat(communication): add REST controllers |Fabrizioco01 |5/11/26 |
+|backend |feature/communication |f9c0c66abc10a142a46efcb437f917f7a84558dc |feat(communication): add persistence repositories |Fabrizioco01 |5/11/26 |
+|backend |feature/communication |55a1d6a9bb712b037d88ac283d7cf3af1a43198f |feat(communication): add domain models and repositories |Fabrizioco01 |5/11/26 |
+|backend |feature/engagement |08111927ef9c5cb74fb55f704cce405b1f58e17d |feature(interfaces):favorite controller |MarlonLasarte |5/11/26 |
+|backend |feature/engagement |350802b1cfc47e171dd183ae571f986517f8a63f |feature(aggregate):favorite |MarlonLasarte |5/11/26 |
+|backend |feature/engagement |d3812168225a6ec64e2267287a327a41d7fd5d26 |feature(Internal):External fleet service |MarlonLasarte |5/11/26 |
+|backend |feature/fleet |d01f38e680be2567e30e22690f596c1667ad3f4a |feat(fleet): register fleet services in web application builder |MarlonFS965 |6/11/26 |
+|backend |feature/fleet |ae3210f54a3cda74a2f39ac6c4d844ffd54670cf |feat(fleet): add vehicle and blocked date resources   |MarlonFS965 |6/11/26 |
+|backend |feature/fleet |2492a53fbd9059cdfac1e390eb4daf043b655bdd |feat(fleet): implement vehicle and blocked date query services |MarlonFS965 |6/11/26 |
+|backend |feature/platform-base|9c68e013a1b38dc1ad5d8ffaddd77ff1d32c0cbf |docs: add readme with bounded contexts, endpoints and setup instructions | JosueFloresAp |6/11/26 |
+|backend |feature/platform-base|9d80a8b1bb3aad8a40d91be60ee01ac271bee14c |feat(i18n): add english and spanish error messages |JosueFloresAp |6/11/26 |
+|backend |feature/platform-base|b8b76d3ada934e908dcf0fefa38e602e9e96d0a0 |feat(shared): implement base repository and unit of work |JosueFloresAp |6/11/26 |
+|backend |main |4ab2c3cec1abd5d2ad160a5be4e1aa88071b6054 |Enhance README with deployment and technology details |JosueFloresAp |6/11/26 |
+|backend |main |53547f9228d624161082f0fed7cdcaa3daa552b7 |feat(shared): add sample data seeder |JosueFloresAp |6/11/26 |
+|backend |main |73dc6042791a7d6770a7098de5c0e24cb977d7fb |chore: add production settings|JosueFloresAp |6/11/26 |
+
 
 Enlaces del historial de commits:
 - https://github.com/1ASI0729-2620-4399-G3-Veygo/backend/commits/main
