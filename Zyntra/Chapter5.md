@@ -1862,11 +1862,8 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 | 3 | Falta de indicadores claros sobre antecedentes del arrendador | 3 | Information Architecture: Transparencia y confianza |
 
 **PROBLEMA #1:** Tipografía reducida en los títulos principales de la Landing Page
-
 **Severidad:** 2
-
 **Heurística violada:** Inclusive Design: Visibilidad y legibilidad
-
 **Problema:** Durante las pruebas de usabilidad con los entrevistados, se observó que el texto inicial e informativo en la vista principal presenta grosores de línea y tamaños ligeramente reducidos, lo que genera ligera fatiga visual o dificultad de lectura rápida para usuarios con menor agudeza visual.
 
 ![Problema 1](assets/img/Capitulo%205/HeuristicaProblema1.png)
@@ -1875,14 +1872,21 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 (Repetir la estructura para cada problema de la tabla resumen.)
 
 **PROBLEMA #2:** Restricción de selección continua en fechas de reserva
-
 **Severidad:** 3
-
+**Heurística violada:** Coincidencia entre el sistema y el mundo real
 **Problema:** Durante las pruebas realizadas en campo, No se entiende porque no se puede seleccionar ciertas fechas en el calendarios, lo que genera desentendimiento en el usuario.
 
-![Problema 1](assets/img/Capitulo%205/HeuristicaProblema2.png)
+![Problema 2](assets/img/Capitulo%205/HeuristicaProblema2.png)
 
 **Recomendación:** Agregar elemento visual mas vistoso de aviso para indicar que las fechas seleccionadas no estan disponibles e indicar el motivo.
+
+**PROBLEMA #3:** Falta de indicadores claros sobre antecedentes del arrendador
+**Severidad:** 3
+**Heurística violada:** Visibilidad del estado del sistema
+
+![Problema 3](assets/img/Capitulo%205/HeuristicaProblema3.png)
+
+**Recomendación:** Agregar un historial de reseñas de arrendadores, incidentes o comentarios. 
 
 ## 5.4. Video About-the-Product.
 
