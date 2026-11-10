@@ -324,6 +324,83 @@ Feature: Solicitud de reserva
       Then el sistema registra la reserva en estado "Pendiente"
 ```
 
+<h4>RESTful Web Services: convenciones C# y ASP.NET Core</h4>
+
+Durante el Sprint 3 se desarrolló la primera versión de los Web Services de Veygo utilizando C#, ASP.NET Core 10 y Entity Framework Core. El código se organizó siguiendo los principios de Domain-Driven Design (DDD), con separación por bounded contexts y responsabilidades técnicas.
+
+**Organización del código:**
+
+El backend se divide en los bounded contexts Fleet, Booking, Engagement, Reputation, Communication y Notification, además de Shared, que contiene funcionalidades reutilizables.
+
+Dentro de cada contexto se identifican las siguientes capas:
+
+- **Domain:** contiene los agregados, entidades, comandos, consultas, errores y contratos propios del dominio.
+- **Application:** implementa los servicios de aplicación, incluidos los Command Services y Query Services.
+- **Infrastructure:** contiene las implementaciones de persistencia mediante Entity Framework Core, repositorios, configuraciones y servicios de infraestructura.
+- **Interfaces:** expone los controladores REST y los recursos utilizados para la comunicación mediante HTTP.
+
+Esta separación facilita el mantenimiento del código y permite desarrollar cada bounded context de forma independiente.
+
+**Convenciones de nomenclatura:**
+
+| Elemento | Convención | Ejemplo |
+|---|---|---|
+| Clases | PascalCase | `Conversation`, `AppDbContext` |
+| Métodos | PascalCase | `RecordMessage`, `OnModelCreating` |
+| Propiedades | PascalCase | `RenterId`, `LastMessagePreview` |
+| Parámetros y variables locales | camelCase | `userId`, `sentAt`, `builder` |
+| Constantes | PascalCase | `PreviewLength` |
+| Interfaces | Prefijo I y PascalCase | `IAuditableEntity` |
+| Namespaces | Organización jerárquica en PascalCase | `Veygo.Platform.Communication.Domain.Model.Aggregates` |
+| Archivos de clases | Nombre correspondiente a la clase y extensión .cs | `Conversation.cs`, `AppDbContext.cs` |
+| Tablas y columnas de base de datos | snake_case | Convención aplicada mediante `UseSnakeCaseNamingConvention()` |
+| Rutas REST | Minúsculas y kebab-case | `/api/v1/blocked-dates` |
+
+**Estilo de código:**
+
+- **Indentación:** el código utiliza cuatro espacios por nivel de anidamiento.
+- **Organización:** las dependencias se declaran mediante directivas `using` y las clases se agrupan en namespaces acordes con sus responsabilidades.
+- **Encapsulamiento:** las entidades del dominio pueden utilizar propiedades con setters privados para controlar las modificaciones de su estado.
+- **Documentación:** se utilizan comentarios XML, como `summary`, `param` y `inheritdoc`, para describir clases y operaciones.
+- **Persistencia:** Entity Framework Core gestiona la configuración de las entidades y sus relaciones mediante un `AppDbContext` compartido.
+- **Rutas y errores:** la API utiliza rutas REST y respuestas estandarizadas mediante Problem Details.
+- **Documentación de API:** los contratos HTTP se exponen mediante OpenAPI y la interfaz interactiva Scalar.
+
+**Ejemplo de implementación en C#:**
+
+El siguiente fragmento corresponde a la clase `Conversation`, ubicada en el bounded context Communication:
+
+```csharp
+public const int PreviewLength = 120;
+
+public int RenterId { get; private set; }
+public int OwnerId { get; private set; }
+public string LastMessagePreview { get; private set; }
+
+/// <summary>
+/// Records the last message sent in the conversation.
+/// </summary>
+/// <param name="content">The message content.</param>
+/// <param name="sentAt">The date and time.</param>
+public void RecordMessage(string content, DateTimeOffset sentAt)
+{
+    var preview = (content ?? string.Empty).Trim();
+    LastMessagePreview = preview.Length > PreviewLength
+        ? preview[..PreviewLength]
+        : preview;
+    LastMessageAt = sentAt;
+}
+```
+
+Este ejemplo evidencia el uso de PascalCase para propiedades y métodos, camelCase para parámetros y variables locales, comentarios XML para la documentación y encapsulamiento mediante propiedades con acceso de escritura restringido.
+
+**Referencias:**
+
+- Microsoft C# Coding Conventions: https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
+- ASP.NET Core Documentation: https://learn.microsoft.com/en-us/aspnet/core/
+- Entity Framework Core Documentation: https://learn.microsoft.com/en-us/ef/core/
+- Repositorio de los Web Services de Veygo: https://github.com/1ASI0729-2620-4399-G3-Veygo/backend
+
 
 ### 5.1.4. Software Deployment Configuration.
 
@@ -1187,9 +1264,27 @@ Repositorios:
 
 A continuación, se presentan los commits más representativos de cada producto:
 
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed by | Committed on (Date) |
-|---|---|---|---|---|---|---|
-| (se completa con los commits reales) | | | | | | |
+| Repository | Branch | Commit Id | Commit Message |  Committed by | Committed on (Date) |
+|---|---|---|---|---|---|
+| backend |feature/booking |b098ab765095ba6230482acfcc24130caa19a3f1 |Implement assembler for update booking status request conversion |Asalreon520 | 5/11/26 |
+|backend |feature/booking |1cacec10f60fda7f08c0263d67f649306c577ba9 |Implement assembler for create booking request conversion |Asalreon520 |5/11/26 |
+|backend |feature/booking |60c862134a4d2365d2f958224ea2012f944e903a |Implement REST API endpoints for booking operations |Asalreon520 |5/11/26 |
+|backend |feature/communication |536b70b7d4a6ada009dad35abf69d82c3a5cefad |feat(communication): add REST controllers |Fabrizioco01 |5/11/26 |
+|backend |feature/communication |f9c0c66abc10a142a46efcb437f917f7a84558dc |feat(communication): add persistence repositories |Fabrizioco01 |5/11/26 |
+|backend |feature/communication |55a1d6a9bb712b037d88ac283d7cf3af1a43198f |feat(communication): add domain models and repositories |Fabrizioco01 |5/11/26 |
+|backend |feature/engagement |08111927ef9c5cb74fb55f704cce405b1f58e17d |feature(interfaces):favorite controller |MarlonLasarte |5/11/26 |
+|backend |feature/engagement |350802b1cfc47e171dd183ae571f986517f8a63f |feature(aggregate):favorite |MarlonLasarte |5/11/26 |
+|backend |feature/engagement |d3812168225a6ec64e2267287a327a41d7fd5d26 |feature(Internal):External fleet service |MarlonLasarte |5/11/26 |
+|backend |feature/fleet |d01f38e680be2567e30e22690f596c1667ad3f4a |feat(fleet): register fleet services in web application builder |MarlonFS965 |6/11/26 |
+|backend |feature/fleet |ae3210f54a3cda74a2f39ac6c4d844ffd54670cf |feat(fleet): add vehicle and blocked date resources   |MarlonFS965 |6/11/26 |
+|backend |feature/fleet |2492a53fbd9059cdfac1e390eb4daf043b655bdd |feat(fleet): implement vehicle and blocked date query services |MarlonFS965 |6/11/26 |
+|backend |feature/platform-base|9c68e013a1b38dc1ad5d8ffaddd77ff1d32c0cbf |docs: add readme with bounded contexts, endpoints and setup instructions | JosueFloresAp |6/11/26 |
+|backend |feature/platform-base|9d80a8b1bb3aad8a40d91be60ee01ac271bee14c |feat(i18n): add english and spanish error messages |JosueFloresAp |6/11/26 |
+|backend |feature/platform-base|b8b76d3ada934e908dcf0fefa38e602e9e96d0a0 |feat(shared): implement base repository and unit of work |JosueFloresAp |6/11/26 |
+|backend |main |4ab2c3cec1abd5d2ad160a5be4e1aa88071b6054 |Enhance README with deployment and technology details |JosueFloresAp |6/11/26 |
+|backend |main |53547f9228d624161082f0fed7cdcaa3daa552b7 |feat(shared): add sample data seeder |JosueFloresAp |6/11/26 |
+|backend |main |73dc6042791a7d6770a7098de5c0e24cb977d7fb |chore: add production settings|JosueFloresAp |6/11/26 |
+
 
 Enlaces del historial de commits:
 - https://github.com/1ASI0729-2620-4399-G3-Veygo/backend/commits/main
@@ -1234,8 +1329,8 @@ Link del video: https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing
 
 **TS25.** Inicio de sesión contra los Web Services. En las herramientas de desarrollo del navegador se observa la petición `POST /api/v1/authentication/sign-in` y el token JWT devuelto, que la aplicación envía en el encabezado `Authorization` de las siguientes peticiones.
 
-![Cierre de sesión](assets/img/sprint3/exec-04-sign-out.png)
-
+![Cierre de sesión](assets/img/Capitulo%205/exec-04-sign-out.png)
+![Cierre de sesión](assets/img/Capitulo%205/exec-04-sign-out2.png)
 **US43.** Opción de cierre de sesión en el menú del usuario, que elimina el token y redirige al inicio de sesión.
 
 <h4>Arrendatario</h4>
@@ -1594,9 +1689,9 @@ A continuación, se registran las entrevistas de validación realizadas con cada
 | **Inicio en el video** | 00:00 |
 | **Duración** | 16:31 |
 
-Video de las entrevistas de validación: [URL del video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQDPTOC20G0_RLh3RzwNurfiAeUgjeFlB2w5pFY4ObwXnS4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kZHBAq)
+Video de la entrevista de validación: [URL del video en Microsoft Stream](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQDPTOC20G0_RLh3RzwNurfiAeUgjeFlB2w5pFY4ObwXnS4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=kZHBAq)
 
-![Entrevista 1](assets/img/validation-01.png)
+![Entrevista 1](assets/img/Capitulo%205/validation-01.png)
 
 **Resumen:** El entrevistado valoró la landing como interesante y llamativa, con buena distribución y colores que combinan. Le gustó que ofrezca dos idiomas y que la app concentre el chat, las reservas, la disponibilidad, las reseñas, los favoritos, el perfil, la seguridad y el mapa, de modo que no haga falta usar WhatsApp o llamadas. Le sorprendió positivamente encontrar el selector de idioma en la propia página (lo habitual es hallarlo en ajustes), además de las secciones de transacciones y disponibilidad. Calificó la landing con 6 sobre 7 ("casi perfecta"). En la aplicación web creó la cuenta como arrendatario y consultó dudas sobre el campo de licencia de conducir, que el entrevistador le indicó rellenar tal cual. Encontró el único vehículo eléctrico disponible sin problemas. Necesitó indicaciones del entrevistador para fijar la fecha de la reserva, para marcar un vehículo como favorito (se equivocó de pantalla y tuvo que repetir el paso) y para ubicar el mensaje al propietario y el estado de la reserva ("en mis reservas no hay todavía"). Calificó la facilidad de la app con 6 sobre 7 ("el comienzo es un poquito nuevo, pero ya luego le agarras la maña") y no encontró nada confuso. Lo que más le gustó fue el filtro por tipo de vehículo (es aficionado a las camionetas) y los favoritos, que le ahorran tiempo de búsqueda. No mencionó nada que le gustara menos. Considera que no le falta ninguna función y que la solicitud de datos personales (DNI) transmite confianza. Recomendaría Veygo con un 10 sobre 10 y comentó que le gustaría seguir explorando la aplicación.
 
@@ -1611,7 +1706,6 @@ Video de las entrevistas de validación: [URL del video en Microsoft Stream](htt
 | A3 | Completada con ayuda | 6 | Revisó el detalle y solicitó la reserva, pero el entrevistador le indicó cómo agregar la fecha. |
 | A4 | Completada con ayuda | 6 | Se equivocó al marcar el favorito y repitió el paso. Dudó para enviar el mensaje al propietario ("aquí le doy clic, supongo"). |
 | A5 | Parcial, con ayuda | 6 | No vio su reserva en "Mis reservas" al inicio. El entrevistador le indicó dónde revisar el estado. Se observó la cancelación. |
-
 
 ##### Entrevista 2
 
@@ -1675,32 +1769,35 @@ Video de las entrevistas de validación: [URL del video en Microsoft Stream](htt
 
 | Campo | Detalle |
 |---|---|
-| **Nombres** | |
-| **Apellidos** | |
-| **Edad** | |
-| **Distrito** | |
-| **Ocupación** | |
-| **Vehículo que posee** | |
-| **Fecha de la entrevista** | |
-| **Entrevistador** | |
+| **Nombres** | Rosa |
+| **Apellidos** | Medrano |
+| **Edad** | 43 años |
+| **Distrito** | San Miguel |
+| **Ocupación** | Alquiler de vehículos particulares |
+| **Vehículo que posee** | Toyota Yaris y Toyota Hilux |
+| **Fecha de la entrevista** | 9/11/2026 |
+| **Entrevistador** | Fabrizio Cano Ortiz |
 | **Inicio en el video** | 00:00 |
-| **Duración** | 00:00 |
+| **Duración** | 29:31 |
+
+**Link de la entrevista:** [Entrevista 4 - Rosa Medrano](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410869_upc_edu_pe/IQAveFJs3V2MRLCCWtZe0XdaAVcrOP1EVT9z0NdgcMV9ZXY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=JouiC3)
 
 ![Entrevista 4](assets/img/sprint3/validation-04.png)
 
-**Resumen:** (Redactar las principales apreciaciones del entrevistado sobre cada tarea.)
+**Resumen:** Rosa Medrano, propietaria de vehículos particulares, considera que Veygo es una plataforma interesante que permitiría a personas dedicadas al alquiler de vehículos llegar a más clientes y agilizar sus negocios, ya que actualmente utiliza principalmente Facebook y WhatsApp para promocionarlos, durante la exploración de la Landing Page, comprendió la propuesta de valor y encontró fácilmente el selector de idioma y la opción de registro, aunque manifestó dudas sobre el significado de "vehículos verificados". En la aplicación web presentó dificultades durante el registro de un vehículo, especialmente por algunos términos técnicos que no comprendía y por los campos del formulario, calificando esta actividad con 4 sobre 7, también señaló que el formulario de registro de usuarios debería indicar claramente los requisitos de la contraseña, por otro lado, encontró fácilmente el calendario de disponibilidad y las secciones de ingresos y calificaciones, destacando positivamente la posibilidad de visualizar las ganancias mensuales. Considera que podría confiar en Veygo para alquilar sus vehículos, pero sugirió incluir información sobre la ocupación del arrendatario y el uso que dará al vehículo, pues las condiciones y precios pueden variar según su finalidad, recomendaría Veygo con una calificación de 8 sobre 10 y valoró positivamente el desarrollo de este tipo de emprendimientos tecnológicos.
 
 | Tarea | Resultado | Facilidad (1-7) | Observación principal |
 |---|---|---|---|
-| L1 | | | |
-| L2 | | | |
-| L3 | | | |
-| L4 | | | |
-| P1 | | | |
-| P2 | | | |
-| P3 | | | |
-| P4 | | | |
-| P5 | | | |
+| L1 | Completada sin ayuda | 6 | Comprendió que Veygo conecta propietarios con clientes. Tuvo dudas sobre el término "vehículos verificados". |
+| L2 | Completada sin ayuda | 7 | Cambió el idioma fácilmente. Consideró que el selector estaba claramente visible. |
+| L4 | Completada sin ayuda | 7 | Identificó rápidamente el botón de registro por su ubicación y color azul. |
+| P1 | Realizada; resultado final por verificar | 4 | Señaló que no se indican claramente los requisitos de caracteres para la contraseña. |
+| P2 | Completada con dificultades | 4 | Tuvo dificultades con algunos campos y términos técnicos del formulario de vehículos. |
+| P3 | Completada sin ayuda | 6 | Encontró el calendario y bloqueó fechas. Destacó la claridad del menú lateral. |
+| P4 | Completada con dificultades | 4 | Tuvo dificultades para encontrar la sección. |
+| P5 | Completada parcialmente | 7 | Encontró las secciones de ingresos y calificaciones. Le gustó poder visualizar las ganancias mensuales, aunque no había datos registrados. |
+
+
 
 (Repetir la estructura de la Entrevista 4 para las Entrevistas 5 y 6 del Segmento 2.)
 
@@ -1784,19 +1881,65 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 | 1 | Tipografía reducida en los títulos principales de la Landing Page | 2 | Inclusive Design: Visibilidad y legibilidad |
 | 2 | Restricción de selección continua en fechas de reserva | 3 | Usability: Flexibilidad y eficiencia de uso |
 | 3 | Falta de indicadores claros sobre antecedentes del arrendador | 3 | Information Architecture: Transparencia y confianza |
+| 4 | Reserva rechazada sin motivo ni acciones de recuperación | 3 | Usability: Ayuda a reconocer, diagnosticar y recuperarse de errores|
+| 5 | Terminología técnica poco comprensible en el formulario de publicación de vehículos | 2 | Usability: Correspondencia entre el sistema y el mundo real |
+| 6 | Falta de información sobre los requisitos de la contraseña | 2 | Usability: Prevención de errores |
+
 
 **PROBLEMA #1:** Tipografía reducida en los títulos principales de la Landing Page
-
 **Severidad:** 2
-
 **Heurística violada:** Inclusive Design: Visibilidad y legibilidad
-
 **Problema:** Durante las pruebas de usabilidad con los entrevistados, se observó que el texto inicial e informativo en la vista principal presenta grosores de línea y tamaños ligeramente reducidos, lo que genera ligera fatiga visual o dificultad de lectura rápida para usuarios con menor agudeza visual.
 
 ![Problema 1](assets/img/Capitulo%205/HeuristicaProblema1.png)
 
 **Recomendación:** Aumentar el peso de fuente (*font-weight*) y el tamaño base de los títulos principales en la Landing Page, garantizando un contraste adecuado y una lectura inclusiva.
 (Repetir la estructura para cada problema de la tabla resumen.)
+
+**PROBLEMA #2:** Restricción de selección continua en fechas de reserva
+**Severidad:** 3
+**Heurística violada:** Coincidencia entre el sistema y el mundo real
+**Problema:** Durante las pruebas realizadas en campo, No se entiende porque no se puede seleccionar ciertas fechas en el calendarios, lo que genera desentendimiento en el usuario.
+
+![Problema 2](assets/img/Capitulo%205/HeuristicaProblema2.png)
+
+**Recomendación:** Agregar elemento visual mas vistoso de aviso para indicar que las fechas seleccionadas no estan disponibles e indicar el motivo.
+
+**PROBLEMA #3:** Falta de indicadores claros sobre antecedentes del arrendador
+**Severidad:** 3
+**Heurística violada:** Visibilidad del estado del sistema
+
+![Problema 3](assets/img/Capitulo%205/HeuristicaProblema3.png)
+
+**Recomendación:** Agregar un historial de reseñas de arrendadores, incidentes o comentarios. 
+
+**PROBLEMA #4:** Reserva rechazada sin motivo ni acciones de recuperación
+**Severidad:** 3
+**Heurística violada:** Usability: Ayuda a reconocer, diagnosticar y recuperarse de errores
+**Problema:** Durante las pruebas realizadas en campo, No se entiende porque no se puede seleccionar ciertas fechas en el calendarios, lo que genera desentendimiento en el usuario.
+
+![Problema 3](assets/img/Capitulo%205/HeuristicaProblema4.png)
+
+**Recomendación:** Mostrar el motivo del rechazo (o un mensaje como “El propietario no pudo aceptar tu solicitud”) y agregar acciones visibles como “Buscar vehículos similares” y “Enviar mensaje al propietario”. También se recomienda enviar una notificación con la misma información.
+
+
+**PROBLEMA #5:** Terminología técnica poco comprensible en el formulario de publicación de vehículos
+**Severidad:** 2
+**Heurística violada:** Usability: Correspondencia entre el sistema y el mundo real
+**Problema:** Durante la entrevista de validación del Segmento 2, la participante Rosa Medrano presentó dificultades al completar el formulario de publicación de vehículos. Manifestó que algunos términos técnicos utilizados en los campos no eran suficientemente claros, lo que generó dudas durante el registro. La entrevistada calificó esta actividad con 4 de 7 puntos.
+
+![Problema 5: Terminología técnica en el formulario de vehículos](assets/img/Capitulo%205/HeuristicaProblema5.png)
+
+**Recomendación:** Utilizar términos más sencillos, incorporar textos de ayuda junto a los campos técnicos y proporcionar ejemplos que faciliten el registro de las características del vehículo.
+
+**PROBLEMA #6:** Falta de información sobre los requisitos de la contraseña
+**Severidad:** 2
+**Heurística violada:** Usability: Prevención de errores
+**Problema:** Durante la actividad de registro de usuario, Rosa Medrano señaló que el formulario no indicaba claramente los requisitos necesarios para crear una contraseña. Esta falta de orientación puede provocar confusión y errores durante el registro.
+
+![Problema 6: Requisitos de contraseña poco claros](assets/img/Capitulo%205/HeuristicaProblema6.png)
+
+**Recomendación:** Mostrar debajo del campo de contraseña los requisitos mínimos para su creación e incorporar mensajes de validación claros que permitan identificar qué condiciones faltan cumplir.
 
 ## 5.4. Video About-the-Product.
 
