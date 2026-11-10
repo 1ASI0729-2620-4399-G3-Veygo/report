@@ -1751,32 +1751,35 @@ Video de la entrevista de validación: [URL del video en Microsoft Stream](https
 
 | Campo | Detalle |
 |---|---|
-| **Nombres** | |
-| **Apellidos** | |
-| **Edad** | |
-| **Distrito** | |
-| **Ocupación** | |
-| **Vehículo que posee** | |
-| **Fecha de la entrevista** | |
-| **Entrevistador** | |
+| **Nombres** | Rosa |
+| **Apellidos** | Medrano |
+| **Edad** | 43 años |
+| **Distrito** | San Miguel |
+| **Ocupación** | Alquiler de vehículos particulares |
+| **Vehículo que posee** | Toyota Yaris y Toyota Hilux |
+| **Fecha de la entrevista** | 9/11/2026 |
+| **Entrevistador** | Fabrizio Cano Ortiz |
 | **Inicio en el video** | 00:00 |
-| **Duración** | 00:00 |
+| **Duración** | 29:31 |
+
+**Link de la entrevista:** [Entrevista 4 - Rosa Medrano](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410869_upc_edu_pe/IQAveFJs3V2MRLCCWtZe0XdaAVcrOP1EVT9z0NdgcMV9ZXY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=JouiC3)
 
 ![Entrevista 4](assets/img/sprint3/validation-04.png)
 
-**Resumen:** (Redactar las principales apreciaciones del entrevistado sobre cada tarea.)
+**Resumen:** Rosa Medrano, propietaria de vehículos particulares, considera que Veygo es una plataforma interesante que permitiría a personas dedicadas al alquiler de vehículos llegar a más clientes y agilizar sus negocios, ya que actualmente utiliza principalmente Facebook y WhatsApp para promocionarlos, durante la exploración de la Landing Page, comprendió la propuesta de valor y encontró fácilmente el selector de idioma y la opción de registro, aunque manifestó dudas sobre el significado de "vehículos verificados". En la aplicación web presentó dificultades durante el registro de un vehículo, especialmente por algunos términos técnicos que no comprendía y por los campos del formulario, calificando esta actividad con 4 sobre 7, también señaló que el formulario de registro de usuarios debería indicar claramente los requisitos de la contraseña, por otro lado, encontró fácilmente el calendario de disponibilidad y las secciones de ingresos y calificaciones, destacando positivamente la posibilidad de visualizar las ganancias mensuales. Considera que podría confiar en Veygo para alquilar sus vehículos, pero sugirió incluir información sobre la ocupación del arrendatario y el uso que dará al vehículo, pues las condiciones y precios pueden variar según su finalidad, recomendaría Veygo con una calificación de 8 sobre 10 y valoró positivamente el desarrollo de este tipo de emprendimientos tecnológicos.
 
 | Tarea | Resultado | Facilidad (1-7) | Observación principal |
 |---|---|---|---|
-| L1 | | | |
-| L2 | | | |
-| L3 | | | |
-| L4 | | | |
-| P1 | | | |
-| P2 | | | |
-| P3 | | | |
-| P4 | | | |
-| P5 | | | |
+| L1 | Completada sin ayuda | 6 | Comprendió que Veygo conecta propietarios con clientes. Tuvo dudas sobre el término "vehículos verificados". |
+| L2 | Completada sin ayuda | 7 | Cambió el idioma fácilmente. Consideró que el selector estaba claramente visible. |
+| L4 | Completada sin ayuda | 7 | Identificó rápidamente el botón de registro por su ubicación y color azul. |
+| P1 | Realizada; resultado final por verificar | 4 | Señaló que no se indican claramente los requisitos de caracteres para la contraseña. |
+| P2 | Completada con dificultades | 4 | Tuvo dificultades con algunos campos y términos técnicos del formulario de vehículos. |
+| P3 | Completada sin ayuda | 6 | Encontró el calendario y bloqueó fechas. Destacó la claridad del menú lateral. |
+| P4 | Completada con dificultades | 4 | Tuvo dificultades para encontrar la sección. |
+| P5 | Completada parcialmente | 7 | Encontró las secciones de ingresos y calificaciones. Le gustó poder visualizar las ganancias mensuales, aunque no había datos registrados. |
+
+
 
 (Repetir la estructura de la Entrevista 4 para las Entrevistas 5 y 6 del Segmento 2.)
 
