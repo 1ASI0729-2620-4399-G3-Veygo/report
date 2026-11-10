@@ -1311,8 +1311,8 @@ Link del video: https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing
 
 **TS25.** Inicio de sesión contra los Web Services. En las herramientas de desarrollo del navegador se observa la petición `POST /api/v1/authentication/sign-in` y el token JWT devuelto, que la aplicación envía en el encabezado `Authorization` de las siguientes peticiones.
 
-![Cierre de sesión](assets/img/sprint3/exec-04-sign-out.png)
-
+![Cierre de sesión](assets/img/Capitulo%205/exec-04-sign-out.png)
+![Cierre de sesión](assets/img/Capitulo%205/exec-04-sign-out2.png)
 **US43.** Opción de cierre de sesión en el menú del usuario, que elimina el token y redirige al inicio de sesión.
 
 <h4>Arrendatario</h4>
