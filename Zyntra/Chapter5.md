@@ -1313,16 +1313,6 @@ Link del video: https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing
 | TS32, TS33 | Métricas del propietario y reseñas |
 | TS54 | Edición de perfil y cambio de contraseña |
 
-<h4>Landing Page</h4>
-
-![Preguntas frecuentes](assets/img/sprint3/exec-01-landing-faq.png)
-
-**US23.** Sección de preguntas frecuentes con respuestas desplegables, disponible en inglés y español.
-
-![Suscripción a novedades](assets/img/sprint3/exec-02-landing-subscribe.png)
-
-**US24.** Formulario de suscripción a novedades con validación del correo y mensaje de confirmación.
-
 <h4>Autenticación con los Web Services</h4>
 
 ![Inicio de sesión con JWT](assets/img/sprint3/exec-03-sign-in-jwt.png)
@@ -1337,31 +1327,50 @@ Link del video: https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing
 
 ![Búsqueda desde los Web Services](assets/img/sprint3/exec-05-vehicle-search.png)
 
+![Reserva persistida](assets/img/sprint3/boo.png)
 **TS27 y TS28.** Búsqueda de vehículos cercanos con filtros, con los resultados obtenidos de los Web Services.
 
-![Reserva persistida](assets/img/sprint3/exec-06-booking.png)
+![Reserva persistida](assets/img/sprint3/booking.png)
+
+![Reserva persistida](assets/img/sprint3/booking2.png)
 
 **TS31.** Creación de una reserva. La solicitud queda registrada en la base de datos con estado `pending`.
 
-![Favoritos y mensajes](assets/img/sprint3/exec-07-favorites-messages.png)
+![Favoritos](assets/img/sprint3/fv.png)
+
+![mensajes](assets/img/sprint3/mss.png)
 
 **TS51 y TS52.** Vehículos favoritos y mensajería con el propietario, almacenados en los Web Services.
 
 <h4>Propietario</h4>
 
-![Solicitud confirmada](assets/img/sprint3/exec-08-owner-confirm.png)
+![Solicitud confirmada](assets/img/sprint3/owner1.png)
+
+![Solicitud confirmada](assets/img/sprint3/owner2.png)
+
+![Solicitud confirmada](assets/img/sprint3/owner3.png)
 
 **TS31 y TS53.** El propietario confirma la solicitud y el arrendatario recibe la notificación correspondiente.
 
-![Gestión de flota](assets/img/sprint3/exec-09-fleet.png)
+![Gestión de flota](assets/img/sprint3/fleet.png)
 
-**TS29 y TS30.** Publicación de un vehículo y bloqueo de fechas en el calendario de disponibilidad.
+![Gestión de flota](assets/img/sprint3/fleet1.png)
 
-![Métricas y reseñas](assets/img/sprint3/exec-10-owner-dashboard.png)
+![Gestión de flota](assets/img/sprint3/fleet2.png)
+
+![Gestión de flota](assets/img/sprint3/fleet3.png)
+
+**TS29 y TS30.** Publicación de un vehículo.
+
+![Métricas y reseñas](assets/img/sprint3/rese.png)
 
 **TS32 y TS33.** Inicio del propietario con métricas calculadas por los Web Services y calificaciones recibidas.
 
-![Perfil](assets/img/sprint3/exec-11-profile.png)
+![Perfil](assets/img/sprint3/cont.png)
+
+![Perfil](assets/img/sprint3/cont1.png)
+
+![Perfil](assets/img/sprint3/cont2.png)
 
 **TS54.** Edición del perfil y cambio de contraseña.
 
