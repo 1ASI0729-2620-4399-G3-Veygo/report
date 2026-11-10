@@ -1891,6 +1891,16 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Recomendación:** Agregar un historial de reseñas de arrendadores, incidentes o comentarios. 
 
+**PROBLEMA #4:** Reserva rechazada sin motivo ni acciones de recuperación
+**Severidad:** 3
+**Heurística violada:** Usability: Ayuda a reconocer, diagnosticar y recuperarse de errores
+**Problema:** Durante las pruebas realizadas en campo, No se entiende porque no se puede seleccionar ciertas fechas en el calendarios, lo que genera desentendimiento en el usuario.
+
+![Problema 3](assets/img/Capitulo%205/HeuristicaProblema4.png)
+
+**Recomendación:** Mostrar el motivo del rechazo (o un mensaje como “El propietario no pudo aceptar tu solicitud”) y agregar acciones visibles como “Buscar vehículos similares” y “Enviar mensaje al propietario”. También se recomienda enviar una notificación con la misma información.
+
+
 ## 5.4. Video About-the-Product.
 
 El Video About-the-Product está dirigido a los visitantes de la Landing Page que desean conocer el modelo de negocio de Veygo y a los usuarios de la aplicación que quieren saber cómo realizar sus tareas principales. Con un tono cercano y confiable, el video presenta el problema de alquilar vehículos entre particulares por canales informales, la propuesta de Veygo para arrendatarios y propietarios, y una demostración de los flujos principales de la aplicación. Además, incluye testimonios de usuarios de ambos segmentos que participaron en las entrevistas de validación.
