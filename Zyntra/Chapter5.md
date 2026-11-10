@@ -324,6 +324,83 @@ Feature: Solicitud de reserva
       Then el sistema registra la reserva en estado "Pendiente"
 ```
 
+<h4>RESTful Web Services: convenciones C# y ASP.NET Core</h4>
+
+Durante el Sprint 3 se desarrolló la primera versión de los Web Services de Veygo utilizando C#, ASP.NET Core 10 y Entity Framework Core. El código se organizó siguiendo los principios de Domain-Driven Design (DDD), con separación por bounded contexts y responsabilidades técnicas.
+
+**Organización del código:**
+
+El backend se divide en los bounded contexts Fleet, Booking, Engagement, Reputation, Communication y Notification, además de Shared, que contiene funcionalidades reutilizables.
+
+Dentro de cada contexto se identifican las siguientes capas:
+
+- **Domain:** contiene los agregados, entidades, comandos, consultas, errores y contratos propios del dominio.
+- **Application:** implementa los servicios de aplicación, incluidos los Command Services y Query Services.
+- **Infrastructure:** contiene las implementaciones de persistencia mediante Entity Framework Core, repositorios, configuraciones y servicios de infraestructura.
+- **Interfaces:** expone los controladores REST y los recursos utilizados para la comunicación mediante HTTP.
+
+Esta separación facilita el mantenimiento del código y permite desarrollar cada bounded context de forma independiente.
+
+**Convenciones de nomenclatura:**
+
+| Elemento | Convención | Ejemplo |
+|---|---|---|
+| Clases | PascalCase | `Conversation`, `AppDbContext` |
+| Métodos | PascalCase | `RecordMessage`, `OnModelCreating` |
+| Propiedades | PascalCase | `RenterId`, `LastMessagePreview` |
+| Parámetros y variables locales | camelCase | `userId`, `sentAt`, `builder` |
+| Constantes | PascalCase | `PreviewLength` |
+| Interfaces | Prefijo I y PascalCase | `IAuditableEntity` |
+| Namespaces | Organización jerárquica en PascalCase | `Veygo.Platform.Communication.Domain.Model.Aggregates` |
+| Archivos de clases | Nombre correspondiente a la clase y extensión .cs | `Conversation.cs`, `AppDbContext.cs` |
+| Tablas y columnas de base de datos | snake_case | Convención aplicada mediante `UseSnakeCaseNamingConvention()` |
+| Rutas REST | Minúsculas y kebab-case | `/api/v1/blocked-dates` |
+
+**Estilo de código:**
+
+- **Indentación:** el código utiliza cuatro espacios por nivel de anidamiento.
+- **Organización:** las dependencias se declaran mediante directivas `using` y las clases se agrupan en namespaces acordes con sus responsabilidades.
+- **Encapsulamiento:** las entidades del dominio pueden utilizar propiedades con setters privados para controlar las modificaciones de su estado.
+- **Documentación:** se utilizan comentarios XML, como `summary`, `param` y `inheritdoc`, para describir clases y operaciones.
+- **Persistencia:** Entity Framework Core gestiona la configuración de las entidades y sus relaciones mediante un `AppDbContext` compartido.
+- **Rutas y errores:** la API utiliza rutas REST y respuestas estandarizadas mediante Problem Details.
+- **Documentación de API:** los contratos HTTP se exponen mediante OpenAPI y la interfaz interactiva Scalar.
+
+**Ejemplo de implementación en C#:**
+
+El siguiente fragmento corresponde a la clase `Conversation`, ubicada en el bounded context Communication:
+
+```csharp
+public const int PreviewLength = 120;
+
+public int RenterId { get; private set; }
+public int OwnerId { get; private set; }
+public string LastMessagePreview { get; private set; }
+
+/// <summary>
+/// Records the last message sent in the conversation.
+/// </summary>
+/// <param name="content">The message content.</param>
+/// <param name="sentAt">The date and time.</param>
+public void RecordMessage(string content, DateTimeOffset sentAt)
+{
+    var preview = (content ?? string.Empty).Trim();
+    LastMessagePreview = preview.Length > PreviewLength
+        ? preview[..PreviewLength]
+        : preview;
+    LastMessageAt = sentAt;
+}
+```
+
+Este ejemplo evidencia el uso de PascalCase para propiedades y métodos, camelCase para parámetros y variables locales, comentarios XML para la documentación y encapsulamiento mediante propiedades con acceso de escritura restringido.
+
+**Referencias:**
+
+- Microsoft C# Coding Conventions: https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions
+- ASP.NET Core Documentation: https://learn.microsoft.com/en-us/aspnet/core/
+- Entity Framework Core Documentation: https://learn.microsoft.com/en-us/ef/core/
+- Repositorio de los Web Services de Veygo: https://github.com/1ASI0729-2620-4399-G3-Veygo/backend
+
 
 ### 5.1.4. Software Deployment Configuration.
 
