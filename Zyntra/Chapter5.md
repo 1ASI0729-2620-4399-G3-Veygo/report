@@ -1863,6 +1863,7 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 | 1 | Tipografía reducida en los títulos principales de la Landing Page | 2 | Inclusive Design: Visibilidad y legibilidad |
 | 2 | Restricción de selección continua en fechas de reserva | 3 | Usability: Flexibilidad y eficiencia de uso |
 | 3 | Falta de indicadores claros sobre antecedentes del arrendador | 3 | Information Architecture: Transparencia y confianza |
+| 3 | Reserva rechazada sin motivo ni acciones de recuperación | 3 | Usability: Ayuda a reconocer, diagnosticar y recuperarse de errores|
 
 **PROBLEMA #1:** Tipografía reducida en los títulos principales de la Landing Page
 **Severidad:** 2
