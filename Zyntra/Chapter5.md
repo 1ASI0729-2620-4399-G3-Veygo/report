@@ -1864,6 +1864,9 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 | 2 | Restricción de selección continua en fechas de reserva | 3 | Usability: Flexibilidad y eficiencia de uso |
 | 3 | Falta de indicadores claros sobre antecedentes del arrendador | 3 | Information Architecture: Transparencia y confianza |
 | 4 | Reserva rechazada sin motivo ni acciones de recuperación | 3 | Usability: Ayuda a reconocer, diagnosticar y recuperarse de errores|
+| 5 | Terminología técnica poco comprensible en el formulario de publicación de vehículos | 2 | Usability: Correspondencia entre el sistema y el mundo real |
+| 6 | Falta de información sobre los requisitos de la contraseña | 2 | Usability: Prevención de errores |
+
 
 **PROBLEMA #1:** Tipografía reducida en los títulos principales de la Landing Page
 **Severidad:** 2
@@ -1901,6 +1904,24 @@ Los errores serán puntuados tomando en cuenta la siguiente escala de severidad:
 
 **Recomendación:** Mostrar el motivo del rechazo (o un mensaje como “El propietario no pudo aceptar tu solicitud”) y agregar acciones visibles como “Buscar vehículos similares” y “Enviar mensaje al propietario”. También se recomienda enviar una notificación con la misma información.
 
+
+**PROBLEMA #5:** Terminología técnica poco comprensible en el formulario de publicación de vehículos
+**Severidad:** 2
+**Heurística violada:** Usability: Correspondencia entre el sistema y el mundo real
+**Problema:** Durante la entrevista de validación del Segmento 2, la participante Rosa Medrano presentó dificultades al completar el formulario de publicación de vehículos. Manifestó que algunos términos técnicos utilizados en los campos no eran suficientemente claros, lo que generó dudas durante el registro. La entrevistada calificó esta actividad con 4 de 7 puntos.
+
+![Problema 5: Terminología técnica en el formulario de vehículos](assets/img/Capitulo%205/HeuristicaProblema5.png)
+
+**Recomendación:** Utilizar términos más sencillos, incorporar textos de ayuda junto a los campos técnicos y proporcionar ejemplos que faciliten el registro de las características del vehículo.
+
+**PROBLEMA #6:** Falta de información sobre los requisitos de la contraseña
+**Severidad:** 2
+**Heurística violada:** Usability: Prevención de errores
+**Problema:** Durante la actividad de registro de usuario, Rosa Medrano señaló que el formulario no indicaba claramente los requisitos necesarios para crear una contraseña. Esta falta de orientación puede provocar confusión y errores durante el registro.
+
+![Problema 6: Requisitos de contraseña poco claros](assets/img/Capitulo%205/HeuristicaProblema6.png)
+
+**Recomendación:** Mostrar debajo del campo de contraseña los requisitos mínimos para su creación e incorporar mensajes de validación claros que permitan identificar qué condiciones faltan cumplir.
 
 ## 5.4. Video About-the-Product.
 
