@@ -101,10 +101,20 @@ Se presenta la evidencia del trabajo realizado según los Insights de GitHub.
 
 
 ### AV2
-Durante la etapa del AV2 (Sprint 3), el equipo continuó el avance del proyecto mediante la mejora continua de los artefactos previos y la integración de nuevos componentes de software. Se concretó el despliegue de una nueva versión de la Landing Page, la nueva versión del Frontend Web Applications y la primera versión de los Web Services (Backend). Los avances en el código fuente fueron gestionados mediante GitHub, aplicando la convención de Conventional Commits, ramas individuales por funcionalidad y Pull Requests para integrar los cambios hacia la rama develop y posteriormente a main.
 
-A continuación, se presentan las evidencias del trabajo y colaboración en el repositorio correspondientes a los Insights de GitHub:
+Durante la entrega AV2 (Sprint 3), el equipo continuó la elaboración colaborativa del informe en el repositorio `report`, aplicando GitFlow. Los aportes se desarrollaron en ramas por capítulo o sección (`Capitulo5` y `StudentOutcome`), siguiendo la convención de Conventional Commits, y se integraron a la rama `develop` mediante Pull Requests, para luego pasar a `main` como versión de la entrega. En total se registraron 78 commits de contenido y 10 Pull Requests integrados durante esta etapa.
 
+La elaboración del informe se distribuyó de la siguiente manera:
+
+| Integrante | Aportes al informe en AV2 | Commits |
+|---|---|---|
+| Flores Apaico, Josué Antonio | Introducción del Sprint 3 y Sprint Planning 3; evidencias de despliegue de los Web Services, base de datos y Frontend (5.2.3.7); enlaces del proyecto en Project Report Collaboration Insights; actualización de Anexos | 16 |
+| Flores Siguas, Marlon Alessandro | Validation Interviews (5.3): registro de entrevistas y evaluaciones según heurísticas; actualización del Capítulo II | 19 |
+| Su Caletti, Eddo | Student Outcome (aportes AV2); actualización de imágenes y evidencias del Capítulo V | 18 |
+| Cano Ortiz, Fabrizio Hamet | Validation Interviews: entrevista del segmento 2 (propietarios) y hallazgos heurísticos 5 y 6 con sus capturas | 13 |
+| Ibañez Torres, Ivonne Beatriz |  Actualización del Capítulo V y del Student Outcome; imágenes del Capítulo 5 | 12 |
+
+A continuación, se presentan las evidencias del trabajo y colaboración en el repositorio del informe, según los Insights de GitHub:
 
 ![aditions3](Zyntra/assets/img/sprint3/commits3.png)
 
