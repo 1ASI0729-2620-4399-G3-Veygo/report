@@ -1462,29 +1462,6 @@ Ejemplo de error de `POST /api/v1/bookings` con `Accept-Language: es-419`:
 }
 ```
 
-<h4>Interacción con la documentación</h4>
-
-![Swagger UI](assets/img/sprint3/swagger-01-overview.png)
-
-Vista general de Swagger UI con los endpoints agrupados por bounded context.
-
-![Autenticación en Swagger](assets/img/sprint3/swagger-02-sign-in.png)
-
-Ejecución de `POST /api/v1/authentication/sign-in` con la cuenta de prueba. El token obtenido se registra con el botón **Authorize** para probar los endpoints protegidos.
-
-![Creación de reserva en Swagger](assets/img/sprint3/swagger-03-create-booking.png)
-
-Ejecución de `POST /api/v1/bookings` con datos de muestra y respuesta `201 Created`.
-
-![Confirmación de reserva en Swagger](assets/img/sprint3/swagger-04-confirm-booking.png)
-
-Ejecución de `PATCH /api/v1/bookings/{id}/confirm` con la cuenta del propietario. La reserva cambia a estado `confirmed`.
-
-| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed by | Committed on (Date) |
-|---|---|---|---|---|---|---|
-| (se completa con los commits reales de documentación) | | | | | | |
-
-
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review.
 
 En este Sprint se desplegaron tres productos: la primera versión de los **Web Services** en Render, con su base de datos MySQL en Aiven; una nueva versión del **Frontend Web Application** en Firebase Hosting, conectada a los Web Services; y una nueva versión de la **Landing Page** en GitHub Pages. Con este despliegue, la Fake API del Sprint 2 dejó de ser utilizada por la aplicación.
@@ -1500,17 +1477,12 @@ En este Sprint se desplegaron tres productos: la primera versión de los **Web S
 
 1. Se creó una cuenta en Aiven y un servicio **MySQL** en el plan gratuito.
 
-![Aiven crear servicio](assets/img/sprint3/deploy-01-aiven-create-mysql.png)
-
 2. Una vez activo el servicio, se obtuvieron los datos de conexión (host, puerto, usuario y base de datos). Estos datos se registraron como variables de entorno en Render y no se incluyeron en el repositorio.
-
-![Aiven servicio activo](assets/img/sprint3/deploy-02-aiven-running.png)
 
 <h4>Despliegue de los Web Services en Render</h4>
 
 3. Se agregó al repositorio `backend` un `Dockerfile` multi-stage, que compila el proyecto con la imagen del SDK de .NET y lo ejecuta con la imagen de ASP.NET Core runtime.
 
-![Dockerfile](assets/img/sprint3/deploy-03-dockerfile.png)
 
 4. En Render se creó un nuevo **Web Service** a partir del repositorio `backend`, con la rama `main` y el entorno **Docker**.
 
@@ -1538,13 +1510,10 @@ Los registros de Render evidencian que el servicio alcanzó el estado `Live` y q
 
 ![Render desplegado](assets/img/sprint3/deploy-06-render-backend-live.png)
 
-![Swagger desplegado](assets/img/sprint3/deploy-07-swagger-live.png)
 
 <h4>Nueva versión del Frontend Web Application en Firebase Hosting</h4>
 
 7. Se actualizó `.env.production` para que la variable de la URL base de la API apunte a los Web Services desplegados en Render, en lugar de la Fake API.
-
-![Variables de producción](assets/img/sprint3/deploy-08-env-production.png)
 
 8. Se generó la versión de producción con `npm run build` y se desplegó con `firebase deploy --only hosting`.
 
@@ -1558,12 +1527,8 @@ La compilación del Frontend Web Application se realizó mediante Vite, generand
 
 9. Se integraron a `main` los cambios de la Landing Page (preguntas frecuentes, suscripción, atributos ARIA, textos en es-419 y el Video About-the-Product incrustado). GitHub Pages publicó automáticamente la nueva versión mediante el flujo `pages-build-deployment`.
 
-![GitHub Actions Landing Page](assets/img/sprint3/deploy-10-pages-actions.png)
 
 10. Se crearon los tags de versión de cada producto según Semantic Versioning: `v1.0.0` en `backend` y `v1.1.0` en `frontend` y `landing-Page`.
-
-![Releases](assets/img/sprint3/deploy-11-tags.png)
-
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint.
 
@@ -1732,7 +1697,7 @@ Video de la entrevista de validación: [URL del video en Microsoft Stream](https
 
 ![Entrevista 2](assets/img/EntrevistaJoce.png)
 
-**Link de la entrevista:**[Entrevista 2](https://onedrive.live.com/?photosData=%2Fshare%2F2E1AE54FD7D52753%21s3f9811608ed747a1808878490e3d8d0a%3Fithint%3Dvideo%26e%3DNAm5zl%26migratedtospo%3Dtrue&cid=2E1AE54FD7D52753&redeem=aHR0cHM6Ly8xZHJ2Lm1zL3YvYy8yZTFhZTU0ZmQ3ZDUyNzUzL0lRQmdFWmdfMTQ2aFI0Q0llRWtPUFkwS0FRZmdEXzE2bFNGeDVRSHZXU2syUlFZP2U9TkFtNXps&view=8)
+**Link de la entrevista:**[Entrevista 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a995_upc_edu_pe/IQCu_5vqmxfyS5GFxEQ1WU8dAWj8qjELSr0KPJYBt4fxAQI?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=XDyT0S)
 
 **Resumen:** La interfaz le parece bastante intuitava, muy bonita, le recuerda a las interfaces de reserva de vuelos, muy sencillas y prácticas. Jose comenta que estaría bien agregar como dato el kilometraje del auto.
 
@@ -1806,29 +1771,36 @@ Video de la entrevista de validación: [URL del video en Microsoft Stream](https
 | P4 | Completada con dificultades | 4 | Tuvo dificultades para encontrar la sección. |
 | P5 | Completada parcialmente | 7 | Encontró las secciones de ingresos y calificaciones. Le gustó poder visualizar las ganancias mensuales, aunque no había datos registrados. |
 
+##### Entrevista 5
+
+| Campo | Detalle |
+|---|---|
+| **Nombres** | Carlos |
+| **Apellidos** | Blancas |
+| **Edad** | 25 años |
+| **Distrito** | San Miguel |
+| **Ocupación** | Ingeniero de Software |
+| **Vehículo que posee** | Toyota Yaris |
+| **Fecha de la entrevista** | 10/11/2026 |
+| **Entrevistador** | Ivonne Ibañez |
+| **Inicio en el video** | 00:00 |
+| **Duración** | 18:50 |
+
+![Entrevista 5](assets/img/EntrevistaCarlos.png)
+
+**Link de la entrevista:**[ Entrevista 4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a995_upc_edu_pe/IQCFvz7iDaZ5QYr1JokA3P12AaxMrYxnKkr3n1KDXS-eIn4?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=J6a0Lp)
+
+**Resumen:** Comenta que la interfaz y la idea en general le parece interesante, pero que se debería correjir el error de invalid License.
+
+| Tarea | Resultado | Facilidad (Dificil 1-6 Sencillo) | Observación principal |
+|---|---|---|---|
+| A1 |Completada sin ayuda |7 | "Muy facil"|
+| A2 |Completada sin ayuda |7 |"Por la facilidad de añadir descripción del vehiculo" |
+| A3 |Completada con ayuda |5 | No entendio como es el sistema de bloquear fechas |
+| A4 |Completada sin ayuda |6 |"No comprendí muy bien" |
+| A5 |Completada sin ayuda |7 | "Muy rapido encontrar la seción de transacciones" |
 
 
-(Repetir la estructura de la Entrevista 4 para las Entrevistas 5 y 6 del Segmento 2.)
-
-#### Resultados generales
-
-| Tarea | Completada sin ayuda | Completada con ayuda | No completada | Facilidad promedio (1-7) |
-|---|---|---|---|---|
-| L1 | 5 | 0 | 0 | 7.0 |
-| L2 | 5 | 0 | 0 | 6.8 |
-| L3 | 4 | 1 | 0 | 6.2 |
-| L4 | 5 | 0 | 0 | 7.0 |
-| A1 / P1 | 4 | 1 | 0 | 6.5 |
-| A2 | 5 | 0 | 0 | 7.0 |
-| A3 | 5 | 0 | 0 | 7.0 |
-| A4 | 5 | 0 | 0 | 7.0 |
-| A5 | 5 | 0 | 0 | 6.8 |
-| P2 | 4 | 1 | 0 | 6.4 |
-| P3 | 5 | 0 | 0 | 6.8 |
-| P4 | 4 | 1 | 0 | 6.2 |
-| P5 | 4 | 0 | 1 | 5.8 |
-
-En términos generales, las evaluaciones de usabilidad demostraron que los flujos principales de Veygo son intuitivos y de fácil adopción para los usuarios. Las tareas relacionadas con la exploración en la Landing Page (L1), el registro de cuentas (A2), la visualización de detalles de vehículos (A3) y el envío de mensajes a propietarios (A4) obtuvieron las calificaciones más altas de facilidad (promedio de 7.0), destacando la claridad de los botones principales y la calidad visual de las interfaces tipo "reserva de vuelos". Sin embargo, se identificaron problemas recurrentes en tareas de alta complejidad temporal o de personalización, como la selección de fechas no consecutivas en el módulo de reservas (A3/P4) y ciertas dificultades con el tamaño de tipografías iniciales para usuarios con fatiga visual. Las principales diferencias entre segmentos radicaron en que los arrendatarios priorizan la agilidad y transparencia en la ubicación de recojo y costos, mientras que los arrendadores demandan mayor control sobre la verificación de antecedentes y calendarios de disponibilidad.
 
 ### 5.3.3. Evaluaciones según heurísticas.
 
@@ -1964,11 +1936,12 @@ El Video About-the-Product está dirigido a los visitantes de la Landing Page qu
 | 01:50 | Testimonios | Opinión de un arrendatario y de un propietario entrevistados en la validación. |
 | 02:20 | Cierre | Llamada a la acción para registrarse en Veygo y enlace a la plataforma. |
 
-![Video About-the-Product](assets/img/sprint3/about-the-product.png)
+![Video About-the-Product](assets/img/About-The-Product.png)
 
-Duración: 00:00
+Duración: 09:12
 
-Video en Microsoft Stream: <URL>
+Video en Microsoft Stream: https://upcedupe-my.sharepoint.com/:v:/g/personal/u20241a995_upc_edu_pe/IQAPxEupSb-oSIS8ICtZoB2mARXYWI41GDY_WHlp8onX_Rw?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=QEhzpL
 
-Video en YouTube (incrustado en la Landing Page): <URL>
+Video en YouTube (incrustado en la Landing Page): https://youtu.be/CN-ecimHaOM
+
 
