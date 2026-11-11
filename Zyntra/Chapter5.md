@@ -1300,8 +1300,6 @@ Link de la Landing Page: https://1asi0729-2620-4399-g3-veygo.github.io/landing-P
 
 Link de la aplicación: https://veygo-web-app.web.app
 
-Link del video: https://drive.google.com/file/d/XXXXXXXX/view?usp=sharing
-
 | User Story / Technical Story | Evidencia |
 |---|---|
 | US23, US24 | Nuevas secciones de la Landing Page |
