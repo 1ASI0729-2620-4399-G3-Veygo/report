@@ -1462,20 +1462,52 @@ Ejemplo de error de `POST /api/v1/bookings` con `Accept-Language: es-419`:
 
 #### 5.2.3.7. Software Deployment Evidence for Sprint Review.
 
-En este Sprint se desplegaron tres productos: la primera versión de los **Web Services** en Render, con su base de datos MySQL en Aiven; una nueva versión del **Frontend Web Application** en Firebase Hosting, conectada a los Web Services; y una nueva versión de la **Landing Page** en GitHub Pages. Con este despliegue, la Fake API del Sprint 2 dejó de ser utilizada por la aplicación.
+#### 5.2.3.7. Software Deployment Evidence for Sprint Review.
+
+En este Sprint se desplegaron tres productos: la primera versión de los **Web Services** en Render, con su base de datos MySQL en Aiven; una nueva versión del **Frontend Web Application** en Firebase Hosting, conectada a los Web Services; y una nueva versión de la **Landing Page** en GitHub Pages. Con este despliegue, la aplicación web dejó de usar la Fake API para los datos del negocio (vehículos, disponibilidad, reservas, favoritos, calificaciones, mensajes y notificaciones). La Fake API se mantiene únicamente para la gestión de usuarios (registro e inicio de sesión) hasta que el bounded context IAM se incorpore a los Web Services en el siguiente Sprint.
 
 | Producto | Plataforma | Versión | URL |
 |---|---|---|---|
 | Landing Page | GitHub Pages | v1.1.0 | https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/ |
 | Frontend Web Application | Firebase Hosting | v1.1.0 | https://veygo-web-app.web.app |
-| Web Services (RESTful API) | Render | v1.0.0 | https://<url-de-los-web-services>/swagger |
-| Base de datos MySQL | Aiven | — | (acceso privado) |
+| Web Services (RESTful API) | Render | v1.0.0 | https://veygo-platform.onrender.com/api/v1 |
+| Documentación de los Web Services | Scalar (OpenAPI) | v1.0.0 | https://veygo-platform.onrender.com/scalar |
+| Base de datos MySQL | Aiven for MySQL | MySQL 8.4 | (acceso privado) |
+| Fake API (usuarios) | Render | — | https://veygo-fake-api.onrender.com/api/v1/users |
+
+**Despliegue de los Web Services.** El repositorio `backend` se conectó a Render como un Web Service de tipo Docker, a partir de la rama `main` y usando el `Dockerfile` del proyecto (`veygo-platform/Dockerfile`). Cada push a `main` genera un nuevo despliegue automático. La cadena de conexión a la base de datos se configuró como variable de entorno en Render (`ConnectionStrings__DefaultConnection`), con conexión cifrada (SSL obligatorio) hacia Aiven. Al iniciar, la aplicación aplica las migraciones de Entity Framework Core y carga los datos de ejemplo si la base está vacía.
+
+**Despliegue del Frontend Web Application.** En el archivo `.env.production` se actualizó `VITE_VEYGO_API_URL` para que apunte a los Web Services en Render. Luego se generó el build de producción con `npm run build` y se publicó con `firebase deploy --only hosting`.
 
 <h4>Base de datos MySQL en Aiven</h4>
 
-1. Se creó una cuenta en Aiven y un servicio **MySQL** en el plan gratuito.
+<h4>Base de datos MySQL en Aiven</h4>
 
-2. Una vez activo el servicio, se obtuvieron los datos de conexión (host, puerto, usuario y base de datos). Estos datos se registraron como variables de entorno en Render y no se incluyeron en el repositorio.
+1. Se creó una cuenta en Aiven, un proyecto `veygo` y un servicio **MySQL 8.4** llamado `veygo-mysql`, en el tier **Developer** (plan Developer-1: 1 CPU, 1 GB de RAM y 8 GB de almacenamiento, con respaldos), cuyo costo se cubre con los créditos del periodo de prueba de Aiven.
+
+![Aiven - Página de inicio](assets/img/sprint3/deploy-01-aiven-home.jpeg)
+
+En el proyecto se eligió **Create new service** y, en el catálogo, **MySQL**.
+
+![Aiven - Catálogo de servicios](assets/img/sprint3/deploy-01-aiven-services.jpeg)
+
+Se seleccionó el tier Developer, la nube North America y el plan Developer-1.
+
+![Aiven - Tier, nube y plan](assets/img/sprint3/deploy-01-aiven-create-mysql.jpeg)
+
+Se asignó el nombre `veygo-mysql` y se creó el servicio, que Aiven aprovisionó en DigitalOcean, región Nueva York.
+
+![Aiven - Nombre del servicio](assets/img/sprint3/deploy-01-aiven-name.jpeg)
+
+![Aiven - Servicio en creación](assets/img/sprint3/deploy-01-aiven-building.jpeg)
+
+2. Con el servicio en estado **Running**, se obtuvieron los datos de conexión (host, puerto, usuario, base de datos `defaultdb` y modo SSL `REQUIRED`). Estos datos se registraron como variable de entorno en Render y no se incluyeron en el repositorio.
+
+![Aiven - Servicio activo y datos de conexión](assets/img/sprint3/deploy-02-aiven-running.jpeg)
+
+El servicio quedó accesible por internet con conexión cifrada obligatoria, para que los Web Services en Render puedan conectarse.
+
+![Aiven - Plan, red y región](assets/img/sprint3/deploy-02-aiven-network.jpeg)
 
 <h4>Despliegue de los Web Services en Render</h4>
 
@@ -1530,24 +1562,28 @@ La compilación del Frontend Web Application se realizó mediante Vite, generand
 
 #### 5.2.3.8. Team Collaboration Insights during Sprint.
 
-Durante este Sprint el equipo trabajó en los tres repositorios de la organización 1ASI0729-2620-4399-G3-Veygo aplicando GitFlow: `backend` para los Web Services, `frontend` para el Frontend Web Application y `landing-Page` para la Landing Page. Cada integrante desarrolló su bounded context de los Web Services en una rama `feature/*`, lo integró en el frontend y realizó una tarea en la Landing Page. Cada aporte se integró a `develop` mediante un Pull Request revisado por al menos otro integrante, y finalmente `develop` se integró a `main` para el despliegue.
+Durante este Sprint el equipo trabajó en los tres repositorios de la organización 1ASI0729-2620-4399-G3-Veygo: `backend` para los Web Services, `frontend` para el Frontend Web Application y `landing-Page` para la Landing Page.
 
-A diferencia del Sprint 2, la carga de trabajo se distribuyó de forma equilibrada: todos los integrantes participaron en la implementación de los tres productos, como se resume en la siguiente tabla.
+El esfuerzo principal se concentró en el repositorio `backend`, donde se desarrolló la primera versión de los Web Services aplicando GitFlow. Cada bounded context se implementó en una rama `feature/*` creada a partir de `develop` y se integró mediante un Pull Request; finalmente, `develop` se integró a `main` para el despliegue en Render. La base común del proyecto (Shared Kernel, configuración, migraciones y carga de datos de muestra), junto con los bounded contexts Reputation y Notification, se desarrolló en la rama `feature/platform-base`.
+
+En el repositorio `frontend` se realizaron los cambios necesarios para conectar el Frontend Web Application con los Web Services: URL base de la API, rutas en kebab-case y lectura de errores en formato Problem Details. La gestión de usuarios se mantuvo en la Fake API hasta la incorporación de IAM. En el repositorio `landing-Page` se incrustaron los videos About-the-Product y About-the-Team, se configuró el inglés como idioma por defecto y se mejoraron los atributos de accesibilidad, integrando los cambios mediante un Pull Request desde la rama `feature/videos-i18n`.
 
 | Integrante | Web Services (`backend`) | Frontend Web Application (`frontend`) | Landing Page (`landing-Page`) | Total de commits |
 |---|---|---|---|---|
-| Flores Apaico, Josué Antonio | feature/shared-kernel, feature/iam — _n_ commits | feature/iam-integration — _n_ commits | feature/navigation-a11y — _n_ commits | _n_ |
-| Flores Siguas, Marlon Alessandro | feature/fleet — _n_ commits | feature/fleet-integration — _n_ commits | feature/catalog-a11y — _n_ commits | _n_ |
-| Su Caletti, Eddo | feature/booking — _n_ commits | feature/booking-integration — _n_ commits | feature/search-a11y — _n_ commits | _n_ |
-| Cano Ortiz, Fabrizio Hamet | feature/communication, feature/notification, feature/engagement, feature/profile — _n_ commits | feature/communication-integration — _n_ commits | feature/trust-a11y — _n_ commits | _n_ |
-| Ibañez Torres, Ivonne Beatriz | feature/reputation, feature/dashboard — _n_ commits | feature/dashboard-integration — _n_ commits | feature/faq, feature/subscription — _n_ commits | _n_ |
-| | | | **Total** | **_n_** |
+| Flores Apaico, Josué Antonio | feature/platform-base — 53 commits; integración en develop — 9 commits | Integración con los Web Services — 4 commits | feature/videos-i18n — 2 commits | 68 |
+| Flores Siguas, Marlon Alessandro | feature/fleet — 23 commits | — | — | 23 |
+| Su Caletti, Eddo | feature/booking — 32 commits | — | — | 32 |
+| Cano Ortiz, Fabrizio Hamet | feature/communication — 8 commits | — | — | 8 |
+| Ibañez Torres, Ivonne Beatriz |  feature/engagement — 21 commits | — | — | 21 |
+| | | | **Total** | **152** |
 
 | Repositorio | Pull Requests integrados | Commits de desarrollo | Commits de merge | Tag de versión |
 |---|---|---|---|---|
-| backend | _n_ | _n_ | _n_ | v1.0.0 |
-| frontend | _n_ | _n_ | _n_ | v1.1.0 |
-| landing-Page | _n_ | _n_ | _n_ | v1.1.0 |
+| backend | 6 | 146 | 6 | — |
+| frontend | 0 | 4 | 0 | — |
+| landing-Page | 1 | 2 | 1 | v1.1.0 |
+
+A continuación, se presentan las capturas de los analíticos de GitHub que evidencian la participación de los miembros del equipo en cada repositorio durante este Sprint:
 
 A continuación, se presentan las capturas de los analíticos de GitHub que evidencian la participación de los miembros del equipo en cada repositorio durante este Sprint:
 
