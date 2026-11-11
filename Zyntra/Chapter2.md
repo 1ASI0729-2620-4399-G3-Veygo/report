@@ -249,7 +249,7 @@ Finalmente, señala que estaría dispuesto a utilizar **Veygo**, principalmente 
 
 **Entrevista 1**
 
-Nombre completo: Edgar Alfonso Sulla
+Nombre completo: Edgar Alfonso su llaque
 
 Edad: 56 años
 
@@ -267,7 +267,7 @@ Ocupación: Actividades relacionadas con alquileres y el sector inmobiliario.
 
 **Transcripción resumen de entrevista:**
 
-Edgar Alfonso Sulla, de 56 años, se dedica a actividades relacionadas con alquileres y el sector inmobiliario, durante la entrevista señaló que ofrece principalmente camionetas SUV y automóviles particulares, para proceder con un alquiler, indicó que normalmente solicita el DNI del cliente y una tarjeta de crédito, en cuanto a la duración del servicio, explicó que depende de las necesidades del cliente y de las características del vehículo, sin establecer un tiempo mínimo o máximo específico.
+Edgar Alfonso su llaque, de 56 años, se dedica a actividades relacionadas con alquileres y el sector inmobiliario, durante la entrevista señaló que ofrece principalmente camionetas SUV y automóviles particulares, para proceder con un alquiler, indicó que normalmente solicita el DNI del cliente y una tarjeta de crédito, en cuanto a la duración del servicio, explicó que depende de las necesidades del cliente y de las características del vehículo, sin establecer un tiempo mínimo o máximo específico.
 
 Respecto al **control de disponibilidad**, comentó que considera necesario llevar un inventario mediante un sistema informático que permita identificar los vehículos disponibles y ocupados, destacó que disponer de información actualizada facilita la organización del servicio y permite ofrecer alternativas adecuadas a cada cliente.
 
