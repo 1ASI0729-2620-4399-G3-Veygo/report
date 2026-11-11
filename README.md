@@ -66,16 +66,19 @@
 En esta sección se indica el URL del repositorio utilizado para la elaboración colaborativa del Informe de Trabajo Final, así como las evidencias de participación de cada integrante del equipo durante el desarrollo de las entregas.
 
 
-| Tipo de Enlace                      | URL                                                                                   |
-|------------------------------------|----------------------------------------------------------------------------------------|
-| **Repositorio de la organización** | https://github.com/1ASI0729-2620-4399-G3-Veygo                                |
-| **Repositorio del reporte**        | https://github.com/1ASI0729-2620-4399-G3-Veygo/report.git         |
-| **Landing Page**                   | https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/     |
-| **Frontend**        | https://github.com/1ASI0729-2620-4399-G3-Veygo/frontend.git         |
-| **Fake API**        | https://veygo-fake-api.onrender.com/api/v1         |
-| **Backend**        | https://github.com/1ASI0729-2620-4399-G3-Veygo/backend.git         |
-| **Deploy Frontend**        |  https://veygo-web-app.web.app         |
-| **Deploy Backend**        | ####         |
+| Tipo de Enlace                       | URL                                                                     |
+|--------------------------------------|-------------------------------------------------------------------------|
+| **Repositorio de la organización**   | https://github.com/1ASI0729-2620-4399-G3-Veygo                          |
+| **Repositorio del reporte**          | https://github.com/1ASI0729-2620-4399-G3-Veygo/report.git               |
+| **Landing Page**                     | https://1asi0729-2620-4399-g3-veygo.github.io/landing-Page/             |
+| **Frontend**                         | https://github.com/1ASI0729-2620-4399-G3-Veygo/frontend.git             |
+| **Backend**                          | https://github.com/1ASI0729-2620-4399-G3-Veygo/backend.git              |
+| **Acceptance Tests**                 | https://github.com/1ASI0729-2620-4399-G3-Veygo/Veygo-AcceptanceTests    |
+| **Fake API (usuarios)**              | https://veygo-fake-api.onrender.com/api/v1                              |
+| **Deploy Frontend**                  | https://veygo-web-app.web.app                                           |
+| **Deploy Backend**                   | https://veygo-platform.onrender.com/api/v1                              |
+| **Documentación de la API (Scalar)** | https://veygo-platform.onrender.com/scalar                              |
+| **OpenAPI Specification**            | https://veygo-platform.onrender.com/openapi/v1.json                     |
 
 
 ### AV1
