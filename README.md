@@ -106,9 +106,9 @@ Durante la etapa del AV2 (Sprint 3), el equipo continuó el avance del proyecto 
 A continuación, se presentan las evidencias del trabajo y colaboración en el repositorio correspondientes a los Insights de GitHub:
 
 
-![aditions1](Zyntra/assets/img/report_3_additions.png)
+![aditions3](Zyntra/assets/img/sprint3/commits3.png)
 
-![network1](Zyntra/assets/img/Network_3.png)
+![network3](Zyntra/assets/img/sprint3/Network3.png)
 
 # Indice
 
