@@ -162,7 +162,7 @@ Ocupación: Estudiante universitario (UPC)
 **Detalles de la entrevista:**
 
 ![Foto Entrevista](assets/img/Entrevista-Segmento2.jpeg) <br>
-[[URL de la entrevista](https://youtu.be/C-CCBMB-hx8?si=CsbbWmsPkPQl6bDD)] — Duración de la entrevista: [7:37]
+[[URL de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQDBlJ29Nj3AR54gD6yFv5gzARTewdrKbZkZqUEjxWcEImc?e=5ZZQcC)] — Duración de la entrevista: [7:37]
  
 **Transcripción resumen de entrevista:**
 Andre suele alquilar vehículos de transmisión manual, ya que prefiere evitar autos automáticos o eléctricos por considerar que tienden a malograrse con mayor frecuencia. Indica que las plataformas que usa habitualmente le exigen DNI, licencia de conducir vigente y datos personales, además de ser mayor de edad y cumplir con las condiciones que impone cada propietario.
@@ -249,64 +249,108 @@ Finalmente, señala que estaría dispuesto a utilizar **Veygo**, principalmente 
 
 **Entrevista 1**
 
-Nombre completo: Jordan Cruz
+Nombre completo: Edgar Alfonso su llaque
 
-Edad: 27 años
+Edad: 56 años
 
-Papel desempeñado: Arrendador de un auto
+Papel desempeñado: Arrendador de vehículos
 
-Distrito: Los Olivos
- 
+Distrito: Santiago del Sur
+
+Ocupación: Actividades relacionadas con alquileres y el sector inmobiliario.
+
 **Detalles de la entrevista:**
 
-![Foto Entrevista](assets/img/Entrevista-Segmento2-1.jpeg) <br>
+![Foto Entrevista](assets/img/Entrevista-Segmento2-1.png) <br>
 
-[[URL de la entrevista](https://drive.google.com/file/d/1qEhT1fvgC09HdDXzRPTrgDkUVPTtdTVm/view?usp=drive_link)] — Duración de la entrevista: [4:51]
- 
+[[URL de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410869_upc_edu_pe/IQByXe_ysjdPQruuIg4F-UKXAfD0nShJMIXHYG85AuLxnKA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=1hb2rM)] — Duración aproximada de la entrevista: [5:23]
+
 **Transcripción resumen de entrevista:**
-Jordan mostró interés en la plataforma, ya que considera que le brindaría un control más claro sobre el alquiler de sus vehículos. Valoró especialmente las medidas de seguridad que podrían proteger tanto a arrendadores como a arrendatarios, y destacó que contar con un **sistema de reseñas de clientes anteriores** sería una herramienta valiosa para identificar inquilinos confiables y evitar problemas.
- 
-Respecto al **panel administrativo**, mencionó que sería útil tener una plataforma que le permita registrar el estado de sus vehículos y gestionar el tiempo de alquiler de manera más eficiente. Sobre el **calendario de disponibilidad**, apreció especialmente la idea de una reserva anticipada que le permita asegurar la disponibilidad de sus vehículos en fechas específicas. En general, mostró interés en un sistema que mejore la confianza y la transparencia entre arrendadores y arrendatarios.
- 
+
+Edgar Alfonso su llaque, de 56 años, se dedica a actividades relacionadas con alquileres y el sector inmobiliario, durante la entrevista señaló que ofrece principalmente camionetas SUV y automóviles particulares, para proceder con un alquiler, indicó que normalmente solicita el DNI del cliente y una tarjeta de crédito, en cuanto a la duración del servicio, explicó que depende de las necesidades del cliente y de las características del vehículo, sin establecer un tiempo mínimo o máximo específico.
+
+Respecto al **control de disponibilidad**, comentó que considera necesario llevar un inventario mediante un sistema informático que permita identificar los vehículos disponibles y ocupados, destacó que disponer de información actualizada facilita la organización del servicio y permite ofrecer alternativas adecuadas a cada cliente.
+
+En relación con la **verificación de identidad**, considera indispensable comprobar los datos del cliente antes de entregarle un vehículo, debido a los riesgos que implica realizar una operación con una persona desconocida, mencionó que utiliza herramientas de consulta relacionadas con RENIEC e información financiera para evaluar a los solicitantes. Asimismo, manifestó que confiaría en un sistema de inicio de sesión con verificación de identidad integrada, porque permitiría simplificar los procedimientos previos al alquiler.
+
+Sobre el **calendario de disponibilidad**, señaló que mantener actualizada la base de datos de los vehículos es fundamental para conocer el inventario disponible, considera que la actualización automática del calendario cuando se confirma una reserva sería una funcionalidad ideal, ya que facilitaría el control de las unidades y permitiría consultar la disponibilidad en tiempo real.
+
+En cuanto al **panel administrativo y las métricas**, mostró interés en contar con una herramienta que permita visualizar las transacciones completadas y la cantidad de vehículos registrados, explicó que esta información ayudaría a mejorar la administración del servicio y a conocer qué vehículos se pueden ofrecer. Además, considera útil disponer de información financiera y crediticia relacionada con los clientes, con la finalidad de evaluar las condiciones de contratación.
+
+Respecto al **mapa y la ubicación**, explicó que la coordinación del punto de entrega depende de los concesionarios o establecimientos disponibles, procurando ofrecer una alternativa cercana al domicilio del cliente, considera que un mapa con la ubicación de los vehículos y sus puntos de entrega permitiría brindar mejores referencias y facilitaría que los usuarios encuentren opciones cercanas.
+
+Actualmente utiliza plataformas como **Neoauto y Facebook Marketplace** para ofrecer vehículos, asimismo, señaló que el teléfono celular le resulta práctico para acceder a estas plataformas y comunicarse con los interesados. Sin embargo, considera que identificar clientes confiables requiere mecanismos adicionales de verificación y acceso a información que permita evaluar su identidad.
+
+Finalmente, Edgar manifestó que estaría dispuesto a utilizar **Veygo**, una plataforma que integre verificación de identidad, calendario de disponibilidad, panel de métricas y mapa de entrega. Desde su perspectiva, las herramientas tecnológicas permiten modernizar los procedimientos, reducir el tiempo dedicado a tareas administrativas y facilitar el trabajo relacionado con el alquiler de vehículos.
+
 **Entrevista 2**
 
-Nombre completo: Jose Marchena
+Nombre completo: Rosa Medrano
 
-Edad: 23 años
+Edad: 43 años
 
-Papel desempeñado: Arrendador de un auto
+Papel desempeñado: Arrendadora de vehículos
 
-Distrito: San Juan de Lurigancho
- 
+Distrito: Oxapampa
+
+Ocupación: Alquiler de vehículos.
+
 **Detalles de la entrevista:**
-![Foto Entrevista](assets/img/Entrevista-Segmento2-2.jpeg) <br>
 
-[[URL de la entrevista](https://drive.google.com/file/d/1qEhT1fvgC09HdDXzRPTrgDkUVPTtdTVm/view?usp=drive_link)] — Duración de la entrevista: [5:33]
- 
+![Foto Entrevista](assets/img/Entrevista-Segmento2-2.png) <br>
+
+[[URL de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202410869_upc_edu_pe/IQCk-fg6Q9M-TZawKUwWtB-PAWRLBvko53FWBVqXzqBvL_0?e=x7ZITR&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)] — Duración aproximada de la entrevista: [8:53]
+
 **Transcripción resumen de entrevista:**
-Jose se mostró gratamente impresionado con el producto presentado, ya que incorpora las **medidas de seguridad** que, según indica, siempre se buscan al momento de arrendar un vehículo a un tercero. Señaló que le gustaría que la plataforma también contara con funciones para ver opiniones o comentarios de otros usuarios que ya la hayan utilizado, lo cual aumentaría aún más la confianza.
- 
-Comentó que anteriormente ofrecía su vehículo en alquiler a través de Facebook, pero siempre le quedaba una sensación de duda e inseguridad al momento de la entrega. Con los métodos de seguridad mostrados (verificación de identidad), afirma sentirse mucho más tranquilo y confiado en el servicio.
+
+Rosa Medrano, de 43 años, reside en el distrito de Oxapampa y se dedica al alquiler de vehículos. Durante la entrevista explicó que ofrece camionetas de diferentes marcas, tanto mecánicas como automáticas, además de vans y minivanes, sus servicios están dirigidos principalmente a turistas, familias, grupos de visitantes y empresas que requieren vehículos para transportar a sus trabajadores.
+
+Respecto a los **requisitos para el alquiler**, indicó que solicita el DNI o carné de extranjería del cliente y, cuando este conduce el vehículo, una licencia de conducir vigente y correspondiente a la categoría requerida, en relación con la duración del servicio, señaló que normalmente alquila los vehículos por un mínimo de un día, aunque en situaciones particulares puede ofrecer alquileres por horas. También realiza contratos por semanas o meses, especialmente cuando se trata de empresas que necesitan movilizar personal durante periodos prolongados.
+
+En cuanto al **control de disponibilidad**, explicó que actualmente utiliza un registro de reservas y contratos de alquiler, donde anota las fechas de salida y devolución de cada vehículo, aunque este procedimiento le permite mantener cierto orden, considera que contar con un sistema digital facilitaría la administración de las unidades y reduciría el trabajo manual.
+
+Sobre la **verificación de identidad**, manifestó que considera fundamental comprobar los documentos de los clientes antes de entregarles un vehículo. Para ello, revisa los documentos personales y la licencia de conducir correspondiente, cuando trabaja con empresas, también verifica sus datos, el RUC y la información de la persona responsable del servicio, considera que un sistema de verificación de identidad integrado sería útil para reducir los riesgos asociados con personas que proporcionan información falsa, sin embargo, destacó que dicho sistema debe garantizar la seguridad y protección de los datos personales.
+
+Respecto al **calendario de disponibilidad**, comentó que utiliza un registro de reservas para organizar las fechas y horarios de alquiler, especialmente porque atiende tanto a turistas como a empresas que pueden solicitar varias unidades simultáneamente, considera que la actualización automática del calendario permitiría ahorrar tiempo, evitar reservas duplicadas y brindar información actualizada sobre la disponibilidad de camionetas y vans.
+
+En relación con el **panel administrativo y las métricas**, señaló que le gustaría visualizar la cantidad de alquileres realizados, los vehículos registrados y las unidades con mayor demanda, también considera importante contar con información sobre los ingresos generados por cada vehículo, las reservas pendientes, los pagos realizados, las fechas de devolución, el historial de clientes y los mantenimientos programados, esta información le permitiría administrar mejor su negocio y tomar decisiones basadas en la demanda de turistas y empresas.
+
+Sobre el **mapa y la ubicación de entrega**, explicó que actualmente coordina con sus clientes mediante llamadas telefónicas o WhatsApp, los puntos de entrega pueden ser hoteles, terminales terrestres, aeropuertos u otros lugares previamente acordados, considera que mostrar los vehículos y sus ubicaciones en un mapa sería especialmente útil para los turistas que no conocen la zona, ya que facilitaría la identificación de unidades cercanas y mejoraría la atención al cliente.
+
+Actualmente utiliza principalmente **WhatsApp, llamadas telefónicas, recomendaciones de clientes y contactos directos con empresas y operadores turísticos** para ofrecer sus servicios, señaló que su dispositivo principal es el teléfono celular, porque le permite atender consultas desde cualquier lugar. También utiliza una computadora para revisar contratos, organizar reservas y realizar actividades administrativas.
+
+Respecto a la **confiabilidad de las plataformas actuales**, considera que los canales que utiliza permiten comunicarse con los clientes, pero no siempre ofrecen mecanismos suficientes para verificar su identidad o conocer sus antecedentes como usuarios del servicio, por ello, considera importante incorporar funciones de verificación y valoración de clientes que contribuyan a generar mayor confianza durante las operaciones de alquiler.
+
+Finalmente, Rosa manifestó que estaría dispuesta a utilizar **Veygo**, siempre que sea una plataforma segura, fácil de manejar y que realmente facilite la administración de sus vehículos. Considera que integrar verificación de identidad, calendario de disponibilidad, panel administrativo y mapa de entrega permitiría mejorar la organización de las reservas, reducir dificultades de coordinación y ofrecer un servicio más eficiente.
  
 **Entrevista 3**
 
-Nombre completo: Juan Diaz Banda
+Nombre completo: Rosa Medina
 
-Edad: 28 años
+Edad: 42 años
 
-Papel desempeñado: Propietario/arrendador (profesor de colegio)
+Papel desempeñado: Propietaria y arrendadora de vehículos
 
-Distrito: Bellavista, Callao
+Distrito: Santiago de Surco
  
 **Detalles de la entrevista:**
-![Foto Entrevista](assets/img/Entrevista-Segmento2-3.jpeg) <br>
+![Foto Entrevista](assets/img/Entrevista-Segmento2-3.png) <br>
 
-[[URL de la entrevista](https://drive.google.com/file/d/1qEhT1fvgC09HdDXzRPTrgDkUVPTtdTVm/view?usp=drive_link)] — Duración de la entrevista: [3:54]
+[[URL de la entrevista](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202415412_upc_edu_pe/IQAr1YYTJJndQo73cCGv46GLAcaD7-zOFbndKlW4ViV5pd0?e=WATK4x)] — Duración de la entrevista: [3:54]
  
 **Transcripción resumen de entrevista:**
-Juan combina su trabajo en un colegio con el alquiler de su Toyota Yaris para generar ingresos adicionales. Es una persona práctica y organizada que gestiona su negocio **manualmente mediante un registro en Excel**, operando principalmente en zonas cercanas a su domicilio.
- 
-Para alquilar su vehículo exige DNI y licencia de conducir vigente, con un mínimo de un día y un máximo de una semana de alquiler. Promociona su servicio por Instagram y coordina los tratos por WhatsApp, pero reconoce que estos canales son **inseguros para manejar datos personales**. Muestra interés en migrar a una aplicación especializada que le permita ver reseñas de clientes, gestionar sus alquileres mediante un **panel de control** y reducir riesgos. Su perfil refleja la necesidad de una solución tecnológica más confiable y eficiente para su negocio.
+
+Rosa Medina, residente en el distrito de Santiago de Surco, se dedica al alquiler de un SUV compacto con transmisión automática, un vehículo muy solicitado debido a las condiciones del tráfico en Lima.
+
+Respecto al control de disponibilidad, señaló que actualmente enfrenta un caos operativo al gestionarlo todo con un Excel compartido en Google Drive, su calendario del celular y WhatsApp, lo que le toma mucho tiempo de coordinación y le genera el riesgo constante de cruzar fechas por error.
+
+En relación con la verificación de identidad, indicó que hoy en día lo hace de forma rudimentaria pidiendo foto de DNI y brevete por WhatsApp, además de revisar multas y redes sociales, lo cual resulta desgastante; asimismo, manifestó que contar con un sistema de verificación de identidad integrado antes del primer contacto le daría muchísima tranquilidad y le permitiría filtrar a los curiosos.
+
+Sobre el calendario de disponibilidad, señaló que es un aspecto crítico y súper útil, destacando que una actualización automática del calendario le salvaría de alquilar un auto dos veces por error un mismo fin de semana.
+
+En cuanto al mapa y la ubicación, explicó que facilitaría muchísimo que la gente de la zona la encuentre rápido sin tener que dar tantas explicaciones por chat, optimizando la coordinación en puntos intermedios seguros como el Jockey Plaza o la puerta de su edificio.
+
+Finalmente, Rosa manifestó que estaría dispuesta de forma definitiva a migrar a Veygo como plataforma principal, reconociendo que si la herramienta junta la seguridad de la verificación de identidad, le quita el peso del Excel con un calendario automático y le ayuda con el mapa de entrega, profesionalizaría por completo su negocio de alquiler.
 
 #### 2.2.3 Análisis de entrevistas.
 A continuación se identifican, por cada segmento objetivo, las características objetivas y subjetivas más comunes, con su sustento estadístico y la referencia a las entrevistas de donde se extrae cada una. Estas características son la base para la construcción de los arquetipos de usuario.
